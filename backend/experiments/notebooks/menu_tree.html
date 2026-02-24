@@ -1,0 +1,222 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 700px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 700px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#c0392b", "id": "Grill", "label": "Grill", "shape": "dot", "title": "Grill"}, {"color": "#2980b9", "id": "Monday", "label": "Monday (2026-02-23)", "shape": "dot", "title": "Monday (2026-02-23)"}, {"color": "#27ae60", "id": "Monday|Breakfast", "label": "Breakfast", "shape": "dot", "title": "Breakfast"}, {"color": "#e67e22", "id": "Monday|Breakfast|M20317", "label": "Eggs", "shape": "dot", "title": "Eggs"}, {"color": "#e67e22", "id": "Monday|Breakfast|M14255", "label": "Diced Ham", "shape": "dot", "title": "Diced Ham"}, {"color": "#e67e22", "id": "Monday|Breakfast|M40339", "label": "Crumbled Plant-Based Chorizo", "shape": "dot", "title": "Crumbled Plant-Based Chorizo"}, {"color": "#e67e22", "id": "Monday|Breakfast|M14258", "label": "Shredded Cheddar Cheese", "shape": "dot", "title": "Shredded Cheddar Cheese"}, {"color": "#e67e22", "id": "Monday|Breakfast|M14290", "label": "Feta Cheese Crumbles", "shape": "dot", "title": "Feta Cheese Crumbles"}, {"color": "#e67e22", "id": "Monday|Breakfast|M6568", "label": "Diced Onions", "shape": "dot", "title": "Diced Onions"}, {"color": "#e67e22", "id": "Monday|Breakfast|M6557", "label": "Sliced Mushrooms", "shape": "dot", "title": "Sliced Mushrooms"}, {"color": "#e67e22", "id": "Monday|Breakfast|M14870", "label": "Sliced Mixed Bell Peppers", "shape": "dot", "title": "Sliced Mixed Bell Peppers"}, {"color": "#e67e22", "id": "Monday|Breakfast|M11769", "label": "Diced Tomatoes", "shape": "dot", "title": "Diced Tomatoes"}, {"color": "#e67e22", "id": "Monday|Breakfast|M6573", "label": "Chopped Fresh Spinach", "shape": "dot", "title": "Chopped Fresh Spinach"}, {"color": "#e67e22", "id": "Monday|Breakfast|M34612", "label": "Egg", "shape": "dot", "title": "Egg"}, {"color": "#e67e22", "id": "Monday|Breakfast|A375", "label": "Chai-Spiced Apple Oat Pancakes", "shape": "dot", "title": "Chai-Spiced Apple Oat Pancakes"}, {"color": "#27ae60", "id": "Monday|Lunch", "label": "Lunch", "shape": "dot", "title": "Lunch"}, {"color": "#e67e22", "id": "Monday|Lunch|M8095", "label": "Crispy Chicken Sandwich", "shape": "dot", "title": "Crispy Chicken Sandwich"}, {"color": "#e67e22", "id": "Monday|Lunch|M20689", "label": "California Turkey Bacon Wrap", "shape": "dot", "title": "California Turkey Bacon Wrap"}, {"color": "#e67e22", "id": "Monday|Lunch|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Monday|Lunch|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Monday|Lunch|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Monday|Lunch|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Monday|Lunch|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Monday|Lunch|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Monday|Lunch|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Monday|Dinner", "label": "Dinner", "shape": "dot", "title": "Dinner"}, {"color": "#e67e22", "id": "Monday|Dinner|M8095", "label": "Crispy Chicken Sandwich", "shape": "dot", "title": "Crispy Chicken Sandwich"}, {"color": "#e67e22", "id": "Monday|Dinner|M7972", "label": "Grilled Ham \u0026 Cheese Sandwich", "shape": "dot", "title": "Grilled Ham \u0026 Cheese Sandwich"}, {"color": "#e67e22", "id": "Monday|Dinner|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Monday|Dinner|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Monday|Dinner|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Monday|Dinner|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Monday|Dinner|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Monday|Dinner|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Monday|Dinner|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Monday|All Day", "label": "All Day", "shape": "dot", "title": "All Day"}, {"color": "#e67e22", "id": "Monday|All Day|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Monday|All Day|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#2980b9", "id": "Tuesday", "label": "Tuesday (2026-02-24)", "shape": "dot", "title": "Tuesday (2026-02-24)"}, {"color": "#27ae60", "id": "Tuesday|Breakfast", "label": "Breakfast", "shape": "dot", "title": "Breakfast"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M20317", "label": "Eggs", "shape": "dot", "title": "Eggs"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M14255", "label": "Diced Ham", "shape": "dot", "title": "Diced Ham"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M40339", "label": "Crumbled Plant-Based Chorizo", "shape": "dot", "title": "Crumbled Plant-Based Chorizo"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M14258", "label": "Shredded Cheddar Cheese", "shape": "dot", "title": "Shredded Cheddar Cheese"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M14290", "label": "Feta Cheese Crumbles", "shape": "dot", "title": "Feta Cheese Crumbles"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M6568", "label": "Diced Onions", "shape": "dot", "title": "Diced Onions"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M6557", "label": "Sliced Mushrooms", "shape": "dot", "title": "Sliced Mushrooms"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M14870", "label": "Sliced Mixed Bell Peppers", "shape": "dot", "title": "Sliced Mixed Bell Peppers"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M11769", "label": "Diced Tomatoes", "shape": "dot", "title": "Diced Tomatoes"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M6573", "label": "Chopped Fresh Spinach", "shape": "dot", "title": "Chopped Fresh Spinach"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M34612", "label": "Egg", "shape": "dot", "title": "Egg"}, {"color": "#e67e22", "id": "Tuesday|Breakfast|M40676", "label": "Buttermilk Pancakes", "shape": "dot", "title": "Buttermilk Pancakes"}, {"color": "#27ae60", "id": "Tuesday|Lunch", "label": "Lunch", "shape": "dot", "title": "Lunch"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M19661", "label": "Crispy Chicken Pepper Jack Slider", "shape": "dot", "title": "Crispy Chicken Pepper Jack Slider"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Tuesday|Lunch|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Tuesday|Lunch|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Tuesday|Dinner", "label": "Dinner", "shape": "dot", "title": "Dinner"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M35397", "label": "Nacho Grilled Cheese", "shape": "dot", "title": "Nacho Grilled Cheese"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Tuesday|Dinner|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Tuesday|Dinner|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Tuesday|All Day", "label": "All Day", "shape": "dot", "title": "All Day"}, {"color": "#e67e22", "id": "Tuesday|All Day|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Tuesday|All Day|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#2980b9", "id": "Wednesday", "label": "Wednesday (2026-02-25)", "shape": "dot", "title": "Wednesday (2026-02-25)"}, {"color": "#27ae60", "id": "Wednesday|Breakfast", "label": "Breakfast", "shape": "dot", "title": "Breakfast"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M20317", "label": "Eggs", "shape": "dot", "title": "Eggs"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M14255", "label": "Diced Ham", "shape": "dot", "title": "Diced Ham"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M40339", "label": "Crumbled Plant-Based Chorizo", "shape": "dot", "title": "Crumbled Plant-Based Chorizo"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M14258", "label": "Shredded Cheddar Cheese", "shape": "dot", "title": "Shredded Cheddar Cheese"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M14290", "label": "Feta Cheese Crumbles", "shape": "dot", "title": "Feta Cheese Crumbles"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M6568", "label": "Diced Onions", "shape": "dot", "title": "Diced Onions"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M6557", "label": "Sliced Mushrooms", "shape": "dot", "title": "Sliced Mushrooms"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M14870", "label": "Sliced Mixed Bell Peppers", "shape": "dot", "title": "Sliced Mixed Bell Peppers"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M11769", "label": "Diced Tomatoes", "shape": "dot", "title": "Diced Tomatoes"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M6573", "label": "Chopped Fresh Spinach", "shape": "dot", "title": "Chopped Fresh Spinach"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M34612", "label": "Egg", "shape": "dot", "title": "Egg"}, {"color": "#e67e22", "id": "Wednesday|Breakfast|M40679", "label": "Chocolate Chip Buttermilk Pancakes", "shape": "dot", "title": "Chocolate Chip Buttermilk Pancakes"}, {"color": "#27ae60", "id": "Wednesday|Lunch", "label": "Lunch", "shape": "dot", "title": "Lunch"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M4890", "label": "Crunchy Corn Dogs", "shape": "dot", "title": "Crunchy Corn Dogs"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M8295", "label": "Grilled Herb Chicken Sandwich", "shape": "dot", "title": "Grilled Herb Chicken Sandwich"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Wednesday|Lunch|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Wednesday|Lunch|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Wednesday|Dinner", "label": "Dinner", "shape": "dot", "title": "Dinner"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M19508", "label": "Buffalo Chicken Grilled Cheese", "shape": "dot", "title": "Buffalo Chicken Grilled Cheese"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M7941", "label": "Classic Grilled Cheese", "shape": "dot", "title": "Classic Grilled Cheese"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M34430", "label": "Creamy Tomato Basil Soup", "shape": "dot", "title": "Creamy Tomato Basil Soup"}, {"color": "#e67e22", "id": "Wednesday|Dinner|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Wednesday|Dinner|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Wednesday|All Day", "label": "All Day", "shape": "dot", "title": "All Day"}, {"color": "#e67e22", "id": "Wednesday|All Day|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Wednesday|All Day|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#2980b9", "id": "Thursday", "label": "Thursday (2026-02-26)", "shape": "dot", "title": "Thursday (2026-02-26)"}, {"color": "#27ae60", "id": "Thursday|Breakfast", "label": "Breakfast", "shape": "dot", "title": "Breakfast"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M20317", "label": "Eggs", "shape": "dot", "title": "Eggs"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M14255", "label": "Diced Ham", "shape": "dot", "title": "Diced Ham"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M40339", "label": "Crumbled Plant-Based Chorizo", "shape": "dot", "title": "Crumbled Plant-Based Chorizo"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M14258", "label": "Shredded Cheddar Cheese", "shape": "dot", "title": "Shredded Cheddar Cheese"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M14290", "label": "Feta Cheese Crumbles", "shape": "dot", "title": "Feta Cheese Crumbles"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M6568", "label": "Diced Onions", "shape": "dot", "title": "Diced Onions"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M6557", "label": "Sliced Mushrooms", "shape": "dot", "title": "Sliced Mushrooms"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M14870", "label": "Sliced Mixed Bell Peppers", "shape": "dot", "title": "Sliced Mixed Bell Peppers"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M11769", "label": "Diced Tomatoes", "shape": "dot", "title": "Diced Tomatoes"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M6573", "label": "Chopped Fresh Spinach", "shape": "dot", "title": "Chopped Fresh Spinach"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M34612", "label": "Egg", "shape": "dot", "title": "Egg"}, {"color": "#e67e22", "id": "Thursday|Breakfast|M21978", "label": "Apple Cinnamon Pancake", "shape": "dot", "title": "Apple Cinnamon Pancake"}, {"color": "#27ae60", "id": "Thursday|Lunch", "label": "Lunch", "shape": "dot", "title": "Lunch"}, {"color": "#e67e22", "id": "Thursday|Lunch|M8095", "label": "Crispy Chicken Sandwich", "shape": "dot", "title": "Crispy Chicken Sandwich"}, {"color": "#e67e22", "id": "Thursday|Lunch|M40064", "label": "Italian Wrap", "shape": "dot", "title": "Italian Wrap"}, {"color": "#e67e22", "id": "Thursday|Lunch|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Thursday|Lunch|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Thursday|Lunch|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Thursday|Lunch|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Thursday|Lunch|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Thursday|Lunch|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Thursday|Lunch|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Thursday|Dinner", "label": "Dinner", "shape": "dot", "title": "Dinner"}, {"color": "#e67e22", "id": "Thursday|Dinner|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Thursday|Dinner|M20589", "label": "Crispy Chicken BBQ Snacker", "shape": "dot", "title": "Crispy Chicken BBQ Snacker"}, {"color": "#e67e22", "id": "Thursday|Dinner|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Thursday|Dinner|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Thursday|Dinner|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Thursday|Dinner|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Thursday|Dinner|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Thursday|Dinner|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Thursday|Dinner|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Thursday|All Day", "label": "All Day", "shape": "dot", "title": "All Day"}, {"color": "#e67e22", "id": "Thursday|All Day|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Thursday|All Day|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#2980b9", "id": "Friday", "label": "Friday (2026-02-27)", "shape": "dot", "title": "Friday (2026-02-27)"}, {"color": "#27ae60", "id": "Friday|Breakfast", "label": "Breakfast", "shape": "dot", "title": "Breakfast"}, {"color": "#e67e22", "id": "Friday|Breakfast|M20317", "label": "Eggs", "shape": "dot", "title": "Eggs"}, {"color": "#e67e22", "id": "Friday|Breakfast|M14255", "label": "Diced Ham", "shape": "dot", "title": "Diced Ham"}, {"color": "#e67e22", "id": "Friday|Breakfast|M40339", "label": "Crumbled Plant-Based Chorizo", "shape": "dot", "title": "Crumbled Plant-Based Chorizo"}, {"color": "#e67e22", "id": "Friday|Breakfast|M14258", "label": "Shredded Cheddar Cheese", "shape": "dot", "title": "Shredded Cheddar Cheese"}, {"color": "#e67e22", "id": "Friday|Breakfast|M14290", "label": "Feta Cheese Crumbles", "shape": "dot", "title": "Feta Cheese Crumbles"}, {"color": "#e67e22", "id": "Friday|Breakfast|M6568", "label": "Diced Onions", "shape": "dot", "title": "Diced Onions"}, {"color": "#e67e22", "id": "Friday|Breakfast|M6557", "label": "Sliced Mushrooms", "shape": "dot", "title": "Sliced Mushrooms"}, {"color": "#e67e22", "id": "Friday|Breakfast|M14870", "label": "Sliced Mixed Bell Peppers", "shape": "dot", "title": "Sliced Mixed Bell Peppers"}, {"color": "#e67e22", "id": "Friday|Breakfast|M11769", "label": "Diced Tomatoes", "shape": "dot", "title": "Diced Tomatoes"}, {"color": "#e67e22", "id": "Friday|Breakfast|M6573", "label": "Chopped Fresh Spinach", "shape": "dot", "title": "Chopped Fresh Spinach"}, {"color": "#e67e22", "id": "Friday|Breakfast|M34612", "label": "Egg", "shape": "dot", "title": "Egg"}, {"color": "#e67e22", "id": "Friday|Breakfast|M40685", "label": "Banana Buttermilk Pancake", "shape": "dot", "title": "Banana Buttermilk Pancake"}, {"color": "#27ae60", "id": "Friday|Lunch", "label": "Lunch", "shape": "dot", "title": "Lunch"}, {"color": "#e67e22", "id": "Friday|Lunch|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Friday|Lunch|M8295", "label": "Grilled Herb Chicken Sandwich", "shape": "dot", "title": "Grilled Herb Chicken Sandwich"}, {"color": "#e67e22", "id": "Friday|Lunch|M8170", "label": "Grilled Black Bean Burger", "shape": "dot", "title": "Grilled Black Bean Burger"}, {"color": "#e67e22", "id": "Friday|Lunch|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}, {"color": "#e67e22", "id": "Friday|Lunch|M14301", "label": "American Cheese", "shape": "dot", "title": "American Cheese"}, {"color": "#e67e22", "id": "Friday|Lunch|M14856", "label": "Dill Pickle Slices", "shape": "dot", "title": "Dill Pickle Slices"}, {"color": "#e67e22", "id": "Friday|Lunch|M33196", "label": "Lettuce", "shape": "dot", "title": "Lettuce"}, {"color": "#e67e22", "id": "Friday|Lunch|M13541", "label": "Sliced Tomatoes", "shape": "dot", "title": "Sliced Tomatoes"}, {"color": "#e67e22", "id": "Friday|Lunch|M14343", "label": "Sliced Red Onions", "shape": "dot", "title": "Sliced Red Onions"}, {"color": "#27ae60", "id": "Friday|Dinner", "label": "Dinner", "shape": "dot", "title": "Dinner"}, {"color": "#27ae60", "id": "Friday|All Day", "label": "All Day", "shape": "dot", "title": "All Day"}, {"color": "#e67e22", "id": "Friday|All Day|M8958", "label": "Hamburger", "shape": "dot", "title": "Hamburger"}, {"color": "#e67e22", "id": "Friday|All Day|A5763", "label": "Crinkle French Fries", "shape": "dot", "title": "Crinkle French Fries"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "Grill", "to": "Monday"}, {"arrows": "to", "from": "Grill", "to": "Tuesday"}, {"arrows": "to", "from": "Grill", "to": "Wednesday"}, {"arrows": "to", "from": "Grill", "to": "Thursday"}, {"arrows": "to", "from": "Grill", "to": "Friday"}, {"arrows": "to", "from": "Monday", "to": "Monday|Breakfast"}, {"arrows": "to", "from": "Monday", "to": "Monday|Lunch"}, {"arrows": "to", "from": "Monday", "to": "Monday|Dinner"}, {"arrows": "to", "from": "Monday", "to": "Monday|All Day"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M20317"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M14255"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M40339"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M14258"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M14290"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M6568"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M6557"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M14870"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M11769"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M6573"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|M34612"}, {"arrows": "to", "from": "Monday|Breakfast", "to": "Monday|Breakfast|A375"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M8095"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M20689"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M8170"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|A5763"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M14301"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M14856"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M33196"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M13541"}, {"arrows": "to", "from": "Monday|Lunch", "to": "Monday|Lunch|M14343"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M8095"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M7972"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M8170"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|A5763"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M14301"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M14856"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M33196"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M13541"}, {"arrows": "to", "from": "Monday|Dinner", "to": "Monday|Dinner|M14343"}, {"arrows": "to", "from": "Monday|All Day", "to": "Monday|All Day|M8958"}, {"arrows": "to", "from": "Monday|All Day", "to": "Monday|All Day|A5763"}, {"arrows": "to", "from": "Tuesday", "to": "Tuesday|Breakfast"}, {"arrows": "to", "from": "Tuesday", "to": "Tuesday|Lunch"}, {"arrows": "to", "from": "Tuesday", "to": "Tuesday|Dinner"}, {"arrows": "to", "from": "Tuesday", "to": "Tuesday|All Day"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M20317"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M14255"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M40339"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M14258"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M14290"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M6568"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M6557"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M14870"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M11769"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M6573"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M34612"}, {"arrows": "to", "from": "Tuesday|Breakfast", "to": "Tuesday|Breakfast|M40676"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M8958"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M19661"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M8170"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|A5763"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M14301"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M14856"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M33196"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M13541"}, {"arrows": "to", "from": "Tuesday|Lunch", "to": "Tuesday|Lunch|M14343"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M8958"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M35397"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M8170"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|A5763"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M14301"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M14856"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M33196"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M13541"}, {"arrows": "to", "from": "Tuesday|Dinner", "to": "Tuesday|Dinner|M14343"}, {"arrows": "to", "from": "Tuesday|All Day", "to": "Tuesday|All Day|M8958"}, {"arrows": "to", "from": "Tuesday|All Day", "to": "Tuesday|All Day|A5763"}, {"arrows": "to", "from": "Wednesday", "to": "Wednesday|Breakfast"}, {"arrows": "to", "from": "Wednesday", "to": "Wednesday|Lunch"}, {"arrows": "to", "from": "Wednesday", "to": "Wednesday|Dinner"}, {"arrows": "to", "from": "Wednesday", "to": "Wednesday|All Day"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M20317"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M14255"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M40339"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M14258"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M14290"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M6568"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M6557"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M14870"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M11769"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M6573"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M34612"}, {"arrows": "to", "from": "Wednesday|Breakfast", "to": "Wednesday|Breakfast|M40679"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M4890"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M8295"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M8170"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|A5763"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M14301"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M14856"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M33196"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M13541"}, {"arrows": "to", "from": "Wednesday|Lunch", "to": "Wednesday|Lunch|M14343"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M19508"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M7941"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M34430"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|A5763"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M14301"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M14856"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M33196"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M13541"}, {"arrows": "to", "from": "Wednesday|Dinner", "to": "Wednesday|Dinner|M14343"}, {"arrows": "to", "from": "Wednesday|All Day", "to": "Wednesday|All Day|M8958"}, {"arrows": "to", "from": "Wednesday|All Day", "to": "Wednesday|All Day|A5763"}, {"arrows": "to", "from": "Thursday", "to": "Thursday|Breakfast"}, {"arrows": "to", "from": "Thursday", "to": "Thursday|Lunch"}, {"arrows": "to", "from": "Thursday", "to": "Thursday|Dinner"}, {"arrows": "to", "from": "Thursday", "to": "Thursday|All Day"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M20317"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M14255"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M40339"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M14258"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M14290"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M6568"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M6557"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M14870"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M11769"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M6573"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M34612"}, {"arrows": "to", "from": "Thursday|Breakfast", "to": "Thursday|Breakfast|M21978"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M8095"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M40064"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M8170"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|A5763"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M14301"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M14856"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M33196"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M13541"}, {"arrows": "to", "from": "Thursday|Lunch", "to": "Thursday|Lunch|M14343"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M8958"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M20589"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M8170"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|A5763"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M14301"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M14856"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M33196"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M13541"}, {"arrows": "to", "from": "Thursday|Dinner", "to": "Thursday|Dinner|M14343"}, {"arrows": "to", "from": "Thursday|All Day", "to": "Thursday|All Day|M8958"}, {"arrows": "to", "from": "Thursday|All Day", "to": "Thursday|All Day|A5763"}, {"arrows": "to", "from": "Friday", "to": "Friday|Breakfast"}, {"arrows": "to", "from": "Friday", "to": "Friday|Lunch"}, {"arrows": "to", "from": "Friday", "to": "Friday|Dinner"}, {"arrows": "to", "from": "Friday", "to": "Friday|All Day"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M20317"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M14255"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M40339"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M14258"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M14290"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M6568"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M6557"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M14870"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M11769"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M6573"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M34612"}, {"arrows": "to", "from": "Friday|Breakfast", "to": "Friday|Breakfast|M40685"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M8958"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M8295"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M8170"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|A5763"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M14301"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M14856"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M33196"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M13541"}, {"arrows": "to", "from": "Friday|Lunch", "to": "Friday|Lunch|M14343"}, {"arrows": "to", "from": "Friday|All Day", "to": "Friday|All Day|M8958"}, {"arrows": "to", "from": "Friday|All Day", "to": "Friday|All Day|A5763"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"layout": {"hierarchical": {"enabled": true, "direction": "UD"}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

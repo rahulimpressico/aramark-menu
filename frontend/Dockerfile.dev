@@ -1,0 +1,11 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package.json ./
+RUN npm install
+
+COPY . .
+EXPOSE 5173
+# Host binding is set in vite.config.ts (server.host: '0.0.0.0') so dev server is reachable from host
+CMD ["npm", "run", "dev"]

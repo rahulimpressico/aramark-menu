@@ -1,0 +1,49 @@
+Here is a comprehensive and verbose project description designed to give Cursor (or any AI development assistant) the complete business, architectural, and technical context needed to build this application.
+You can copy and paste this directly into Cursor's codebase context or prompt window.
+
+--------------------------------------------------------------------------------
+🎯 Project Goal: Collegiate Dining Agentic AI Menu Analyzer
+1. High-Level Objective
+The goal of this project is to build a deep, multi-agent AI ecosystem using the LangChain/LangGraph framework in Python. The system is designed to ingest raw, unstructured collegiate dining menu data (CSV/PDF) and evaluate it against corporate culinary guidelines (the "Playbook").
+The system acts as an automated "Menu Structure Agent" and strategic advisor, identifying structural anomalies, data redundancies, menu monotony, and strategic compliance (cost and nutrition) before the menu is finalized and pushed to auto-forecasting systems.
+2. Business Context & Problem Statement
+Human menu planners map out food stations across multiple weeks, days, and meal periods (Breakfast, Lunch, Dinner, All-Day). However, human review often misses critical structural flaws. If raw menu data is inaccurate, it corrupts downstream systems like Pre-costing, inventory Pre-ordering, and yield forecasting.
+Specifically, for the Grill Station, the system must enforce the "Fresh & Fast" Playbook standards. The core problems this AI must solve are:
+• Template Violations: The Grill must offer a specific structural mix: 1 burger, 2 rotating daily features, 1 vegan option, and French fries. Human planners often under-offer (missing a vegan option) or over-offer (scheduling 5 distinct hot sandwiches, risking labor burnout).
+• Data Integrity Risks (Duplication): Planners frequently duplicate items. For example, scheduling a "Hamburger" on the "All-Day" menu, and redundantly scheduling it again on the specific "Lunch" menu. This artificially doubles auto-forecasting metrics.
+• Strategic Compliance: The menu must support the "Be Well. Do Well." collegiate sustainability goals, specifically ensuring 44% of offerings are plant-based, and executing the "Chef Tip" to swap out beef for non-beef alternatives (turkey, chicken) to lower the Cost Per Meal (CPM) by 18%.
+3. Technical Architecture & Tech Stack
+The project will be built as a stateful, routed graph using LangChain and LangGraph.
+• State Management: A global TypedDict or Pydantic state object will be passed between nodes, carrying raw_data, menu_graph_json, structural_flags, integrity_warnings, and final_report.
+• Prompting & Tool Standards: The system will strictly adhere to Claude’s Enterprise Best Practices.
+    ◦ System prompts will be structured using XML tags (<role>, <objective>, <constraints>, <workflow>).
+    ◦ Agent Skills (Tools) will be named using lowercase, hyphenated gerunds (e.g., transforming-menu-graph, detecting-period-overlap).
+    ◦ Complex agent workflows will utilize "Checklist Patterns" for step-by-step execution.
+4. The Multi-Agent Ecosystem
+The system relies on six specialized agents working in concert. Cursor will need to define the nodes, edges, tools, and prompts for the following entities:
+Agent 1: Root / Orchestrator Agent
+• Role: The traffic controller.
+• Function: Ingests the raw menu files, delegates tasks to the sub-agents (ensuring the Structure Agent goes first), aggregates their JSON outputs into a global state, and passes the final state to the Synthesizer.
+Agent 2: Menu Structure Agent (The Foundation)
+• Role: The single source of truth.
+• Function: Answers "What is being served, where, and when?". It transforms raw text/CSV into a structured JSON graph. It counts items per meal period and flags days that violate the Playbook's "1 burger, 2 features, 1 vegan, 1 fry" maximum bounds rule. It outputs boolean compliance flags (e.g., vegan_option_present: False).
+Agent 3: Data Integrity & Validation Agent
+• Role: The operational risk detector.
+• Function: Scans the JSON graph specifically for cross-period overlaps. It detects if identical items (like Hamburger M8958 or Crinkle French Fries A5763) are scheduled simultaneously on parent/child menus (e.g., All-Day vs. Lunch). It flags these as high-severity forecasting risks.
+Agent 4: Rotation & Recurrence Agent
+• Role: The menu fatigue monitor.
+• Function: Calculates a "Grill Structural Diversity Index". It maps how often specific proteins appear across the 5-day cycle to prevent extreme monotony, sending recurrence signals (e.g., "High beef recurrence") to the Cost Agent.
+Agent 5: Nutrition, Mix & Cost Agent
+• Role: The strategic playbook enforcer.
+• Function: Evaluates the menu against the 44% plant-based sustainability mandate. It checks the recurrence signals from the Rotation agent to verify if the menu planner successfully substituted high-cost beef with poultry or black bean alternatives to optimize the 18% CPM reduction target.
+Agent 6: Executive Synthesizer Agent
+• Role: The Solution Designer.
+• Function: Takes the raw Boolean flags and JSON warnings from the analytical agents and translates them into a polished, business-friendly Markdown summary. It strictly outputs prose in a specific format: Overall Structure, Alignment with Expectations (What’s working/What needs improvement), Rotation Signals, and Recommended Adjustments.
+5. Expected Inputs & Outputs
+• Input: Raw menu data (Breakfast, Lunch, Dinner, All-Day) detailing Recipe Names, Recipe IDs, Meal Periods, and Days of the week.
+• Output: A cohesive, executive-ready presentation (Markdown) that a Menu Manager can use to instantly fix their PRIMA Web systems before running Pre-cost and ordering pipelines.
+How can the All-Day Grill menu be structurally improved?
+Which Lunch and Dinner days are currently over-offered?
+How does protein diversification help reduce overall food costs?
+For the PoC purpose we can hand curate the menu graph for the entire grill statation (that includes All day, breakfast, dinner and lunch). Can you help me with the json for the menu graph.
+
