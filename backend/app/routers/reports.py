@@ -5,7 +5,7 @@ from fastapi import APIRouter, HTTPException
 
 router = APIRouter(prefix="/reports", tags=["reports"])
 
-# backend dir: app/routers/reports.py -> app -> backend
+# Expected file: backend/menu_report.md (backend root = parent of app/)
 _BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
 _MENU_REPORT_PATH = _BACKEND_DIR / "menu_report.md"
 

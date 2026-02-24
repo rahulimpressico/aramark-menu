@@ -1,9 +1,11 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
-from app import routers
 from app.routers import reports
 
 
@@ -13,8 +15,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Ecommerce API",
-    description="Backend API for the ecommerce project",
+    title="Menu Analysis API",
+    description="Backend API for menu analysis and reports",
     version="0.1.0",
     lifespan=lifespan,
 )
@@ -28,4 +30,21 @@ app.add_middleware(
 )
 
 
-app.include_router(reports.router)
+app.include_router(reports.router, prefix="/api")
+
+# Serve frontend when static/ is present (e.g. Docker production build)
+STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+if STATIC_DIR.is_dir():
+    assets_dir = STATIC_DIR / "assets"
+    if assets_dir.is_dir():
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
+    @app.get("/{full_path:path}")
+    def _serve_spa(full_path: str):
+        # Never serve SPA for API paths (let API routes handle them)
+        if full_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="Not Found")
+        path = STATIC_DIR / full_path
+        if path.is_file() and not full_path.startswith(".."):
+            return FileResponse(path)
+        return FileResponse(STATIC_DIR / "index.html")
