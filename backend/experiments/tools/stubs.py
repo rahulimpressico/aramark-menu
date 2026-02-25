@@ -18,12 +18,10 @@ from experiments.tools.schemas import (
     AggregatingGlobalStateOutput,
     CalculatingCpmRiskSwapsInput,
     CalculatingCpmRiskSwapsOutput,
-    CalculatingDiversityIndexInput,
     CalculatingDiversityIndexOutput,
     CheckingPlaybookBoundsInput,
     CheckingPlaybookBoundsOutput,
     DetectingPeriodOverlapOutput,
-    EvaluatingSustainabilityMixInput,
     EvaluatingSustainabilityMixOutput,
     FormattingExecutiveSlideOutput,
     RoutingTasksInput,
@@ -51,13 +49,14 @@ def _graph_context(graph: MenuGraph, max_chars: int = 50000) -> str:
     """Serialize menu graph for LLM context (truncate if very large)."""
     raw = json.dumps(graph.model_dump(), indent=0)
     if len(raw) > max_chars:
+        original_len = len(raw)
         raw = raw[:max_chars] + "\n... (truncated)"
-        log.warning("Graph context truncated to {} characters. Total length was {} characters", max_chars, len(raw))
+        log.warning("Graph context truncated to {} characters (original: {})", max_chars, original_len)
     return raw
 
 
 def _context_with_playbook(context: str, max_playbook_chars: int = 8000) -> str:
-    """Prepend organisation playbook to context so analysis is done against compliance."""
+    """Prepend organization playbook to context so analysis is done against compliance."""
     playbook = get_playbook_content()
     if not playbook:
         return context
@@ -77,7 +76,7 @@ def routing_tasks(
     inp = RoutingTasksInput(payload=payload, target_agent=target_agent)
     context = _context_with_playbook(json.dumps(inp.model_dump(), indent=2))
     out = run_structured(
-        task_description="You are routing a task to a sub-agent. Confirm the delegation: set success=True, set a short task_id or message.",
+        task_description="You are routing a task to a sub-agent. Confirm the delegation in a professional manner: set success=True and provide a short task_id or confirmation message suitable for audit or logging.",
         context=context,
         output_model=RoutingTasksOutput,
     )
@@ -92,7 +91,7 @@ def aggregating_global_state(sub_agent_outputs: list[dict[str, Any]]) -> Aggrega
     inp = AggregatingGlobalStateInput(sub_agent_outputs=sub_agent_outputs)
     context = _context_with_playbook(json.dumps(inp.model_dump(), indent=2))
     return run_structured(
-        task_description="Merge the list of sub-agent outputs into one aggregated dict. List which sources (agent names) contributed.",
+        task_description="Merge the list of sub-agent outputs into one aggregated structure suitable for the final report. List which analysis sources (agent names) contributed to each section, for traceability.",
         context=context,
         output_model=AggregatingGlobalStateOutput,
     )
@@ -124,7 +123,7 @@ def checking_playbook_bounds(
     inp = CheckingPlaybookBoundsInput(meal_period=meal_period, day_key=day_key)
     context = _context_with_playbook(f"meal_period={meal_period}, day_key={day_key}\n\nMenu graph (excerpt):\n{_graph_context(graph)}")
     return run_structured(
-        task_description="Use the Organization Playbook (Station Guide: Fresh & Fast Grill). Recommended Maximum Selections: 1 Burger, 2 Daily Features, 1 Vegan Option, French Fry. Compare the menu to these bounds. Flag under_offered (e.g. missing vegan option) and over_offered (exceeding playbook max). Set compliant True only if within bounds. Fill counts with actual numbers you infer.",
+        task_description="Using the Organization Playbook (Station Guide: Fresh & Fast Grill), evaluate the menu against Recommended Maximum Selections: 1 Burger, 2 Daily Features, 1 Vegan Option, French Fry. Compare the given meal period to these bounds. Flag under_offered (e.g. missing vegan option) and over_offered (exceeding playbook maximum). Set compliant True only when within bounds. Report actual counts inferred from the menu data for use in the formal report.",
         context=context,
         output_model=CheckingPlaybookBoundsOutput,
     )
@@ -138,7 +137,7 @@ def detecting_period_overlap(menu_graph: MenuGraph | dict[str, Any] | str) -> De
     graph = _ensure_menu_graph(menu_graph)
     context = _context_with_playbook(_graph_context(graph))
     return run_structured(
-        task_description="Scan the menu graph: for each day, find recipe_id(s) that appear in more than one meal period (e.g. same recipe in Lunch and Dinner, or All-Day and Lunch). For each finding list recipe_id, recipe_name, periods, day, severity=high. Return overlaps list and total_count.",
+        task_description="Scan the menu graph for data integrity: for each day, identify recipe_id(s) that appear in more than one overlapping meal period (e.g. same recipe in Lunch and Dinner, or All-Day and Lunch). For each finding document recipe_id, recipe_name, affected periods, day, and severity (use high for duplicates that affect forecasting). Return an overlaps list and total_count suitable for inclusion in a compliance report.",
         context=context,
         output_model=DetectingPeriodOverlapOutput,
     )
@@ -152,7 +151,7 @@ def calculating_diversity_index(menu_graph: MenuGraph | dict[str, Any] | str) ->
     graph = _ensure_menu_graph(menu_graph)
     context = _context_with_playbook(_graph_context(graph))
     return run_structured(
-        task_description="Using the playbook's Core Offerings and Enhancements (e.g. Daily Feature rotation), compute Grill Structural Diversity Index: ratio of unique entrées vs repeated static items. Output diversity_index (0-1), unique_entree_count, repeated_static_count, and a short message.",
+        task_description="Using the playbook Core Offerings and Enhancements (e.g. Daily Feature rotation), compute the Grill Structural Diversity Index: the ratio of unique entrées to repeated static items. Output diversity_index (0-1), unique_entree_count, repeated_static_count, and a concise message suitable for the rotation and variety section of the final report.",
         context=context,
         output_model=CalculatingDiversityIndexOutput,
     )
@@ -168,7 +167,7 @@ def tracking_item_frequency(
     inp = TrackingItemFrequencyInput(recipe_ids=recipe_ids)
     context = _context_with_playbook(f"recipe_ids filter: {inp.recipe_ids}\n\nMenu graph:\n{_graph_context(graph)}")
     return run_structured(
-        task_description="Using the playbook (rotation, enhancements), count how many times each recipe (or key protein/entrée if recipe_ids not specified) appears. Fill frequencies with recipe_id, recipe_name, appearance_count, days. Add recurrence_signals (e.g. High repetition of hamburger) for the Cost Agent.",
+        task_description="Using the playbook rotation and enhancements guidance, count how many times each recipe (or key protein/entrée if recipe_ids not specified) appears across the cycle. Fill frequencies with recipe_id, recipe_name, appearance_count, and days. Add recurrence_signals with evidence-based wording (e.g. High repetition of hamburger across lunch periods) for use in the nutrition-cost analysis and final report.",
         context=context,
         output_model=TrackingItemFrequencyOutput,
     )
@@ -182,7 +181,7 @@ def evaluating_sustainability_mix(menu_graph: MenuGraph | dict[str, Any] | str) 
     graph = _ensure_menu_graph(menu_graph)
     context = _context_with_playbook(_graph_context(graph))
     return run_structured(
-        task_description="Use the playbook's Plant-Forward Goal: by 2025, 44% of core menu template offerings must be plant-based. Compute plant_based_percent and vegan_percent for the menu; set compliant_44=(plant_based_percent>=44), total_offerings, plant_based_count, and a short message.",
+        task_description="Using the playbook Plant-Forward Goal (by 2025, 44% of core menu template offerings must be plant-based), compute plant_based_percent and vegan_percent for the menu. Set compliant_44=(plant_based_percent>=44), report total_offerings and plant_based_count, and provide a short message suitable for the sustainability section of the formal report.",
         context=context,
         output_model=EvaluatingSustainabilityMixOutput,
     )
@@ -198,7 +197,7 @@ def calculating_cpm_risk_swaps(
     inp = CalculatingCpmRiskSwapsInput(recurrence_signals=recurrence_signals)
     context = _context_with_playbook(f"recurrence_signals: {json.dumps(inp.recurrence_signals or {})}\n\nMenu graph:\n{_graph_context(graph)}")
     return run_structured(
-        task_description="Use the playbook Chef Tips (Menu Engineering): swap at least one beef burger for non-beef each week to lower CPM by 18%; diversify with turkey, chicken, fish, MTO take-overs. Evaluate: beef_recurrence_high, non_beef_alternatives_diversified, cpm_risk_level (low/medium/high), recommendations list, message.",
+        task_description="Using the playbook Chef Tips (Menu Engineering): swap at least one beef burger for a non-beef alternative each week to lower CPM by 18%; diversify with turkey, chicken, fish, MTO take-overs. Evaluate and report: beef_recurrence_high, non_beef_alternatives_diversified, cpm_risk_level (low/medium/high), a list of actionable recommendations, and a short message suitable for the cost section of the formal report.",
         context=context,
         output_model=CalculatingCpmRiskSwapsOutput,
     )
@@ -211,7 +210,7 @@ def formatting_executive_slide(aggregated_state: dict[str, Any]) -> str:
     log.info("Tool formatting_executive_slide invoked aggregated_state_keys={}", list(aggregated_state.keys()) if isinstance(aggregated_state, dict) else "n/a")
     context = _context_with_playbook(json.dumps(aggregated_state, indent=2)[:15000])
     out: FormattingExecutiveSlideOutput = run_structured(
-        task_description="Turn the aggregated analysis into an executive summary. Frame compliance and recommendations against the Organization Playbook (Fresh & Fast Grill, 44% plant-based, Chef Tips, Core/Enhancements). Write in clear prose. Output: 1) Overall Station Structure, 2a) What you're doing well, 2b) Where structure needs improvement, 3) Rotation & Repetition Signals, 4) Recommended Structural Adjustments. Combine into full_markdown as one coherent document.",
+        task_description="Produce a SHORT, premium-style markdown report. Rules: (1) Use ## for main sections and **bold** for subheadings and key terms (e.g. **What's working**, **Needs improvement**, **Compliant**). (2) Keep all text concise: 1–3 sentences per paragraph; prefer bullet points. (3) Use blockquote (>) for the two alignment callouts: one blockquote for **What's working** with 3–5 bullets, one for **Where to improve** with 3–5 bullets. (4) Structure: ## Overall Station Structure (2–3 sentences or bullets), ## Playbook Alignment (two blockquotes), ## Rotation & Repetition (bullets), ## Recommended Adjustments (short bullet list). (5) Bold important metrics and findings (e.g. **44% plant-based**, **duplicate recipe IDs**). Output one coherent full_markdown: crisp, scannable, premium feel.",
         context=context,
         output_model=FormattingExecutiveSlideOutput,
     )

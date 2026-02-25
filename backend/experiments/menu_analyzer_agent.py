@@ -1,8 +1,8 @@
 """
 Collegiate Dining Menu Analyzer — Deep Agent (PoC).
 
-Orchestrator + 3 perspective-based subagents: Operator (operations), Nutritionist (nutrition/sustainability),
-Synthesizer. Each sub-agent plans from its standpoint then executes with its tools. Uses create_deep_agent.
+Orchestrator + 5 subagents: Menu Structure, Data Integrity, Rotation & Recurrence,
+Nutrition/Cost, Executive Synthesizer. Uses create_deep_agent from deepagents.
 Tools take MenuGraph (or dict/JSON string) where applicable; see experiments.models.MenuGraph.
 
 Run from backend directory:
@@ -15,18 +15,22 @@ Or invoke programmatically with a loaded graph:
   result = agent.invoke({"messages": [{"role": "user", "content": f"Analyze this Grill menu. Menu graph (JSON): {graph.model_dump_json()}"}]})  # graph is traversable (nodes/edges)
 """
 
+from datetime import datetime
 from pathlib import Path
-import os
 
+from dotenv import load_dotenv
 from deepagents import create_deep_agent
 
-from experiments.callbacks import AgentOutputLoggingCallback
+load_dotenv()
+
 from experiments.log_config import log
 from experiments.models.menu_graph import MenuGraph
 from experiments.prompts import (
-    get_nutrition_cost_prompt,
-    get_operator_prompt,
     get_orchestrator_prompt,
+    get_menu_structure_prompt,
+    get_data_integrity_prompt,
+    get_rotation_recurrence_prompt,
+    get_nutrition_cost_prompt,
     get_synthesizer_prompt,
 )
 from experiments.tools.stubs import (
@@ -67,42 +71,51 @@ def create_menu_analyzer_agent(
     checkpointer=None,
 ):
     """
-    Build the Menu Analyzer deep agent with orchestrator and 3 perspective-based subagents.
+    Build the Menu Analyzer deep agent with orchestrator and 5 subagents.
 
-    - Orchestrator: delegates to Operator, then Nutritionist, then Synthesizer.
-    - Operator: plans from operations standpoint (structure, playbook, integrity, rotation), then executes with its tools.
-    - Nutritionist: plans from nutrition/sustainability standpoint, then executes with sustainability and CPM tools.
-    - Synthesizer: plans what to emphasise, then formats aggregated outputs into executive summary markdown.
+    - Orchestrator: routes to Structure first, then Integrity/Rotation/Cost, then Synthesizer.
+    - Menu Structure: transform menu → JSON, check playbook bounds.
+    - Data Integrity: detect period overlaps (duplicate recipe IDs).
+    - Rotation & Recurrence: diversity index, item frequency.
+    - Nutrition & Cost: sustainability mix, CPM risk/swaps.
+    - Synthesizer: format aggregated state into executive summary.
     """
     # Use google_genai: prefix so LangChain uses ChatGoogleGenerativeAI (Gemini Developer API),
     # not ChatVertexAI (Vertex AI). See GOOGLE_API_KEY in README.
     model = model or "google_genai:gemini-2.5-flash"
     log.info("Creating menu analyzer agent model={}", model)
-    # Perspective-based sub-agents: each plans from its standpoint then executes with its tools.
     subagents = [
         {
-            "name": "operator-agent",
-            "description": "Analyses the menu from an operations standpoint: structure, playbook compliance, data integrity (overlap detection), and rotation/variety (diversity index, item frequency). Plans then executes using structure, playbook, overlap, diversity, and frequency tools.",
-            "system_prompt": get_operator_prompt(),
-            "tools": [
-                transforming_menu_graph,
-                checking_playbook_bounds,
-                detecting_period_overlap,
-                calculating_diversity_index,
-                tracking_item_frequency,
-            ],
+            "name": "menu-structure-agent",
+            "description": "Transforms raw menu data into a standardized JSON graph and validates structure against the Fresh & Fast Grill Playbook. Produces evidence-based counts, capacities, and template alignment for compliance reporting.",
+            "system_prompt": get_menu_structure_prompt(),
+            "tools": [transforming_menu_graph, checking_playbook_bounds],
             "model": model,
         },
         {
-            "name": "nutritionist-agent",
-            "description": "Analyses the menu from a nutrition and sustainability standpoint: 44% plant-based compliance, sustainability mix, and CPM/Chef Tips (e.g. beef swap). Plans then executes using sustainability and CPM tools.",
+            "name": "data-integrity-agent",
+            "description": "Identifies duplicate recipe IDs across overlapping meal periods (e.g. same item on All-Day and Lunch). Documents findings for forecasting integrity and pre-costing risk in the formal report.",
+            "system_prompt": get_data_integrity_prompt(),
+            "tools": [detecting_period_overlap],
+            "model": model,
+        },
+        {
+            "name": "rotation-recurrence-agent",
+            "description": "Computes Grill Structural Diversity Index and item frequency across the cycle. Produces recurrence signals and variety assessment for the rotation section of the report.",
+            "system_prompt": get_rotation_recurrence_prompt(),
+            "tools": [calculating_diversity_index, tracking_item_frequency],
+            "model": model,
+        },
+        {
+            "name": "nutrition-cost-agent",
+            "description": "Evaluates 44% plant-based compliance and beef-swap/CPM strategies against the playbook. Produces sustainability and cost-risk findings for the formal report.",
             "system_prompt": get_nutrition_cost_prompt(),
             "tools": [evaluating_sustainability_mix, calculating_cpm_risk_swaps],
             "model": model,
         },
         {
             "name": "synthesizer-agent",
-            "description": "Turns aggregated Operator and Nutritionist outputs into a business-ready markdown summary: Overall Structure, Playbook alignment, Rotation signals, Recommended Adjustments. Plans what to emphasise then calls formatting tool.",
+            "description": "Produces a professional menu analysis report from aggregated outputs: Overall Structure, Playbook alignment, Rotation findings, and Recommended Adjustments (suitable for institutional or regulatory review).",
             "system_prompt": get_synthesizer_prompt(),
             "tools": [formatting_executive_slide],
             "model": model,
@@ -143,27 +156,24 @@ def main():
         # Instruct orchestrator to use task tool only; include graph so it can pass to subagents
         user_content = (
             "Analyze the Grill station menu. Use your task tool to delegate in order: "
-            "operator-agent (operations), then nutritionist-agent (nutrition/sustainability), "
+            "menu-structure-agent, then data-integrity-agent, rotation-recurrence-agent, nutrition-cost-agent, "
             "then synthesizer-agent. Pass the menu graph below in each task description as needed. "
             "Return the synthesizer's executive summary as your final response for UI.\n\n"
             "Menu graph (JSON):\n"
             + graph.model_dump_json()
         )
     log.debug("Invoking agent with user message len={}", len(user_content))
-    # Langfuse tracing + console log of each agent's output (first 50 words)
+    # Langfuse tracing: pass callback so tool/LLM traces appear in Langfuse (set LANGFUSE_SECRET_KEY, LANGFUSE_PUBLIC_KEY, LANGFUSE_BASE_URL)
     config: dict = {}
-    callbacks_list: list = []
-    callbacks_list.append(AgentOutputLoggingCallback())
     try:
         from langfuse.langchain import CallbackHandler
         langfuse_handler = CallbackHandler()
-        callbacks_list.append(langfuse_handler)
+        config["callbacks"] = [langfuse_handler]
         log.info("Langfuse tracing enabled; traces will appear in Langfuse")
     except ImportError:
         log.debug("langfuse not installed; run with uv sync --extra experiments for tracing")
     except Exception as e:
         log.warning("Langfuse callback not used: {}", e)
-    config["callbacks"] = callbacks_list
 
     result = agent.invoke(
         {"messages": [{"role": "user", "content": user_content}]},
@@ -211,7 +221,6 @@ def _save_report_to_filesystem(markdown_text: str) -> None:
     if not markdown_text.strip():
         return
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    from datetime import datetime
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     path_ts = REPORTS_DIR / f"menu_report_{timestamp}.md"
     path_latest = REPORTS_DIR / "menu_report_latest.md"

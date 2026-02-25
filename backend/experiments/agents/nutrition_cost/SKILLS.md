@@ -1,8 +1,9 @@
-# Nutritionist sub-agent — Skills
+# Nutrition, Mix & Cost Agent — Skills
 
-You plan from a **nutrition and sustainability** standpoint and execute using these tools:
+Skills for sustainability and cost compliance.
 
-- **evaluating_sustainability_mix** — Plant-based and vegan share of the menu; 44% plant-based compliance (playbook). Pass menu_graph.
-- **calculating_cpm_risk_swaps** — Beef recurrence, non-beef diversification, CPM risk, swap recommendations (playbook Chef Tips). Pass menu_graph and optionally recurrence_signals.
+- **evaluating-sustainability-mix**
+  - Calculates the percentage of plant-based and vegan recipes programmed into the core menu template. Use when checking compliance with the 44 percent plant-based mandate.
 
-Plan what to evaluate, then call the tools and return a concise summary for the synthesizer.
+- **calculating-cpm-risk-swaps**
+  - Identifies high-cost beef recurrence and checks if poultry or plant-based alternatives have been diversified. Use when evaluating cost-saving protein strategies.
