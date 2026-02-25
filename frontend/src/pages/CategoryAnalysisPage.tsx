@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, type ReactNode, type ReactElement } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { AramarkLogo } from "../components/AramarkLogo";
@@ -212,32 +212,54 @@ export function CategoryAnalysisPage() {
                     </p>
                   </div>
                 ) : reportContent ? (
-                  <article className="animate-fade-in max-w-none text-gray-800">
+                  <article className="animate-fade-in max-w-none text-gray-800 report-premium">
                     <ReactMarkdown
                       components={{
                         h1: ({ children }) => (
-                          <h1 className="text-lg font-bold text-gray-900 mt-0 mb-5 pb-3 border-b-2 border-gray-200 tracking-tight">
+                          <h1 className="text-xl font-bold text-gray-900 mt-0 mb-4 pb-3 border-b-2 border-primary/30 tracking-tight">
                             {children}
                           </h1>
                         ),
                         h2: ({ children }) => (
-                          <h2 className="text-[0.9375rem] font-semibold text-gray-900 mt-6 mb-2.5 pb-2 border-b border-gray-200/80 flex items-center gap-2">
-                            <span className="w-1 h-4 rounded-full bg-primary shrink-0" />
+                          <h2 className="text-base font-bold text-gray-900 mt-6 mb-3 pb-2 border-b border-gray-200 flex items-center gap-2">
+                            <span className="w-1 h-5 rounded-full bg-primary shrink-0" />
                             {children}
                           </h2>
                         ),
+                        h3: ({ children }) => (
+                          <h3 className="text-[0.9375rem] font-semibold text-gray-800 mt-4 mb-2">
+                            {children}
+                          </h3>
+                        ),
                         p: ({ children }) => (
-                          <p className="m-0 mb-4 text-[0.9375rem] leading-[1.65] text-gray-700">
+                          <p className="m-0 mb-3 text-[0.9375rem] leading-[1.6] text-gray-700">
                             {children}
                           </p>
                         ),
+                        blockquote: ({ children }) => {
+                          const flatten = (node: ReactNode): string =>
+                            typeof node === "string" ? node : Array.isArray(node) ? node.map(flatten).join(" ") : (node as ReactElement)?.props?.children ? flatten((node as ReactElement).props.children) : "";
+                          const text = flatten(children);
+                          const isPositive = /what'?s working|working well|compliant|meets/i.test(text);
+                          return (
+                            <blockquote
+                              className={
+                                isPositive
+                                  ? "my-4 pl-4 py-2.5 border-l-4 border-emerald-500/80 bg-emerald-50/60 rounded-r text-[0.9375rem] text-gray-800"
+                                  : "my-4 pl-4 py-2.5 border-l-4 border-amber-500/80 bg-amber-50/50 rounded-r text-[0.9375rem] text-gray-800"
+                              }
+                            >
+                              {children}
+                            </blockquote>
+                          );
+                        },
                         ul: ({ children }) => (
-                          <ul className="list-none pl-0 my-4 space-y-2.5 text-[0.9375rem] text-gray-700">
+                          <ul className="list-none pl-0 my-3 space-y-2 text-[0.9375rem] text-gray-700">
                             {children}
                           </ul>
                         ),
                         li: ({ children }) => (
-                          <li className="flex items-start gap-2.5 leading-[1.6]">
+                          <li className="flex items-start gap-2.5 leading-[1.55]">
                             <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                             {children}
                           </li>
@@ -257,11 +279,15 @@ export function CategoryAnalysisPage() {
                     <div className="rounded-xl bg-amber-50/90 border border-amber-200/80 px-5 py-4 text-sm text-amber-900 max-w-md">
                       <p className="m-0 font-medium">Report not available</p>
                       <p className="m-0 mt-1.5 text-amber-800/90 text-xs leading-relaxed">
-                        Ensure{" "}
+                        Ensure a report exists at{" "}
+                        <code className="bg-amber-100/80 px-1.5 py-0.5 rounded text-[0.8125rem]">
+                          backend/experiments/reports/menu_report_latest.md
+                        </code>{" "}
+                        or{" "}
                         <code className="bg-amber-100/80 px-1.5 py-0.5 rounded text-[0.8125rem]">
                           backend/menu_report.md
-                        </code>{" "}
-                        is present.
+                        </code>
+                        , or run the menu analyzer to generate one.
                       </p>
                     </div>
                   </div>
