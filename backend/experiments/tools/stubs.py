@@ -76,7 +76,7 @@ def _ensure_menu_graph(menu_graph: MenuGraph | dict[str, Any] | str) -> MenuGrap
     return MenuGraph.model_validate(menu_graph)
 
 
-def _graph_context(graph: MenuGraph, max_chars: int = 50000) -> str:
+def _graph_context(graph: MenuGraph, max_chars: int = 22000) -> str:
     """Serialize menu graph for LLM context (truncate if very large)."""
     raw = json.dumps(graph.model_dump(), indent=0)
     if len(raw) > max_chars:
@@ -86,7 +86,7 @@ def _graph_context(graph: MenuGraph, max_chars: int = 50000) -> str:
     return raw
 
 
-def _context_with_playbook(context: str, max_playbook_chars: int = 8000) -> str:
+def _context_with_playbook(context: str, max_playbook_chars: int = 5000) -> str:
     """Prepend organization playbook to context so analysis is done against compliance."""
     playbook = get_playbook_content()
     if not playbook:

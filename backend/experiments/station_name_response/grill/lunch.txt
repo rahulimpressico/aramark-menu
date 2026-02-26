@@ -1,64 +1,36 @@
-## Collegiate Hospitality: Residential Menu Analysis Report
+### Grill Station Lunch Menu Analysis: Rotation and Recurrence Report (FY25-26 - cycle 2 - week 3)
 
-**Station:** Grill
-**Meal Period:** Lunch
-**Cycle:** FY25-26 - cycle 2 - week 3
+#### Grill Structural Diversity Index
 
----
+*   **Diversity Index:** 0.6
+*   **Unique Entrée Count:** 6
+*   **Repeated Static Item Count:** 10
 
-### 1. Overall Structure & Playbook Alignment
+**Assessment:** The Grill station exhibits moderate structural diversity, offering 6 unique entrées against 10 instances of repeated static items over the cycle. This indicates a reliance on a core set of items with some rotational variety.
 
-**Overall Compliance: False** (due to over-offering of Daily Features)
+#### Recurrence Signals and Variety Assessment
 
-The "Grill" station's Lunch menu for the week of February 23-27, 2026, exhibits a significant deviation from the "Fresh & Fast Grill Station Playbook" regarding the number of Daily Features offered.
+**Quantitative Item Frequencies:**
 
-**Findings:**
+*   **Hamburger (Recipe\_M8958):** Appears 4 times (Monday, Tuesday, Wednesday, Friday)
+*   **Crinkle French Fries (Recipe\_A5763):** Appears 5 times (Monday, Tuesday, Wednesday, Thursday, Friday)
+*   **Grilled Black Bean Burger (Recipe\_M8170):** Appears 1 time (Thursday)
+*   **Crispy Chicken Sandwich (Recipe\_M8095):** Appears 3 times (Monday, Wednesday, Friday)
+*   **Crunchy Corn Dogs (Recipe\_M4890):** Appears 3 times (Monday, Wednesday, Friday)
+*   **Crispy Chicken Pepper Jack Slider (Recipe\_M19661):** Appears 2 times (Tuesday, Thursday)
+*   **Grilled Herb Chicken Sandwich (Recipe\_M8295):** Appears 2 times (Tuesday, Thursday)
 
-*   **Over-offering of Daily Features:**
-    *   **Day:** Monday, Tuesday, Wednesday, Thursday, Friday (all days of the week)
-    *   **Evidence:** On each of these days, 5 distinct Daily Features are offered: "Crispy Chicken Sandwich", "California Turkey Bacon Wrap", "Crispy Chicken Pepper Jack Slider", "Crunchy Corn Dogs", and "Grilled Herb Chicken Sandwich".
-    *   **Playbook Standard:** The playbook recommends a maximum of 2 additional Daily Features. The current offering exceeds this standard by 3 items daily.
+**Qualitative Recurrence Signals:**
 
-**Compliance Indicators and Counts (Per Day for Lunch):**
+1.  **High Repetition of Beef Burgers:** The "Hamburger" appears 4 out of 5 days, indicating high repetition for the primary burger offering. This may contribute to menu fatigue and limit customer choice for alternative main proteins.
+    *   **Recommendation:** Align with the "Menu Engineering" guideline to "Swap out at least one beef burger for a non-beef alternative each week" and "Diversify protein offerings with turkey burgers, chicken, or fish sandwiches."
+2.  **Insufficient Plant-Based Offerings:** The "Grilled Black Bean Burger" is the sole plant-based entree and appears only once during the week. This falls significantly short of the organization's "Plant-Forward Goal" to ensure 44% of residential dining menu offerings are plant-based by 2025.
+    *   **Recommendation:** Increase the frequency and variety of plant-based entrees at the Grill station to meet the plant-forward goal and offer more diverse options for guests.
+3.  **Frequent Chicken Offerings:** Chicken-based entrees ("Crispy Chicken Sandwich," "Crispy Chicken Pepper Jack Slider," "Grilled Herb Chicken Sandwich") collectively appear 7 times across the week. While offering variety within chicken options, the overall high frequency of chicken may lead to repetition for guests seeking different protein types.
+    *   **Recommendation:** Review the rotation of chicken items to ensure sufficient diversity and consider incorporating other protein sources as "Daily Features" as per the playbook.
+4.  **Consistent French Fry Availability:** "Crinkle French Fries" are offered daily, aligning with the playbook's "Core Offerings" for French Fries. This provides a consistent and expected staple for guests.
+5.  **Moderate Non-Beef Alternative:** "Crunchy Corn Dogs" appear 3 times, providing a non-beef alternative. However, further diversification of non-beef options could enhance variety.
 
-| Day       | Meal Period | Burger Compliant (1) | Daily Features Compliant (2 max) | Vegan Option Compliant (1) | French Fry Compliant (1) | Burger Count | Daily Features Count | Vegan Option Count | French Fry Count |
-| :-------- | :---------- | :------------------- | :------------------------------- | :------------------------- | :----------------------- | :----------- | :------------------- | :----------------- | :--------------- |
-| Monday    | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
-| Tuesday   | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
-| Wednesday | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
-| Thursday  | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
-| Friday    | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
+**Overall Variety Assessment:**
 
-**Menu Item Breakdown for Lunch:**
-
-*   **Burger:** Hamburger (1)
-*   **Vegan Option:** Grilled Black Bean Burger (1)
-*   **French Fry:** Crinkle French Fries (1)
-*   **Daily Features:** Crispy Chicken Sandwich, California Turkey Bacon Wrap, Crispy Chicken Pepper Jack Slider, Crunchy Corn Dogs, Grilled Herb Chicken Sandwich (5 total)
-*   **MTO Toppings Bar Items:** American Cheese, Dill Pickle Slices, Lettuce, Sliced Tomatoes, Sliced Red Onions (5 total)
-
----
-
-### 2. Data Integrity
-
-No data integrity issues were found for the 'Lunch' meal period at the 'Grill' station for the analyzed week.
-
----
-
-### 3. Rotation & Recurrence
-
-No specific rotation or recurrence issues were identified for the 'Lunch' meal period at the 'Grill' station for the analyzed week. The diversity of core offerings (Burger, Vegan Option, French Fry) and the variety within the Daily Features (despite over-offering) appear acceptable within the scope of this single week's data.
-
----
-
-### 4. Nutrition & Cost
-
-No specific nutrition or cost-related findings were identified for the 'Lunch' meal period at the 'Grill' station based on the provided menu data and playbook for the analyzed week.
-
----
-
-### 5. Recommended Adjustments
-
-To achieve compliance with the "Fresh & Fast Grill Station Playbook" for the Lunch meal period, the following adjustments are recommended:
-
-*   **Reduce Daily Features:** The number of Daily Features offered each day (Monday-Friday) must be reduced from 5 to a maximum of 2. This will ensure alignment with the playbook's recommended maximum selections, which aims to improve execution efficiency and quality standards. Consider rotating the current 5 Daily Features throughout the week to maintain variety without exceeding the daily limit.
+The Grill station demonstrates moderate menu variety for lunch. While a range of items are offered, the high frequency of beef hamburgers and chicken options, coupled with the very limited plant-based entree, indicates opportunities to enhance menu diversity and reduce fatigue. Adhering more closely to the "Menu Engineering" and "Plant-Forward Goal" guidelines in the playbook will significantly improve variety, align with sustainability commitments, and potentially optimize food costs.

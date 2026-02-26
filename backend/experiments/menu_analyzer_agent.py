@@ -17,6 +17,7 @@ Or invoke programmatically with a loaded graph:
 
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from dotenv import load_dotenv
 from deepagents import create_deep_agent
@@ -55,12 +56,12 @@ FALLBACK_GRAPH_PATHS = [
     EXPERIMENTS_DIR / "menu_graph_v1.json",
 ]
 REPORTS_DIR = EXPERIMENTS_DIR / "reports"
-from dotenv import load_dotenv
-load_dotenv()
-# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-# LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY")
-# LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY")
-# LANGFUSE_BASE_URL = os.getenv("LANGFUSE_BASE_URL")
+
+# Caches to avoid repeated work (speeds up report generation)
+_agent_cache: dict[str, Any] = {}
+_graph_cache: MenuGraph | None = None
+_filtered_payload_cache: dict[tuple[str, str], str] = {}  # (station, meal_period) -> JSON payload
+_FILTERED_CACHE_MAX = 6  # keep last 6 (e.g. 3 meals × 2 stations)
 
 
 def get_default_menu_graph(graph_path: Path | None = None) -> MenuGraph:
@@ -73,7 +74,12 @@ def get_default_menu_graph(graph_path: Path | None = None) -> MenuGraph:
                 log.info("[AGENT] Graph path fallback: {} → {}", DEFAULT_MENU_GRAPH_PATH.name, path.name)
                 break
     log.info("[AGENT] Loading menu graph from path={}", path)
+    global _graph_cache
+    if _graph_cache is not None and graph_path is None:
+        return _graph_cache
     graph = MenuGraph.from_json_path(path)
+    if graph_path is None:
+        _graph_cache = graph
     log.info("[AGENT] Loaded MenuGraph nodes={} edges={}", len(graph.nodes), len(graph.edges))
     return graph
 
@@ -151,6 +157,15 @@ def create_menu_analyzer_agent(
     except Exception as e:
         log.warning("Could not save agent graph PNG: {}", e)
     return agent
+
+
+def _get_or_create_agent(model: str):
+    """Return cached agent for model to avoid recreating on every request."""
+    global _agent_cache
+    if model not in _agent_cache:
+        _agent_cache[model] = create_menu_analyzer_agent(model=model)
+        log.info("[AGENT] Cached agent for model={}", model)
+    return _agent_cache[model]
 
 
 def main():
@@ -297,16 +312,24 @@ def _save_report_to_filesystem(markdown_text: str) -> None:
 def run_analysis(station_name: str, meal_period: str, model: str = "google_genai:gemini-2.5-flash") -> str:
     """
     Run the menu analyzer for the given station_name and meal_period; return the report markdown.
-    Loads main graph (menu_graph_v2_extracted.json), filters by meal_period, and sends only
-    that subset to the agent as JSON.
+    Uses cached graph and filtered payload when possible; reuses cached agent to reduce latency.
     """
     log.info("[AGENT] run_analysis START station_name={} meal_period={} model={}", station_name, meal_period, model)
-    graph = get_default_menu_graph()
-    filtered = graph.filter_by_meal_period(meal_period)
-    log.info("[AGENT] Filtered by meal_period={} → nodes={} edges={}", meal_period, len(filtered.nodes), len(filtered.edges))
-    graph_payload = filtered.model_dump_json()
-    log.info("[AGENT] Serialized graph as JSON len={}", len(graph_payload))
-    agent = create_menu_analyzer_agent(model=model)
+    global _filtered_payload_cache
+    cache_key = (station_name.strip().lower(), meal_period.strip().lower())
+    if cache_key in _filtered_payload_cache:
+        graph_payload = _filtered_payload_cache[cache_key]
+        log.info("[AGENT] Using cached filtered payload len={}", len(graph_payload))
+    else:
+        graph = get_default_menu_graph()
+        filtered = graph.filter_by_meal_period(meal_period)
+        log.info("[AGENT] Filtered by meal_period={} → nodes={} edges={}", meal_period, len(filtered.nodes), len(filtered.edges))
+        graph_payload = filtered.model_dump_json()
+        if len(_filtered_payload_cache) >= _FILTERED_CACHE_MAX:
+            _filtered_payload_cache.pop(next(iter(_filtered_payload_cache)))
+        _filtered_payload_cache[cache_key] = graph_payload
+        log.info("[AGENT] Serialized graph as JSON len={}", len(graph_payload))
+    agent = _get_or_create_agent(model)
     user_content = (
         f'Analyze only station "{station_name}" and meal period "{meal_period}". '
         "Do not analyze any other station or meal period. "

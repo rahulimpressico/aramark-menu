@@ -5,7 +5,7 @@ router = APIRouter(tags=["health"])
 
 @router.get("/")
 async def root():
-    return {"message": "Ecommerce API", "status": "ok"}
+    return {"message": "Menu Analysis API", "status": "ok"}
 
 
 @router.get("/health")

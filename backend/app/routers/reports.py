@@ -1,9 +1,10 @@
 """Serve menu analysis reports: static .md or generate via agent and save to station_name_response."""
+import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Response
 from loguru import logger
 from pydantic import BaseModel, Field
 
@@ -15,6 +16,11 @@ class ReportRequest(BaseModel):
     """Payload for report-by-station-and-period API."""
     station_name: str = Field(..., description="Station name (e.g. Grill)")
     meal_period: str = Field(..., description="Meal period (e.g. Breakfast, Lunch, Dinner)")
+
+
+class OverallReportRequest(BaseModel):
+    """Payload for overall report API (synthesizes breakfast + lunch + dinner .txt via LLM)."""
+    station_name: str = Field(default="Grill", description="Station name (e.g. Grill)")
 
 
 _BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
@@ -62,7 +68,6 @@ def _station_period_paths(station_name: str, meal_period: str) -> tuple[Path, Pa
 
 def _save_station_period_response(station_name: str, meal_period: str, response: dict) -> Path:
     """Save response to station_name_response/<station>/<meal_period>.json and report body to .txt."""
-    import json
     json_path, txt_path = _station_period_paths(station_name, meal_period)
     json_path.write_text(json.dumps(response, indent=2), encoding="utf-8")
     content = response.get("content") or ""
@@ -74,22 +79,12 @@ def _save_station_period_response(station_name: str, meal_period: str, response:
     return json_path
 
 
-def _get_cached_report(station_name: str, meal_period: str) -> str | None:
-    """Return cached report text from .txt if it exists and is non-empty, else None."""
-    _, txt_path = _station_period_paths(station_name, meal_period)
-    if not txt_path.is_file():
-        return None
-    text = txt_path.read_text(encoding="utf-8").strip()
-    return text if text else None
-
-
 @router.get("/report/{station_slug}/{meal_slug}")
 def get_cached_report(station_slug: str, meal_slug: str):
     """
     Return cached report from saved .txt or .json. 404 if neither exists or content empty.
     FE can fall back to POST /report to generate.
     """
-    import json
     log.info("[REPORTS] GET cached report station_slug={} meal_slug={}", station_slug, meal_slug)
     station_dir = _STATION_RESPONSE_DIR / station_slug
     txt_path = station_dir / f"{meal_slug}.txt"
@@ -106,7 +101,6 @@ def get_cached_report(station_slug: str, meal_slug: str):
         log.debug("[REPORTS] Read from .json path={} content_len={}", json_path, len(content))
     if not content:
         log.info("[REPORTS] No cached report found → 404")
-        from fastapi import Response
         return Response(status_code=404)
     log.info("[REPORTS] Returning cached report content_len={}", len(content))
     return {"content": content, "station_name": station_slug, "meal_period": meal_slug, "generated_at": generated_at}
@@ -153,3 +147,57 @@ def get_report_by_station_and_period(payload: ReportRequest):
     )
     response["_saved_path"] = str(saved_path)
     return response
+
+
+def _read_cached_report_text(station_slug: str, meal_slug: str) -> str:
+    """Return cached report body from .txt or .json for station/meal. Empty string if missing."""
+    station_dir = _STATION_RESPONSE_DIR / station_slug
+    txt_path = station_dir / f"{meal_slug}.txt"
+    if txt_path.is_file():
+        return txt_path.read_text(encoding="utf-8").strip()
+    json_path = station_dir / f"{meal_slug}.json"
+    if json_path.is_file():
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+        return (data.get("content") or "").strip()
+    return ""
+
+
+@router.post("/overall", response_model=dict)
+def get_overall_report(payload: OverallReportRequest):
+    """
+    Read breakfast.txt, lunch.txt, dinner.txt for the station; send their content to an LLM
+    to produce one overall executive report. Returns that report in the response.
+    Requires cached reports (generate per-period reports first). Needs GOOGLE_API_KEY.
+    """
+    log.info("[REPORTS] POST /overall station_name={}", payload.station_name)
+    station_slug = _slug(payload.station_name)
+    reports = {
+        "Breakfast": _read_cached_report_text(station_slug, "breakfast"),
+        "Lunch": _read_cached_report_text(station_slug, "lunch"),
+        "Dinner": _read_cached_report_text(station_slug, "dinner"),
+    }
+    if not any(reports[k].strip() for k in reports):
+        log.warning("[REPORTS] No cached reports for station={} → 404", station_slug)
+        raise HTTPException(
+            status_code=404,
+            detail="No cached reports found for this station. Generate Breakfast, Lunch, and Dinner reports first (e.g. from the meal-period pages).",
+        )
+    try:
+        from experiments.overall_report import generate_overall_report
+    except ImportError as e:
+        log.warning("[REPORTS] Overall report not available (experiments): {}", e)
+        raise HTTPException(
+            status_code=503,
+            detail="Overall report requires experiments (uv sync --extra experiments) and GOOGLE_API_KEY.",
+        ) from e
+    content = generate_overall_report(reports)
+    if not content.strip():
+        raise HTTPException(
+            status_code=503,
+            detail="LLM returned an empty overall report. Try again.",
+        )
+    return {
+        "content": content,
+        "station_name": payload.station_name,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+    }

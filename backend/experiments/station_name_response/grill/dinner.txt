@@ -1,32 +1,33 @@
 **Meal period: Dinner**
 
 ## Overall Station Structure
-The Fresh & Fast (Grill) station features a **Core Offerings** structure including a static menu of burgers, chicken sandwiches, hot dogs, and fries, complemented by a **Made-To-Order (MTO) Toppings Bar**. **Enhancements** include a rotating Daily Feature, a dedicated Vegan Option, and French Fries. The playbook recommends a maximum of **1 Burger**, **2 additional Daily Features**, a **Vegan Option**, and a **French Fry**.
+The station structure emphasizes **Core Offerings** with flexible **Enhancements** to meet specific needs. Clear **Recommended Maximum Selections** are provided to ensure efficient execution and quality standards. The Fresh & Fast (Grill) station, for example, includes a static core with Made-To-Order (MTO) ingredients and a toppings bar, complemented by rotating daily features and vegan options.
 
 ## Playbook Alignment
-> **What's working**
-> *   **Ingredient Standards**: Compliance with **cage-free eggs**, **responsibly sourced seafood**, and **group-housed pork**.
-> *   **Plant-Based Focus**: Strong commitment to **plant-based meal options** and the **44% plant-forward goal** by 2025.
-> *   **Climate Commitments**: Adherence to **Net-Zero** targets and the **Coolfood Pledge**.
-> *   **Menu Engineering**: Strategic use of non-beef alternatives to lower **CPM by 18%** while maintaining satisfaction.
-> *   **Service Method**: Clear guidelines for **cooked-to-order** and proper display for self-serve.
+> **What's working:**
+> *   **Cage-free eggs**, **responsibly sourced seafood**, and **group-housed pork** demonstrate strong ethical sourcing.
+> *   Commitment to **plant-based meal options** supports diverse diets and sustainability goals.
+> *   Emphasis on **fresh, seasonal produce** and **regional/global menu diversity** enhances guest experience.
+> *   Integration of "Be Well. Do Well." highlights provides valuable health and sustainability tips.
+> *   Clear guidelines for **Core Offerings** and **Enhancements** provide a structured approach to menu building.
 
-> **Where to improve**
-> *   **Holding Practices**: Ensure strict adherence to the guideline: **do not hold cooked proteins in water or broth baths**.
-> *   **Menu Selection Limits**: Avoid exceeding **recommended maximum selections** to maintain operational efficiency and quality.
-> *   **MTO Execution**: For large accounts, simplify **Made-to-Order (MTO)** menus with condiment bars to support speed of service.
-> *   **Item Justification**: Ensure **enhancements** are added based on demand and not solely to fill space, considering cost and labor.
+> **Where to improve:**
+> *   Ensure strict adherence to **Recommended Maximum Selections** to prevent operational inefficiencies and maintain quality.
+> *   Monitor compliance with **44% plant-based** menu goal, ensuring core menu templates reflect this target.
+> *   Reinforce proper protein **holding techniques** to avoid water/broth baths, as per Chef Tips.
+> *   Optimize MTO station execution for large accounts, potentially through simplified menus and robust condiment bars.
+> *   Regularly review menu offerings for consistency and adherence to playbook guidelines.
 
 ## Rotation & Repetition Signals
-The playbook emphasizes rotation to maintain menu diversity and guest satisfaction. Key signals include:
-*   **Daily Features**: Rotate **2 additional Daily Features** at the Fresh & Fast station.
-*   **Protein Diversification**: Swap out at least **one beef burger for a non-beef alternative each week**.
-*   **Variety**: Diversify protein offerings with options like turkey burgers, chicken, or fish sandwiches.
-*   **MTO Take-overs**: Incorporate MTO station take-overs, such as Grilled Cheese, to vary offerings.
+Effective menu rotation is crucial for guest satisfaction and operational efficiency.
+*   Implement the recommended **2 additional Daily Features (rotate)** at stations like Fresh & Fast.
+*   Actively **swap out at least one beef burger for a non-beef alternative each week** to diversify protein offerings and lower CPM.
+*   Incorporate creative MTO station take-overs, such as **Grilled Cheese**, to provide variety.
+*   Ensure consistent diversification of protein offerings, including turkey burgers, chicken, or fish sandwiches.
 
-## Recommended Structural Adjustments
-To optimize station performance and playbook alignment:
-*   **Adhere to Maximum Selections**: Strictly follow the recommended maximums for menu items to prevent operational strain.
-*   **Implement Protein Rotation**: Systematically rotate daily features and non-beef alternatives weekly as per guidelines.
-*   **Review Holding Protocols**: Reinforce proper holding techniques for cooked proteins to ensure quality and safety.
-*   **Streamline MTO for Volume**: For high-volume periods, simplify MTO offerings to enhance speed of service and guest experience.
+## Recommended Adjustments
+To optimize menu structure and operational flow:
+*   Strictly enforce **Recommended Maximum Selections** across all stations.
+*   Prioritize **protein diversification and weekly rotation** to enhance guest experience and meet sustainability targets.
+*   Conduct regular audits to ensure compliance with **plant-based menu goals** and proper protein handling.
+*   Streamline MTO processes for high-volume periods to maintain speed of service and quality.
