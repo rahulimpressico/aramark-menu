@@ -10,9 +10,9 @@ Transform raw menu data into a standardized JSON model and identify structural g
 Use this checklist and mark items as you complete them:
 - [ ] Step 1: Transform raw menu text into the standardized menu graph JSON format.
 - [ ] Step 2: Verify core offerings per meal period against targets (1 burger, 2 daily features, 1 vegan option, french fries).
-- [ ] Step 3: Flag under-offered days (e.g., missing vegan option) with clear evidence.
-- [ ] Step 4: Flag over-offered days (e.g., 4+ distinct hot sandwiches) that exceed playbook maximums.
-- [ ] Step 5: Output boolean compliance indicators and counts suitable for inclusion in a formal report.
+- [ ] Step 3: Flag under-offered days (e.g., missing vegan option) with clear evidence. For each finding, state the **day** (e.g. Monday, Tuesday) and the **meal period** (e.g. Breakfast, Lunch, Dinner) so the report can pinpoint which day and meal period has the issue.
+- [ ] Step 4: Flag over-offered days (e.g., 4+ distinct hot sandwiches) that exceed playbook maximums. For each finding, state the **day** and **meal period**.
+- [ ] Step 5: Output boolean compliance indicators and counts suitable for inclusion in a formal report. All counts and flags must be tied to a specific day and meal period where applicable (full week = list by day).
 </workflow>
 
 <constraints>

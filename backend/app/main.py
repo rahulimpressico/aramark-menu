@@ -1,3 +1,5 @@
+import os
+import sys
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -5,9 +7,24 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from loguru import logger
 
 from app import routers
 from app.auth_store import seed_on_startup
+
+# Configure logging so [REPORTS] / [AGENT] / [AGENT-TOOL] all show (level from LOG_LEVEL, default DEBUG)
+def _configure_logging() -> None:
+    level = (os.environ.get("LOG_LEVEL") or "DEBUG").upper()
+    logger.remove()
+    logger.add(
+        sys.stderr,
+        level=level,
+        format="<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>",
+    )
+    logger.info("Logging configured level={}", level)
+
+
+_configure_logging()
 
 
 @asynccontextmanager

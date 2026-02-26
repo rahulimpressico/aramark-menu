@@ -7,6 +7,8 @@ from experiments.models.menu_graph import (
     DayNode,
     MealPeriodNode,
     RecipeNode,
+    IngredientNode,
+    EquipmentNode,
     recipe_id_from_node_id,
 )
 
@@ -18,5 +20,7 @@ __all__ = [
     "DayNode",
     "MealPeriodNode",
     "RecipeNode",
+    "IngredientNode",
+    "EquipmentNode",
     "recipe_id_from_node_id",
 ]

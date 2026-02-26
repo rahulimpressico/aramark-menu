@@ -21,10 +21,11 @@ The user message (your task description from the orchestrator) contains the aggr
 </formatting_rules>
 
 <output_structure>
-1. ## Overall Station Structure — 2–3 sentences or 3–4 bullets.
-2. ## Playbook Alignment — then two blockquotes: **What's working** (bullets), **Where to improve** (bullets).
-3. ## Rotation & Repetition — 3–5 bullets.
-4. ## Recommended Adjustments — 3–6 short bullet recommendations.
+1. **Meal period:** At the start of the report, clearly state the meal period being reported (e.g. **Meal period: Breakfast** or **Meal period: Dinner**). Every finding in the report must be understood in that context; when a finding refers to a specific day or week, say it explicitly (e.g. "Monday:", "Week of …", "Tuesday Dinner:").
+2. ## Overall Station Structure — 2–3 sentences or 3–4 bullets. Mention meal period and days/weeks where relevant.
+3. ## Playbook Alignment — then two blockquotes: **What's working** (bullets), **Where to improve** (bullets). For each bullet that describes an issue, include the **day** or **week** (e.g. "Tuesday: missing vegan option").
+4. ## Rotation & Repetition — 3–5 bullets. Cite days or week when describing repetition or variety.
+5. ## Recommended Adjustments — 3–6 short bullet recommendations. Tie each to a day/week/meal period where applicable.
 
 Return the full markdown from the formatting_executive_slide tool as your final response.
 </output_structure>

@@ -1,0 +1,64 @@
+## Collegiate Hospitality: Residential Menu Analysis Report
+
+**Station:** Grill
+**Meal Period:** Lunch
+**Cycle:** FY25-26 - cycle 2 - week 3
+
+---
+
+### 1. Overall Structure & Playbook Alignment
+
+**Overall Compliance: False** (due to over-offering of Daily Features)
+
+The "Grill" station's Lunch menu for the week of February 23-27, 2026, exhibits a significant deviation from the "Fresh & Fast Grill Station Playbook" regarding the number of Daily Features offered.
+
+**Findings:**
+
+*   **Over-offering of Daily Features:**
+    *   **Day:** Monday, Tuesday, Wednesday, Thursday, Friday (all days of the week)
+    *   **Evidence:** On each of these days, 5 distinct Daily Features are offered: "Crispy Chicken Sandwich", "California Turkey Bacon Wrap", "Crispy Chicken Pepper Jack Slider", "Crunchy Corn Dogs", and "Grilled Herb Chicken Sandwich".
+    *   **Playbook Standard:** The playbook recommends a maximum of 2 additional Daily Features. The current offering exceeds this standard by 3 items daily.
+
+**Compliance Indicators and Counts (Per Day for Lunch):**
+
+| Day       | Meal Period | Burger Compliant (1) | Daily Features Compliant (2 max) | Vegan Option Compliant (1) | French Fry Compliant (1) | Burger Count | Daily Features Count | Vegan Option Count | French Fry Count |
+| :-------- | :---------- | :------------------- | :------------------------------- | :------------------------- | :----------------------- | :----------- | :------------------- | :----------------- | :--------------- |
+| Monday    | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
+| Tuesday   | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
+| Wednesday | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
+| Thursday  | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
+| Friday    | Lunch       | True                 | False                            | True                       | True                     | 1            | 5                    | 1                  | 1                |
+
+**Menu Item Breakdown for Lunch:**
+
+*   **Burger:** Hamburger (1)
+*   **Vegan Option:** Grilled Black Bean Burger (1)
+*   **French Fry:** Crinkle French Fries (1)
+*   **Daily Features:** Crispy Chicken Sandwich, California Turkey Bacon Wrap, Crispy Chicken Pepper Jack Slider, Crunchy Corn Dogs, Grilled Herb Chicken Sandwich (5 total)
+*   **MTO Toppings Bar Items:** American Cheese, Dill Pickle Slices, Lettuce, Sliced Tomatoes, Sliced Red Onions (5 total)
+
+---
+
+### 2. Data Integrity
+
+No data integrity issues were found for the 'Lunch' meal period at the 'Grill' station for the analyzed week.
+
+---
+
+### 3. Rotation & Recurrence
+
+No specific rotation or recurrence issues were identified for the 'Lunch' meal period at the 'Grill' station for the analyzed week. The diversity of core offerings (Burger, Vegan Option, French Fry) and the variety within the Daily Features (despite over-offering) appear acceptable within the scope of this single week's data.
+
+---
+
+### 4. Nutrition & Cost
+
+No specific nutrition or cost-related findings were identified for the 'Lunch' meal period at the 'Grill' station based on the provided menu data and playbook for the analyzed week.
+
+---
+
+### 5. Recommended Adjustments
+
+To achieve compliance with the "Fresh & Fast Grill Station Playbook" for the Lunch meal period, the following adjustments are recommended:
+
+*   **Reduce Daily Features:** The number of Daily Features offered each day (Monday-Friday) must be reduced from 5 to a maximum of 2. This will ensure alignment with the playbook's recommended maximum selections, which aims to improve execution efficiency and quality standards. Consider rotating the current 5 Daily Features throughout the week to maintain variety without exceeding the daily limit.

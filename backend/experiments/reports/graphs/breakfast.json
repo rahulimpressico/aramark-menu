@@ -1,0 +1,1115 @@
+{
+  "graph_metadata": {
+    "description": "Enriched graph with normalized Ingredient and Utensil nodes only; filtered for meal period: Breakfast",
+    "version": "2.3-normalized",
+    "cycle": "FY25-26 - cycle 2 - week 3"
+  },
+  "nodes": [
+    {
+      "id": "Station_Grill",
+      "type": "Station",
+      "name": "Grill"
+    },
+    {
+      "id": "Day_Monday",
+      "type": "Day",
+      "name": "Monday",
+      "date": "2026-02-23"
+    },
+    {
+      "id": "Day_Tuesday",
+      "type": "Day",
+      "name": "Tuesday",
+      "date": "2026-02-24"
+    },
+    {
+      "id": "Day_Wednesday",
+      "type": "Day",
+      "name": "Wednesday",
+      "date": "2026-02-25"
+    },
+    {
+      "id": "Day_Thursday",
+      "type": "Day",
+      "name": "Thursday",
+      "date": "2026-02-26"
+    },
+    {
+      "id": "Day_Friday",
+      "type": "Day",
+      "name": "Friday",
+      "date": "2026-02-27"
+    },
+    {
+      "id": "Period_Breakfast",
+      "type": "MealPeriod",
+      "name": "Breakfast"
+    },
+    {
+      "id": "Recipe_M40339",
+      "type": "Recipe",
+      "name": "Crumbled Plant-Based Chorizo",
+      "assembly_instructions": "1. Heat to 140 F. Cover. Keep hot for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 1 oz  2-oz spoodle = 1 7/8 oz 3-oz spoodle = 2 7/8 oz 4-oz spoodle = 3 3/4 oz 6-oz spoodle = 5 5/8 oz 8-oz spoodle = 7 1/2 oz",
+      "ingredient_description": [
+        "VEGAN CHORIZO CRUMBLES FZ - THAWED / COOKED"
+      ]
+    },
+    {
+      "id": "Recipe_M20317",
+      "type": "Recipe",
+      "name": "Eggs",
+      "assembly_instructions": "1.  Cover. Keep chilled for service.",
+      "special_instructions": "IDDSI Level 7",
+      "ingredient_description": [
+        "EGG LIQUID BREAKFAST BLEND FRESH CAGE FREE / COOKED"
+      ]
+    },
+    {
+      "id": "Recipe_A375",
+      "type": "Recipe",
+      "name": "Chai-Spiced Apple Oat Pancakes",
+      "assembly_instructions": "1. Preheat flat-top griddle to 350 F.  2. In bowl, combine all ingredients. Add pancake mix. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX.  3. Coat hot griddle with cooking spray.  4. On griddle, pour 2-oz ladles batter 3\" apart.  5. Cook until top of pancakes are covered with bubbles and edges begin to dry, 1 to 2 minutes. Turn pancakes over. Cook until golden brown, 1 to 2 minutes.  6. Serve immediately.",
+      "special_instructions": "1 box PM pancake mix = 5 lb",
+      "ingredient_description": [
+        "CEREAL OATS QUICK",
+        "JUICE APPLE BULK",
+        "WATER - COOL"
+      ]
+    },
+    {
+      "id": "Recipe_M14255",
+      "type": "Recipe",
+      "name": "Diced Ham",
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "IDDSI Level 7",
+      "ingredient_description": [
+        "HAM SMOKED PIT STYLE BNLS FC FTR - DICED",
+        "DAIRY BLEND",
+        "BASE CHICKEN FLAVORED (VEGAN)",
+        "MARGARINE BULK UNSALTED (VEGAN)",
+        "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "VEGETABLE FZ ONION DICED / COOKED",
+        "VEGETABLE FZ PEPPER CUT / COOKED",
+        "VEGETABLE FRESH PEPPER GREEN - CORED, SEEDED, DICED / COOKED",
+        "VEGETABLE FZ PEAS GREEN / COOKED",
+        "DELI TURKEY ENDS/PIECES - DICED",
+        "FLOUR ALL PURPOSE",
+        "SPICE PEPPER BLACK GROUND IMITATION",
+        "SAUCE WORCESTERSHIRE",
+        "WATER"
+      ]
+    },
+    {
+      "id": "Recipe_M14258",
+      "type": "Recipe",
+      "name": "Shredded Cheddar Cheese",
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz  IDDSI Level 7",
+      "ingredient_description": [
+        "CHEESE CHEDDAR YELLOW MILD AP SHREDDED FEATHER",
+        "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "VEGETABLE FRESH CELERY - TRIMMED, DICED / COOKED",
+        "VEGETABLE FZ ONION DICED / COOKED",
+        "VEGETABLE FZ CELERY DICED / COOKED",
+        "BREAD LOAF WHOLE WHEAT 1 OZ SLICE (LOCAL BAKERY) - DRIED, CUBED",
+        "SPICE PEPPER BLACK GROUND IMITATION",
+        "SEASONING POULTRY (SYSCO)",
+        "HERB DRIED SAGE RUBBED",
+        "WATER"
+      ]
+    },
+    {
+      "id": "Recipe_M14870",
+      "type": "Recipe",
+      "name": "Sliced Mixed Bell Peppers",
+      "assembly_instructions": "1. Combine peppers. Toss to mix well.  2. Cover. Keep chilled for service.",
+      "special_instructions": "",
+      "ingredient_description": [
+        "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, SLICED / RAW",
+        "VEGETABLE FRESH PEPPER RED BELL - SEEDED, SLICED / RAW",
+        "DELI PORK HAM BUFFET STYLE - SLICED",
+        "CHEESE AMERICAN YELLOW OR WHITE AP SLICES 0.5 OZ",
+        "MUFFIN ENGLISH 2 OZ FZ"
+      ]
+    },
+    {
+      "id": "Recipe_M6568",
+      "type": "Recipe",
+      "name": "Diced Onions",
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "IDDSI Level 7",
+      "ingredient_description": [
+        "VEGETABLE FRESH ONION YELLOW - TRIMMED, DICED / RAW",
+        "DAIRY BLEND",
+        "SPICE GARLIC POWDER",
+        "MARGARINE BULK UNSALTED (VEGAN)",
+        "BASE BEEF FLAVORED (VEGAN)",
+        "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "VEGETABLE FZ ONION DICED / COOKED",
+        "PASTA DRY ROTINI / COOKED",
+        "PASTA DRY ELBOW MACARONI / COOKED",
+        "POULTRY MECHANICALLY SEPARATED RAW FZ - THAWED / COOKED",
+        "FLOUR ALL PURPOSE",
+        "KETCHUP BULK",
+        "SPICE PEPPER BLACK GROUND IMITATION",
+        "SAUCE WORCESTERSHIRE",
+        "SOY GRANULES",
+        "HERB DRIED THYME LEAVES",
+        "VINEGAR WHITE",
+        "WATER"
+      ]
+    },
+    {
+      "id": "Recipe_M6573",
+      "type": "Recipe",
+      "name": "Chopped Fresh Spinach",
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "NULL",
+      "ingredient_description": [
+        "VEGETABLE FRESH SPINACH - STEMS REMOVED, CUT / RAW",
+        "BASE CHICKEN FLAVORED (VEGAN)",
+        "MARGARINE BULK UNSALTED (VEGAN)",
+        "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "VEGETABLE FZ ONION DICED / COOKED",
+        "VEGETABLE FRESH POTATO WHITE/YELLOW CHEF - SLICED / COOKED",
+        "VEGETABLE FZ PEPPER CUT / COOKED",
+        "VEGETABLE FRESH PEPPER GREEN - CORED, SEEDED, DICED / COOKED",
+        "VEGETABLE FRESH POTATO BAKER/RUSSET 120 CT - SLICED / COOKED",
+        "POULTRY MECHANICALLY SEPARATED RAW FZ - THAWED / COOKED",
+        "SAUCE MIX CHEESE",
+        "VEGETABLE FRESH POTATO BAKER/RUSSET 90 CT - SLICED / COOKED",
+        "FLOUR ALL PURPOSE",
+        "SPICE PEPPER BLACK GROUND IMITATION",
+        "VEGETABLE DRIED POTATO SLICES",
+        "SAUCE WORCESTERSHIRE",
+        "SOY GRANULES",
+        "WATER"
+      ]
+    },
+    {
+      "id": "Recipe_M11769",
+      "type": "Recipe",
+      "name": "Diced Tomatoes",
+      "assembly_instructions": "1.  Cover. Keep chilled for service.",
+      "special_instructions": "IDDSI Level 7  1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw",
+      "ingredient_description": [
+        "VEGETABLE FRESH TOMATO UTILITY - CORED, DICED / RAW",
+        "VEGETABLE FRESH TOMATO 6 X 6 - CORED, DICED / RAW"
+      ]
+    },
+    {
+      "id": "Recipe_M14290",
+      "type": "Recipe",
+      "name": "Feta Cheese Crumbles",
+      "assembly_instructions": "1.  Cover. Keep chilled for service.",
+      "special_instructions": "1 tbl = 3/8 ozw 1-oz spoodle = 5/8 ozw 2-oz spoodle = 1 1/4 ozw 3-oz spoodle = 1 7/8 ozw 4-oz spoodle = 2 1/2 ozw 6-oz spoodle = 3 3/4 ozw 8-oz spoodle = 5 ozw",
+      "ingredient_description": [
+        "CHEESE FETA AP CRUMBLED"
+      ]
+    },
+    {
+      "id": "Recipe_M34612",
+      "type": "Recipe",
+      "name": "Egg",
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "",
+      "ingredient_description": [
+        "EGG SHELL LARGE CAGE FREE / COOKED / REFUSE SHELL"
+      ]
+    },
+    {
+      "id": "Recipe_M6557",
+      "type": "Recipe",
+      "name": "Sliced Mushrooms",
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "IDDSI Level 7",
+      "ingredient_description": [
+        "VEGETABLE FRESH MUSHROOM AP SLICED / RAW",
+        "VEGETABLE FRESH MUSHROOM - TRIMMED, SLICED / RAW"
+      ]
+    },
+    {
+      "id": "Recipe_M21978",
+      "type": "Recipe",
+      "name": "Apple Cinnamon Pancake",
+      "assembly_instructions": "1. Combine flour, sugar, brown sugar, baking powder, ground cinnamon, and salt. Whisk until well blended.  2. Combine milk, sliced apple, egg, margarine and lemon juice. Whisk until well blended.  3. Preheat flat-top griddle to 350 F.",
+      "special_instructions": "",
+      "ingredient_description": [
+        "FLOUR ALL-PURPOSE",
+        "BAKING POWDER",
+        "EGG LIQUID CHOLESTEROL FREE FF FRESH CAGE FREE / COOKED",
+        "JUICE BULK LEMON PASTEURIZED REFRIGERATED",
+        "MILK BULK 2%",
+        "SUGAR GRANULATED EXTRA FINE"
+      ]
+    },
+    {
+      "id": "Recipe_M40679",
+      "type": "Recipe",
+      "name": "Chocolate Chip Buttermilk Pancakes",
+      "assembly_instructions": "1. Preheat flat-top griddle to 350 F.  2. In bowl, place water. Add pancake mix. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX.  3. Coat hot griddle with cooking spray.  4. On griddle, pour 2-oz ladles batter 3\" apart. Immediately sprinkle 1 tbl chocolate chips on each pool of batter.  5. Cook until top of pancakes are covered with bubbles and edges begin to dry, 1 to 2 minutes. Turn pancakes over. Cook until golden brown, 1 to 2 minutes.  6. Cover. Keep hot for service.",
+      "special_instructions": "1 box PM pancake mix = 5 lb",
+      "ingredient_description": []
+    },
+    {
+      "id": "Recipe_M40685",
+      "type": "Recipe",
+      "name": "Banana Buttermilk Pancake",
+      "assembly_instructions": "",
+      "special_instructions": "",
+      "ingredient_description": []
+    },
+    {
+      "id": "Recipe_M40676",
+      "type": "Recipe",
+      "name": "Buttermilk Pancakes",
+      "assembly_instructions": "",
+      "special_instructions": "",
+      "ingredient_description": []
+    },
+    {
+      "id": "Ingredient_chorizo_crumble_vegan",
+      "type": "Ingredient",
+      "name": "chorizo crumble vegan"
+    },
+    {
+      "id": "Ingredient_blend_breakfast_cage_egg_free_liquid",
+      "type": "Ingredient",
+      "name": "blend breakfast cage egg free liquid"
+    },
+    {
+      "id": "Ingredient_cereal_oat_quick",
+      "type": "Ingredient",
+      "name": "cereal oat quick"
+    },
+    {
+      "id": "Ingredient_apple_juice",
+      "type": "Ingredient",
+      "name": "apple juice"
+    },
+    {
+      "id": "Ingredient_cool_water",
+      "type": "Ingredient",
+      "name": "cool water"
+    },
+    {
+      "id": "Ingredient_margarine_unsalted",
+      "type": "Ingredient",
+      "name": "margarine unsalted"
+    },
+    {
+      "id": "Ingredient_all_flour_purpose",
+      "type": "Ingredient",
+      "name": "all flour purpose"
+    },
+    {
+      "id": "Ingredient_water",
+      "type": "Ingredient",
+      "name": "water"
+    },
+    {
+      "id": "Ingredient_bnl_fc_ftr_ham_pit_smoked_style",
+      "type": "Ingredient",
+      "name": "bnl fc ftr ham pit smoked style"
+    },
+    {
+      "id": "Ingredient_blend_dairy",
+      "type": "Ingredient",
+      "name": "blend dairy"
+    },
+    {
+      "id": "Ingredient_base_chicken_flavored",
+      "type": "Ingredient",
+      "name": "base chicken flavored"
+    },
+    {
+      "id": "Ingredient_onion_vegetable_yellow",
+      "type": "Ingredient",
+      "name": "onion vegetable yellow"
+    },
+    {
+      "id": "Ingredient_onion_vegetable",
+      "type": "Ingredient",
+      "name": "onion vegetable"
+    },
+    {
+      "id": "Ingredient_pepper_vegetable",
+      "type": "Ingredient",
+      "name": "pepper vegetable"
+    },
+    {
+      "id": "Ingredient_green_pepper_seeded_vegetable",
+      "type": "Ingredient",
+      "name": "green pepper seeded vegetable"
+    },
+    {
+      "id": "Ingredient_green_pea_vegetable",
+      "type": "Ingredient",
+      "name": "green pea vegetable"
+    },
+    {
+      "id": "Ingredient_deli_end_turkey",
+      "type": "Ingredient",
+      "name": "deli end turkey"
+    },
+    {
+      "id": "Ingredient_black_ground_imitation_pepper_spice",
+      "type": "Ingredient",
+      "name": "black ground imitation pepper spice"
+    },
+    {
+      "id": "Ingredient_sauce_worcestershire",
+      "type": "Ingredient",
+      "name": "sauce worcestershire"
+    },
+    {
+      "id": "Ingredient_american_cheese_or_slice_white_yellow",
+      "type": "Ingredient",
+      "name": "american cheese or slice white yellow"
+    },
+    {
+      "id": "Ingredient_cheddar_cheese_feather_mild_yellow",
+      "type": "Ingredient",
+      "name": "cheddar cheese feather mild yellow"
+    },
+    {
+      "id": "Ingredient_celery_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "celery trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_celery_vegetable",
+      "type": "Ingredient",
+      "name": "celery vegetable"
+    },
+    {
+      "id": "Ingredient_bread_cubed_dried_loaf_slice_wheat_whole",
+      "type": "Ingredient",
+      "name": "bread cubed dried loaf slice wheat whole"
+    },
+    {
+      "id": "Ingredient_poultry_seasoning",
+      "type": "Ingredient",
+      "name": "poultry seasoning"
+    },
+    {
+      "id": "Ingredient_dried_herb_rubbed_sage",
+      "type": "Ingredient",
+      "name": "dried herb rubbed sage"
+    },
+    {
+      "id": "Ingredient_tomato_utility_vegetable",
+      "type": "Ingredient",
+      "name": "tomato utility vegetable"
+    },
+    {
+      "id": "Ingredient_tomato_vegetable_x",
+      "type": "Ingredient",
+      "name": "tomato vegetable x"
+    },
+    {
+      "id": "Ingredient_bell_green_pepper_seeded_vegetable",
+      "type": "Ingredient",
+      "name": "bell green pepper seeded vegetable"
+    },
+    {
+      "id": "Ingredient_bell_pepper_red_seeded_vegetable",
+      "type": "Ingredient",
+      "name": "bell pepper red seeded vegetable"
+    },
+    {
+      "id": "Ingredient_buffet_deli_ham_pork_style",
+      "type": "Ingredient",
+      "name": "buffet deli ham pork style"
+    },
+    {
+      "id": "Ingredient_english_muffin",
+      "type": "Ingredient",
+      "name": "english muffin"
+    },
+    {
+      "id": "Ingredient_garlic_powder_spice",
+      "type": "Ingredient",
+      "name": "garlic powder spice"
+    },
+    {
+      "id": "Ingredient_base_beef_flavored",
+      "type": "Ingredient",
+      "name": "base beef flavored"
+    },
+    {
+      "id": "Ingredient_dry_pasta_rotini",
+      "type": "Ingredient",
+      "name": "dry pasta rotini"
+    },
+    {
+      "id": "Ingredient_granule_soy",
+      "type": "Ingredient",
+      "name": "granule soy"
+    },
+    {
+      "id": "Ingredient_dried_herb_leave_thyme",
+      "type": "Ingredient",
+      "name": "dried herb leave thyme"
+    },
+    {
+      "id": "Ingredient_onion_trimmed_vegetable_yellow",
+      "type": "Ingredient",
+      "name": "onion trimmed vegetable yellow"
+    },
+    {
+      "id": "Ingredient_dry_elbow_macaroni_pasta",
+      "type": "Ingredient",
+      "name": "dry elbow macaroni pasta"
+    },
+    {
+      "id": "Ingredient_mechanically_poultry_separated",
+      "type": "Ingredient",
+      "name": "mechanically poultry separated"
+    },
+    {
+      "id": "Ingredient_ketchup",
+      "type": "Ingredient",
+      "name": "ketchup"
+    },
+    {
+      "id": "Ingredient_vinegar_white",
+      "type": "Ingredient",
+      "name": "vinegar white"
+    },
+    {
+      "id": "Ingredient_spinach_stem_vegetable",
+      "type": "Ingredient",
+      "name": "spinach stem vegetable"
+    },
+    {
+      "id": "Ingredient_potato_vegetable_white",
+      "type": "Ingredient",
+      "name": "potato vegetable white"
+    },
+    {
+      "id": "Ingredient_baker_potato_vegetable",
+      "type": "Ingredient",
+      "name": "baker potato vegetable"
+    },
+    {
+      "id": "Ingredient_cheese_mix_sauce",
+      "type": "Ingredient",
+      "name": "cheese mix sauce"
+    },
+    {
+      "id": "Ingredient_dried_potato_slice_vegetable",
+      "type": "Ingredient",
+      "name": "dried potato slice vegetable"
+    },
+    {
+      "id": "Ingredient_extra_fine_granulated_sugar",
+      "type": "Ingredient",
+      "name": "extra fine granulated sugar"
+    },
+    {
+      "id": "Ingredient_cheese_feta",
+      "type": "Ingredient",
+      "name": "cheese feta"
+    },
+    {
+      "id": "Ingredient_cage_egg_free_large_shell",
+      "type": "Ingredient",
+      "name": "cage egg free large shell"
+    },
+    {
+      "id": "Ingredient_mushroom_vegetable",
+      "type": "Ingredient",
+      "name": "mushroom vegetable"
+    },
+    {
+      "id": "Ingredient_mushroom_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "mushroom trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_baking_powder",
+      "type": "Ingredient",
+      "name": "baking powder"
+    },
+    {
+      "id": "Ingredient_cage_cholesterol_egg_ff_free_free_liquid",
+      "type": "Ingredient",
+      "name": "cage cholesterol egg ff free free liquid"
+    },
+    {
+      "id": "Ingredient_juice_lemon_pasteurized_refrigerated",
+      "type": "Ingredient",
+      "name": "juice lemon pasteurized refrigerated"
+    },
+    {
+      "id": "Ingredient_milk",
+      "type": "Ingredient",
+      "name": "milk"
+    },
+    {
+      "id": "Utensil_griddle",
+      "type": "Equipment",
+      "name": "griddle",
+      "equipment_type": "griddle"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Station_Grill",
+      "target": "Day_Monday",
+      "relationship": "HAS_SCHEDULE"
+    },
+    {
+      "source": "Station_Grill",
+      "target": "Day_Tuesday",
+      "relationship": "HAS_SCHEDULE"
+    },
+    {
+      "source": "Station_Grill",
+      "target": "Day_Wednesday",
+      "relationship": "HAS_SCHEDULE"
+    },
+    {
+      "source": "Station_Grill",
+      "target": "Day_Thursday",
+      "relationship": "HAS_SCHEDULE"
+    },
+    {
+      "source": "Station_Grill",
+      "target": "Day_Friday",
+      "relationship": "HAS_SCHEDULE"
+    },
+    {
+      "source": "Day_Monday",
+      "target": "Period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M20317",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M14255",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M40339",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M14258",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M14290",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M6568",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M6557",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M14870",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M11769",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M6573",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M34612",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_A375",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M40679",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M21978",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M40685",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Period_Breakfast",
+      "target": "Recipe_M40676",
+      "relationship": "SERVES_RECIPE"
+    },
+    {
+      "source": "Day_Friday",
+      "target": "Period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "Day_Thursday",
+      "target": "Period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "Day_Tuesday",
+      "target": "Period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "Day_Wednesday",
+      "target": "Period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "Recipe_M40339",
+      "target": "Ingredient_chorizo_crumble_vegan",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M20317",
+      "target": "Ingredient_blend_breakfast_cage_egg_free_liquid",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_A375",
+      "target": "Utensil_griddle",
+      "relationship": "USES_UTENSIL"
+    },
+    {
+      "source": "Recipe_A375",
+      "target": "Ingredient_cereal_oat_quick",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_A375",
+      "target": "Ingredient_apple_juice",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_A375",
+      "target": "Ingredient_cool_water",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_bnl_fc_ftr_ham_pit_smoked_style",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_blend_dairy",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_base_chicken_flavored",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_green_pea_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_deli_end_turkey",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14255",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_cheddar_cheese_feather_mild_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_celery_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_celery_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_bread_cubed_dried_loaf_slice_wheat_whole",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_poultry_seasoning",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_dried_herb_rubbed_sage",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14258",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14870",
+      "target": "Ingredient_bell_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14870",
+      "target": "Ingredient_bell_pepper_red_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14870",
+      "target": "Ingredient_buffet_deli_ham_pork_style",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14870",
+      "target": "Ingredient_american_cheese_or_slice_white_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14870",
+      "target": "Ingredient_english_muffin",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_onion_trimmed_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_blend_dairy",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_garlic_powder_spice",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_base_beef_flavored",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_dry_pasta_rotini",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_dry_elbow_macaroni_pasta",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_mechanically_poultry_separated",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_ketchup",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_granule_soy",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_dried_herb_leave_thyme",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_vinegar_white",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6568",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_spinach_stem_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_base_chicken_flavored",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_potato_vegetable_white",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_baker_potato_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_mechanically_poultry_separated",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_cheese_mix_sauce",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_baker_potato_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_dried_potato_slice_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_granule_soy",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6573",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M11769",
+      "target": "Ingredient_tomato_utility_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M11769",
+      "target": "Ingredient_tomato_vegetable_x",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M14290",
+      "target": "Ingredient_cheese_feta",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M34612",
+      "target": "Ingredient_cage_egg_free_large_shell",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6557",
+      "target": "Ingredient_mushroom_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M6557",
+      "target": "Ingredient_mushroom_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Utensil_griddle",
+      "relationship": "USES_UTENSIL"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Ingredient_baking_powder",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Ingredient_cage_cholesterol_egg_ff_free_free_liquid",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Ingredient_juice_lemon_pasteurized_refrigerated",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Ingredient_milk",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M21978",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT"
+    },
+    {
+      "source": "Recipe_M40679",
+      "target": "Utensil_griddle",
+      "relationship": "USES_UTENSIL"
+    }
+  ]
+}

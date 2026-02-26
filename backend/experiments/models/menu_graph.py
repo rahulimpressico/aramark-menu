@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field, PrivateAttr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, PrivateAttr, field_validator
 
 from experiments.log_config import log
 
@@ -47,8 +47,25 @@ class RecipeNode(BaseModel):
     ingredient_description: list[str] = Field(default_factory=list, description="Ingredient line items")
 
 
+class IngredientNode(BaseModel):
+    """Ingredient node extracted from recipe ingredient lines."""
+    model_config = ConfigDict(extra="allow")
+    id: str = Field(description="Node ID (e.g. Ingredient_red_onion)")
+    type: Literal["Ingredient"] = "Ingredient"
+    name: str = Field(description="Canonical ingredient name")
+
+
+class EquipmentNode(BaseModel):
+    """Utensil/equipment node extracted from recipe instructions."""
+    model_config = ConfigDict(extra="allow")
+    id: str = Field(description="Node ID (e.g. Equipment_fryer)")
+    type: Literal["Equipment"] = "Equipment"
+    name: str = Field(description="Equipment name")
+    equipment_type: str = Field(default="", description="Normalized equipment type")
+
+
 # Union of all node kinds (for parsing)
-GraphNode = StationNode | DayNode | MealPeriodNode | RecipeNode
+GraphNode = StationNode | DayNode | MealPeriodNode | RecipeNode | IngredientNode | EquipmentNode
 
 
 class GraphEdge(BaseModel):
@@ -65,7 +82,7 @@ class GraphMetadata(BaseModel):
     cycle: str = Field(default="", description="Menu cycle identifier (e.g. FY25-26 - cycle 2 - week 3)")
 
 
-def _parse_node(raw: dict[str, Any]) -> StationNode | DayNode | MealPeriodNode | RecipeNode:
+def _parse_node(raw: dict[str, Any]) -> GraphNode:
     """Parse a raw node dict into the correct typed node."""
     t = raw.get("type")
     if t == "Station":
@@ -76,16 +93,20 @@ def _parse_node(raw: dict[str, Any]) -> StationNode | DayNode | MealPeriodNode |
         return MealPeriodNode.model_validate(raw)
     if t == "Recipe":
         return RecipeNode.model_validate(raw)
+    if t == "Ingredient":
+        return IngredientNode.model_validate(raw)
+    if t == "Equipment":
+        return EquipmentNode.model_validate(raw)
     raise ValueError(f"Unknown node type: {t}")
 
 
 class MenuGraph(BaseModel):
     """
-    Knowledge graph of menu data: nodes (Station, Day, MealPeriod, Recipe) and edges.
+    Knowledge graph of menu data: nodes (Station, Day, MealPeriod, Recipe, Ingredient, Equipment) and edges.
     Traversable so agents can mine relevant information.
     """
     graph_metadata: GraphMetadata = Field(default_factory=GraphMetadata)
-    nodes: list[StationNode | DayNode | MealPeriodNode | RecipeNode] = Field(default_factory=list)
+    nodes: list[GraphNode] = Field(default_factory=list)
     edges: list[GraphEdge] = Field(default_factory=list)
 
     @field_validator("nodes", mode="before")
@@ -96,7 +117,7 @@ class MenuGraph(BaseModel):
         return v
 
     # Indexes for traversal (not persisted)
-    _by_id: dict[str, StationNode | DayNode | MealPeriodNode | RecipeNode] = PrivateAttr(default_factory=dict)
+    _by_id: dict[str, GraphNode] = PrivateAttr(default_factory=dict)
     _by_type: dict[str, list[Any]] = PrivateAttr(default_factory=dict)
     _outgoing: dict[str, list[GraphEdge]] = PrivateAttr(default_factory=dict)
     _incoming: dict[str, list[GraphEdge]] = PrivateAttr(default_factory=dict)
@@ -127,11 +148,14 @@ class MenuGraph(BaseModel):
 
     # --- Traversal / mining API ---
 
-    def get_node(self, node_id: str) -> StationNode | DayNode | MealPeriodNode | RecipeNode | None:
+    def get_node(self, node_id: str) -> GraphNode | None:
         """Return the node with the given id, or None."""
         return self._by_id.get(node_id)
 
-    def get_nodes_by_type(self, node_type: Literal["Station", "Day", "MealPeriod", "Recipe"]) -> list[Any]:
+    def get_nodes_by_type(
+        self,
+        node_type: Literal["Station", "Day", "MealPeriod", "Recipe", "Ingredient", "Equipment"],
+    ) -> list[Any]:
         """Return all nodes of the given type."""
         return self._by_type.get(node_type, [])
 
@@ -151,6 +175,14 @@ class MenuGraph(BaseModel):
     def get_recipes(self) -> list[RecipeNode]:
         """Return all Recipe nodes."""
         return list(self.get_nodes_by_type("Recipe"))
+
+    def get_ingredients(self) -> list[IngredientNode]:
+        """Return all Ingredient nodes."""
+        return list(self.get_nodes_by_type("Ingredient"))
+
+    def get_equipments(self) -> list[EquipmentNode]:
+        """Return all Equipment nodes."""
+        return list(self.get_nodes_by_type("Equipment"))
 
     def get_recipe(self, recipe_id: str) -> RecipeNode | None:
         """Return a Recipe node by id (e.g. Recipe_M8958 or M8958)."""
@@ -237,6 +269,56 @@ class MenuGraph(BaseModel):
     def list_recipe_ids_in_period(self, period_id: str) -> list[str]:
         """List recipe node ids served in a period (for overlap/diversity logic)."""
         return [r.id for r in self.get_recipes_for_period(period_id)]
+
+    def filter_by_meal_period(self, period_name: str) -> "MenuGraph":
+        """
+        Return a new graph containing only nodes/edges for the given meal period
+        (e.g. "Breakfast", "Lunch", "Dinner"). Keeps Station, Days, that MealPeriod,
+        all Recipes served in that period, and their Ingredient/Equipment nodes.
+        """
+        period_name = period_name.strip()
+        period_node = None
+        for n in self.get_meal_periods():
+            if getattr(n, "name", "") == period_name:
+                period_node = n
+                break
+        if not period_node:
+            log.warning("Meal period %r not found; returning empty graph", period_name)
+            return MenuGraph(
+                graph_metadata=GraphMetadata(description=f"Filtered for {period_name} (not found)"),
+                nodes=[],
+                edges=[],
+            )
+        keep_ids: set[str] = set()
+        # Station(s)
+        for n in self.get_nodes_by_type("Station"):
+            keep_ids.add(n.id)
+        # Days
+        for n in self.get_nodes_by_type("Day"):
+            keep_ids.add(n.id)
+        # This meal period only
+        keep_ids.add(period_node.id)
+        # Recipes served in this period
+        recipe_ids = [r.id for r in self.get_recipes_for_period(period_node.id)]
+        for rid in recipe_ids:
+            keep_ids.add(rid)
+        # Ingredients and equipment linked from those recipes
+        for rid in recipe_ids:
+            for e in self.get_edges_from(rid):
+                keep_ids.add(e.target)
+        # Edges: only those whose source and target are in keep_ids
+        new_edges = [e for e in self.edges if e.source in keep_ids and e.target in keep_ids]
+        new_nodes = [n for n in self.nodes if n.id in keep_ids]
+        meta = GraphMetadata(
+            description=f"{self.graph_metadata.description}; filtered for meal period: {period_name}",
+            version=self.graph_metadata.version,
+            cycle=self.graph_metadata.cycle,
+        )
+        log.info(
+            "[AGENT] filter_by_meal_period period={} recipes={} → nodes={} edges={}",
+            period_name, len(recipe_ids), len(new_nodes), len(new_edges),
+        )
+        return MenuGraph(graph_metadata=meta, nodes=new_nodes, edges=new_edges)
 
     def to_dict(self) -> dict[str, Any]:
         """Serialize to dict for JSON or state (nodes + edges; indexes are not serialized)."""

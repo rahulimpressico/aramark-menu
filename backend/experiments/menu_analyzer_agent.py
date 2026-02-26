@@ -20,6 +20,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from deepagents import create_deep_agent
+from langchain_core.messages import AIMessage, ToolMessage
 
 load_dotenv()
 
@@ -48,8 +49,12 @@ from experiments.tools.stubs import (
 
 # Default path: Node Linked Data Model (knowledge graph)
 EXPERIMENTS_DIR = Path(__file__).parent
-DEFAULT_MENU_GRAPH_PATH = EXPERIMENTS_DIR / "menu_graph_v1.json"
-REPORTS_DIR = EXPERIMENTS_DIR/"reports"
+DEFAULT_MENU_GRAPH_PATH = EXPERIMENTS_DIR / "reports" / "graphs" / "dinner_graph.json"
+FALLBACK_GRAPH_PATHS = [
+    EXPERIMENTS_DIR / "menu_graph_v2_extracted.json",
+    EXPERIMENTS_DIR / "menu_graph_v1.json",
+]
+REPORTS_DIR = EXPERIMENTS_DIR / "reports"
 from dotenv import load_dotenv
 load_dotenv()
 # GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
@@ -58,11 +63,18 @@ load_dotenv()
 # LANGFUSE_BASE_URL = os.getenv("LANGFUSE_BASE_URL")
 
 
-def get_default_menu_graph() -> MenuGraph:
-    """Load the Grill station knowledge graph from experiments/menu_graph_v1.json."""
-    log.debug("Loading menu graph from path={}", DEFAULT_MENU_GRAPH_PATH)
-    graph = MenuGraph.from_json_path(DEFAULT_MENU_GRAPH_PATH)
-    log.info("Loaded MenuGraph nodes={} edges={}", len(graph.nodes), len(graph.edges))
+def get_default_menu_graph(graph_path: Path | None = None) -> MenuGraph:
+    """Load menu graph from given path, or default/fallback paths."""
+    path = graph_path or DEFAULT_MENU_GRAPH_PATH
+    if not path.is_file():
+        for fallback in FALLBACK_GRAPH_PATHS:
+            if fallback.is_file():
+                path = fallback
+                log.info("[AGENT] Graph path fallback: {} → {}", DEFAULT_MENU_GRAPH_PATH.name, path.name)
+                break
+    log.info("[AGENT] Loading menu graph from path={}", path)
+    graph = MenuGraph.from_json_path(path)
+    log.info("[AGENT] Loaded MenuGraph nodes={} edges={}", len(graph.nodes), len(graph.edges))
     return graph
 
 
@@ -83,7 +95,7 @@ def create_menu_analyzer_agent(
     # Use google_genai: prefix so LangChain uses ChatGoogleGenerativeAI (Gemini Developer API),
     # not ChatVertexAI (Vertex AI). See GOOGLE_API_KEY in README.
     model = model or "google_genai:gemini-2.5-flash"
-    log.info("Creating menu analyzer agent model={}", model)
+    log.info("[AGENT] Creating orchestrator + 5 subagents model={}", model)
     subagents = [
         {
             "name": "menu-structure-agent",
@@ -145,26 +157,34 @@ def main():
     """Create agent and run a single example invocation (optional)."""
     from experiments.log_config import configure_experiments_logging
     configure_experiments_logging()
-    log.info("Starting menu analyzer agent main()")
+    log.info("[AGENT] main() START")
     agent = create_menu_analyzer_agent(model="google_genai:gemini-2.5-flash")
-    menu_graph_path = DEFAULT_MENU_GRAPH_PATH
-    if not menu_graph_path.exists():
-        print(f"Menu graph not found at {menu_graph_path}; use a query that provides menu data.")
+    try:
+        graph = get_default_menu_graph()
+    except Exception as e:
+        log.warning("No menu graph found: {}", e)
+        print("Menu graph not found; use a query that provides menu data.")
         user_content = "Describe what analysis you would perform on a Grill station menu once the menu graph is loaded."
     else:
-        graph = get_default_menu_graph()
-        # Instruct orchestrator to use task tool only; include graph so it can pass to subagents
+        station_name = "Grill"
+        meal_period = "Dinner"
+        filtered = graph.filter_by_meal_period(meal_period)
+        graph_payload = filtered.model_dump_json()
         user_content = (
-            "Analyze the Grill station menu. Use your task tool to delegate in order: "
+            f'Analyze only station "{station_name}" and meal period "{meal_period}". '
+            "Do not analyze any other station or meal period. "
+            "Use your task tool to delegate in order: "
             "menu-structure-agent, then data-integrity-agent, rotation-recurrence-agent, nutrition-cost-agent, "
-            "then synthesizer-agent. Pass the menu graph below in each task description as needed. "
-            "Return the synthesizer's executive summary as your final response for UI.\n\n"
-            "Menu graph (JSON):\n"
-            + graph.model_dump_json()
+            "then synthesizer-agent. "
+            "Return exactly one executive summary markdown report for this scope only. "
+            "The report must clearly state the meal period and, for any finding, which day or week it refers to.\n\n"
+            f"Scope:\n- station_name: {station_name}\n- meal_period: {meal_period}\n\n"
+            "Menu graph (JSON) — full week schedule; pass this entire block to tools that need menu data:\n"
+            + graph_payload
         )
-    log.debug("Invoking agent with user message len={}", len(user_content))
-    # Langfuse tracing: pass callback so tool/LLM traces appear in Langfuse (set LANGFUSE_SECRET_KEY, LANGFUSE_PUBLIC_KEY, LANGFUSE_BASE_URL)
-    config: dict = {}
+    log.info("[AGENT] main() Invoking orchestrator user_message_len={}", len(user_content))
+    # Langfuse tracing + recursion_limit so graph can run through all subagent steps
+    config: dict = {"recursion_limit": 50}
     try:
         from langfuse.langchain import CallbackHandler
         langfuse_handler = CallbackHandler()
@@ -180,14 +200,24 @@ def main():
         config=config,
     )
     messages = result.get("messages", [])
-    log.info("Agent invoke completed messages_count={}", len(messages))
-    # Extract final assistant message (synthesizer output); content may be str or list of blocks
-    from langchain_core.messages import AIMessage
-    final_content = None
-    for msg in reversed(messages):
+    log.info("[AGENT] main() Invoke completed messages_count={}", len(messages))
+    # Best report = longest content from AIMessage or ToolMessage (synthesizer often in tool result)
+    candidate_contents = []
+    for msg in messages:
+        raw = None
         if isinstance(msg, AIMessage) and msg.content:
-            final_content = msg.content
-            break
+            raw = msg.content
+        elif isinstance(msg, ToolMessage) and msg.content:
+            raw = msg.content
+        if raw is not None:
+            ln = len(raw) if isinstance(raw, str) else sum(len(b.get("text", "") or "") for b in raw) if isinstance(raw, list) else 0
+            if ln:
+                candidate_contents.append((ln, raw))
+    if candidate_contents:
+        candidate_contents.sort(key=lambda x: x[0], reverse=True)
+        final_content = candidate_contents[0][1]
+    else:
+        final_content = None
     markdown_text = _extract_markdown_from_content(final_content)
     if markdown_text:
         _save_report_to_filesystem(markdown_text)
@@ -200,20 +230,55 @@ def main():
     return result
 
 
-def _extract_markdown_from_content(content: str | list | None) -> str:
-    """Extract plain markdown string from final message content (may be list of blocks)."""
+def _content_to_str(content: str | list | None) -> str:
+    """Flatten any message content to a single string (str, list of blocks, etc.)."""
     if content is None:
         return ""
     if isinstance(content, str):
         return content
     if isinstance(content, list):
+        parts: list[str] = []
         for block in content:
-            if isinstance(block, dict) and block.get("type") == "text":
-                return block.get("text") or ""
-            if hasattr(block, "get") and block.get("type") == "text":
-                return block.get("text") or ""
-        return ""
+            if isinstance(block, str):
+                parts.append(block)
+            elif isinstance(block, dict):
+                for key in ("text", "content", "input"):
+                    if block.get(key) and isinstance(block[key], str):
+                        parts.append(block[key])
+                        break
+                else:
+                    if block.get("type") == "text" and block.get("text"):
+                        parts.append(block["text"])
+                    elif "parts" in block and isinstance(block["parts"], list):
+                        for p in block["parts"]:
+                            if isinstance(p, str):
+                                parts.append(p)
+                            elif isinstance(p, dict) and p.get("text"):
+                                parts.append(p["text"])
+            elif hasattr(block, "get"):
+                t = block.get("text") or block.get("content")
+                if t and isinstance(t, str):
+                    parts.append(t)
+        return "\n\n".join(parts) if parts else ""
     return str(content)
+
+
+def _extract_markdown_from_content(content: str | list | None) -> str:
+    """Extract plain markdown string from final message content (may be str or list of blocks from Gemini)."""
+    s = _content_to_str(content)
+    return _normalize_report_markdown(s) if s else ""
+
+
+def _normalize_report_markdown(text: str) -> str:
+    """Fix common LLM markdown issues: tables with header and separator glued (| ... | | :--- |)."""
+    if not text or not text.strip():
+        return text
+    import re
+    # Fix: header row and separator row on same line: "| Day | ... | | :-------- |" -> newline before separator
+    text = re.sub(r"\|\s*\|(\s*:[-|\s]+)", r"|\n|\1", text)
+    # Same when separator follows without space: "| ... || :-- |"
+    text = re.sub(r"\|(\s*)\|\s*\|(\s*:)", r"|\n|\2", text)
+    return text.strip()
 
 
 def _save_report_to_filesystem(markdown_text: str) -> None:
@@ -227,6 +292,81 @@ def _save_report_to_filesystem(markdown_text: str) -> None:
     for path in (path_ts, path_latest):
         path.write_text(markdown_text, encoding="utf-8")
         log.info("Report saved to {}", path)
+
+
+def run_analysis(station_name: str, meal_period: str, model: str = "google_genai:gemini-2.5-flash") -> str:
+    """
+    Run the menu analyzer for the given station_name and meal_period; return the report markdown.
+    Loads main graph (menu_graph_v2_extracted.json), filters by meal_period, and sends only
+    that subset to the agent as JSON.
+    """
+    log.info("[AGENT] run_analysis START station_name={} meal_period={} model={}", station_name, meal_period, model)
+    graph = get_default_menu_graph()
+    filtered = graph.filter_by_meal_period(meal_period)
+    log.info("[AGENT] Filtered by meal_period={} → nodes={} edges={}", meal_period, len(filtered.nodes), len(filtered.edges))
+    graph_payload = filtered.model_dump_json()
+    log.info("[AGENT] Serialized graph as JSON len={}", len(graph_payload))
+    agent = create_menu_analyzer_agent(model=model)
+    user_content = (
+        f'Analyze only station "{station_name}" and meal period "{meal_period}". '
+        "Do not analyze any other station or meal period. "
+        "Use your task tool to delegate in order: "
+        "menu-structure-agent, then data-integrity-agent, rotation-recurrence-agent, nutrition-cost-agent, "
+        "then synthesizer-agent. "
+        "Return exactly one executive summary markdown report for this scope only. "
+        "The report must clearly state the meal period and, for any finding or issue, which day (e.g. Monday, Tuesday) or week it refers to.\n\n"
+        f"Scope:\n- station_name: {station_name}\n- meal_period: {meal_period}\n\n"
+        "Menu graph (JSON) for this meal period — full week schedule; pass this entire block to tools that need menu data:\n"
+        + graph_payload
+    )
+    log.info("[AGENT] Invoking orchestrator (user_message_len={})", len(user_content))
+    config = {"recursion_limit": 50}
+    max_tries = 2  # Retry once if we get partial run (e.g. timeout → only 2 messages, empty report)
+    report = ""
+    for attempt in range(max_tries):
+        if attempt > 0:
+            log.warning("[AGENT] Retrying run_analysis (attempt {}): previous run had messages_count={} report_len=0", attempt + 1, len(messages))
+        result = agent.invoke({"messages": [{"role": "user", "content": user_content}]}, config=config)
+        log.info("[AGENT] Invoke result keys: {}", list(result.keys()) if isinstance(result, dict) else type(result).__name__)
+        messages = result.get("messages", [])
+        log.info("[AGENT] Invoke done messages_count={}", len(messages))
+        candidate_strs: list[tuple[int, int, str]] = []
+        for i, msg in enumerate(messages):
+            kind = type(msg).__name__
+            raw = getattr(msg, "content", None)
+            if raw is None or (isinstance(raw, list) and not raw):
+                extra = getattr(msg, "additional_kwargs", None) or {}
+                if isinstance(extra, dict):
+                    raw = extra.get("content") or extra.get("text")
+                if raw is None and hasattr(msg, "response_metadata"):
+                    meta = getattr(msg, "response_metadata", {}) or {}
+                    raw = meta.get("content") if isinstance(meta, dict) else None
+            if raw is None:
+                has_tool_calls = getattr(msg, "tool_calls", None) or []
+                log.info("[AGENT] message[{}] {} no content tool_calls={}", i, kind, len(has_tool_calls) if has_tool_calls else 0)
+                continue
+            text = _content_to_str(raw)
+            if not text.strip():
+                log.info("[AGENT] message[{}] {} content empty after flatten", i, kind)
+                continue
+            log.info("[AGENT] message[{}] {} content_len={} preview={!r}", i, kind, len(text), text[:120].replace("\n", " "))
+            if "Analyze only station" in text and ("Menu graph" in text or "graph_metadata" in text):
+                continue
+            report_like = 1 if any(m in text for m in ("##", "**Meal period", "**What's working", "Playbook Alignment", "Overall Station", "Recommended Adjustments")) else 0
+            candidate_strs.append((report_like, len(text), text))
+        final_content = None
+        if candidate_strs:
+            candidate_strs.sort(key=lambda x: (x[0], x[1]), reverse=True)
+            final_content = candidate_strs[0][2]
+            log.info("[AGENT] Picked message report_like={} content_len={}", candidate_strs[0][0], candidate_strs[0][1])
+        report = _extract_markdown_from_content(final_content)
+        log.info("[AGENT] run_analysis attempt={} report_len={}", attempt + 1, len(report or ""))
+        if report and len(report.strip()) > 0:
+            break
+        if attempt == 0 and len(messages) <= 2:
+            log.warning("[AGENT] Partial run (messages_count={}); will retry once", len(messages))
+    log.info("[AGENT] run_analysis END report_len={}", len(report or ""))
+    return report
 
 
 if __name__ == "__main__":
