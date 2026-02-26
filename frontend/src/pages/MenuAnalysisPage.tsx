@@ -3,6 +3,16 @@ import { AramarkLogo } from '../components/AramarkLogo';
 
 const backToStations = { to: '/', label: '← Back to stations' };
 
+const combinedReportIcon = (
+  <svg className="w-[72px] h-[72px] mb-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <path d="M14 2v6h6" />
+    <path d="M16 13H8" />
+    <path d="M16 17H8" />
+    <path d="M10 9H8" />
+  </svg>
+);
+
 const meals = [
   {
     id: 'breakfast',
@@ -43,16 +53,21 @@ const meals = [
 
 export function MenuAnalysisPage() {
   return (
-    <main className="min-h-0 flex-1 flex flex-col items-center bg-gray-100">
-      <div className="w-full flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-footer-bg text-white">
+    <main className="h-full flex flex-col overflow-hidden bg-gray-100">
+      <div className="w-full shrink-0 grid grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-3 bg-footer-bg text-white">
         <Link
           to={backToStations.to}
-          className="inline-flex items-center gap-2 px-3 py-2 text-[0.9375rem] font-medium text-white bg-transparent border border-white/40 rounded-md no-underline hover:bg-white/10 hover:border-white/60 transition-colors"
+          className="inline-flex items-center gap-2 px-3 py-2 text-[0.9375rem] font-medium text-white bg-transparent border border-white/40 rounded-md no-underline hover:bg-white/10 hover:border-white/60 transition-colors justify-self-start"
         >
           {backToStations.label}
         </Link>
+        <div className="flex justify-center">
+          <AramarkLogo width={140} height={35} variant="white" />
+        </div>
+        <div aria-hidden />
       </div>
-      <div className="w-full max-w-[1200px] px-4">
+      <div className="flex-1 min-h-0 overflow-y-auto w-full flex flex-col items-center">
+      <div className="w-full max-w-[1200px] px-4 flex flex-col items-center">
         <div className="w-full h-[200px] mb-6 rounded-b-xl overflow-hidden bg-gradient-to-br from-footer-bg via-[#034078] to-[#055c9e]" role="img" aria-label="Professional food service">
           <img
             src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80"
@@ -61,9 +76,6 @@ export function MenuAnalysisPage() {
           />
         </div>
         <header className="flex flex-col items-center gap-4 mb-6 text-center">
-          <div className="shrink-0">
-            <AramarkLogo width={191} height={48} />
-          </div>
           <h1 className="m-0 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
             Menu Analysis
           </h1>
@@ -71,6 +83,32 @@ export function MenuAnalysisPage() {
             Select a meal period to view and analyze menu offerings, nutrition, and compliance.
           </p>
         </header>
+
+        {/* Combined report CTA */}
+        <Link
+          to="/report"
+          className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-[1100px] p-5 sm:p-6 mb-6 rounded-2xl border-2 border-primary/20 bg-white shadow-md hover:shadow-lg hover:border-primary/40 transition-all duration-200 no-underline text-inherit focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 group"
+        >
+          <div className="shrink-0 text-primary group-hover:scale-105 transition-transform">
+            {combinedReportIcon}
+          </div>
+          <div className="flex-1 text-center sm:text-left min-w-0">
+            <h2 className="m-0 text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+              Want a combined report for all meal periods?
+            </h2>
+            <p className="m-0 mt-1.5 text-[0.9375rem] text-gray-500 leading-snug">
+              View one full report covering Breakfast, Lunch & Dinner — structure, playbook alignment, rotation, and recommendations.
+            </p>
+          </div>
+          <span className="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-white text-sm font-semibold group-hover:bg-primary-hover transition-colors">
+            View full report
+            <span aria-hidden>→</span>
+          </span>
+        </Link>
+
+        <p className="text-[0.8125rem] text-gray-500 mb-3 w-full max-w-[1100px]">
+          Or select a meal period:
+        </p>
 
         <ul className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1100px] list-none m-0 p-0 pb-8" role="list">
         {meals.map(({ id, title, description, icon, path }) => (
@@ -88,6 +126,7 @@ export function MenuAnalysisPage() {
           </li>
         ))}
         </ul>
+      </div>
       </div>
     </main>
   );

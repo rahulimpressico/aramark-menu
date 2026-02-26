@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback, type ReactNode, type ReactElement } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
 import { AramarkLogo } from "../components/AramarkLogo";
+import { ReportMarkdown } from "../components/ReportMarkdown";
 
 const CATEGORIES: Record<string, string> = {
   breakfast: "Breakfast",
@@ -20,8 +20,15 @@ function getImagePath(fileName: string): string {
   return `/stations/grill/${encodeURIComponent(fileName)}`;
 }
 
-const LOADER_DURATION_MS = 5000;
-const REPORT_API = "/api/reports/menu-report";
+const REPORT_API = "/api/reports/report";
+const REPORT_CACHED_API = "/api/reports/report"; // GET /api/reports/report/{station}/{meal}
+const DEFAULT_STATION = "Grill";
+
+function reportCachedUrl(station: string, mealPeriod: string): string {
+  const s = station.toLowerCase().replace(/\s+/g, "_");
+  const m = mealPeriod.toLowerCase().replace(/\s+/g, "_");
+  return `${REPORT_CACHED_API}/${s}/${m}`;
+}
 
 // Same icons as Menu Analysis page cards (breakfast tray, lunch sun, dinner moon)
 const MEAL_ICONS: Record<string, JSX.Element> = {
@@ -50,7 +57,7 @@ export function CategoryAnalysisPage() {
   const [analysisOpen, setAnalysisOpen] = useState(false);
   const [loaderActive, setLoaderActive] = useState(false);
   const [reportContent, setReportContent] = useState<string | null>(null);
-  const [reportError, setReportError] = useState(false);
+  const [reportError, setReportError] = useState<string | null>(null);
   const [imageDialogOpen, setImageDialogOpen] = useState(false);
 
   // Routes are /breakfast, /lunch, /dinner – no :category param, so derive from pathname
@@ -61,33 +68,59 @@ export function CategoryAnalysisPage() {
   const imageFileName = category ? IMAGE_BY_CATEGORY[category] : "";
   const imageSrc = imageFileName ? getImagePath(imageFileName) : "";
 
-  const fetchReport = useCallback(async () => {
-    try {
-      const res = await fetch(REPORT_API);
-      if (res.ok) {
-        const data = await res.json();
-        setReportContent(data.content ?? "");
-        setReportError(false);
-      } else {
-        setReportError(true);
-      }
-    } catch {
-      setReportError(true);
-    }
-  }, []);
-
-  // Auto-run analysis when page loads: 5s loader on image, then fetch report
+  // Try cached report (GET .txt) first; if 404, generate via POST and use response
   useEffect(() => {
-    if (!analysisOpen) return;
+    if (!analysisOpen || !category || !CATEGORIES[category]) return;
     setReportContent(null);
-    setReportError(false);
+    setReportError(null);
     setLoaderActive(true);
-    const t = setTimeout(() => {
-      setLoaderActive(false);
-      fetchReport();
-    }, LOADER_DURATION_MS);
-    return () => clearTimeout(t);
-  }, [analysisOpen, fetchReport]);
+    let cancelled = false;
+    const mealPeriod = CATEGORIES[category];
+    (async () => {
+      try {
+        const cachedRes = await fetch(reportCachedUrl(DEFAULT_STATION, mealPeriod));
+        if (cancelled) return;
+        if (cachedRes.ok) {
+          const data = await cachedRes.json();
+          const text = data.content ?? "";
+          if (text.trim()) {
+            setReportContent(text);
+            setReportError(null);
+            setLoaderActive(false);
+            return;
+          }
+        }
+        const res = await fetch(REPORT_API, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            station_name: DEFAULT_STATION,
+            meal_period: mealPeriod,
+          }),
+        });
+        if (cancelled) return;
+        if (res.ok) {
+          const data = await res.json();
+          setReportContent(data.content ?? "");
+          setReportError(null);
+        } else {
+          let message: string | null = null;
+          try {
+            const err = await res.json();
+            if (err?.detail) message = typeof err.detail === "string" ? err.detail : err.detail?.msg ?? null;
+          } catch {
+            message = res.status === 503 ? "Report could not be generated. Please try again." : null;
+          }
+          setReportError(message ?? (res.status === 503 ? "Report could not be generated. Please try again." : "Report not available."));
+        }
+      } catch {
+        if (!cancelled) setReportError("Report not available. Please try again.");
+      } finally {
+        if (!cancelled) setLoaderActive(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [analysisOpen, category]);
 
   // Auto-start analysis once when category is valid (no buttons)
   useEffect(() => {
@@ -212,82 +245,13 @@ export function CategoryAnalysisPage() {
                     </p>
                   </div>
                 ) : reportContent ? (
-                  <article className="animate-fade-in max-w-none text-gray-800 report-premium">
-                    <ReactMarkdown
-                      components={{
-                        h1: ({ children }) => (
-                          <h1 className="text-xl font-bold text-gray-900 mt-0 mb-4 pb-3 border-b-2 border-primary/30 tracking-tight">
-                            {children}
-                          </h1>
-                        ),
-                        h2: ({ children }) => (
-                          <h2 className="text-base font-bold text-gray-900 mt-6 mb-3 pb-2 border-b border-gray-200 flex items-center gap-2">
-                            <span className="w-1 h-5 rounded-full bg-primary shrink-0" />
-                            {children}
-                          </h2>
-                        ),
-                        h3: ({ children }) => (
-                          <h3 className="text-[0.9375rem] font-semibold text-gray-800 mt-4 mb-2">
-                            {children}
-                          </h3>
-                        ),
-                        p: ({ children }) => (
-                          <p className="m-0 mb-3 text-[0.9375rem] leading-[1.6] text-gray-700">
-                            {children}
-                          </p>
-                        ),
-                        blockquote: ({ children }) => {
-                          const flatten = (node: ReactNode): string =>
-                            typeof node === "string" ? node : Array.isArray(node) ? node.map(flatten).join(" ") : (node as ReactElement)?.props?.children ? flatten((node as ReactElement).props.children) : "";
-                          const text = flatten(children);
-                          const isPositive = /what'?s working|working well|compliant|meets/i.test(text);
-                          return (
-                            <blockquote
-                              className={
-                                isPositive
-                                  ? "my-4 pl-4 py-2.5 border-l-4 border-emerald-500/80 bg-emerald-50/60 rounded-r text-[0.9375rem] text-gray-800"
-                                  : "my-4 pl-4 py-2.5 border-l-4 border-amber-500/80 bg-amber-50/50 rounded-r text-[0.9375rem] text-gray-800"
-                              }
-                            >
-                              {children}
-                            </blockquote>
-                          );
-                        },
-                        ul: ({ children }) => (
-                          <ul className="list-none pl-0 my-3 space-y-2 text-[0.9375rem] text-gray-700">
-                            {children}
-                          </ul>
-                        ),
-                        li: ({ children }) => (
-                          <li className="flex items-start gap-2.5 leading-[1.55]">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                            {children}
-                          </li>
-                        ),
-                        strong: ({ children }) => (
-                          <strong className="font-semibold text-gray-900">
-                            {children}
-                          </strong>
-                        ),
-                      }}
-                    >
-                      {reportContent}
-                    </ReactMarkdown>
-                  </article>
+                  <ReportMarkdown content={reportContent} />
                 ) : reportError ? (
                   <div className="py-10 animate-fade-in">
                     <div className="rounded-xl bg-amber-50/90 border border-amber-200/80 px-5 py-4 text-sm text-amber-900 max-w-md">
                       <p className="m-0 font-medium">Report not available</p>
                       <p className="m-0 mt-1.5 text-amber-800/90 text-xs leading-relaxed">
-                        Ensure a report exists at{" "}
-                        <code className="bg-amber-100/80 px-1.5 py-0.5 rounded text-[0.8125rem]">
-                          backend/experiments/reports/menu_report_latest.md
-                        </code>{" "}
-                        or{" "}
-                        <code className="bg-amber-100/80 px-1.5 py-0.5 rounded text-[0.8125rem]">
-                          backend/menu_report.md
-                        </code>
-                        , or run the menu analyzer to generate one.
+                        {reportError}
                       </p>
                     </div>
                   </div>

@@ -5,6 +5,7 @@ import { AramarkRouteLoader } from '../components/AramarkRouteLoader';
 import { HomePage } from '../pages/HomePage';
 import { MenuAnalysisPage } from '../pages/MenuAnalysisPage';
 import { CategoryAnalysisPage } from '../pages/CategoryAnalysisPage';
+import { CombinedReportPage } from '../pages/CombinedReportPage';
 
 const ROUTE_LOADER_DURATION_MS = 2000;
 
@@ -25,14 +26,17 @@ export function AppRoutes() {
   return (
     <>
       <div className="min-h-screen flex flex-col">
+        <div className="flex-1 flex flex-col min-h-0">
         <Routes location={displayLocation}>
           <Route path="/" element={<HomePage />} />
           <Route path="/meal-period" element={<MenuAnalysisPage />} />
+          <Route path="/report" element={<CombinedReportPage />} />
           <Route path="/breakfast" element={<CategoryAnalysisPage />} />
           <Route path="/lunch" element={<CategoryAnalysisPage />} />
           <Route path="/dinner" element={<CategoryAnalysisPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </div>
         <Footer />
       </div>
       {showLoader && <AramarkRouteLoader />}
