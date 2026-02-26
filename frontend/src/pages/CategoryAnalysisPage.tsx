@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { DEFAULT_STATION, reportCachedUrl, REPORT_API_BASE } from "../api/reports";
 import { AramarkLogo } from "../components/AramarkLogo";
 import { ReportMarkdown } from "../components/ReportMarkdown";
 
@@ -9,7 +10,6 @@ const CATEGORIES: Record<string, string> = {
   dinner: "Dinner",
 };
 
-// Images in frontend/public/stations/grill/ – Vite serves at /stations/grill/
 const IMAGE_BY_CATEGORY: Record<string, string> = {
   breakfast: "Breakfast.png",
   lunch: "Lunch.png",
@@ -18,16 +18,6 @@ const IMAGE_BY_CATEGORY: Record<string, string> = {
 
 function getImagePath(fileName: string): string {
   return `/stations/grill/${encodeURIComponent(fileName)}`;
-}
-
-const REPORT_API = "/api/reports/report";
-const REPORT_CACHED_API = "/api/reports/report"; // GET /api/reports/report/{station}/{meal}
-const DEFAULT_STATION = "Grill";
-
-function reportCachedUrl(station: string, mealPeriod: string): string {
-  const s = station.toLowerCase().replace(/\s+/g, "_");
-  const m = mealPeriod.toLowerCase().replace(/\s+/g, "_");
-  return `${REPORT_CACHED_API}/${s}/${m}`;
 }
 
 // Same icons as Menu Analysis page cards (breakfast tray, lunch sun, dinner moon)
@@ -90,7 +80,7 @@ export function CategoryAnalysisPage() {
             return;
           }
         }
-        const res = await fetch(REPORT_API, {
+        const res = await fetch(REPORT_API_BASE, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -125,6 +115,33 @@ export function CategoryAnalysisPage() {
   // Auto-start analysis once when category is valid (no buttons)
   useEffect(() => {
     if (category && CATEGORIES[category]) setAnalysisOpen(true);
+  }, [category]);
+
+  const regenerateReport = useCallback(async () => {
+    if (!category || !CATEGORIES[category]) return;
+    const mealPeriod = CATEGORIES[category];
+    setLoaderActive(true);
+    setReportError(null);
+    try {
+      const res = await fetch(REPORT_API_BASE, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ station_name: DEFAULT_STATION, meal_period: mealPeriod }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setReportContent(data.content ?? "");
+        setReportError(null);
+      } else {
+        const err = await res.json().catch(() => ({}));
+        const msg = typeof err?.detail === "string" ? err.detail : "Report could not be generated. Please try again.";
+        setReportError(msg);
+      }
+    } catch {
+      setReportError("Report not available. Please try again.");
+    } finally {
+      setLoaderActive(false);
+    }
   }, [category]);
 
   // Close image dialog on Escape
@@ -226,13 +243,30 @@ export function CategoryAnalysisPage() {
 
           {/* Section 2: Analysis Report – professional document-style panel */}
           <section className="flex-1 min-h-0 min-w-0 opacity-0-init animate-slide-up delay-100 flex flex-col rounded-xl shadow-xl border border-gray-200/90 max-h-[65vh] lg:max-h-[72vh] overflow-hidden bg-white">
-            <div className="shrink-0 px-6 py-3.5 border-b border-gray-100 bg-white">
-              <h2 className="m-0 text-[0.9375rem] font-semibold tracking-tight text-gray-900">
-                Analysis Report
-              </h2>
-              <p className="m-0 mt-0.5 text-xs text-gray-500">
-                Menu intelligence
-              </p>
+            <div className="shrink-0 px-6 py-3.5 border-b border-gray-100 bg-white flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h2 className="m-0 text-[0.9375rem] font-semibold tracking-tight text-gray-900">
+                  Analysis Report
+                </h2>
+                <p className="m-0 mt-0.5 text-xs text-gray-500">
+                  Menu intelligence
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={regenerateReport}
+                disabled={loaderActive}
+                className="shrink-0 inline-flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
+              >
+                {loaderActive ? (
+                  <>
+                    <span className="h-3.5 w-3.5 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+                    Regenerating…
+                  </>
+                ) : (
+                  "Regenerate report"
+                )}
+              </button>
             </div>
             {/* Report body */}
             <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden border-l-4 border-l-primary/20 bg-[#fafbfc]">

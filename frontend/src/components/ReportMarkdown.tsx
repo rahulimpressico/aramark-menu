@@ -2,16 +2,31 @@ import type { ReactNode, ReactElement } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-/** Fix LLM markdown: table header and separator glued with "| |" -> newline so table parses */
+/** Fix LLM markdown: table header/separator glued with "| |" + alignment row (e.g. lunch.txt "| :-------- |") so table parses. */
 function normalizeMarkdownTables(md: string): string {
   if (!md?.trim()) return md;
   return md
+    .replace(/(\s*)\|\s*:([\s-]+)\s*\|/g, (_, lead, inner) => lead + "|:" + inner.replace(/\s/g, "") + "|")
     .replace(/\|\s*\|(\s*:[-|\s]+)/g, "|\n|$1")
-    .replace(/([^\n])\|\s*\|(\s*:)/g, "$1|\n|$2");
+    .replace(/([^\n])\|\s*\|(\s*:)/g, "$1|\n|$2")
+    .replace(/\|[ \t]+\|(?=\s*(?::|Monday|Tuesday|Wednesday|Thursday|Friday))/g, "|\n|")
+    .replace(/\|\|/g, "|\n|");
+}
+
+/** Fix bold: "**phrase: **" -> "**phrase:**" so GFM renders bold. */
+function normalizeBoldDelimiters(md: string): string {
+  if (!md?.trim()) return md;
+  return md
+    .replace(/: \*\*/g, ":**")
+    .replace(/\. \*\*/g, ".**")
+    .replace(/; \*\*/g, ";**")
+    .replace(/! \*\*/g, "!**")
+    .replace(/\? \*\*/g, "?**")
+    .replace(/, \*\*/g, ",**");
 }
 
 export function ReportMarkdown({ content }: { content: string }) {
-  const normalized = normalizeMarkdownTables(content ?? "");
+  const normalized = normalizeBoldDelimiters(normalizeMarkdownTables(content ?? ""));
   return (
     <article className="animate-fade-in max-w-none text-gray-800">
       <ReactMarkdown
