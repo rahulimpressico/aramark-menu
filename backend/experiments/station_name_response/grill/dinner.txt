@@ -1,33 +1,17 @@
-**Meal period: Dinner**
-
 ## Overall Station Structure
-The station structure emphasizes **Core Offerings** with flexible **Enhancements** to meet specific needs. Clear **Recommended Maximum Selections** are provided to ensure efficient execution and quality standards. The Fresh & Fast (Grill) station, for example, includes a static core with Made-To-Order (MTO) ingredients and a toppings bar, complemented by rotating daily features and vegan options.
+- The **Dinner** meal period at the Grill station offers a core menu of Made-To-Order (MTO) items including burgers, chicken sandwiches, hot dogs, and fries, complemented by an MTO Toppings Bar. Additional proteins are available based on demand.
+- Current weekly unique offerings include 15 **burgers**, 35 **daily features**, 20 **vegan options**, and 5 **fries**.
 
-## Playbook Alignment
-> **What's working:**
-> *   **Cage-free eggs**, **responsibly sourced seafood**, and **group-housed pork** demonstrate strong ethical sourcing.
-> *   Commitment to **plant-based meal options** supports diverse diets and sustainability goals.
-> *   Emphasis on **fresh, seasonal produce** and **regional/global menu diversity** enhances guest experience.
-> *   Integration of "Be Well. Do Well." highlights provides valuable health and sustainability tips.
-> *   Clear guidelines for **Core Offerings** and **Enhancements** provide a structured approach to menu building.
+## Playbook Alignment with **Where to improve:**
+> - **Burger**: Limit daily offerings to one distinct burger type to align with recommended maximum selections, addressing the current over-offering on multiple days.
+> - **Daily Feature**: Reduce the number of daily features offered to a maximum of two rotating options per day, as current offerings exceed this guideline.
+> - **Vegan Option**: Streamline daily vegan offerings to one distinct option to improve operational efficiency and align with playbook guidelines, given the high number of unique options currently offered.
 
-> **Where to improve:**
-> *   Ensure strict adherence to **Recommended Maximum Selections** to prevent operational inefficiencies and maintain quality.
-> *   Monitor compliance with **44% plant-based** menu goal, ensuring core menu templates reflect this target.
-> *   Reinforce proper protein **holding techniques** to avoid water/broth baths, as per Chef Tips.
-> *   Optimize MTO station execution for large accounts, potentially through simplified menus and robust condiment bars.
-> *   Regularly review menu offerings for consistency and adherence to playbook guidelines.
-
-## Rotation & Repetition Signals
-Effective menu rotation is crucial for guest satisfaction and operational efficiency.
-*   Implement the recommended **2 additional Daily Features (rotate)** at stations like Fresh & Fast.
-*   Actively **swap out at least one beef burger for a non-beef alternative each week** to diversify protein offerings and lower CPM.
-*   Incorporate creative MTO station take-overs, such as **Grilled Cheese**, to provide variety.
-*   Ensure consistent diversification of protein offerings, including turkey burgers, chicken, or fish sandwiches.
+## Rotation & Repetition
+- The menu demonstrates good variety with a diversity index of 1.0 and 15 unique entree counts, indicating a low risk of monotony for guests.
+- No high-repetition signals were identified, suggesting a well-rotated menu across the week.
 
 ## Recommended Adjustments
-To optimize menu structure and operational flow:
-*   Strictly enforce **Recommended Maximum Selections** across all stations.
-*   Prioritize **protein diversification and weekly rotation** to enhance guest experience and meet sustainability targets.
-*   Conduct regular audits to ensure compliance with **plant-based menu goals** and proper protein handling.
-*   Streamline MTO processes for high-volume periods to maintain speed of service and quality.
+- **Optimize Offerings**: Reduce the daily selection of **burgers**, **daily features**, and **vegan options** to meet the playbook's recommended maximums (1 burger, 2 daily features, 1 vegan option per day) to enhance execution efficiency and quality.
+- **Diversify Proteins**: Implement the chef tip to swap at least one **beef burger** for a non-beef alternative (e.g., turkey, chicken, or plant-based) each week to lower Cost Per Meal (CPM) and support sustainability goals.
+- **Menu Simplification**: For high-volume periods, plan a simplified menu with a robust condiment/toppings bar to maintain speed of service while adhering to offering limits.

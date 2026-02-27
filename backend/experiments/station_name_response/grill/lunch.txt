@@ -1,36 +1,17 @@
-### Grill Station Lunch Menu Analysis: Rotation and Recurrence Report (FY25-26 - cycle 2 - week 3)
+## Overall Station Structure
+- The **Lunch** period at the Grill station offers a Made-To-Ingredients core menu including burgers, chicken sandwiches, hot dogs, and fries, complemented by an MTO Toppings Bar.
+- Current weekly offerings include 20 **Burger** items, 20 **Daily Feature** items, 20 **Vegan Option** items, and 5 **French Fry** items.
 
-#### Grill Structural Diversity Index
+## Playbook Alignment with **Where to improve:**
+> - **Burger** — limit to 1 per day to align with recommended maximum selections.
+> - **Daily Feature** — limit to 2 per day to align with recommended maximum selections.
+> - **Vegan Option** — optimize to ensure one distinct option per day, rather than multiple, to align with recommended maximum selections.
 
-*   **Diversity Index:** 0.6
-*   **Unique Entrée Count:** 6
-*   **Repeated Static Item Count:** 10
+## Rotation & Repetition
+- The menu demonstrates good variety with a diversity index of 1.0 and 13 unique entrees, indicating a low risk of monotony.
+- No high-repetition signals were identified among the tracked recipes.
 
-**Assessment:** The Grill station exhibits moderate structural diversity, offering 6 unique entrées against 10 instances of repeated static items over the cycle. This indicates a reliance on a core set of items with some rotational variety.
-
-#### Recurrence Signals and Variety Assessment
-
-**Quantitative Item Frequencies:**
-
-*   **Hamburger (Recipe\_M8958):** Appears 4 times (Monday, Tuesday, Wednesday, Friday)
-*   **Crinkle French Fries (Recipe\_A5763):** Appears 5 times (Monday, Tuesday, Wednesday, Thursday, Friday)
-*   **Grilled Black Bean Burger (Recipe\_M8170):** Appears 1 time (Thursday)
-*   **Crispy Chicken Sandwich (Recipe\_M8095):** Appears 3 times (Monday, Wednesday, Friday)
-*   **Crunchy Corn Dogs (Recipe\_M4890):** Appears 3 times (Monday, Wednesday, Friday)
-*   **Crispy Chicken Pepper Jack Slider (Recipe\_M19661):** Appears 2 times (Tuesday, Thursday)
-*   **Grilled Herb Chicken Sandwich (Recipe\_M8295):** Appears 2 times (Tuesday, Thursday)
-
-**Qualitative Recurrence Signals:**
-
-1.  **High Repetition of Beef Burgers:** The "Hamburger" appears 4 out of 5 days, indicating high repetition for the primary burger offering. This may contribute to menu fatigue and limit customer choice for alternative main proteins.
-    *   **Recommendation:** Align with the "Menu Engineering" guideline to "Swap out at least one beef burger for a non-beef alternative each week" and "Diversify protein offerings with turkey burgers, chicken, or fish sandwiches."
-2.  **Insufficient Plant-Based Offerings:** The "Grilled Black Bean Burger" is the sole plant-based entree and appears only once during the week. This falls significantly short of the organization's "Plant-Forward Goal" to ensure 44% of residential dining menu offerings are plant-based by 2025.
-    *   **Recommendation:** Increase the frequency and variety of plant-based entrees at the Grill station to meet the plant-forward goal and offer more diverse options for guests.
-3.  **Frequent Chicken Offerings:** Chicken-based entrees ("Crispy Chicken Sandwich," "Crispy Chicken Pepper Jack Slider," "Grilled Herb Chicken Sandwich") collectively appear 7 times across the week. While offering variety within chicken options, the overall high frequency of chicken may lead to repetition for guests seeking different protein types.
-    *   **Recommendation:** Review the rotation of chicken items to ensure sufficient diversity and consider incorporating other protein sources as "Daily Features" as per the playbook.
-4.  **Consistent French Fry Availability:** "Crinkle French Fries" are offered daily, aligning with the playbook's "Core Offerings" for French Fries. This provides a consistent and expected staple for guests.
-5.  **Moderate Non-Beef Alternative:** "Crunchy Corn Dogs" appear 3 times, providing a non-beef alternative. However, further diversification of non-beef options could enhance variety.
-
-**Overall Variety Assessment:**
-
-The Grill station demonstrates moderate menu variety for lunch. While a range of items are offered, the high frequency of beef hamburgers and chicken options, coupled with the very limited plant-based entree, indicates opportunities to enhance menu diversity and reduce fatigue. Adhering more closely to the "Menu Engineering" and "Plant-Forward Goal" guidelines in the playbook will significantly improve variety, align with sustainability commitments, and potentially optimize food costs.
+## Recommended Adjustments
+- Reduce the number of **Burger** and **Daily Feature** offerings to align with the playbook's recommended maximum selections per day.
+- Optimize **Vegan Option** offerings to ensure one distinct option is available daily, rather than exceeding the recommended single slot.
+- Diversify protein offerings by swapping at least one **Hamburger** for a non-beef alternative (e.g., turkey, chicken, or plant-based option) weekly to manage CPM effectively.

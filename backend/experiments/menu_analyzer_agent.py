@@ -48,9 +48,7 @@ from experiments.tools.stubs import (
     formatting_executive_slide,
 )
 
-# Default path: Node Linked Data Model (knowledge graph)
 EXPERIMENTS_DIR = Path(__file__).parent
-DEFAULT_MENU_GRAPH_PATH = EXPERIMENTS_DIR / "reports" / "graphs" / "dinner_graph.json"
 FALLBACK_GRAPH_PATHS = [
     EXPERIMENTS_DIR / "menu_graph_v2_extracted.json",
     EXPERIMENTS_DIR / "menu_graph_v1.json",
@@ -65,14 +63,16 @@ _FILTERED_CACHE_MAX = 6  # keep last 6 (e.g. 3 meals × 2 stations)
 
 
 def get_default_menu_graph(graph_path: Path | None = None) -> MenuGraph:
-    """Load menu graph from given path, or default/fallback paths."""
-    path = graph_path or DEFAULT_MENU_GRAPH_PATH
-    if not path.is_file():
+    """Load menu graph from given path, or first existing path in FALLBACK_GRAPH_PATHS."""
+    path = graph_path
+    if not path or not path.is_file():
         for fallback in FALLBACK_GRAPH_PATHS:
             if fallback.is_file():
                 path = fallback
-                log.info("[AGENT] Graph path fallback: {} → {}", DEFAULT_MENU_GRAPH_PATH.name, path.name)
+                log.info("[AGENT] Using menu graph from fallback: {}", path.name)
                 break
+    if not path or not path.is_file():
+        raise FileNotFoundError("No menu graph file found. Place menu_graph_v1.json or menu_graph_v2_extracted.json in the experiments directory.")
     log.info("[AGENT] Loading menu graph from path={}", path)
     global _graph_cache
     if _graph_cache is not None and graph_path is None:
@@ -246,7 +246,7 @@ def main():
 
 
 def _content_to_str(content: str | list | None) -> str:
-    """Flatten any message content to a single string (str, list of blocks, etc.)."""
+    """Flatten any message content to a single string (str, list of blocks, Gemini/LangChain shapes)."""
     if content is None:
         return ""
     if isinstance(content, str):
@@ -256,10 +256,13 @@ def _content_to_str(content: str | list | None) -> str:
         for block in content:
             if isinstance(block, str):
                 parts.append(block)
-            elif isinstance(block, dict):
+                continue
+            # Dict block (e.g. {"type": "text", "text": "..."} or {"content": "..."})
+            if isinstance(block, dict):
                 for key in ("text", "content", "input"):
-                    if block.get(key) and isinstance(block[key], str):
-                        parts.append(block[key])
+                    val = block.get(key)
+                    if val is not None and isinstance(val, str):
+                        parts.append(val)
                         break
                 else:
                     if block.get("type") == "text" and block.get("text"):
@@ -270,12 +273,26 @@ def _content_to_str(content: str | list | None) -> str:
                                 parts.append(p)
                             elif isinstance(p, dict) and p.get("text"):
                                 parts.append(p["text"])
-            elif hasattr(block, "get"):
+                continue
+            # Object with .text or .content (LangChain content blocks)
+            if hasattr(block, "text"):
+                t = getattr(block, "text", None)
+                if isinstance(t, str) and t.strip():
+                    parts.append(t)
+                    continue
+            if hasattr(block, "content"):
+                c = getattr(block, "content", None)
+                if isinstance(c, str) and c.strip():
+                    parts.append(c)
+                    continue
+            if hasattr(block, "get"):
                 t = block.get("text") or block.get("content")
                 if t and isinstance(t, str):
                     parts.append(t)
         return "\n\n".join(parts) if parts else ""
-    return str(content)
+    # Fallback: stringify (e.g. for unexpected types)
+    s = str(content)
+    return s if s.strip() else ""
 
 
 def _extract_markdown_from_content(content: str | list | None) -> str:
@@ -309,12 +326,66 @@ def _save_report_to_filesystem(markdown_text: str) -> None:
         log.info("Report saved to {}", path)
 
 
-def run_analysis(station_name: str, meal_period: str, model: str = "google_genai:gemini-2.5-flash") -> str:
+def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     """
-    Run the menu analyzer for the given station_name and meal_period; return the report markdown.
-    Uses cached graph and filtered payload when possible; reuses cached agent to reduce latency.
+    Fast path: run all analysis with deterministic tools (no orchestrator), then one LLM call for the report.
+    Returns dict with "content" (report markdown) and "usage". Typically completes in 1–2 minutes.
+    """
+    log.info("[AGENT] run_analysis_fast START station_name={} meal_period={}", station_name, meal_period)
+    try:
+        from experiments.tools.llm_runner import clear_usage, get_usage_summary
+        clear_usage()
+    except Exception:
+        pass
+    graph = get_default_menu_graph()
+    filtered = graph.filter_by_meal_period(meal_period)
+    log.info("[AGENT] run_analysis_fast filtered graph nodes={} edges={}", len(filtered.nodes), len(filtered.edges))
+
+    menu_structure = checking_playbook_bounds(filtered, meal_period, "all")
+    data_integrity = detecting_period_overlap(filtered)
+    diversity = calculating_diversity_index(filtered)
+    frequency = tracking_item_frequency(filtered)
+    sustainability = evaluating_sustainability_mix(filtered)
+    cpm = calculating_cpm_risk_swaps(filtered)
+
+    aggregated_state = {
+        "menu_structure": menu_structure.model_dump() if hasattr(menu_structure, "model_dump") else menu_structure,
+        "data_integrity": data_integrity.model_dump() if hasattr(data_integrity, "model_dump") else data_integrity,
+        "rotation_recurrence": {
+            "diversity": diversity.model_dump() if hasattr(diversity, "model_dump") else diversity,
+            "frequency": frequency.model_dump() if hasattr(frequency, "model_dump") else frequency,
+        },
+        "nutrition_cost": {
+            "sustainability": sustainability.model_dump() if hasattr(sustainability, "model_dump") else sustainability,
+            "cpm": cpm.model_dump() if hasattr(cpm, "model_dump") else cpm,
+        },
+        "scope": {"station_name": station_name, "meal_period": meal_period},
+    }
+    report_md = formatting_executive_slide(aggregated_state)
+    try:
+        usage = get_usage_summary()
+    except Exception as e:
+        log.warning("[AGENT] get_usage_summary failed: {}", e)
+        usage = {"total_input_tokens": 0, "total_output_tokens": 0, "cost_usd": 0.0, "call_count": 0}
+    log.info("[AGENT] run_analysis_fast END report_len={} usage={}", len(report_md or ""), usage)
+    return {"content": report_md or "", "usage": usage}
+
+
+def run_analysis(
+    station_name: str,
+    meal_period: str,
+    model: str = "google_genai:gemini-2.5-flash",
+) -> dict:
+    """
+    Run the menu analyzer for the given station_name and meal_period.
+    Returns dict with "content" (report markdown) and "usage" (total_input_tokens, total_output_tokens, cost_usd).
     """
     log.info("[AGENT] run_analysis START station_name={} meal_period={} model={}", station_name, meal_period, model)
+    try:
+        from experiments.tools.llm_runner import clear_usage
+        clear_usage()
+    except Exception:
+        pass
     global _filtered_payload_cache
     cache_key = (station_name.strip().lower(), meal_period.strip().lower())
     if cache_key in _filtered_payload_cache:
@@ -329,17 +400,20 @@ def run_analysis(station_name: str, meal_period: str, model: str = "google_genai
             _filtered_payload_cache.pop(next(iter(_filtered_payload_cache)))
         _filtered_payload_cache[cache_key] = graph_payload
         log.info("[AGENT] Serialized graph as JSON len={}", len(graph_payload))
+    # Cap payload size to reduce latency (orchestrator + subagents parse this)
+    _max_payload_chars = 28_000
+    if len(graph_payload) > _max_payload_chars:
+        graph_payload = graph_payload[:_max_payload_chars] + "\n...(truncated)"
+        log.info("[AGENT] Truncated graph payload to {} chars", _max_payload_chars)
     agent = _get_or_create_agent(model)
     user_content = (
         f'Analyze only station "{station_name}" and meal period "{meal_period}". '
         "Do not analyze any other station or meal period. "
-        "Use your task tool to delegate in order: "
-        "menu-structure-agent, then data-integrity-agent, rotation-recurrence-agent, nutrition-cost-agent, "
-        "then synthesizer-agent. "
+        "Delegate: menu-structure-agent first; then data-integrity-agent, rotation-recurrence-agent, nutrition-cost-agent (you may call these three in parallel in one round); then synthesizer-agent with aggregated results. "
         "Return exactly one executive summary markdown report for this scope only. "
         "The report must clearly state the meal period and, for any finding or issue, which day (e.g. Monday, Tuesday) or week it refers to.\n\n"
         f"Scope:\n- station_name: {station_name}\n- meal_period: {meal_period}\n\n"
-        "Menu graph (JSON) for this meal period — full week schedule; pass this entire block to tools that need menu data:\n"
+        "Menu graph (JSON) for this meal period — full week schedule; pass this block to tools that need menu data:\n"
         + graph_payload
     )
     log.info("[AGENT] Invoking orchestrator (user_message_len={})", len(user_content))
@@ -364,6 +438,15 @@ def run_analysis(station_name: str, meal_period: str, model: str = "google_genai
                 if raw is None and hasattr(msg, "response_metadata"):
                     meta = getattr(msg, "response_metadata", {}) or {}
                     raw = meta.get("content") if isinstance(meta, dict) else None
+            # ToolMessage sometimes has content as list with one string (tool result)
+            if (raw is None or (isinstance(raw, list) and len(raw) == 1)) and kind == "ToolMessage":
+                c = getattr(msg, "content", None)
+                if isinstance(c, list) and len(c) == 1:
+                    first = c[0]
+                    if isinstance(first, str):
+                        raw = first
+                    elif isinstance(first, dict) and (first.get("content") or first.get("text")):
+                        raw = first.get("content") or first.get("text")
             if raw is None:
                 has_tool_calls = getattr(msg, "tool_calls", None) or []
                 log.info("[AGENT] message[{}] {} no content tool_calls={}", i, kind, len(has_tool_calls) if has_tool_calls else 0)
@@ -382,14 +465,33 @@ def run_analysis(station_name: str, meal_period: str, model: str = "google_genai
             candidate_strs.sort(key=lambda x: (x[0], x[1]), reverse=True)
             final_content = candidate_strs[0][2]
             log.info("[AGENT] Picked message report_like={} content_len={}", candidate_strs[0][0], candidate_strs[0][1])
+        else:
+            # Fallback: use longest non-user content (report often in last ToolMessage)
+            for i in range(len(messages) - 1, -1, -1):
+                msg = messages[i]
+                if type(msg).__name__ == "HumanMessage":
+                    continue
+                raw = getattr(msg, "content", None)
+                text = _content_to_str(raw) if raw else ""
+                if text.strip() and len(text.strip()) > 100:
+                    final_content = text
+                    log.info("[AGENT] Fallback: using message[{}] content_len={}", i, len(text))
+                    break
         report = _extract_markdown_from_content(final_content)
         log.info("[AGENT] run_analysis attempt={} report_len={}", attempt + 1, len(report or ""))
         if report and len(report.strip()) > 0:
             break
         if attempt == 0 and len(messages) <= 2:
             log.warning("[AGENT] Partial run (messages_count={}); will retry once", len(messages))
-    log.info("[AGENT] run_analysis END report_len={}", len(report or ""))
-    return report
+    try:
+        from experiments.tools.llm_runner import get_usage_summary
+        usage = get_usage_summary()
+    except Exception as e:
+        log.warning("[AGENT] get_usage_summary failed: {}", e)
+        usage = {"total_input_tokens": 0, "total_output_tokens": 0, "cost_usd": 0.0, "call_count": 0}
+    report = (report or "").strip()
+    log.info("[AGENT] run_analysis END report_len={} usage={}", len(report or ""), usage)
+    return {"content": report or "", "usage": usage}
 
 
 if __name__ == "__main__":

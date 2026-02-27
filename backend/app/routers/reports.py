@@ -16,6 +16,7 @@ class ReportRequest(BaseModel):
     """Payload for report-by-station-and-period API."""
     station_name: str = Field(..., description="Station name (e.g. Grill)")
     meal_period: str = Field(..., description="Meal period (e.g. Breakfast, Lunch, Dinner)")
+    use_fast: bool = Field(default=True, description="Use fast path (1 LLM call). Set false for full agent pipeline.")
 
 
 class OverallReportRequest(BaseModel):
@@ -83,6 +84,7 @@ def _save_station_period_response(station_name: str, meal_period: str, response:
 def get_cached_report(station_slug: str, meal_slug: str):
     """
     Return cached report from saved .txt or .json. 404 if neither exists or content empty.
+    Includes token/cost from saved JSON when available so the UI can show them.
     FE can fall back to POST /report to generate.
     """
     log.info("[REPORTS] GET cached report station_slug={} meal_slug={}", station_slug, meal_slug)
@@ -91,6 +93,7 @@ def get_cached_report(station_slug: str, meal_slug: str):
     json_path = station_dir / f"{meal_slug}.json"
     content = None
     generated_at = None
+    usage = {}
     if txt_path.is_file():
         content = txt_path.read_text(encoding="utf-8").strip()
         log.debug("[REPORTS] Read from .txt path={} len={}", txt_path, len(content))
@@ -98,12 +101,28 @@ def get_cached_report(station_slug: str, meal_slug: str):
         data = json.loads(json_path.read_text(encoding="utf-8"))
         content = (data.get("content") or "").strip()
         generated_at = data.get("generated_at")
+        usage = {
+            "total_input_tokens": data.get("total_input_tokens", 0),
+            "total_output_tokens": data.get("total_output_tokens", 0),
+            "cost_usd": data.get("cost_usd"),
+        }
         log.debug("[REPORTS] Read from .json path={} content_len={}", json_path, len(content))
+    if content and json_path.is_file() and not usage:
+        data = json.loads(json_path.read_text(encoding="utf-8"))
+        usage = {
+            "total_input_tokens": data.get("total_input_tokens", 0),
+            "total_output_tokens": data.get("total_output_tokens", 0),
+            "cost_usd": data.get("cost_usd"),
+        }
     if not content:
         log.info("[REPORTS] No cached report found → 404")
         return Response(status_code=404)
     log.info("[REPORTS] Returning cached report content_len={}", len(content))
-    return {"content": content, "station_name": station_slug, "meal_period": meal_slug, "generated_at": generated_at}
+    out = {"content": content, "station_name": station_slug, "meal_period": meal_slug, "generated_at": generated_at}
+    out["total_input_tokens"] = usage.get("total_input_tokens", 0)
+    out["total_output_tokens"] = usage.get("total_output_tokens", 0)
+    out["cost_usd"] = usage.get("cost_usd")
+    return out
 
 
 @router.get("/menu-report")
@@ -120,7 +139,9 @@ def get_report_by_station_and_period(payload: ReportRequest):
     """
     log.info("[REPORTS] POST /report station_name={} meal_period={} → starting run_analysis", payload.station_name, payload.meal_period)
     try:
-        from experiments.menu_analyzer_agent import run_analysis
+        from experiments.menu_analyzer_agent import run_analysis_fast
+        # Old slow path (orchestrator + 10+ LLM calls) commented out; only fast path used now.
+        # from experiments.menu_analyzer_agent import run_analysis
     except ImportError as e:
         log.warning("[REPORTS] Menu analyzer not available (experiments): {}", e)
         raise HTTPException(
@@ -128,9 +149,13 @@ def get_report_by_station_and_period(payload: ReportRequest):
             detail="Menu analyzer not available. Install with: uv sync --extra experiments",
         ) from e
 
-    content = run_analysis(payload.station_name, payload.meal_period)
-    log.info("[REPORTS] run_analysis completed content_len={}", len(content or ""))
-    if not (content and content.strip()):
+    # Fast path only: deterministic analysis + 1 LLM call (~1–2 min). Old orchestrator path commented out.
+    log.info("[REPORTS] Using fast path (1 LLM call)")
+    result = run_analysis_fast(payload.station_name, payload.meal_period)
+    content = result.get("content") or ""
+    usage = result.get("usage") or {}
+    log.info("[REPORTS] run_analysis completed content_len={} usage={}", len(content), usage)
+    if not content.strip():
         log.warning("[REPORTS] Report empty for station={} meal={}; returning 503", payload.station_name, payload.meal_period)
         raise HTTPException(
             status_code=503,
@@ -141,6 +166,9 @@ def get_report_by_station_and_period(payload: ReportRequest):
         "meal_period": payload.meal_period,
         "content": content,
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total_input_tokens": usage.get("total_input_tokens", 0),
+        "total_output_tokens": usage.get("total_output_tokens", 0),
+        "cost_usd": usage.get("cost_usd"),
     }
     saved_path = _save_station_period_response(
         payload.station_name, payload.meal_period, response

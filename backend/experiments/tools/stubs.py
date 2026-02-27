@@ -13,6 +13,7 @@ from experiments.log_config import log
 from experiments.models.menu_graph import MenuGraph
 from experiments.prompts import get_playbook_content
 from experiments.tools.llm_runner import run_structured
+from experiments.models.menu_graph import recipe_id_from_node_id
 from experiments.tools.schemas import (
     AggregatingGlobalStateInput,
     AggregatingGlobalStateOutput,
@@ -24,6 +25,8 @@ from experiments.tools.schemas import (
     DetectingPeriodOverlapOutput,
     EvaluatingSustainabilityMixOutput,
     FormattingExecutiveSlideOutput,
+    ItemFrequency,
+    OverlapFinding,
     RoutingTasksInput,
     RoutingTasksOutput,
     TrackingItemFrequencyInput,
@@ -96,6 +99,203 @@ def _context_with_playbook(context: str, max_playbook_chars: int = 5000) -> str:
     return f"## Organization Playbook (compliance reference)\n{playbook}\n\n---\n\n## Input / Menu data\n{context}"
 
 
+# --- Deterministic helpers (no LLM) for speed ---
+
+def _detect_period_overlap_deterministic(graph: MenuGraph) -> DetectingPeriodOverlapOutput:
+    """Find recipe IDs that appear in more than one meal period on the same day (graph traversal only)."""
+    overlaps: list[OverlapFinding] = []
+    for day in graph.get_days_for_station():
+        period_nodes = graph.get_periods_for_day(day.id)
+        recipe_to_periods: dict[str, list[str]] = {}
+        for p in period_nodes:
+            for r in graph.get_recipes_for_period(p.id):
+                rid = r.id
+                recipe_to_periods.setdefault(rid, []).append(p.name)
+        for rid, periods in recipe_to_periods.items():
+            if len(periods) < 2:
+                continue
+            recipe_node = graph.get_recipe(rid)
+            name = recipe_node.name if recipe_node else rid
+            overlaps.append(OverlapFinding(
+                recipe_id=recipe_id_from_node_id(rid),
+                recipe_name=name,
+                periods=periods,
+                day=day.name,
+                severity="high",
+            ))
+    message = f"Found {len(overlaps)} recipe(s) scheduled in multiple periods on the same day." if overlaps else "No overlapping period duplicates found."
+    return DetectingPeriodOverlapOutput(overlaps=overlaps, total_count=len(overlaps), message=message)
+
+
+def _calculate_diversity_index_deterministic(graph: MenuGraph) -> CalculatingDiversityIndexOutput:
+    """Compute unique vs repeated recipe counts from graph (no LLM)."""
+    recipes = graph.get_recipes()
+    if not recipes:
+        return CalculatingDiversityIndexOutput(
+            diversity_index=0.0, unique_entree_count=0, repeated_static_count=0,
+            message="No recipes in graph.",
+        )
+    total_slots = sum(graph.recipe_serve_count(r.id) for r in recipes)
+    unique = len(recipes)
+    repeated_static = max(0, total_slots - unique)
+    diversity_index = unique / total_slots if total_slots else 0.0
+    if diversity_index >= 0.6:
+        msg = "Good variety; low monotony risk."
+    elif diversity_index >= 0.3:
+        msg = "Moderate variety; consider rotating daily features."
+    else:
+        msg = "Low diversity; high repetition—rotate offerings per playbook."
+    return CalculatingDiversityIndexOutput(
+        diversity_index=round(diversity_index, 2),
+        unique_entree_count=unique,
+        repeated_static_count=repeated_static,
+        message=msg,
+    )
+
+
+def _recipe_text(r: Any) -> str:
+    """Combined text for keyword classification (name + ingredients)."""
+    parts = [getattr(r, "name", "") or ""]
+    if hasattr(r, "ingredient_description") and r.ingredient_description:
+        parts.extend(r.ingredient_description if isinstance(r.ingredient_description, list) else [])
+    return " ".join(parts).lower()
+
+
+def _check_playbook_bounds_deterministic(graph: MenuGraph) -> CheckingPlaybookBoundsOutput:
+    """Classify recipes by name/ingredient keywords and check 1 burger, 2 daily features, 1 vegan, fries."""
+    under_offered: list[str] = []
+    over_offered: list[str] = []
+    counts = {"burger": 0, "daily_feature": 0, "vegan": 0, "fries": 0}
+    for day in graph.get_days_for_station():
+        period_nodes = graph.get_periods_for_day(day.id)
+        day_burger = day_feature = day_vegan = day_fries = 0
+        for p in period_nodes:
+            for r in graph.get_recipes_for_period(p.id):
+                t = _recipe_text(r)
+                if "burger" in t and "vegan" not in t and "bean" not in t:
+                    day_burger += 1
+                elif "fries" in t or "french fry" in t or (t.startswith("fry") and "fry" in t):
+                    day_fries += 1
+                elif any(x in t for x in ("vegan", "plant-based", "plant based", "tofu", "black bean", "veggie")):
+                    day_vegan += 1
+                else:
+                    day_feature += 1
+        counts["burger"] += day_burger
+        counts["daily_feature"] += day_feature
+        counts["vegan"] += day_vegan
+        counts["fries"] += day_fries
+        if day_vegan < 1:
+            under_offered.append(f"Missing vegan option ({day.name})")
+        if day_burger > 1:
+            over_offered.append(f"Too many burgers ({day.name})")
+        if day_feature > 2:
+            over_offered.append(f"Too many daily features ({day.name})")
+    compliant = len(under_offered) == 0 and len(over_offered) == 0
+    message = "Within playbook bounds." if compliant else "Check under_offered and over_offered."
+    return CheckingPlaybookBoundsOutput(
+        compliant=compliant,
+        under_offered=under_offered,
+        over_offered=over_offered,
+        counts=counts,
+        message=message,
+    )
+
+
+def _evaluate_sustainability_mix_deterministic(graph: MenuGraph) -> EvaluatingSustainabilityMixOutput:
+    """Plant-based % from recipe name/ingredient keywords (no LLM)."""
+    recipes = graph.get_recipes()
+    if not recipes:
+        return EvaluatingSustainabilityMixOutput(
+            plant_based_percent=0.0, vegan_percent=0.0, compliant_44=False,
+            total_offerings=0, plant_based_count=0, message="No recipes.",
+        )
+    total_slots = sum(graph.recipe_serve_count(r.id) for r in recipes)
+    plant_keywords = ("vegan", "plant-based", "plant based", "tofu", "black bean", "veggie", "vegetable", "bean", "lentil")
+    plant_count = 0
+    for r in recipes:
+        t = _recipe_text(r)
+        if any(k in t for k in plant_keywords):
+            plant_count += graph.recipe_serve_count(r.id)
+    plant_based_percent = (100.0 * plant_count / total_slots) if total_slots else 0.0
+    compliant_44 = plant_based_percent >= 44.0
+    message = f"{plant_based_percent:.0f}% plant-based; {'compliant' if compliant_44 else 'below 44% target'}."
+    return EvaluatingSustainabilityMixOutput(
+        plant_based_percent=round(plant_based_percent, 1),
+        vegan_percent=round(plant_based_percent, 1),
+        compliant_44=compliant_44,
+        total_offerings=total_slots,
+        plant_based_count=plant_count,
+        message=message,
+    )
+
+
+def _calculate_cpm_risk_swaps_deterministic(
+    graph: MenuGraph,
+    recurrence_signals: dict[str, Any] | None = None,
+) -> CalculatingCpmRiskSwapsOutput:
+    """Beef vs non-beef from recipe name keywords (no LLM)."""
+    recipes = graph.get_recipes()
+    beef_count = 0
+    non_beef_count = 0
+    for r in recipes:
+        t = _recipe_text(r)
+        n = graph.recipe_serve_count(r.id)
+        if "beef" in t or "hamburger" in t or ("burger" in t and "turkey" not in t and "chicken" not in t and "bean" not in t):
+            beef_count += n
+        elif any(x in t for x in ("turkey", "chicken", "fish", "plant", "vegan", "tofu", "bean")):
+            non_beef_count += n
+    beef_recurrence_high = beef_count >= 3
+    non_beef_alternatives_diversified = non_beef_count >= 2
+    cpm_risk_level = "high" if beef_recurrence_high and not non_beef_alternatives_diversified else ("low" if non_beef_alternatives_diversified else "medium")
+    recommendations = []
+    if beef_recurrence_high:
+        recommendations.append("Swap at least one beef burger for turkey, chicken, or plant-based option per week.")
+    if not non_beef_alternatives_diversified:
+        recommendations.append("Diversify with turkey, chicken, or fish options.")
+    message = f"Beef slots={beef_count}, non-beef={non_beef_count}; CPM risk {cpm_risk_level}."
+    return CalculatingCpmRiskSwapsOutput(
+        beef_recurrence_high=beef_recurrence_high,
+        non_beef_alternatives_diversified=non_beef_alternatives_diversified,
+        cpm_risk_level=cpm_risk_level,
+        recommendations=recommendations,
+        message=message,
+    )
+
+
+def _track_item_frequency_deterministic(
+    graph: MenuGraph,
+    recipe_ids: list[str] | None = None,
+) -> TrackingItemFrequencyOutput:
+    """Count how often each recipe appears across the cycle (graph traversal only)."""
+    recipes = graph.get_recipes()
+    if recipe_ids:
+        recipe_ids_set = {r if r.startswith("Recipe_") else f"Recipe_{r}" for r in recipe_ids}
+        recipes = [r for r in recipes if r.id in recipe_ids_set or recipe_id_from_node_id(r.id) in recipe_ids]
+    frequencies: list[ItemFrequency] = []
+    recurrence_signals: list[str] = []
+    for r in recipes:
+        count = graph.recipe_serve_count(r.id)
+        period_sources = graph.get_sources(r.id, "SERVES_RECIPE")
+        day_names: list[str] = []
+        for pid in period_sources:
+            for did in graph.get_sources(pid, "HAS_PERIOD"):
+                node = graph.get_node(did)
+                if node and getattr(node, "name", None):
+                    day_names.append(node.name)
+        day_names = sorted(set(day_names))
+        frequencies.append(ItemFrequency(
+            recipe_id=recipe_id_from_node_id(r.id),
+            recipe_name=r.name,
+            appearance_count=count,
+            days=day_names,
+        ))
+        if count >= 4:
+            recurrence_signals.append(f"High repetition of {r.name} ({count} times across cycle).")
+    frequencies.sort(key=lambda x: (-x.appearance_count, x.recipe_id))
+    message = f"Tracked {len(frequencies)} recipe(s). " + ("; ".join(recurrence_signals[:3]) if recurrence_signals else "No high-repetition signals.")
+    return TrackingItemFrequencyOutput(frequencies=frequencies, recurrence_signals=recurrence_signals, message=message)
+
+
 # --- Orchestrator ---
 
 def routing_tasks(
@@ -150,16 +350,10 @@ def checking_playbook_bounds(
     meal_period: str,
     day_key: str,
 ) -> CheckingPlaybookBoundsOutput:
-    """Compares a specific meal period against playbook maximum selections to identify under-offering or over-offering. Use when validating if a station meets core structural requirements."""
+    """Compares meal period against playbook bounds (deterministic, keyword-based)."""
     log.info("[AGENT-TOOL] menu-structure: checking_playbook_bounds START meal_period={} day_key={}", meal_period, day_key)
     graph = _ensure_menu_graph(menu_graph)
-    inp = CheckingPlaybookBoundsInput(meal_period=meal_period, day_key=day_key)
-    context = _context_with_playbook(f"meal_period={meal_period}, day_key={day_key}\n\nMenu graph (excerpt):\n{_graph_context(graph)}")
-    out = run_structured(
-        task_description="Using the Organization Playbook (Station Guide: Fresh & Fast Grill), evaluate the menu against Recommended Maximum Selections: 1 Burger, 2 Daily Features, 1 Vegan Option, French Fry. Compare the given meal period to these bounds. Flag under_offered (e.g. missing vegan option) and over_offered (exceeding playbook maximum). Set compliant True only when within bounds. Report actual counts inferred from the menu data for use in the formal report.",
-        context=context,
-        output_model=CheckingPlaybookBoundsOutput,
-    )
+    out = _check_playbook_bounds_deterministic(graph)
     log.info("[AGENT-TOOL] menu-structure: checking_playbook_bounds DONE compliant={}", out.compliant)
     return out
 
@@ -167,15 +361,10 @@ def checking_playbook_bounds(
 # --- Data Integrity ---
 
 def detecting_period_overlap(menu_graph: MenuGraph | dict[str, Any] | str) -> DetectingPeriodOverlapOutput:
-    """Scans the menu graph for identical recipe IDs scheduled in overlapping meal periods on the same day. Use when checking for forecasting and Pre-costing risks."""
+    """Scans the menu graph for identical recipe IDs scheduled in overlapping meal periods on the same day (deterministic, no LLM)."""
     log.info("[AGENT-TOOL] data-integrity: detecting_period_overlap START")
     graph = _ensure_menu_graph(menu_graph)
-    context = _context_with_playbook(_graph_context(graph))
-    out = run_structured(
-        task_description="Scan the menu graph for data integrity: for each day, identify recipe_id(s) that appear in more than one overlapping meal period (e.g. same recipe in Lunch and Dinner, or All-Day and Lunch). For each finding document recipe_id, recipe_name, affected periods, day, and severity (use high for duplicates that affect forecasting). Return an overlaps list and total_count suitable for inclusion in a compliance report.",
-        context=context,
-        output_model=DetectingPeriodOverlapOutput,
-    )
+    out = _detect_period_overlap_deterministic(graph)
     log.info("[AGENT-TOOL] data-integrity: detecting_period_overlap DONE total_count={}", out.total_count)
     return out
 
@@ -183,15 +372,10 @@ def detecting_period_overlap(menu_graph: MenuGraph | dict[str, Any] | str) -> De
 # --- Rotation & Recurrence ---
 
 def calculating_diversity_index(menu_graph: MenuGraph | dict[str, Any] | str) -> CalculatingDiversityIndexOutput:
-    """Computes a score based on the volume of unique feature items versus static daily items across a cycle. Use when evaluating a station for monotony or menu fatigue."""
+    """Computes diversity index from unique vs repeated recipe counts (deterministic, no LLM)."""
     log.info("[AGENT-TOOL] rotation-recurrence: calculating_diversity_index START")
     graph = _ensure_menu_graph(menu_graph)
-    context = _context_with_playbook(_graph_context(graph))
-    out = run_structured(
-        task_description="Using the playbook Core Offerings and Enhancements (e.g. Daily Feature rotation), compute the Grill Structural Diversity Index: the ratio of unique entrées to repeated static items. Output diversity_index (0-1), unique_entree_count, repeated_static_count, and a concise message suitable for the rotation and variety section of the final report.",
-        context=context,
-        output_model=CalculatingDiversityIndexOutput,
-    )
+    out = _calculate_diversity_index_deterministic(graph)
     log.info("[AGENT-TOOL] rotation-recurrence: calculating_diversity_index DONE diversity_index={}", out.diversity_index)
     return out
 
@@ -200,16 +384,10 @@ def tracking_item_frequency(
     menu_graph: MenuGraph | dict[str, Any] | str,
     recipe_ids: list[str] | None = None,
 ) -> TrackingItemFrequencyOutput:
-    """Analyzes the exact appearance count of specific recipe IDs across the week. Use when extracting recurrence patterns for key proteins."""
+    """Counts recipe appearance across the cycle (deterministic, no LLM)."""
     log.info("[AGENT-TOOL] rotation-recurrence: tracking_item_frequency START recipe_ids={}", recipe_ids)
     graph = _ensure_menu_graph(menu_graph)
-    inp = TrackingItemFrequencyInput(recipe_ids=recipe_ids)
-    context = _context_with_playbook(f"recipe_ids filter: {inp.recipe_ids}\n\nMenu graph:\n{_graph_context(graph)}")
-    out = run_structured(
-        task_description="Using the playbook rotation and enhancements guidance, count how many times each recipe (or key protein/entrée if recipe_ids not specified) appears across the cycle. Fill frequencies with recipe_id, recipe_name, appearance_count, and days. Add recurrence_signals with evidence-based wording (e.g. High repetition of hamburger across lunch periods) for use in the nutrition-cost analysis and final report.",
-        context=context,
-        output_model=TrackingItemFrequencyOutput,
-    )
+    out = _track_item_frequency_deterministic(graph, recipe_ids)
     log.info("[AGENT-TOOL] rotation-recurrence: tracking_item_frequency DONE frequencies_count={}", len(out.frequencies))
     return out
 
@@ -217,15 +395,10 @@ def tracking_item_frequency(
 # --- Nutrition & Cost ---
 
 def evaluating_sustainability_mix(menu_graph: MenuGraph | dict[str, Any] | str) -> EvaluatingSustainabilityMixOutput:
-    """Calculates the percentage of plant-based and vegan recipes programmed into the core menu template. Use when checking compliance with the 44 percent plant-based mandate."""
+    """Plant-based % from recipe keywords (deterministic, no LLM)."""
     log.info("[AGENT-TOOL] nutrition-cost: evaluating_sustainability_mix START")
     graph = _ensure_menu_graph(menu_graph)
-    context = _context_with_playbook(_graph_context(graph))
-    out = run_structured(
-        task_description="Using the playbook Plant-Forward Goal (by 2025, 44% of core menu template offerings must be plant-based), compute plant_based_percent and vegan_percent for the menu. Set compliant_44=(plant_based_percent>=44), report total_offerings and plant_based_count, and provide a short message suitable for the sustainability section of the formal report.",
-        context=context,
-        output_model=EvaluatingSustainabilityMixOutput,
-    )
+    out = _evaluate_sustainability_mix_deterministic(graph)
     log.info("[AGENT-TOOL] nutrition-cost: evaluating_sustainability_mix DONE plant_based_percent={} compliant_44={}", out.plant_based_percent, out.compliant_44)
     return out
 
@@ -234,31 +407,64 @@ def calculating_cpm_risk_swaps(
     menu_graph: MenuGraph | dict[str, Any] | str,
     recurrence_signals: dict[str, Any] | None = None,
 ) -> CalculatingCpmRiskSwapsOutput:
-    """Identifies high-cost beef recurrence and checks if poultry or plant-based alternatives have been diversified. Use when evaluating cost-saving protein strategies."""
+    """Beef vs non-beef from recipe keywords (deterministic, no LLM)."""
     log.info("[AGENT-TOOL] nutrition-cost: calculating_cpm_risk_swaps START")
     graph = _ensure_menu_graph(menu_graph)
-    inp = CalculatingCpmRiskSwapsInput(recurrence_signals=recurrence_signals)
-    context = _context_with_playbook(f"recurrence_signals: {json.dumps(inp.recurrence_signals or {})}\n\nMenu graph:\n{_graph_context(graph)}")
-    out = run_structured(
-        task_description="Using the playbook Chef Tips (Menu Engineering): swap at least one beef burger for a non-beef alternative each week to lower CPM by 18%; diversify with turkey, chicken, fish, MTO take-overs. Evaluate and report: beef_recurrence_high, non_beef_alternatives_diversified, cpm_risk_level (low/medium/high), a list of actionable recommendations, and a short message suitable for the cost section of the formal report.",
-        context=context,
-        output_model=CalculatingCpmRiskSwapsOutput,
-    )
+    out = _calculate_cpm_risk_swaps_deterministic(graph, recurrence_signals)
     log.info("[AGENT-TOOL] nutrition-cost: calculating_cpm_risk_swaps DONE cpm_risk_level={}", out.cpm_risk_level)
     return out
 
 
 # --- Synthesizer ---
 
+
+def _fallback_report_from_aggregated(aggregated_state: dict[str, Any]) -> str:
+    """Build a minimal report when the LLM returns empty, so the API never returns blank content."""
+    scope = aggregated_state.get("scope") or {}
+    meal = (scope.get("meal_period") or "Meal").capitalize()
+    station = scope.get("station_name") or "Station"
+    ms = aggregated_state.get("menu_structure") or {}
+    msg = (ms.get("message") or "").strip()
+    under = ms.get("under_offered") or []
+    over = ms.get("over_offered") or []
+    counts = ms.get("counts") or {}
+    lines = [
+        f"## Overall Station Structure",
+        f"- **{meal}** at **{station}**: counts {json.dumps(counts)[:200]}.",
+        "",
+        "## Playbook Alignment",
+        "**Where to improve:**",
+        f"> {msg}" if msg else "> Review playbook limits for this station.",
+    ]
+    if under:
+        lines.append("> - Under-offered: " + ", ".join(str(x) for x in under[:5]))
+    if over:
+        lines.append("> - Over-offered: " + ", ".join(str(x) for x in over[:5]))
+    lines.extend(["", "## Rotation & Repetition", "- Review variety and repetition from data.", "", "## Recommended Adjustments", "- Align offerings with playbook limits.", "- Rotate items where needed."])
+    return "\n".join(lines)
+
+
 def formatting_executive_slide(aggregated_state: dict[str, Any]) -> str:
     """Translates the aggregated global JSON state into specific markdown presentation blocks. Use when generating the final business-ready summary for the user."""
     log.info("[AGENT-TOOL] synthesizer: formatting_executive_slide START aggregated_state_keys={}", list(aggregated_state.keys()) if isinstance(aggregated_state, dict) else "n/a")
-    context = _context_with_playbook(json.dumps(aggregated_state, indent=2)[:15000])
-    out: FormattingExecutiveSlideOutput = run_structured(
-        task_description="Produce a SHORT, premium-style markdown report. Rules: (1) Use ## for main sections and **bold** for subheadings and key terms (e.g. **What's working**, **Needs improvement**, **Compliant**). (2) Keep all text concise: 1–3 sentences per paragraph; prefer bullet points. (3) Use blockquote (>) for the two alignment callouts: one blockquote for **What's working** with 3–5 bullets, one for **Where to improve** with 3–5 bullets. (4) Structure: ## Overall Station Structure (2–3 sentences or bullets), ## Playbook Alignment (two blockquotes), ## Rotation & Repetition (bullets), ## Recommended Adjustments (short bullet list). (5) Bold important metrics and findings (e.g. **44% plant-based**, **duplicate recipe IDs**). Output one coherent full_markdown: crisp, scannable, premium feel.",
-        context=context,
-        output_model=FormattingExecutiveSlideOutput,
-    )
-    md_len = len(out.full_markdown or "")
-    log.info("[AGENT-TOOL] synthesizer: formatting_executive_slide DONE full_markdown_len={}", md_len)
-    return out.full_markdown or f"{out.overall_station_structure}\n\n{out.alignment_whats_working}\n\n{out.alignment_needs_improvement}\n\n{out.rotation_repetition_signals}\n\n{out.recommended_structural_adjustments}"
+    context = _context_with_playbook(json.dumps(aggregated_state, indent=2)[:12000])
+    try:
+        out: FormattingExecutiveSlideOutput = run_structured(
+            task_description="Produce one FDA-suitable markdown report. Use proper markdown (MD) tags: ## for each section heading, - or * for bullet lists, ** for bold text, > for blockquotes. Put the COMPLETE report (all four sections, with bullets) in the full_markdown field—do not return only a title or one line. (1) State meal period (Breakfast/Lunch/Dinner) from scope.meal_period. (2) Exactly four sections: ## Overall Station Structure (1–2 bullets: meal name, what is offered, counts). ## Playbook Alignment with **Where to improve:** only—one blockquote (>) with 3–4 bullets naming specific items (e.g. **Burger** — limit to 1; **Vegan option** — add one; **Fries** — ensure one slot). Use menu_structure (under_offered, over_offered, counts) from context. ## Rotation & Repetition (1–2 bullets). ## Recommended Adjustments (2–3 bullets, action verbs). Bold meal name and item names with **. No 'What's working'. Output the full report as full_markdown.",
+            context=context,
+            output_model=FormattingExecutiveSlideOutput,
+        )
+        combined = out.full_markdown or f"{out.overall_station_structure or ''}\n\n{out.alignment_whats_working or ''}\n\n{out.alignment_needs_improvement or ''}\n\n{out.rotation_repetition_signals or ''}\n\n{out.recommended_structural_adjustments or ''}".strip()
+    except Exception as e:
+        log.warning("[AGENT-TOOL] synthesizer: run_structured failed, using fallback: {}", e)
+        combined = ""
+    combined = (combined or "").strip()
+    # Treat very short responses (e.g. only a heading) as failure → use full fallback report
+    if not combined or len(combined) < 250:
+        if combined:
+            log.warning("[AGENT-TOOL] synthesizer: LLM returned too short (len={}), using fallback", len(combined))
+        else:
+            log.warning("[AGENT-TOOL] synthesizer: LLM returned empty report, using fallback from aggregated_state")
+        combined = _fallback_report_from_aggregated(aggregated_state)
+    log.info("[AGENT-TOOL] synthesizer: formatting_executive_slide DONE full_markdown_len={}", len(combined))
+    return combined
