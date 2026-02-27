@@ -48,6 +48,7 @@ export function CategoryAnalysisPage() {
   const [loaderActive, setLoaderActive] = useState(false);
   const [reportContent, setReportContent] = useState<string | null>(null);
   const [reportError, setReportError] = useState<string | null>(null);
+  const [reportUsage, setReportUsage] = useState<{ total_input_tokens: number; total_output_tokens: number; cost_usd?: number } | null>(null);
   const [imageDialogOpen, setImageDialogOpen] = useState(false);
 
   // Routes are /breakfast, /lunch, /dinner – no :category param, so derive from pathname
@@ -63,6 +64,7 @@ export function CategoryAnalysisPage() {
     if (!analysisOpen || !category || !CATEGORIES[category]) return;
     setReportContent(null);
     setReportError(null);
+    setReportUsage(null);
     setLoaderActive(true);
     let cancelled = false;
     const mealPeriod = CATEGORIES[category];
@@ -76,6 +78,15 @@ export function CategoryAnalysisPage() {
           if (text.trim()) {
             setReportContent(text);
             setReportError(null);
+            setReportUsage(
+              data.total_input_tokens != null || data.total_output_tokens != null || data.cost_usd != null
+                ? {
+                    total_input_tokens: data.total_input_tokens ?? 0,
+                    total_output_tokens: data.total_output_tokens ?? 0,
+                    cost_usd: data.cost_usd ?? 0,
+                  }
+                : null
+            );
             setLoaderActive(false);
             return;
           }
@@ -93,6 +104,11 @@ export function CategoryAnalysisPage() {
           const data = await res.json();
           setReportContent(data.content ?? "");
           setReportError(null);
+          setReportUsage({
+            total_input_tokens: data.total_input_tokens ?? 0,
+            total_output_tokens: data.total_output_tokens ?? 0,
+            cost_usd: data.cost_usd ?? 0,
+          });
         } else {
           let message: string | null = null;
           try {
@@ -132,6 +148,11 @@ export function CategoryAnalysisPage() {
         const data = await res.json();
         setReportContent(data.content ?? "");
         setReportError(null);
+        setReportUsage({
+          total_input_tokens: data.total_input_tokens ?? 0,
+          total_output_tokens: data.total_output_tokens ?? 0,
+          cost_usd: data.cost_usd ?? 0,
+        });
       } else {
         const err = await res.json().catch(() => ({}));
         const msg = typeof err?.detail === "string" ? err.detail : "Report could not be generated. Please try again.";
@@ -242,15 +263,30 @@ export function CategoryAnalysisPage() {
           </section>
 
           {/* Section 2: Analysis Report – professional document-style panel */}
-          <section className="flex-1 min-h-0 min-w-0 opacity-0-init animate-slide-up delay-100 flex flex-col rounded-xl shadow-xl border border-gray-200/90 max-h-[65vh] lg:max-h-[72vh] overflow-hidden bg-white">
+          <section className="flex-1 min-h-0 min-w-0 opacity-0-init animate-slide-up delay-100 flex flex-col rounded-xl shadow-xl border border-gray-200/90 max-h-[65vh] lg:max-h-[72vh] overflow-hidden bg-white w-full">
             <div className="shrink-0 px-6 py-3.5 border-b border-gray-100 bg-white flex flex-wrap items-center justify-between gap-3">
-              <div>
-                <h2 className="m-0 text-[0.9375rem] font-semibold tracking-tight text-gray-900">
-                  Analysis Report
-                </h2>
-                <p className="m-0 mt-0.5 text-xs text-gray-500">
-                  Menu intelligence
-                </p>
+              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <div>
+                  <h2 className="m-0 text-[0.9375rem] font-semibold tracking-tight text-gray-900">
+                    Analysis Report
+                  </h2>
+                  <p className="m-0 mt-0.5 text-xs text-gray-500">
+                    Menu intelligence
+                  </p>
+                </div>
+                {reportUsage != null && (
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-0.5 text-xs text-gray-600">
+                    <span title="Total input tokens">
+                      <strong className="text-gray-700">Input:</strong> {(reportUsage.total_input_tokens ?? 0).toLocaleString()} tokens
+                    </span>
+                    <span title="Total output tokens">
+                      <strong className="text-gray-700">Output:</strong> {(reportUsage.total_output_tokens ?? 0).toLocaleString()} tokens
+                    </span>
+                    <span title="Estimated cost">
+                      <strong className="text-gray-700">Cost:</strong> ${(reportUsage.cost_usd ?? 0).toFixed(4)} USD
+                    </span>
+                  </div>
+                )}
               </div>
               <button
                 type="button"
@@ -268,9 +304,9 @@ export function CategoryAnalysisPage() {
                 )}
               </button>
             </div>
-            {/* Report body */}
-            <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden border-l-4 border-l-primary/20 bg-[#fafbfc]">
-              <div className="p-6 py-5">
+            {/* Report body: scroll vertical and horizontal, full width */}
+            <div className="flex-1 min-h-0 min-w-0 overflow-y-auto overflow-x-auto border-l-4 border-l-primary/20 bg-[#fafbfc]">
+              <div className="p-6 py-5 w-full min-w-0 max-w-none">
                 {loaderActive ? (
                   <div className="flex flex-col items-center justify-center gap-4 py-12 text-gray-500 animate-fade-in">
                     <span className="h-10 w-10 border-2 border-primary border-t-transparent rounded-full animate-spin" />

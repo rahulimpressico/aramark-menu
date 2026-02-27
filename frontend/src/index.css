@@ -171,3 +171,38 @@ html, body { background: #f3f4f6; }
 .report-markdown-preview .wmde-markdown table tbody tr:nth-child(even) {
   background: #fafbfc;
 }
+
+/* Premium report markdown (Analysis Report – react-markdown) */
+.report-markdown {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+.report-markdown .report-h1 {
+  letter-spacing: -0.02em;
+}
+.report-markdown .report-h2,
+.report-markdown .report-h3,
+.report-markdown .report-h4 {
+  letter-spacing: -0.01em;
+}
+.report-markdown .report-blockquote {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.report-markdown .report-ul + .report-h2,
+.report-markdown .report-ul + .report-h3,
+.report-markdown .report-ul + .report-h4,
+.report-markdown .report-blockquote + .report-h2,
+.report-markdown .report-blockquote + .report-h3,
+.report-markdown .report-blockquote + .report-h4 {
+  margin-top: 1.5rem;
+}
+.report-markdown .report-strong {
+  font-weight: 600;
+  color: #111827;
+}
+.report-markdown .report-table {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+}
+.report-markdown .report-li {
+  padding-left: 0.125rem;
+}

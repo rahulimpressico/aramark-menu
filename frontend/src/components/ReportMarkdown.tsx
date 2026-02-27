@@ -25,31 +25,49 @@ function normalizeBoldDelimiters(md: string): string {
     .replace(/, \*\*/g, ",**");
 }
 
+/** Ensure newlines before block elements so LLM output that runs on one line still parses as markdown. */
+function ensureBlockNewlines(md: string): string {
+  if (!md?.trim()) return md;
+  return md
+    .replace(/\s+(####\s)/g, "\n\n#### ")
+    .replace(/\s+(###\s)/g, "\n\n### ")
+    .replace(/\s+(##\s)/g, "\n\n## ")
+    .replace(/\s+\*\s+/g, "\n\n* ")  // bullet " * The" -> newline + "* The"
+    .replace(/\s+(>\s*\*?\s*)/g, "\n\n$1");  // keep "> " or "> * "
+}
+
 export function ReportMarkdown({ content }: { content: string }) {
-  const normalized = normalizeBoldDelimiters(normalizeMarkdownTables(content ?? ""));
+  const normalized = ensureBlockNewlines(
+    normalizeBoldDelimiters(normalizeMarkdownTables(content ?? ""))
+  );
   return (
-    <article className="animate-fade-in max-w-none text-gray-800">
+    <article className="report-markdown animate-fade-in w-full min-w-0 max-w-none text-gray-800">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
           h1: ({ children }) => (
-            <h1 className="text-xl font-bold text-gray-900 mt-0 mb-4 pb-3 border-b-2 border-primary/30 tracking-tight">
+            <h1 className="report-h1 text-xl font-bold text-gray-900 mt-0 mb-5 pb-3 border-b-2 border-primary/40 tracking-tight">
               {children}
             </h1>
           ),
           h2: ({ children }) => (
-            <h2 className="text-base font-bold text-gray-900 mt-6 mb-3 pb-2 border-b border-gray-200 flex items-center gap-2">
-              <span className="w-1 h-5 rounded-full bg-primary shrink-0" />
+            <h2 className="report-h2 text-[1rem] font-bold text-gray-900 mt-6 mb-2.5 pb-2 border-b border-gray-200/90 flex items-center gap-2">
+              <span className="w-1 h-5 rounded-full bg-primary shrink-0" aria-hidden />
               {children}
             </h2>
           ),
           h3: ({ children }) => (
-            <h3 className="text-[0.9375rem] font-semibold text-gray-800 mt-4 mb-2">
+            <h3 className="report-h3 text-[0.9375rem] font-semibold text-gray-800 mt-5 mb-2">
               {children}
             </h3>
           ),
+          h4: ({ children }) => (
+            <h4 className="report-h4 text-[0.9375rem] font-semibold text-primary mt-5 mb-2 pb-1.5 border-b border-primary/25">
+              {children}
+            </h4>
+          ),
           p: ({ children }) => (
-            <p className="m-0 mb-3 text-[0.9375rem] leading-[1.6] text-gray-700">
+            <p className="report-p m-0 mb-3 text-[0.9375rem] leading-[1.65] text-gray-700">
               {children}
             </p>
           ),
@@ -68,8 +86,8 @@ export function ReportMarkdown({ content }: { content: string }) {
               <blockquote
                 className={
                   isPositive
-                    ? "my-4 pl-4 py-2.5 border-l-4 border-emerald-500/80 bg-emerald-50/60 rounded-r text-[0.9375rem] text-gray-800"
-                    : "my-4 pl-4 py-2.5 border-l-4 border-amber-500/80 bg-amber-50/50 rounded-r text-[0.9375rem] text-gray-800"
+                    ? "report-blockquote my-4 pl-4 py-3 border-l-4 border-emerald-500/80 bg-emerald-50/60 rounded-r text-[0.9375rem] text-gray-800"
+                    : "report-blockquote my-4 pl-4 py-3 border-l-4 border-primary bg-primary/5 rounded-r text-[0.9375rem] text-gray-800"
                 }
               >
                 {children}
@@ -77,21 +95,21 @@ export function ReportMarkdown({ content }: { content: string }) {
             );
           },
           ul: ({ children }) => (
-            <ul className="list-none pl-0 my-3 space-y-2 text-[0.9375rem] text-gray-700">
+            <ul className="report-ul list-none pl-0 my-3 space-y-2 text-[0.9375rem] text-gray-700">
               {children}
             </ul>
           ),
           li: ({ children }) => (
-            <li className="flex items-start gap-2.5 leading-[1.55]">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+            <li className="report-li flex items-start gap-2.5 leading-[1.6]">
+              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" aria-hidden />
               {children}
             </li>
           ),
           strong: ({ children }) => (
-            <strong className="font-semibold text-gray-900">{children}</strong>
+            <strong className="report-strong font-semibold text-gray-900">{children}</strong>
           ),
           table: ({ children }) => (
-            <div className="my-4 overflow-x-auto rounded-lg border border-gray-200">
+            <div className="report-table my-4 overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
               <table className="min-w-full text-left text-sm text-gray-700">{children}</table>
             </div>
           ),

@@ -11,9 +11,18 @@ export function reportCachedUrl(station: string, mealPeriod: string): string {
   return `${REPORT_API_BASE}/${s}/${m}`;
 }
 
+export interface ReportUsage {
+  total_input_tokens: number;
+  total_output_tokens: number;
+  cost_usd?: number;
+}
+
 export interface ReportResponse {
   content: string;
   station_name?: string;
   meal_period?: string;
   generated_at?: string;
+  total_input_tokens?: number;
+  total_output_tokens?: number;
+  cost_usd?: number;
 }
