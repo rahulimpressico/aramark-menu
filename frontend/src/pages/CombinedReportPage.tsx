@@ -4,6 +4,9 @@ import { DEFAULT_STATION, REPORT_OVERALL_API } from "../api/reports";
 import { AramarkLogo } from "../components/AramarkLogo";
 import { ReportMarkdown } from "../components/ReportMarkdown";
 
+/** Prevents duplicate overall POST in React StrictMode (double mount). Resets after delay so revisiting page can fetch again. */
+let _overallFetchInFlight = false;
+
 function useOverallReport() {
   const [overallContent, setOverallContent] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -45,7 +48,13 @@ export function CombinedReportPage() {
   const { overallContent, loading, error, fetchOverall } = useOverallReport();
 
   useEffect(() => {
-    fetchOverall();
+    if (_overallFetchInFlight) return;
+    _overallFetchInFlight = true;
+    fetchOverall().finally(() => {
+      setTimeout(() => {
+        _overallFetchInFlight = false;
+      }, 2000);
+    });
   }, [fetchOverall]);
 
   return (
