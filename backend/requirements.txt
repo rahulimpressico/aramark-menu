@@ -3,3 +3,23 @@ uvicorn[standard]>=0.27.0
 python-jose[cryptography]>=3.3.0
 passlib>=1.7.4
 python-multipart>=0.0.6
+
+python-multipart>=0.0.6
+pydantic>=2.0.0
+
+# Excel processing
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# LLM — Gemini 2.5 Flash
+google-genai>=1.0.0
+
+# Environment and config
+python-dotenv>=1.0.0
+
+# Logging
+loguru>=0.7.0
+
+# Graph visualization
+pyvis>=0.3.0
+networkx>=3.0.0
