@@ -1,0 +1,277 @@
+{
+  "station_name": "Grill",
+  "meal_period": "Lunch",
+  "content": "## Grill Station — Lunch Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 6 daily features (**Crispy Chicken Pepper Jack Slider**, **California Turkey Bacon Wrap**, **Italian Wrap**, **Crunchy Corn Dogs**, **Crispy Chicken Sandwich**, **Grilled Herb Chicken Sandwich**)\n- What the Playbook says: Maximum 2 per day.\n- Gap: The menu offers 6 daily features, exceeding the maximum of 2 allowed per day.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 0.53 (8 unique entrees / 15 scheduled slots)\n- Playbook says daily features must rotate. Items appearing on 4+ days:\n    - **Crinkle French Fries**: 6 days (Monday, Tuesday, Wednesday, Thursday, Friday, Sunday)\n\n### Plant-Based\n- Current: 6.5% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 37.5% below target\n\n---\n\n## What the Playbook Recommends\n\n1.  Reduce the number of daily features offered to a maximum of 2 per day. — Playbook rule: \"DAILY FEATURE: Maximum 2 per day.\"\n2.  Improve the rotation of fried starches to avoid high repetition. — Playbook rule: \"ROTATION: High repetition of any entree across multiple days signals poor rotation.\"\n3.  Increase the percentage of plant-based entrees to meet the target. — Playbook rule: \"PLANT-BASED: 44% of entrees should be plant-based (Aramark Coolfood Pledge)\"",
+  "analysis_json": {
+    "playbook_check": {
+      "meal_period": "Lunch",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 6,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Crispy Chicken Pepper Jack Slider",
+            "California Turkey Bacon Wrap",
+            "Italian Wrap",
+            "Crunchy Corn Dogs",
+            "Crispy Chicken Sandwich",
+            "Grilled Herb Chicken Sandwich"
+          ]
+        },
+        "vegan": {
+          "count": 1,
+          "playbook_rule": "min 1",
+          "status": "ok",
+          "recipes": [
+            "Grilled Black Bean Burger"
+          ]
+        },
+        "fries": {
+          "count": 1,
+          "playbook_rule": "min 1",
+          "status": "ok",
+          "recipes": [
+            "Crinkle French Fries"
+          ]
+        }
+      },
+      "violations": [
+        "Too many daily features (got 6, max 2)"
+      ],
+      "sides": {
+        "count": 6,
+        "recipes": [
+          "Sliced Tomatoes",
+          "American Cheese",
+          "Sliced Red Onions",
+          "Dill Pickle Slices",
+          "Lettuce",
+          "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE"
+        ]
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 0.53,
+        "unique_entree_count": 8,
+        "repeated_static_count": 7,
+        "entree_slots": 15,
+        "total_slots": 31,
+        "side_count": 6,
+        "message": "Moderate entree variety; consider rotating daily features.",
+        "entree_serve_counts": {
+          "Crinkle French Fries": 6,
+          "Crispy Chicken Pepper Jack Slider": 1,
+          "California Turkey Bacon Wrap": 1,
+          "Italian Wrap": 1,
+          "Crunchy Corn Dogs": 1,
+          "Crispy Chicken Sandwich": 1,
+          "Grilled Black Bean Burger": 2,
+          "Grilled Herb Chicken Sandwich": 2
+        },
+        "side_recipes": [
+          "American Cheese",
+          "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE",
+          "Dill Pickle Slices",
+          "Lettuce",
+          "Sliced Red Onions",
+          "Sliced Tomatoes"
+        ]
+      },
+      "item_frequency": {
+        "total_recipes": 14,
+        "recurrence_signals": [
+          {
+            "recipe_id": "A5763",
+            "recipe_name": "Crinkle French Fries",
+            "days": 6,
+            "signal": "High repetition: scheduled on 6 days (Monday, Tuesday, Wednesday, Thursday, Friday, Sunday)"
+          }
+        ],
+        "message": "1 recipe(s) appear ≥ 4 days (Crinkle French Fries). Consider rotating to improve variety.",
+        "frequencies": [
+          {
+            "recipe_id": "M8958",
+            "recipe_name": "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE",
+            "appearance_count": 6,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "A5763",
+            "recipe_name": "Crinkle French Fries",
+            "appearance_count": 6,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M14301",
+            "recipe_name": "American Cheese",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14856",
+            "recipe_name": "Dill Pickle Slices",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M8170",
+            "recipe_name": "Grilled Black Bean Burger",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M8295",
+            "recipe_name": "Grilled Herb Chicken Sandwich",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M33196",
+            "recipe_name": "Lettuce",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14343",
+            "recipe_name": "Sliced Red Onions",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M13541",
+            "recipe_name": "Sliced Tomatoes",
+            "appearance_count": 2,
+            "days": [
+              "Wednesday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M20689",
+            "recipe_name": "California Turkey Bacon Wrap",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M19661",
+            "recipe_name": "Crispy Chicken Pepper Jack Slider",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M8095",
+            "recipe_name": "Crispy Chicken Sandwich",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M4890",
+            "recipe_name": "Crunchy Corn Dogs",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M40064",
+            "recipe_name": "Italian Wrap",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 6.5,
+        "vegan_percent": 6.5,
+        "compliant_44": false,
+        "total_offerings": 31,
+        "plant_based_count": 2,
+        "message": "6.5% plant-based — 37.5% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": [
+          "Grilled Black Bean Burger"
+        ]
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 0,
+        "alt_slots": 7,
+        "beef_recipes": [],
+        "alt_recipes": [
+          "California Turkey Bacon Wrap",
+          "Crispy Chicken Pepper Jack Slider",
+          "Crispy Chicken Sandwich",
+          "Grilled Black Bean Burger",
+          "Grilled Herb Chicken Sandwich"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=7; CPM risk level=LOW."
+      }
+    }
+  },
+  "generated_at": "2026-03-03T07:05:14.354564+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

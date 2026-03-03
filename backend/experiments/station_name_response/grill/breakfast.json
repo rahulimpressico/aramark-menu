@@ -1,0 +1,332 @@
+{
+  "station_name": "Grill",
+  "meal_period": "Breakfast",
+  "content": "## Grill Station — Breakfast Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 5 daily features (**Chai-Spiced Apple Oat Pancakes**, **Apple Cinnamon Pancake**, **Buttermilk Pancakes**, **Chocolate Chip Buttermilk Pancakes**, **Banana Buttermilk Pancake**)\n- What the Playbook says: Maximum 2 per day.\n- Gap: The menu offers 3 more daily features than allowed.\n\n**VEGAN**\n- What the menu is doing: 0 plant-based main items.\n- What the Playbook says: Minimum 1 plant-based main item per day.\n- Gap: The menu is missing the required minimum of 1 plant-based main item.\n\n**FRIES**\n- What the menu is doing: 0 fried starch items.\n- What the Playbook says: Minimum 1 fried starch per day.\n- Gap: The menu is missing the required minimum of 1 fried starch item.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 0.4 (8 unique entrees / 20 scheduled slots)\n- Playbook says daily features must rotate. Items appearing on 4+ days:\n    - **Eggs**: 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)\n    - **Egg**: 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)\n    - **Crumbled Plant-Based Chorizo**: 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)\n\n### Plant-Based\n- Current: 8.3% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 35.7% below target\n\n---\n\n## What the Playbook Recommends\n\n1.  Reduce the number of daily features to a maximum of 2 per day. — Playbook rule: \"DAILY FEATURE: Maximum 2 per day.\"\n2.  Add at least one plant-based main item to the menu each day. — Playbook rule: \"VEGAN: Minimum 1 plant-based main item per day.\"\n3.  Include at least one fried starch item on the menu each day. — Playbook rule: \"FRIES: Minimum 1 fried starch per day.\"\n4.  Improve the rotation of entrees, especially those appearing on 4 or more days. — Playbook rule: \"ROTATION: High repetition of any entree across multiple days signals poor rotation.\"\n5.  Increase the percentage of plant-based entrees to meet the 44% target. — Playbook rule: \"PLANT-BASED: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\"",
+  "analysis_json": {
+    "playbook_check": {
+      "meal_period": "Breakfast",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 5,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Chai-Spiced Apple Oat Pancakes",
+            "Apple Cinnamon Pancake",
+            "Buttermilk Pancakes",
+            "Chocolate Chip Buttermilk Pancakes",
+            "Banana Buttermilk Pancake"
+          ]
+        },
+        "vegan": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        }
+      },
+      "violations": [
+        "Too many daily features (got 5, max 2)",
+        "Missing vegan option",
+        "Missing fries option"
+      ],
+      "sides": {
+        "count": 11,
+        "recipes": [
+          "Diced Tomatoes",
+          "Diced Ham",
+          "Shredded Cheddar Cheese",
+          "Feta Cheese Crumbles",
+          "Sliced Mixed Bell Peppers",
+          "Eggs",
+          "Egg",
+          "Crumbled Plant-Based Chorizo",
+          "Sliced Mushrooms",
+          "Diced Onions",
+          "Chopped Fresh Spinach"
+        ]
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 0.4,
+        "unique_entree_count": 8,
+        "repeated_static_count": 12,
+        "entree_slots": 20,
+        "total_slots": 60,
+        "side_count": 8,
+        "message": "Moderate entree variety; consider rotating daily features.",
+        "entree_serve_counts": {
+          "Chai-Spiced Apple Oat Pancakes": 1,
+          "Eggs": 5,
+          "Apple Cinnamon Pancake": 1,
+          "Egg": 5,
+          "Crumbled Plant-Based Chorizo": 5,
+          "Buttermilk Pancakes": 1,
+          "Chocolate Chip Buttermilk Pancakes": 1,
+          "Banana Buttermilk Pancake": 1
+        },
+        "side_recipes": [
+          "Chopped Fresh Spinach",
+          "Diced Ham",
+          "Diced Onions",
+          "Diced Tomatoes",
+          "Feta Cheese Crumbles",
+          "Shredded Cheddar Cheese",
+          "Sliced Mixed Bell Peppers",
+          "Sliced Mushrooms"
+        ]
+      },
+      "item_frequency": {
+        "total_recipes": 16,
+        "recurrence_signals": [
+          {
+            "recipe_id": "M20317",
+            "recipe_name": "Eggs",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)"
+          },
+          {
+            "recipe_id": "M34612",
+            "recipe_name": "Egg",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)"
+          },
+          {
+            "recipe_id": "M40339",
+            "recipe_name": "Crumbled Plant-Based Chorizo",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)"
+          }
+        ],
+        "message": "3 recipe(s) appear ≥ 4 days (Eggs, Egg, Crumbled Plant-Based Chorizo). Consider rotating to improve variety.",
+        "frequencies": [
+          {
+            "recipe_id": "M6573",
+            "recipe_name": "Chopped Fresh Spinach",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M40339",
+            "recipe_name": "Crumbled Plant-Based Chorizo",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14255",
+            "recipe_name": "Diced Ham",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M6568",
+            "recipe_name": "Diced Onions",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M11769",
+            "recipe_name": "Diced Tomatoes",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M34612",
+            "recipe_name": "Egg",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M20317",
+            "recipe_name": "Eggs",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14290",
+            "recipe_name": "Feta Cheese Crumbles",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14258",
+            "recipe_name": "Shredded Cheddar Cheese",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14870",
+            "recipe_name": "Sliced Mixed Bell Peppers",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M6557",
+            "recipe_name": "Sliced Mushrooms",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M21978",
+            "recipe_name": "Apple Cinnamon Pancake",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M40685",
+            "recipe_name": "Banana Buttermilk Pancake",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M40676",
+            "recipe_name": "Buttermilk Pancakes",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "A375",
+            "recipe_name": "Chai-Spiced Apple Oat Pancakes",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M40679",
+            "recipe_name": "Chocolate Chip Buttermilk Pancakes",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 8.3,
+        "vegan_percent": 8.3,
+        "compliant_44": false,
+        "total_offerings": 60,
+        "plant_based_count": 5,
+        "message": "8.3% plant-based — 35.7% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": [
+          "Crumbled Plant-Based Chorizo"
+        ]
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 0,
+        "alt_slots": 5,
+        "beef_recipes": [],
+        "alt_recipes": [
+          "Crumbled Plant-Based Chorizo"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=5; CPM risk level=LOW."
+      }
+    }
+  },
+  "generated_at": "2026-03-02T17:12:27.032230+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

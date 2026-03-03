@@ -1,0 +1,47 @@
+## Grill Station — Breakfast Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 5 daily features (**Chai-Spiced Apple Oat Pancakes**, **Apple Cinnamon Pancake**, **Buttermilk Pancakes**, **Chocolate Chip Buttermilk Pancakes**, **Banana Buttermilk Pancake**)
+- What the Playbook says: Maximum 2 per day.
+- Gap: The menu offers 3 more daily features than allowed.
+
+**VEGAN**
+- What the menu is doing: 0 plant-based main items.
+- What the Playbook says: Minimum 1 plant-based main item per day.
+- Gap: The menu is missing the required minimum of 1 plant-based main item.
+
+**FRIES**
+- What the menu is doing: 0 fried starch items.
+- What the Playbook says: Minimum 1 fried starch per day.
+- Gap: The menu is missing the required minimum of 1 fried starch item.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 0.4 (8 unique entrees / 20 scheduled slots)
+- Playbook says daily features must rotate. Items appearing on 4+ days:
+    - **Eggs**: 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)
+    - **Egg**: 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)
+    - **Crumbled Plant-Based Chorizo**: 5 days (Monday, Tuesday, Wednesday, Thursday, Friday)
+
+### Plant-Based
+- Current: 8.3% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 35.7% below target
+
+---
+
+## What the Playbook Recommends
+
+1.  Reduce the number of daily features to a maximum of 2 per day. — Playbook rule: "DAILY FEATURE: Maximum 2 per day."
+2.  Add at least one plant-based main item to the menu each day. — Playbook rule: "VEGAN: Minimum 1 plant-based main item per day."
+3.  Include at least one fried starch item on the menu each day. — Playbook rule: "FRIES: Minimum 1 fried starch per day."
+4.  Improve the rotation of entrees, especially those appearing on 4 or more days. — Playbook rule: "ROTATION: High repetition of any entree across multiple days signals poor rotation."
+5.  Increase the percentage of plant-based entrees to meet the 44% target. — Playbook rule: "PLANT-BASED: 44% of entrees should be plant-based (Aramark Coolfood Pledge)."

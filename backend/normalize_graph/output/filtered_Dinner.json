@@ -1,0 +1,2460 @@
+{
+  "meal_period": "Dinner",
+  "summary": {
+    "Station": 1,
+    "Week": 1,
+    "Day": 6,
+    "MealPeriod": 1,
+    "Recipe": 16,
+    "Ingredient": 68,
+    "Equipment": 5
+  },
+  "nodes": {
+    "Station": [
+      {
+        "id": "station_Grill",
+        "type": "Station",
+        "name": "Grill"
+      }
+    ],
+    "Week": [
+      {
+        "id": "week_3",
+        "type": "Week",
+        "week_no": 3
+      }
+    ],
+    "Day": [
+      {
+        "id": "day_Monday",
+        "type": "Day",
+        "day_name": "Monday",
+        "day_no": 1,
+        "week_no": 3
+      },
+      {
+        "id": "day_Tuesday",
+        "type": "Day",
+        "day_name": "Tuesday",
+        "day_no": 2,
+        "week_no": 3
+      },
+      {
+        "id": "day_Wednesday",
+        "type": "Day",
+        "day_name": "Wednesday",
+        "day_no": 3,
+        "week_no": 3
+      },
+      {
+        "id": "day_Thursday",
+        "type": "Day",
+        "day_name": "Thursday",
+        "day_no": 4,
+        "week_no": 3
+      },
+      {
+        "id": "day_Friday",
+        "type": "Day",
+        "day_name": "Friday",
+        "day_no": 5,
+        "week_no": 3
+      },
+      {
+        "id": "day_Sunday",
+        "type": "Day",
+        "day_name": "Sunday",
+        "day_no": 7,
+        "week_no": 3
+      }
+    ],
+    "MealPeriod": [
+      {
+        "id": "period_Dinner",
+        "type": "MealPeriod",
+        "name": "Dinner"
+      }
+    ],
+    "Recipe": [
+      {
+        "id": "A5763",
+        "type": "Recipe",
+        "name": "Crinkle French Fries",
+        "food_cost": 0.4016,
+        "assembly_instructions": "1, Preheat deep-fat fryer to 350 F. 2. Fry frozen potatoes until golden brown and crisp, 3 to 4 minutes. Drain. FOR ONE SERVING: 1. on specified serving dish, place 3 ozw fries. 2. Serve immediately.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "M13541",
+        "type": "Recipe",
+        "name": "Sliced Tomatoes",
+        "food_cost": 1.6152,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M14301",
+        "type": "Recipe",
+        "name": "American Cheese",
+        "food_cost": 2.335,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M14343",
+        "type": "Recipe",
+        "name": "Sliced Red Onions",
+        "food_cost": 0.7786,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M14856",
+        "type": "Recipe",
+        "name": "Dill Pickle Slices",
+        "food_cost": 2.0766,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "chopped 1/4\" 1 tbl = 3/8 ozw 1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw IDDSI Level 7"
+      },
+      {
+        "id": "M19508",
+        "type": "Recipe",
+        "name": "Buffalo Chicken Grilled Cheese",
+        "food_cost": 0.7349,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following on 1 slice of bread: 1 slice cheese 1 tbl Buffalo Blue Dressing 2-oz spoodle Chicken 1 slice cheese 2nd slice of bread 2. Brush outside of sandwich with 1 tbl margarine. PANINI PRESS METHOD 1. Preheat panini press to 400 F. 2. Place sandwich in panini press. Cook until sandwich is browned and cheese begins to melt, 3 to 4 minutes. Cheese does not have to melt completely. 3. Cut diagonally in half. 4. Cover. Keep hot for service. FLAT-TOP GRIDDLE METHOD 1. Preheat flat-top griddle to 350 F. 2. Cook sandwich, turning once, until browned and cheese is melted, 2 to 3 minutes on each side. 3. Cut diagonally in half. 4. Cover. Keep hot for service."
+      },
+      {
+        "id": "M20589",
+        "type": "Recipe",
+        "name": "Crispy Chicken BBQ Snacker",
+        "food_cost": 0.5124,
+        "assembly_instructions": "1. Preheat deep-fat fryer to 350 F. 2. Fry frozen chicken patties until golden brown and internal temperature reaches 165 F, 4 to 6 minutes. Drain. 3. Cut each patty into 3 strips. FOR 1 SERVING: 1. Layer the following in center of 1 tortilla: 2 tsp sauce 1-oz spoodle lettuce 1 piece onion, separated into rings 1 piece chicken 1 slice cheese Fold bottom of tortilla up over filling, about 1\". Fold in right and left edges of tortilla 2\" on each side to form a V. Top 1/3 of filling should be exposed. 2. Keep hot for service.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "M33196",
+        "type": "Recipe",
+        "name": "Lettuce",
+        "food_cost": 3.129,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M34430",
+        "type": "Recipe",
+        "name": "Creamy Tomato Basil Soup",
+        "food_cost": 0.4981,
+        "assembly_instructions": "1. In stockpot over medium-high heat, heat oil. Add onion, celery and carrot. Saute until vegetables are tender, 4 to 6 minutes. Stir in tomato paste and base. 2. Add remaining ingredients except half & half and basil. Whisk until well blended. Bring to a boil. Reduce heat. Simmer 35 minutes. Discard bay leaves. Puree. 3. Heat half & half to 140 F. 4. Return pureed mixture to pot. Stir in heated half & half. Return to a simmer. DO NOT BOIL. 5. Cover. Keep hot for service. 6. At time of service, stir in basil."
+      },
+      {
+        "id": "M35397",
+        "type": "Recipe",
+        "name": "Nacho Grilled Cheese",
+        "food_cost": 0.6003,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following on 1 slice of bread: 1 slice cheese 2 slices tomato 1-oz spoodle chips 1 tbl jalapeno 2nd slice cheese 2nd slice of bread 2. Brush outside of sandwich with 1 tbl margarine. PANINI PRESS METHOD 1. Preheat panini press to 400 F. 2. Place sandwich in panini press. Cook until sandwich is browned and cheese begins to melt, 3 to 4 minutes. Cheese does not have to melt completely. 3. Cut diagonally in half. 4. Cover. Keep hot for service. FLAT-TOP GRIDDLE METHOD 1. Preheat flat-top griddle to 350 F. 2. Cook sandwich, turning once, until browned and cheese is melted, 2 to 3 minutes on each side. 3. Cut diagonally in half. 4. Cover. Keep hot for service."
+      },
+      {
+        "id": "M7941",
+        "type": "Recipe",
+        "name": "Classic Grilled Cheese",
+        "food_cost": 0.4099,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following on 1 slice of bread: 2 slices cheese 2nd slice of bread 2. Brush outside of sandwich with 1 tbl margarine. PANINI PRESS METHOD 1. Preheat panini press to 400 F. 2. Place sandwich in panini press. Cook until sandwich is browned and cheese begins to melt, 3 to 4 minutes. Cheese does not have to melt completely. 3. Cut diagonally in half, 4. Cover. Keep hot for service. FLAT-TOP GRIDDLE METHOD 1. Preheat flat-top griddle to 350 F. 2. Cook sandwich, turning once, until browned and cheese is melted, 2 to 3 minutes on each side. 3. Cut diagonally in half. 4. Cover. Keep hot for service."
+      },
+      {
+        "id": "M7972",
+        "type": "Recipe",
+        "name": "Grilled Ham & Cheese Sandwich",
+        "food_cost": 0.6759,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following on 1 slice of bread: 1 slice cheese 1 oz ham 1 slice cheese 2nd slice of bread 2. Brush outside of sandwich with 1 tbl margarine. PANINI PRESS METHOD 1. Preheat panini press to 400 F. 2. Place sandwich in panini press. Cook until sandwich is browned and cheese begins to melt, 3 to 4 minutes. Cheese does not have to melt completely. 3. Cut diagonally in half. 4. Cover. Keep hot for service. FLAT-TOP GRIDDLE METHOD 1. Preheat flat-top griddle to 350 F. 2. Cook sandwich, turning once, until browned and cheese is melted, 2 to 3 minutes on each side. 3. Cut diagonally in half. 4. Cover. Keep hot for service."
+      },
+      {
+        "id": "M8095",
+        "type": "Recipe",
+        "name": "Crispy Chicken Sandwich",
+        "food_cost": 0.8316,
+        "assembly_instructions": "1. Preheat deep-fat fryer to 350 F. 2. Fry frozen chicken patties until internal temperature reaches 165 F, 4 to 5 minutes. Drain. FOR 1 SERVING: 1. Layer the following on bottom half of roll: 1 chicken patty Top half of roll 2. Keep hot for service.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "M8170",
+        "type": "Recipe",
+        "name": "Grilled Black Bean Burger",
+        "food_cost": 1.539,
+        "assembly_instructions": "1. Preheat char-grill to medium or flat-top griddle to 350 F. 2. Cook frozen burgers 4 minutes. Turn burgers over. Cook until internal temperature reaches 165 F, 4 to 5 minutes. FOR 1 SERVING: 1. Layer the following on bottom half of 1 roll: 1 burger Top half of roll 2. Cover. Keep hot for service."
+      },
+      {
+        "id": "M8295",
+        "type": "Recipe",
+        "name": "Grilled Herb Chicken Sandwich",
+        "food_cost": 0.7633,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following on bottom half of roll: 1 piece Chicken Top half of roll 2. Cover. Keep hot for service."
+      },
+      {
+        "id": "M8958",
+        "type": "Recipe",
+        "name": "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE",
+        "food_cost": 0.9486,
+        "assembly_instructions": "1. Preheat char-grill to medium or flat-top griddle to 350 F. 2. Cook frozen burgers 2 minutes. Turn burgers over. Cook until internal temperature reaches 160 F, 2 to 3 minutes. FOR 1 SERVING: 1. Layer the following on bottom half of 1 roll: 1 burger Top half of roll 2. Cover. Keep hot for service.",
+        "special_instructions": "IDDSI Level 7"
+      }
+    ],
+    "Ingredient": [
+      {
+        "id": "Ingredient_salt",
+        "type": "Ingredient",
+        "name": "salt"
+      },
+      {
+        "id": "Ingredient_coat_crinkle_fry_potato",
+        "type": "Ingredient",
+        "name": "coat crinkle fry potato"
+      },
+      {
+        "id": "Ingredient_tomato_utility_vegetable",
+        "type": "Ingredient",
+        "name": "tomato utility vegetable"
+      },
+      {
+        "id": "Ingredient_tomato_vegetable_x",
+        "type": "Ingredient",
+        "name": "tomato vegetable x"
+      },
+      {
+        "id": "Ingredient_base_chicken_flavored",
+        "type": "Ingredient",
+        "name": "base chicken flavored"
+      },
+      {
+        "id": "Ingredient_water",
+        "type": "Ingredient",
+        "name": "water"
+      },
+      {
+        "id": "Ingredient_blend_dairy",
+        "type": "Ingredient",
+        "name": "blend dairy"
+      },
+      {
+        "id": "Ingredient_all_flour_purpose",
+        "type": "Ingredient",
+        "name": "all flour purpose"
+      },
+      {
+        "id": "Ingredient_black_ground_imitation_pepper_spice",
+        "type": "Ingredient",
+        "name": "black ground imitation pepper spice"
+      },
+      {
+        "id": "Ingredient_margarine_unsalted",
+        "type": "Ingredient",
+        "name": "margarine unsalted"
+      },
+      {
+        "id": "Ingredient_onion_vegetable_yellow",
+        "type": "Ingredient",
+        "name": "onion vegetable yellow"
+      },
+      {
+        "id": "Ingredient_onion_vegetable",
+        "type": "Ingredient",
+        "name": "onion vegetable"
+      },
+      {
+        "id": "Ingredient_celery_trimmed_vegetable",
+        "type": "Ingredient",
+        "name": "celery trimmed vegetable"
+      },
+      {
+        "id": "Ingredient_celery_vegetable",
+        "type": "Ingredient",
+        "name": "celery vegetable"
+      },
+      {
+        "id": "Ingredient_blueberry_fruit",
+        "type": "Ingredient",
+        "name": "blueberry fruit"
+      },
+      {
+        "id": "Ingredient_ground_nutmeg_spice",
+        "type": "Ingredient",
+        "name": "ground nutmeg spice"
+      },
+      {
+        "id": "Ingredient_american_cheese_yellow",
+        "type": "Ingredient",
+        "name": "american cheese yellow"
+      },
+      {
+        "id": "Ingredient_cinnamon_ground_spice",
+        "type": "Ingredient",
+        "name": "cinnamon ground spice"
+      },
+      {
+        "id": "Ingredient_american_cheese_white",
+        "type": "Ingredient",
+        "name": "american cheese white"
+      },
+      {
+        "id": "Ingredient_granulated_sugar_white",
+        "type": "Ingredient",
+        "name": "granulated sugar white"
+      },
+      {
+        "id": "Ingredient_salt_table",
+        "type": "Ingredient",
+        "name": "salt table"
+      },
+      {
+        "id": "Ingredient_onion_red_trimmed_vegetable",
+        "type": "Ingredient",
+        "name": "onion red trimmed vegetable"
+      },
+      {
+        "id": "Ingredient_ketchup",
+        "type": "Ingredient",
+        "name": "ketchup"
+      },
+      {
+        "id": "Ingredient_beef_ground_patty",
+        "type": "Ingredient",
+        "name": "beef ground patty"
+      },
+      {
+        "id": "Ingredient_american_cheese_or_slice_white_yellow",
+        "type": "Ingredient",
+        "name": "american cheese or slice white yellow"
+      },
+      {
+        "id": "Ingredient_tomato_vegetable",
+        "type": "Ingredient",
+        "name": "tomato vegetable"
+      },
+      {
+        "id": "Ingredient_and_onion_peeled_red_trimmed_vegetable",
+        "type": "Ingredient",
+        "name": "and onion peeled red trimmed vegetable"
+      },
+      {
+        "id": "Ingredient_all_blend_free_purpose_salt_seasoning",
+        "type": "Ingredient",
+        "name": "all blend free purpose salt seasoning"
+      },
+      {
+        "id": "Ingredient_lettuce_romaine_vegetable",
+        "type": "Ingredient",
+        "name": "lettuce romaine vegetable"
+      },
+      {
+        "id": "Ingredient_bun_hamburger_potato_roll",
+        "type": "Ingredient",
+        "name": "bun hamburger potato roll"
+      },
+      {
+        "id": "Ingredient_mustard_prepared_yellow",
+        "type": "Ingredient",
+        "name": "mustard prepared yellow"
+      },
+      {
+        "id": "Ingredient_black_ground_pepper_pure_spice",
+        "type": "Ingredient",
+        "name": "black ground pepper pure spice"
+      },
+      {
+        "id": "Ingredient_garlic_powder_spice",
+        "type": "Ingredient",
+        "name": "garlic powder spice"
+      },
+      {
+        "id": "Ingredient_granule_soy",
+        "type": "Ingredient",
+        "name": "granule soy"
+      },
+      {
+        "id": "Ingredient_base_beef_flavored",
+        "type": "Ingredient",
+        "name": "base beef flavored"
+      },
+      {
+        "id": "Ingredient_canned_paste_tomato_vegetable",
+        "type": "Ingredient",
+        "name": "canned paste tomato vegetable"
+      },
+      {
+        "id": "Ingredient_dill_pickle",
+        "type": "Ingredient",
+        "name": "dill pickle"
+      },
+      {
+        "id": "Ingredient_dry_pasta_rotini",
+        "type": "Ingredient",
+        "name": "dry pasta rotini"
+      },
+      {
+        "id": "Ingredient_dried_herb_leave_thyme",
+        "type": "Ingredient",
+        "name": "dried herb leave thyme"
+      },
+      {
+        "id": "Ingredient_dried_herb_leaf_oregano",
+        "type": "Ingredient",
+        "name": "dried herb leaf oregano"
+      },
+      {
+        "id": "Ingredient_margarine_softened_solid_unsalted_ztf",
+        "type": "Ingredient",
+        "name": "margarine softened solid unsalted ztf"
+      },
+      {
+        "id": "Ingredient_bread_end_pullman_slice_white",
+        "type": "Ingredient",
+        "name": "bread end pullman slice white"
+      },
+      {
+        "id": "Ingredient_baby_bbq_ray_s_sauce_sweet",
+        "type": "Ingredient",
+        "name": "baby bbq ray s sauce sweet"
+      },
+      {
+        "id": "Ingredient_cheddar_cheese_mild_yellow",
+        "type": "Ingredient",
+        "name": "cheddar cheese mild yellow"
+      },
+      {
+        "id": "Ingredient_iceberg_lettuce_vegetable",
+        "type": "Ingredient",
+        "name": "iceberg lettuce vegetable"
+      },
+      {
+        "id": "Ingredient_flour_shelf_stable_tortilla_white",
+        "type": "Ingredient",
+        "name": "flour shelf stable tortilla white"
+      },
+      {
+        "id": "Ingredient_brd_breast_chicken_homestyle_patty",
+        "type": "Ingredient",
+        "name": "brd breast chicken homestyle patty"
+      },
+      {
+        "id": "Ingredient_extra_fine_granulated_sugar",
+        "type": "Ingredient",
+        "name": "extra fine granulated sugar"
+      },
+      {
+        "id": "Ingredient_better_burgr_leave_lettuce_vegetable",
+        "type": "Ingredient",
+        "name": "better burgr leave lettuce vegetable"
+      },
+      {
+        "id": "Ingredient_bay_dried_herb_leave_whole",
+        "type": "Ingredient",
+        "name": "bay dried herb leave whole"
+      },
+      {
+        "id": "Ingredient_added_base_gf_ls_msg_no_vegetable",
+        "type": "Ingredient",
+        "name": "added base gf ls msg no vegetable"
+      },
+      {
+        "id": "Ingredient_black_grind_pepper_spice_table",
+        "type": "Ingredient",
+        "name": "black grind pepper spice table"
+      },
+      {
+        "id": "Ingredient_hot_pepper_sauce_tabasco",
+        "type": "Ingredient",
+        "name": "hot pepper sauce tabasco"
+      },
+      {
+        "id": "Ingredient_blend_oil_vegetable",
+        "type": "Ingredient",
+        "name": "blend oil vegetable"
+      },
+      {
+        "id": "Ingredient_cream_half_half",
+        "type": "Ingredient",
+        "name": "cream half half"
+      },
+      {
+        "id": "Ingredient_canned_puree_tomato_vegetable",
+        "type": "Ingredient",
+        "name": "canned puree tomato vegetable"
+      },
+      {
+        "id": "Ingredient_onion_trimmed_vegetable_yellow",
+        "type": "Ingredient",
+        "name": "onion trimmed vegetable yellow"
+      },
+      {
+        "id": "Ingredient_carrot_vegetable",
+        "type": "Ingredient",
+        "name": "carrot vegetable"
+      },
+      {
+        "id": "Ingredient_basil_chopped_herb_leave",
+        "type": "Ingredient",
+        "name": "basil chopped herb leave"
+      },
+      {
+        "id": "Ingredient_carrot_trimmed_vegetable",
+        "type": "Ingredient",
+        "name": "carrot trimmed vegetable"
+      },
+      {
+        "id": "Ingredient_canned_chili_chopped_drained_jalapeno_pepper_vegetable",
+        "type": "Ingredient",
+        "name": "canned chili chopped drained jalapeno pepper vegetable"
+      },
+      {
+        "id": "Ingredient_bread_end_pullman_slice_ww",
+        "type": "Ingredient",
+        "name": "bread end pullman slice ww"
+      },
+      {
+        "id": "Ingredient_chip_corn_crushed_snack",
+        "type": "Ingredient",
+        "name": "chip corn crushed snack"
+      },
+      {
+        "id": "Ingredient_black_deli_forest_ham",
+        "type": "Ingredient",
+        "name": "black deli forest ham"
+      },
+      {
+        "id": "Ingredient_hamburger_roll_white",
+        "type": "Ingredient",
+        "name": "hamburger roll white"
+      },
+      {
+        "id": "Ingredient_bean_black_burger_gardenburger_vegan",
+        "type": "Ingredient",
+        "name": "bean black burger gardenburger vegan"
+      },
+      {
+        "id": "Ingredient_head_iceberg_lettuce_vegetable",
+        "type": "Ingredient",
+        "name": "head iceberg lettuce vegetable"
+      },
+      {
+        "id": "Ingredient_iceberg_lettuce_shred_vegetable",
+        "type": "Ingredient",
+        "name": "iceberg lettuce shred vegetable"
+      }
+    ],
+    "Equipment": [
+      {
+        "id": "Equipment_griddle",
+        "type": "Equipment",
+        "name": "griddle",
+        "equipment_type": "griddle"
+      },
+      {
+        "id": "Equipment_fryer",
+        "type": "Equipment",
+        "name": "fryer",
+        "equipment_type": "fryer"
+      },
+      {
+        "id": "Equipment_panini_press",
+        "type": "Equipment",
+        "name": "panini_press",
+        "equipment_type": "panini_press"
+      },
+      {
+        "id": "Equipment_stockpot",
+        "type": "Equipment",
+        "name": "stockpot",
+        "equipment_type": "stockpot"
+      },
+      {
+        "id": "Equipment_grill",
+        "type": "Equipment",
+        "name": "grill",
+        "equipment_type": "grill"
+      }
+    ]
+  },
+  "edges": [
+    {
+      "source": "A5763",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A5763",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A5763",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A5763",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A5763",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A5763",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A5763",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A5763",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M13541",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M13541",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M13541",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M13541",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M13541",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M13541",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M13541",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M13541",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14301",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14301",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14301",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14301",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14301",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14301",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14301",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14301",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14343",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14343",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14343",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14343",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14343",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14343",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14343",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14343",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14856",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14856",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14856",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14856",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14856",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14856",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14856",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14856",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M19508",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M19508",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M19508",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20589",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M20589",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20589",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M33196",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M33196",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M33196",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M33196",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M33196",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M33196",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M33196",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M33196",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M34430",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M34430",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34430",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M35397",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M35397",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M35397",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M7941",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M7941",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M7941",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M7972",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M7972",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M7972",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M8095",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M8095",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8095",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8095",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M8170",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M8170",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8170",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8170",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8170",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8170",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8170",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8170",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M8295",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M8295",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8295",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8295",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8295",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M8958",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M8958",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8958",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8958",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8958",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8958",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8958",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M8958",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Sunday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "station_Grill",
+      "target": "week_3",
+      "relationship": "HAS_WEEK"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Friday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Monday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Sunday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Thursday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Tuesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Wednesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "A5763",
+      "target": "Ingredient_coat_crinkle_fry_potato",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "POTATO FZ FRIES CRINKLE CUT COAT 3/8\" XL 3761 / DEEP FAT FRIED",
+        "normalized_name": "coat crinkle fry potato",
+        "canonical_name": "coat crinkle fry potato",
+        "quantity": null,
+        "states": [
+          "8\" xl 3761",
+          "deep fat fried"
+        ]
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_base_chicken_flavored",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE CHICKEN FLAVORED (VEGAN)",
+        "normalized_name": "base chicken flavored",
+        "canonical_name": "base chicken flavored",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_blend_dairy",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DAIRY BLEND",
+        "normalized_name": "blend dairy",
+        "canonical_name": "blend dairy",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLOUR ALL PURPOSE",
+        "normalized_name": "all flour purpose",
+        "canonical_name": "all flour purpose",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE BULK UNSALTED (VEGAN)",
+        "normalized_name": "margarine unsalted",
+        "canonical_name": "margarine unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_tomato_vegetable_x",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, SLICED / RAW",
+        "normalized_name": "tomato vegetable x",
+        "canonical_name": "tomato vegetable x",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M13541",
+      "target": "Ingredient_tomato_utility_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO UTILITY - CORED, SLICED / RAW",
+        "normalized_name": "tomato utility vegetable",
+        "canonical_name": "tomato utility vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_blueberry_fruit",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT FZ BLUEBERRIES",
+        "normalized_name": "blueberry fruit",
+        "canonical_name": "blueberry fruit",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_ground_nutmeg_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE NUTMEG GROUND",
+        "normalized_name": "ground nutmeg spice",
+        "canonical_name": "ground nutmeg spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLOUR ALL PURPOSE",
+        "normalized_name": "all flour purpose",
+        "canonical_name": "all flour purpose",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_american_cheese_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW RS AP SLICED 160 CT",
+        "normalized_name": "american cheese yellow",
+        "canonical_name": "american cheese yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE BULK UNSALTED (VEGAN)",
+        "normalized_name": "margarine unsalted",
+        "canonical_name": "margarine unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_cinnamon_ground_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE CINNAMON GROUND",
+        "normalized_name": "cinnamon ground spice",
+        "canonical_name": "cinnamon ground spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_american_cheese_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN WHITE RS AP SLICED 160 CT",
+        "normalized_name": "american cheese white",
+        "canonical_name": "american cheese white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_granulated_sugar_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR WHITE GRANULATED",
+        "normalized_name": "granulated sugar white",
+        "canonical_name": "granulated sugar white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14301",
+      "target": "Ingredient_salt_table",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT TABLE",
+        "normalized_name": "salt table",
+        "canonical_name": "salt table",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_onion_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - TRIMMED, SLICED / RAW",
+        "normalized_name": "onion red trimmed vegetable",
+        "canonical_name": "onion red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_ketchup",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "KETCHUP PC 9 G",
+        "normalized_name": "ketchup",
+        "canonical_name": "ketchup",
+        "quantity": "9 G",
+        "states": []
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_beef_ground_patty",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BEEF GD PATTY 75/25 ANGUS 5.33 OZ RAW FZ (SYSCO) / COOKED",
+        "normalized_name": "beef ground patty",
+        "canonical_name": "beef ground patty",
+        "quantity": "5.33 OZ",
+        "states": [
+          "25 angus 5.33 oz raw fz (sysco)",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_american_cheese_or_slice_white_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW OR WHITE AP SLICES 0.5 OZ",
+        "normalized_name": "american cheese or slice white yellow",
+        "canonical_name": "american cheese or slice white yellow",
+        "quantity": "0.5 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO - CORED, SLICED / RAW",
+        "normalized_name": "tomato vegetable",
+        "canonical_name": "tomato vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_and_onion_peeled_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - PEELED AND TRIMMED, SLICED / RAW",
+        "normalized_name": "and onion peeled red trimmed vegetable",
+        "canonical_name": "and onion peeled red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_all_blend_free_purpose_salt_seasoning",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SEASONING BLEND ALL PURPOSE SALT FREE",
+        "normalized_name": "all blend free purpose salt seasoning",
+        "canonical_name": "all blend free purpose salt seasoning",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_lettuce_romaine_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ROMAINE - CORED, CUT / RAW",
+        "normalized_name": "lettuce romaine vegetable",
+        "canonical_name": "lettuce romaine vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_bun_hamburger_potato_roll",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "ROLL BUN HAMBURGER POTATO 2 OZ FZ (SYSCO) - THAWED",
+        "normalized_name": "bun hamburger potato roll",
+        "canonical_name": "bun hamburger potato roll",
+        "quantity": "2 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_mustard_prepared_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MUSTARD PC YELLOW PREPARED (SYSCO)",
+        "normalized_name": "mustard prepared yellow",
+        "canonical_name": "mustard prepared yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14343",
+      "target": "Ingredient_black_ground_pepper_pure_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND PURE",
+        "normalized_name": "black ground pepper pure spice",
+        "canonical_name": "black ground pepper pure spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_garlic_powder_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE GARLIC POWDER",
+        "normalized_name": "garlic powder spice",
+        "canonical_name": "garlic powder spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "white - peeled and trimmed, diced"
+        ]
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_granule_soy",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SOY GRANULES",
+        "normalized_name": "granule soy",
+        "canonical_name": "granule soy",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_base_beef_flavored",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE BEEF FLAVORED (VEGAN)",
+        "normalized_name": "base beef flavored",
+        "canonical_name": "base beef flavored",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_canned_paste_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED TOMATO PASTE",
+        "normalized_name": "canned paste tomato vegetable",
+        "canonical_name": "canned paste tomato vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_dill_pickle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PICKLE DILL SLICED KOSHER REFRIGERATED 1/4\" - DRAINED",
+        "normalized_name": "dill pickle",
+        "canonical_name": "dill pickle",
+        "quantity": null,
+        "states": [
+          "4\" - drained"
+        ]
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ ONION DICED / COOKED",
+        "normalized_name": "onion vegetable",
+        "canonical_name": "onion vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_dry_pasta_rotini",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTA DRY ROTINI / COOKED",
+        "normalized_name": "dry pasta rotini",
+        "canonical_name": "dry pasta rotini",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE BULK UNSALTED (VEGAN)",
+        "normalized_name": "margarine unsalted",
+        "canonical_name": "margarine unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_dried_herb_leave_thyme",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED THYME LEAVES",
+        "normalized_name": "dried herb leave thyme",
+        "canonical_name": "dried herb leave thyme",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_granulated_sugar_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR WHITE GRANULATED",
+        "normalized_name": "granulated sugar white",
+        "canonical_name": "granulated sugar white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14856",
+      "target": "Ingredient_dried_herb_leaf_oregano",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED OREGANO LEAF",
+        "normalized_name": "dried herb leaf oregano",
+        "canonical_name": "dried herb leaf oregano",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M19508",
+      "target": "Ingredient_american_cheese_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW RS AP SLICED 160 CT",
+        "normalized_name": "american cheese yellow",
+        "canonical_name": "american cheese yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M19508",
+      "target": "Ingredient_margarine_softened_solid_unsalted_ztf",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE SOLID UNSALTED ZTF - SOFTENED",
+        "normalized_name": "margarine softened solid unsalted ztf",
+        "canonical_name": "margarine softened solid unsalted ztf",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M19508",
+      "target": "Ingredient_bread_end_pullman_slice_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BREAD WHITE PULLMAN 28 SLICE 24 OZ FZ - THAWED, ENDS REMOVED",
+        "normalized_name": "bread end pullman slice white",
+        "canonical_name": "bread end pullman slice white",
+        "quantity": "24 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M19508",
+      "target": "Ingredient_american_cheese_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN WHITE RS AP SLICED 160 CT",
+        "normalized_name": "american cheese white",
+        "canonical_name": "american cheese white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_baby_bbq_ray_s_sauce_sweet",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE BBQ SWEET BABY RAY'S",
+        "normalized_name": "baby bbq ray s sauce sweet",
+        "canonical_name": "baby bbq ray s sauce sweet",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_onion_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - TRIMMED, SLICED / RAW",
+        "normalized_name": "onion red trimmed vegetable",
+        "canonical_name": "onion red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_cheddar_cheese_mild_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE CHEDDAR YELLOW MILD AP SLICED .5 OZ",
+        "normalized_name": "cheddar cheese mild yellow",
+        "canonical_name": "cheddar cheese mild yellow",
+        "quantity": "5 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG AP SHREDDED / RAW",
+        "normalized_name": "iceberg lettuce vegetable",
+        "canonical_name": "iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG - SHREDDED / RAW",
+        "normalized_name": "iceberg lettuce vegetable",
+        "canonical_name": "iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_flour_shelf_stable_tortilla_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TORTILLA FLOUR 6\" WHITE 1.09 OZ SHELF STABLE",
+        "normalized_name": "flour shelf stable tortilla white",
+        "canonical_name": "flour shelf stable tortilla white",
+        "quantity": "1.09 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M20589",
+      "target": "Ingredient_brd_breast_chicken_homestyle_patty",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHICKEN PATTY BREAST BRD HOMESTYLE 3.2 OZ RAW FZ / DEEP FAT FRIED",
+        "normalized_name": "brd breast chicken homestyle patty",
+        "canonical_name": "brd breast chicken homestyle patty",
+        "quantity": "3.2 OZ",
+        "states": [
+          "deep fat fried"
+        ]
+      }
+    },
+    {
+      "source": "M33196",
+      "target": "Ingredient_better_burgr_leave_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE BETTER BURGR AP WHL LEAVES - CUT / RAW",
+        "normalized_name": "better burgr leave lettuce vegetable",
+        "canonical_name": "better burgr leave lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_bay_dried_herb_leave_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED BAY LEAVES WHOLE",
+        "normalized_name": "bay dried herb leave whole",
+        "canonical_name": "bay dried herb leave whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_celery_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CELERY AP DICED 1/4\" / COOKED",
+        "normalized_name": "celery vegetable",
+        "canonical_name": "celery vegetable",
+        "quantity": null,
+        "states": [
+          "4\"",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_celery_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CELERY - TRIMMED, DICED / COOKED",
+        "normalized_name": "celery trimmed vegetable",
+        "canonical_name": "celery trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_canned_paste_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED TOMATO PASTE",
+        "normalized_name": "canned paste tomato vegetable",
+        "canonical_name": "canned paste tomato vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_added_base_gf_ls_msg_no_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE VEGETABLE LS NO ADDED MSG GF",
+        "normalized_name": "added base gf ls msg no vegetable",
+        "canonical_name": "added base gf ls msg no vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW AP DICED 3/8\" / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "8\"",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_black_grind_pepper_spice_table",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK TABLE GRIND",
+        "normalized_name": "black grind pepper spice table",
+        "canonical_name": "black grind pepper spice table",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_hot_pepper_sauce_tabasco",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE HOT PEPPER TABASCO",
+        "normalized_name": "hot pepper sauce tabasco",
+        "canonical_name": "hot pepper sauce tabasco",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_cream_half_half",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CREAM HALF & HALF",
+        "normalized_name": "cream half half",
+        "canonical_name": "cream half half",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_canned_puree_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED TOMATO PUREE",
+        "normalized_name": "canned puree tomato vegetable",
+        "canonical_name": "canned puree tomato vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_onion_trimmed_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW - TRIMMED, DICED / COOKED",
+        "normalized_name": "onion trimmed vegetable yellow",
+        "canonical_name": "onion trimmed vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_carrot_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT AP DICED 3/8\" / COOKED",
+        "normalized_name": "carrot vegetable",
+        "canonical_name": "carrot vegetable",
+        "quantity": null,
+        "states": [
+          "8\"",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_basil_chopped_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH BASIL - LEAVES, CHOPPED / RAW",
+        "normalized_name": "basil chopped herb leave",
+        "canonical_name": "basil chopped herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M34430",
+      "target": "Ingredient_carrot_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT - TRIMMED, DICED / COOKED",
+        "normalized_name": "carrot trimmed vegetable",
+        "canonical_name": "carrot trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M35397",
+      "target": "Ingredient_canned_chili_chopped_drained_jalapeno_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED PEPPER CHILI JALAPENO SLICED - DRAINED, CHOPPED",
+        "normalized_name": "canned chili chopped drained jalapeno pepper vegetable",
+        "canonical_name": "canned chili chopped drained jalapeno pepper vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M35397",
+      "target": "Ingredient_american_cheese_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW RS AP SLICED 160 CT",
+        "normalized_name": "american cheese yellow",
+        "canonical_name": "american cheese yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M35397",
+      "target": "Ingredient_bread_end_pullman_slice_ww",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BREAD WW 100% PULLMAN 24 SLICE 24 OZ FZ - THAWED, ENDS REMOVED",
+        "normalized_name": "bread end pullman slice ww",
+        "canonical_name": "bread end pullman slice ww",
+        "quantity": "24 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M35397",
+      "target": "Ingredient_chip_corn_crushed_snack",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SNACK BULK CHIPS CORN - CRUSHED",
+        "normalized_name": "chip corn crushed snack",
+        "canonical_name": "chip corn crushed snack",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M35397",
+      "target": "Ingredient_margarine_softened_solid_unsalted_ztf",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE SOLID UNSALTED ZTF - SOFTENED",
+        "normalized_name": "margarine softened solid unsalted ztf",
+        "canonical_name": "margarine softened solid unsalted ztf",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M35397",
+      "target": "Ingredient_tomato_vegetable_x",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, SLICED / RAW",
+        "normalized_name": "tomato vegetable x",
+        "canonical_name": "tomato vegetable x",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M7941",
+      "target": "Ingredient_american_cheese_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW RS AP SLICED 160 CT",
+        "normalized_name": "american cheese yellow",
+        "canonical_name": "american cheese yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M7941",
+      "target": "Ingredient_margarine_softened_solid_unsalted_ztf",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE SOLID UNSALTED ZTF - SOFTENED",
+        "normalized_name": "margarine softened solid unsalted ztf",
+        "canonical_name": "margarine softened solid unsalted ztf",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M7941",
+      "target": "Ingredient_bread_end_pullman_slice_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BREAD WHITE PULLMAN 28 SLICE 24 OZ FZ - THAWED, ENDS REMOVED",
+        "normalized_name": "bread end pullman slice white",
+        "canonical_name": "bread end pullman slice white",
+        "quantity": "24 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M7941",
+      "target": "Ingredient_american_cheese_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN WHITE RS AP SLICED 160 CT",
+        "normalized_name": "american cheese white",
+        "canonical_name": "american cheese white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M7972",
+      "target": "Ingredient_black_deli_forest_ham",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DELI HAM BLACK FOREST - SLICED",
+        "normalized_name": "black deli forest ham",
+        "canonical_name": "black deli forest ham",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M7972",
+      "target": "Ingredient_american_cheese_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW RS AP SLICED 160 CT",
+        "normalized_name": "american cheese yellow",
+        "canonical_name": "american cheese yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M7972",
+      "target": "Ingredient_margarine_softened_solid_unsalted_ztf",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE SOLID UNSALTED ZTF - SOFTENED",
+        "normalized_name": "margarine softened solid unsalted ztf",
+        "canonical_name": "margarine softened solid unsalted ztf",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M7972",
+      "target": "Ingredient_bread_end_pullman_slice_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BREAD WHITE PULLMAN 28 SLICE 24 OZ FZ - THAWED, ENDS REMOVED",
+        "normalized_name": "bread end pullman slice white",
+        "canonical_name": "bread end pullman slice white",
+        "quantity": "24 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M7972",
+      "target": "Ingredient_american_cheese_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN WHITE RS AP SLICED 160 CT",
+        "normalized_name": "american cheese white",
+        "canonical_name": "american cheese white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M8095",
+      "target": "Ingredient_hamburger_roll_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "ROLL HAMBURGER 4\" WHITE SLICED 2.1 OZ FZ - THAWED",
+        "normalized_name": "hamburger roll white",
+        "canonical_name": "hamburger roll white",
+        "quantity": "2.1 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M8095",
+      "target": "Ingredient_brd_breast_chicken_homestyle_patty",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHICKEN PATTY BREAST BRD HOMESTYLE 3.2 OZ RAW FZ / DEEP FAT FRIED",
+        "normalized_name": "brd breast chicken homestyle patty",
+        "canonical_name": "brd breast chicken homestyle patty",
+        "quantity": "3.2 OZ",
+        "states": [
+          "deep fat fried"
+        ]
+      }
+    },
+    {
+      "source": "M8170",
+      "target": "Ingredient_bean_black_burger_gardenburger_vegan",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BURGER GARDENBURGER BLACK BEAN VEGAN 3.4 OZ FZ / COOKED",
+        "normalized_name": "bean black burger gardenburger vegan",
+        "canonical_name": "bean black burger gardenburger vegan",
+        "quantity": "3.4 OZ",
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M8170",
+      "target": "Ingredient_hamburger_roll_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "ROLL HAMBURGER 4\" WHITE SLICED 2.1 OZ FZ - THAWED",
+        "normalized_name": "hamburger roll white",
+        "canonical_name": "hamburger roll white",
+        "quantity": "2.1 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M8295",
+      "target": "Ingredient_hamburger_roll_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "ROLL HAMBURGER 4\" WHITE SLICED 2.1 OZ FZ - THAWED",
+        "normalized_name": "hamburger roll white",
+        "canonical_name": "hamburger roll white",
+        "quantity": "2.1 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO - CORED, DICED / RAW",
+        "normalized_name": "tomato vegetable",
+        "canonical_name": "tomato vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_head_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG HEADS - CORED, SHREDDED / RAW",
+        "normalized_name": "head iceberg lettuce vegetable",
+        "canonical_name": "head iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_dill_pickle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PICKLE DILL SLICED 1/4\" REFRIG (CLAUSSEN) - DRAINED",
+        "normalized_name": "dill pickle",
+        "canonical_name": "dill pickle",
+        "quantity": null,
+        "states": [
+          "4\" refrig (claussen) - drained"
+        ]
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_dill_pickle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PICKLE DILL SLICED 1/4\" CANNED - DRAINED",
+        "normalized_name": "dill pickle",
+        "canonical_name": "dill pickle",
+        "quantity": null,
+        "states": [
+          "4\" canned - drained"
+        ]
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_iceberg_lettuce_shred_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG AP SHREDS / RAW",
+        "normalized_name": "iceberg lettuce shred vegetable",
+        "canonical_name": "iceberg lettuce shred vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_hamburger_roll_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "ROLL HAMBURGER 4\" WHITE SLICED 2.1 OZ FZ - THAWED",
+        "normalized_name": "hamburger roll white",
+        "canonical_name": "hamburger roll white",
+        "quantity": "2.1 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M8958",
+      "target": "Ingredient_beef_ground_patty",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BEEF GROUND PATTY 75/25 3.2 OZ RAW FZ / SAUTEED, GRILLED OR STIR FRIED / REFUSE EXCESS FAT",
+        "normalized_name": "beef ground patty",
+        "canonical_name": "beef ground patty",
+        "quantity": "3.2 OZ",
+        "states": [
+          "25 3.2 oz raw fz",
+          "refuse excess fat",
+          "sauteed, grilled or stir fried"
+        ]
+      }
+    },
+    {
+      "source": "A5763",
+      "target": "Equipment_fryer",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M19508",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M19508",
+      "target": "Equipment_panini_press",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M20589",
+      "target": "Equipment_fryer",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M34430",
+      "target": "Equipment_stockpot",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M35397",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M35397",
+      "target": "Equipment_panini_press",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M7941",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M7941",
+      "target": "Equipment_panini_press",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M7972",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M7972",
+      "target": "Equipment_panini_press",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M8095",
+      "target": "Equipment_fryer",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M8170",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M8170",
+      "target": "Equipment_grill",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M8958",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M8958",
+      "target": "Equipment_grill",
+      "relationship": "USES_EQUIPMENT"
+    }
+  ]
+}

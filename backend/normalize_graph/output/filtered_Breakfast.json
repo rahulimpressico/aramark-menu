@@ -1,0 +1,2378 @@
+{
+  "meal_period": "Breakfast",
+  "summary": {
+    "Station": 1,
+    "Week": 1,
+    "Day": 6,
+    "MealPeriod": 1,
+    "Recipe": 16,
+    "Ingredient": 64,
+    "Equipment": 1
+  },
+  "nodes": {
+    "Station": [
+      {
+        "id": "station_Grill",
+        "type": "Station",
+        "name": "Grill"
+      }
+    ],
+    "Week": [
+      {
+        "id": "week_3",
+        "type": "Week",
+        "week_no": 3
+      }
+    ],
+    "Day": [
+      {
+        "id": "day_Monday",
+        "type": "Day",
+        "day_name": "Monday",
+        "day_no": 1,
+        "week_no": 3
+      },
+      {
+        "id": "day_Tuesday",
+        "type": "Day",
+        "day_name": "Tuesday",
+        "day_no": 2,
+        "week_no": 3
+      },
+      {
+        "id": "day_Wednesday",
+        "type": "Day",
+        "day_name": "Wednesday",
+        "day_no": 3,
+        "week_no": 3
+      },
+      {
+        "id": "day_Thursday",
+        "type": "Day",
+        "day_name": "Thursday",
+        "day_no": 4,
+        "week_no": 3
+      },
+      {
+        "id": "day_Friday",
+        "type": "Day",
+        "day_name": "Friday",
+        "day_no": 5,
+        "week_no": 3
+      },
+      {
+        "id": "day_Sunday",
+        "type": "Day",
+        "day_name": "Sunday",
+        "day_no": 7,
+        "week_no": 3
+      }
+    ],
+    "MealPeriod": [
+      {
+        "id": "period_Breakfast",
+        "type": "MealPeriod",
+        "name": "Breakfast"
+      }
+    ],
+    "Recipe": [
+      {
+        "id": "A375",
+        "type": "Recipe",
+        "name": "Chai-Spiced Apple Oat Pancakes",
+        "food_cost": 1.1103,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. In bowl, combine all ingredients. Add pancake mix. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX. 3. Coat hot griddle with cooking spray. 4. On griddle, pour 2-oz ladles batter 3\" apart. 5. Cook until top of pancakes are covered with bubbles and edges begin to dry, 1 to 2 minutes. Turn pancakes over. Cook until golden brown, 1 to 2 minutes. 6. Serve immediately or use as directed in recipe.",
+        "special_instructions": "1 box PM pancake mix = 5 lb"
+      },
+      {
+        "id": "M11769",
+        "type": "Recipe",
+        "name": "Diced Tomatoes",
+        "food_cost": 1.6152,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7 1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw"
+      },
+      {
+        "id": "M14255",
+        "type": "Recipe",
+        "name": "Diced Ham",
+        "food_cost": 4.275,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M14258",
+        "type": "Recipe",
+        "name": "Shredded Cheddar Cheese",
+        "food_cost": 2.338,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz IDDSI Level 7"
+      },
+      {
+        "id": "M14290",
+        "type": "Recipe",
+        "name": "Feta Cheese Crumbles",
+        "food_cost": 2.829,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1 tbl = 3/8 ozw 1-oz spoodle = 5/8 ozw 2-oz spoodle = 1 1/4 ozw 3-oz spoodle = 1 7/8 ozw 4-oz spoodle = 2 1/2 ozw 6-oz spoodle = 3 3/4 ozw 8-oz spoodle = 5 ozw"
+      },
+      {
+        "id": "M14870",
+        "type": "Recipe",
+        "name": "Sliced Mixed Bell Peppers",
+        "food_cost": 1.7715,
+        "assembly_instructions": "1. Combine peppers. Toss to mix well. 2. Cover. Keep chilled for service.",
+        "special_instructions": "For Grab-n-Go: Wrap sandwich. Keep hot for service."
+      },
+      {
+        "id": "M20317",
+        "type": "Recipe",
+        "name": "Eggs",
+        "food_cost": 2.1625,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M21978",
+        "type": "Recipe",
+        "name": "Apple Cinnamon Pancake",
+        "food_cost": 0.3177,
+        "assembly_instructions": "1. Combine flour, sugar, brown sugar, baking powder, ground cinnamon, and salt. Whisk until well blended. 2. Combine milk, sliced apple, egg, margarine and lemon juice. Whisk until well blended. 3. Preheat flat-top griddle to 350 F. 4. Add dry ingredients all at once to wet ingredients. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX. 5. Coat hot griddle with cooking spray. 6. On griddle, pour 2-oz ladles batter 3\" apart 7. Cook until top of pancakes are covered with bubbles and edges begin to dry, 2 to 3 minutes. 8. Turn pancakes over. Cook until golden brown, 2 to 3 minutes. 9. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M34612",
+        "type": "Recipe",
+        "name": "Egg",
+        "food_cost": 0.3123,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M40339",
+        "type": "Recipe",
+        "name": "Crumbled Plant-Based Chorizo",
+        "food_cost": 7.0656,
+        "assembly_instructions": "1. Heat to 140 F. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 1 oz 2-oz spoodle = 1 7/8 oz 3-oz spoodle = 2 7/8 oz 4-oz spoodle = 3 3/4 oz 6-oz spoodle = 5 5/8 oz 8-oz spoodle = 7 1/2 oz"
+      },
+      {
+        "id": "M40676",
+        "type": "Recipe",
+        "name": "Buttermilk Pancakes",
+        "food_cost": 0.1233,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. In bowl, place water. Add pancake mix. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX. 3. Coat hot griddle with cooking spray. 4. On griddle, pour 2-oz ladles batter 3\" apart. 5. Cook until top of pancakes are covered with bubbles and edges begin to dry, 1 to 2 minutes. Turn pancakes over. Cook until golden brown, 1 to 2 minutes. 6. Cover. Keep hot for service.",
+        "special_instructions": "1 box PM pancake mix = 5 lb"
+      },
+      {
+        "id": "M40679",
+        "type": "Recipe",
+        "name": "Chocolate Chip Buttermilk Pancakes",
+        "food_cost": 0.3143,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. In bowl, place water. Add pancake mix. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX. 3. Coat hot griddle with cooking spray. 4. On griddle, pour 2-oz ladles batter 3\" apart. Immediately sprinkle 1 tbl chocolate chips on each pool of batter. 5. Cook until top of pancakes are covered with bubbles and edges begin to dry, 1 to 2 minutes. Turn pancakes over. Cook until golden brown, 1 to 2 minutes. 6. Cover. Keep hot for service.",
+        "special_instructions": "1 box PM pancake mix = 5 lb"
+      },
+      {
+        "id": "M40685",
+        "type": "Recipe",
+        "name": "Banana Buttermilk Pancake",
+        "food_cost": 0.1777,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. In bowl, place banana and water. Add pancake mix. Whisk until just blended. Batter will be slightly lumpy. DO NOT OVERMIX. 3. Coat hot griddle with cooking spray. 4. On griddle, pour 2-oz ladles batter 3\" apart. 5. Cook until top of pancakes are covered with bubbles and edges begin to dry, 1 to 2 minutes. Turn pancakes over. Cook until golden brown, 1 to 2 minutes. 6. Serve immediately or use as directed in recipe.",
+        "special_instructions": "1 box PM pancake mix = 5 lb"
+      },
+      {
+        "id": "M6557",
+        "type": "Recipe",
+        "name": "Sliced Mushrooms",
+        "food_cost": 2.5278,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M6568",
+        "type": "Recipe",
+        "name": "Diced Onions",
+        "food_cost": 0.5277,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M6573",
+        "type": "Recipe",
+        "name": "Chopped Fresh Spinach",
+        "food_cost": 5.292,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "SELECT UTENSIL BASED ON PORTION SIZE. RANDOMLY CHECK ON SCALE."
+      }
+    ],
+    "Ingredient": [
+      {
+        "id": "Ingredient_cereal_oat_quick",
+        "type": "Ingredient",
+        "name": "cereal oat quick"
+      },
+      {
+        "id": "Ingredient_apple_canned_drained_fruit_water",
+        "type": "Ingredient",
+        "name": "apple canned drained fruit water"
+      },
+      {
+        "id": "Ingredient_apple_juice",
+        "type": "Ingredient",
+        "name": "apple juice"
+      },
+      {
+        "id": "Ingredient_salt",
+        "type": "Ingredient",
+        "name": "salt"
+      },
+      {
+        "id": "Ingredient_complete_milling_mix_pancake_pearl_waffle",
+        "type": "Ingredient",
+        "name": "complete milling mix pancake pearl waffle"
+      },
+      {
+        "id": "Ingredient_tomato_utility_vegetable",
+        "type": "Ingredient",
+        "name": "tomato utility vegetable"
+      },
+      {
+        "id": "Ingredient_tomato_vegetable_x",
+        "type": "Ingredient",
+        "name": "tomato vegetable x"
+      },
+      {
+        "id": "Ingredient_base_chicken_flavored",
+        "type": "Ingredient",
+        "name": "base chicken flavored"
+      },
+      {
+        "id": "Ingredient_water",
+        "type": "Ingredient",
+        "name": "water"
+      },
+      {
+        "id": "Ingredient_blend_dairy",
+        "type": "Ingredient",
+        "name": "blend dairy"
+      },
+      {
+        "id": "Ingredient_all_flour_purpose",
+        "type": "Ingredient",
+        "name": "all flour purpose"
+      },
+      {
+        "id": "Ingredient_black_ground_imitation_pepper_spice",
+        "type": "Ingredient",
+        "name": "black ground imitation pepper spice"
+      },
+      {
+        "id": "Ingredient_margarine_unsalted",
+        "type": "Ingredient",
+        "name": "margarine unsalted"
+      },
+      {
+        "id": "Ingredient_onion_vegetable_yellow",
+        "type": "Ingredient",
+        "name": "onion vegetable yellow"
+      },
+      {
+        "id": "Ingredient_ham_pit_smoked_style",
+        "type": "Ingredient",
+        "name": "ham pit smoked style"
+      },
+      {
+        "id": "Ingredient_onion_vegetable",
+        "type": "Ingredient",
+        "name": "onion vegetable"
+      },
+      {
+        "id": "Ingredient_pepper_vegetable",
+        "type": "Ingredient",
+        "name": "pepper vegetable"
+      },
+      {
+        "id": "Ingredient_green_pea_vegetable",
+        "type": "Ingredient",
+        "name": "green pea vegetable"
+      },
+      {
+        "id": "Ingredient_deli_end_turkey",
+        "type": "Ingredient",
+        "name": "deli end turkey"
+      },
+      {
+        "id": "Ingredient_green_pepper_seeded_vegetable",
+        "type": "Ingredient",
+        "name": "green pepper seeded vegetable"
+      },
+      {
+        "id": "Ingredient_sauce_worcestershire",
+        "type": "Ingredient",
+        "name": "sauce worcestershire"
+      },
+      {
+        "id": "Ingredient_cheddar_cheese_feather_mild_yellow",
+        "type": "Ingredient",
+        "name": "cheddar cheese feather mild yellow"
+      },
+      {
+        "id": "Ingredient_celery_trimmed_vegetable",
+        "type": "Ingredient",
+        "name": "celery trimmed vegetable"
+      },
+      {
+        "id": "Ingredient_dried_herb_rubbed_sage",
+        "type": "Ingredient",
+        "name": "dried herb rubbed sage"
+      },
+      {
+        "id": "Ingredient_celery_vegetable",
+        "type": "Ingredient",
+        "name": "celery vegetable"
+      },
+      {
+        "id": "Ingredient_poultry_seasoning",
+        "type": "Ingredient",
+        "name": "poultry seasoning"
+      },
+      {
+        "id": "Ingredient_bread_cubed_dried_loaf_slice_wheat_whole",
+        "type": "Ingredient",
+        "name": "bread cubed dried loaf slice wheat whole"
+      },
+      {
+        "id": "Ingredient_cheese_feta",
+        "type": "Ingredient",
+        "name": "cheese feta"
+      },
+      {
+        "id": "Ingredient_cinnamon_ground_spice",
+        "type": "Ingredient",
+        "name": "cinnamon ground spice"
+      },
+      {
+        "id": "Ingredient_ketchup",
+        "type": "Ingredient",
+        "name": "ketchup"
+      },
+      {
+        "id": "Ingredient_american_cheese_or_slice_white_yellow",
+        "type": "Ingredient",
+        "name": "american cheese or slice white yellow"
+      },
+      {
+        "id": "Ingredient_garlic_powder_spice",
+        "type": "Ingredient",
+        "name": "garlic powder spice"
+      },
+      {
+        "id": "Ingredient_granule_soy",
+        "type": "Ingredient",
+        "name": "granule soy"
+      },
+      {
+        "id": "Ingredient_base_beef_flavored",
+        "type": "Ingredient",
+        "name": "base beef flavored"
+      },
+      {
+        "id": "Ingredient_dry_pasta_rotini",
+        "type": "Ingredient",
+        "name": "dry pasta rotini"
+      },
+      {
+        "id": "Ingredient_dried_herb_leave_thyme",
+        "type": "Ingredient",
+        "name": "dried herb leave thyme"
+      },
+      {
+        "id": "Ingredient_bell_pepper_red_seeded_vegetable",
+        "type": "Ingredient",
+        "name": "bell pepper red seeded vegetable"
+      },
+      {
+        "id": "Ingredient_english_muffin",
+        "type": "Ingredient",
+        "name": "english muffin"
+      },
+      {
+        "id": "Ingredient_buffet_deli_ham_pork_style",
+        "type": "Ingredient",
+        "name": "buffet deli ham pork style"
+      },
+      {
+        "id": "Ingredient_blend_breakfast_cage_egg_free_liquid",
+        "type": "Ingredient",
+        "name": "blend breakfast cage egg free liquid"
+      },
+      {
+        "id": "Ingredient_juice_lemon_pasteurized",
+        "type": "Ingredient",
+        "name": "juice lemon pasteurized"
+      },
+      {
+        "id": "Ingredient_brown_light_sugar",
+        "type": "Ingredient",
+        "name": "brown light sugar"
+      },
+      {
+        "id": "Ingredient_extra_fine_granulated_sugar",
+        "type": "Ingredient",
+        "name": "extra fine granulated sugar"
+      },
+      {
+        "id": "Ingredient_cage_cholesterol_egg_ff_free_free_liquid",
+        "type": "Ingredient",
+        "name": "cage cholesterol egg ff free free liquid"
+      },
+      {
+        "id": "Ingredient_margarine_melted_solid_unsalted_ztf",
+        "type": "Ingredient",
+        "name": "margarine melted solid unsalted ztf"
+      },
+      {
+        "id": "Ingredient_milk",
+        "type": "Ingredient",
+        "name": "milk"
+      },
+      {
+        "id": "Ingredient_baking_powder",
+        "type": "Ingredient",
+        "name": "baking powder"
+      },
+      {
+        "id": "Ingredient_apple_canned_chopped_drained_fruit_water",
+        "type": "Ingredient",
+        "name": "apple canned chopped drained fruit water"
+      },
+      {
+        "id": "Ingredient_onion_trimmed_vegetable_yellow",
+        "type": "Ingredient",
+        "name": "onion trimmed vegetable yellow"
+      },
+      {
+        "id": "Ingredient_cage_egg_free_large_shell",
+        "type": "Ingredient",
+        "name": "cage egg free large shell"
+      },
+      {
+        "id": "Ingredient_chorizo_crumble_vegan",
+        "type": "Ingredient",
+        "name": "chorizo crumble vegan"
+      },
+      {
+        "id": "Ingredient_cool_water",
+        "type": "Ingredient",
+        "name": "cool water"
+      },
+      {
+        "id": "Ingredient_chip_chocolate_semisweet",
+        "type": "Ingredient",
+        "name": "chip chocolate semisweet"
+      },
+      {
+        "id": "Ingredient_banana_fruit_mashed_peeled",
+        "type": "Ingredient",
+        "name": "banana fruit mashed peeled"
+      },
+      {
+        "id": "Ingredient_mushroom_trimmed_vegetable",
+        "type": "Ingredient",
+        "name": "mushroom trimmed vegetable"
+      },
+      {
+        "id": "Ingredient_mushroom_vegetable",
+        "type": "Ingredient",
+        "name": "mushroom vegetable"
+      },
+      {
+        "id": "Ingredient_mechanically_poultry_separated",
+        "type": "Ingredient",
+        "name": "mechanically poultry separated"
+      },
+      {
+        "id": "Ingredient_vinegar_white",
+        "type": "Ingredient",
+        "name": "vinegar white"
+      },
+      {
+        "id": "Ingredient_dry_elbow_macaroni_pasta",
+        "type": "Ingredient",
+        "name": "dry elbow macaroni pasta"
+      },
+      {
+        "id": "Ingredient_baker_potato_vegetable",
+        "type": "Ingredient",
+        "name": "baker potato vegetable"
+      },
+      {
+        "id": "Ingredient_dried_potato_slice_vegetable",
+        "type": "Ingredient",
+        "name": "dried potato slice vegetable"
+      },
+      {
+        "id": "Ingredient_potato_vegetable_white",
+        "type": "Ingredient",
+        "name": "potato vegetable white"
+      },
+      {
+        "id": "Ingredient_spinach_stem_vegetable",
+        "type": "Ingredient",
+        "name": "spinach stem vegetable"
+      },
+      {
+        "id": "Ingredient_cheese_mix_sauce",
+        "type": "Ingredient",
+        "name": "cheese mix sauce"
+      }
+    ],
+    "Equipment": [
+      {
+        "id": "Equipment_griddle",
+        "type": "Equipment",
+        "name": "griddle",
+        "equipment_type": "griddle"
+      }
+    ]
+  },
+  "edges": [
+    {
+      "source": "A375",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A375",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "A375",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M11769",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M11769",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M11769",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M11769",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M11769",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M11769",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M11769",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M11769",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14255",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14255",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14255",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14255",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14255",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14255",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14255",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14258",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14258",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14258",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14258",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14258",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14258",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14258",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14258",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14290",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14290",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14290",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14290",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14290",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14290",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14290",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14290",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14870",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14870",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14870",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14870",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14870",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14870",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14870",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M14870",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20317",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M20317",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20317",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20317",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20317",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20317",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20317",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M20317",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M21978",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M21978",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M21978",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M34612",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M34612",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34612",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34612",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34612",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34612",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34612",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M34612",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40339",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40339",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40339",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40339",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40339",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40339",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40339",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40339",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40676",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40676",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40676",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40679",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40679",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40679",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40685",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40685",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M40685",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M6557",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M6557",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6557",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6557",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6557",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6557",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6557",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6557",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M6568",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M6568",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6568",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6568",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6568",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6568",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6568",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6568",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M6573",
+      "target": "station_Grill",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M6573",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6573",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6573",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6573",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6573",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6573",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON"
+    },
+    {
+      "source": "M6573",
+      "target": "period_Breakfast",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "day_Friday",
+      "target": "period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_Breakfast",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "station_Grill",
+      "target": "week_3",
+      "relationship": "HAS_WEEK"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Friday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Monday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Sunday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Thursday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Tuesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Wednesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "A375",
+      "target": "Ingredient_cereal_oat_quick",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CEREAL OATS QUICK",
+        "normalized_name": "cereal oat quick",
+        "canonical_name": "cereal oat quick",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A375",
+      "target": "Ingredient_apple_canned_drained_fruit_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT CANNED APPLE SLICED IN WATER - DRAINED, DICED",
+        "normalized_name": "apple canned drained fruit water",
+        "canonical_name": "apple canned drained fruit water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A375",
+      "target": "Ingredient_apple_juice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "JUICE APPLE BULK",
+        "normalized_name": "apple juice",
+        "canonical_name": "apple juice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A375",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A375",
+      "target": "Ingredient_complete_milling_mix_pancake_pearl_waffle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MIX PANCAKE WAFFLE COMPLETE PEARL MILLING",
+        "normalized_name": "complete milling mix pancake pearl waffle",
+        "canonical_name": "complete milling mix pancake pearl waffle",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M11769",
+      "target": "Ingredient_tomato_utility_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO UTILITY - CORED, DICED / RAW",
+        "normalized_name": "tomato utility vegetable",
+        "canonical_name": "tomato utility vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M11769",
+      "target": "Ingredient_tomato_vegetable_x",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, DICED / RAW",
+        "normalized_name": "tomato vegetable x",
+        "canonical_name": "tomato vegetable x",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_base_chicken_flavored",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE CHICKEN FLAVORED (VEGAN)",
+        "normalized_name": "base chicken flavored",
+        "canonical_name": "base chicken flavored",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "white - peeled and trimmed, diced"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_ham_pit_smoked_style",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HAM SMOKED PIT STYLE BNLS FC FTR - DICED",
+        "normalized_name": "ham pit smoked style",
+        "canonical_name": "ham pit smoked style",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_blend_dairy",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DAIRY BLEND",
+        "normalized_name": "blend dairy",
+        "canonical_name": "blend dairy",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ ONION DICED / COOKED",
+        "normalized_name": "onion vegetable",
+        "canonical_name": "onion vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLOUR ALL PURPOSE",
+        "normalized_name": "all flour purpose",
+        "canonical_name": "all flour purpose",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ PEPPER CUT / COOKED",
+        "normalized_name": "pepper vegetable",
+        "canonical_name": "pepper vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_green_pea_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ PEAS GREEN / COOKED",
+        "normalized_name": "green pea vegetable",
+        "canonical_name": "green pea vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_deli_end_turkey",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DELI TURKEY ENDS/PIECES - DICED",
+        "normalized_name": "deli end turkey",
+        "canonical_name": "deli end turkey",
+        "quantity": null,
+        "states": [
+          "pieces - diced"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE BULK UNSALTED (VEGAN)",
+        "normalized_name": "margarine unsalted",
+        "canonical_name": "margarine unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER GREEN - CORED, SEEDED, DICED / COOKED",
+        "normalized_name": "green pepper seeded vegetable",
+        "canonical_name": "green pepper seeded vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14255",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE WORCESTERSHIRE",
+        "normalized_name": "sauce worcestershire",
+        "canonical_name": "sauce worcestershire",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "white - peeled and trimmed, diced"
+        ]
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_cheddar_cheese_feather_mild_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE CHEDDAR YELLOW MILD AP SHREDDED FEATHER",
+        "normalized_name": "cheddar cheese feather mild yellow",
+        "canonical_name": "cheddar cheese feather mild yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_celery_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CELERY - TRIMMED, DICED / COOKED",
+        "normalized_name": "celery trimmed vegetable",
+        "canonical_name": "celery trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ ONION DICED / COOKED",
+        "normalized_name": "onion vegetable",
+        "canonical_name": "onion vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_dried_herb_rubbed_sage",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED SAGE RUBBED",
+        "normalized_name": "dried herb rubbed sage",
+        "canonical_name": "dried herb rubbed sage",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_celery_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ CELERY DICED / COOKED",
+        "normalized_name": "celery vegetable",
+        "canonical_name": "celery vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_poultry_seasoning",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SEASONING POULTRY (SYSCO)",
+        "normalized_name": "poultry seasoning",
+        "canonical_name": "poultry seasoning",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14258",
+      "target": "Ingredient_bread_cubed_dried_loaf_slice_wheat_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BREAD LOAF WHOLE WHEAT 1 OZ SLICE (LOCAL BAKERY) - DRIED, CUBED",
+        "normalized_name": "bread cubed dried loaf slice wheat whole",
+        "canonical_name": "bread cubed dried loaf slice wheat whole",
+        "quantity": "1 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M14290",
+      "target": "Ingredient_cheese_feta",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE FETA AP CRUMBLED",
+        "normalized_name": "cheese feta",
+        "canonical_name": "cheese feta",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14870",
+      "target": "Ingredient_bell_pepper_red_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER RED BELL - SEEDED, SLICED / RAW",
+        "normalized_name": "bell pepper red seeded vegetable",
+        "canonical_name": "bell pepper red seeded vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14870",
+      "target": "Ingredient_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, SLICED / RAW",
+        "normalized_name": "bell green pepper seeded vegetable",
+        "canonical_name": "green pepper seeded vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14870",
+      "target": "Ingredient_english_muffin",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MUFFIN ENGLISH 2 OZ FZ",
+        "normalized_name": "english muffin",
+        "canonical_name": "english muffin",
+        "quantity": "2 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M14870",
+      "target": "Ingredient_american_cheese_or_slice_white_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE AMERICAN YELLOW OR WHITE AP SLICES 0.5 OZ",
+        "normalized_name": "american cheese or slice white yellow",
+        "canonical_name": "american cheese or slice white yellow",
+        "quantity": "0.5 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M14870",
+      "target": "Ingredient_buffet_deli_ham_pork_style",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DELI PORK HAM BUFFET STYLE - SLICED",
+        "normalized_name": "buffet deli ham pork style",
+        "canonical_name": "buffet deli ham pork style",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20317",
+      "target": "Ingredient_blend_breakfast_cage_egg_free_liquid",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "EGG LIQUID BREAKFAST BLEND FRESH CAGE FREE / COOKED",
+        "normalized_name": "blend breakfast cage egg free liquid",
+        "canonical_name": "blend breakfast cage egg free liquid",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_juice_lemon_pasteurized",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "JUICE BULK LEMON PASTEURIZED REFRIGERATED",
+        "normalized_name": "juice lemon pasteurized",
+        "canonical_name": "juice lemon pasteurized",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_brown_light_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR BROWN LIGHT",
+        "normalized_name": "brown light sugar",
+        "canonical_name": "brown light sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_cage_cholesterol_egg_ff_free_free_liquid",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "EGG LIQUID CHOLESTEROL FREE FF FRESH CAGE FREE / COOKED",
+        "normalized_name": "cage cholesterol egg ff free free liquid",
+        "canonical_name": "cage cholesterol egg ff free free liquid",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_margarine_melted_solid_unsalted_ztf",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE SOLID UNSALTED ZTF - MELTED",
+        "normalized_name": "margarine melted solid unsalted ztf",
+        "canonical_name": "margarine melted solid unsalted ztf",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_milk",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MILK BULK 2%",
+        "normalized_name": "milk",
+        "canonical_name": "milk",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLOUR ALL-PURPOSE",
+        "normalized_name": "all flour purpose",
+        "canonical_name": "all flour purpose",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_baking_powder",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BAKING POWDER",
+        "normalized_name": "baking powder",
+        "canonical_name": "baking powder",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_cinnamon_ground_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE CINNAMON GROUND",
+        "normalized_name": "cinnamon ground spice",
+        "canonical_name": "cinnamon ground spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21978",
+      "target": "Ingredient_apple_canned_chopped_drained_fruit_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT CANNED APPLE SLICED IN WATER - DRAINED, CHOPPED",
+        "normalized_name": "apple canned chopped drained fruit water",
+        "canonical_name": "apple canned chopped drained fruit water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34612",
+      "target": "Ingredient_cage_egg_free_large_shell",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "EGG SHELL LARGE CAGE FREE / COOKED / REFUSE SHELL",
+        "normalized_name": "cage egg free large shell",
+        "canonical_name": "cage egg free large shell",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "refuse shell"
+        ]
+      }
+    },
+    {
+      "source": "M40339",
+      "target": "Ingredient_chorizo_crumble_vegan",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGAN CHORIZO CRUMBLES FZ - THAWED / COOKED",
+        "normalized_name": "chorizo crumble vegan",
+        "canonical_name": "chorizo crumble vegan",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M40676",
+      "target": "Ingredient_cool_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER - COOL",
+        "normalized_name": "cool water",
+        "canonical_name": "cool water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40676",
+      "target": "Ingredient_complete_milling_mix_pancake_pearl_waffle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MIX PANCAKE WAFFLE COMPLETE PEARL MILLING",
+        "normalized_name": "complete milling mix pancake pearl waffle",
+        "canonical_name": "complete milling mix pancake pearl waffle",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40679",
+      "target": "Ingredient_cool_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER - COOL",
+        "normalized_name": "cool water",
+        "canonical_name": "cool water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40679",
+      "target": "Ingredient_chip_chocolate_semisweet",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHOCOLATE SEMISWEET CHIPS",
+        "normalized_name": "chip chocolate semisweet",
+        "canonical_name": "chip chocolate semisweet",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40679",
+      "target": "Ingredient_complete_milling_mix_pancake_pearl_waffle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MIX PANCAKE WAFFLE COMPLETE PEARL MILLING",
+        "normalized_name": "complete milling mix pancake pearl waffle",
+        "canonical_name": "complete milling mix pancake pearl waffle",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40685",
+      "target": "Ingredient_cool_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER - COOL",
+        "normalized_name": "cool water",
+        "canonical_name": "cool water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40685",
+      "target": "Ingredient_banana_fruit_mashed_peeled",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT FRESH BANANA - PEELED, MASHED / RAW",
+        "normalized_name": "banana fruit mashed peeled",
+        "canonical_name": "banana fruit mashed peeled",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M40685",
+      "target": "Ingredient_complete_milling_mix_pancake_pearl_waffle",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MIX PANCAKE WAFFLE COMPLETE PEARL MILLING",
+        "normalized_name": "complete milling mix pancake pearl waffle",
+        "canonical_name": "complete milling mix pancake pearl waffle",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6557",
+      "target": "Ingredient_mushroom_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH MUSHROOM - TRIMMED, SLICED / RAW",
+        "normalized_name": "mushroom trimmed vegetable",
+        "canonical_name": "mushroom trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M6557",
+      "target": "Ingredient_mushroom_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH MUSHROOM AP SLICED / RAW",
+        "normalized_name": "mushroom vegetable",
+        "canonical_name": "mushroom vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_garlic_powder_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE GARLIC POWDER",
+        "normalized_name": "garlic powder spice",
+        "canonical_name": "garlic powder spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "white - peeled and trimmed, diced"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_granule_soy",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SOY GRANULES",
+        "normalized_name": "granule soy",
+        "canonical_name": "granule soy",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_base_beef_flavored",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE BEEF FLAVORED (VEGAN)",
+        "normalized_name": "base beef flavored",
+        "canonical_name": "base beef flavored",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_mechanically_poultry_separated",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "POULTRY MECHANICALLY SEPARATED RAW FZ - THAWED / COOKED",
+        "normalized_name": "mechanically poultry separated",
+        "canonical_name": "mechanically poultry separated",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_blend_dairy",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DAIRY BLEND",
+        "normalized_name": "blend dairy",
+        "canonical_name": "blend dairy",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ ONION DICED / COOKED",
+        "normalized_name": "onion vegetable",
+        "canonical_name": "onion vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_vinegar_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR WHITE",
+        "normalized_name": "vinegar white",
+        "canonical_name": "vinegar white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLOUR ALL PURPOSE",
+        "normalized_name": "all flour purpose",
+        "canonical_name": "all flour purpose",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_ketchup",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "KETCHUP BULK",
+        "normalized_name": "ketchup",
+        "canonical_name": "ketchup",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_dry_pasta_rotini",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTA DRY ROTINI / COOKED",
+        "normalized_name": "dry pasta rotini",
+        "canonical_name": "dry pasta rotini",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_dry_elbow_macaroni_pasta",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTA DRY ELBOW MACARONI / COOKED",
+        "normalized_name": "dry elbow macaroni pasta",
+        "canonical_name": "dry elbow macaroni pasta",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_onion_trimmed_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW - TRIMMED, DICED / RAW",
+        "normalized_name": "onion trimmed vegetable yellow",
+        "canonical_name": "onion trimmed vegetable yellow",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE BULK UNSALTED (VEGAN)",
+        "normalized_name": "margarine unsalted",
+        "canonical_name": "margarine unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE WORCESTERSHIRE",
+        "normalized_name": "sauce worcestershire",
+        "canonical_name": "sauce worcestershire",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6568",
+      "target": "Ingredient_dried_herb_leave_thyme",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED THYME LEAVES",
+        "normalized_name": "dried herb leave thyme",
+        "canonical_name": "dried herb leave thyme",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_base_chicken_flavored",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE CHICKEN FLAVORED (VEGAN)",
+        "normalized_name": "base chicken flavored",
+        "canonical_name": "base chicken flavored",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "white - peeled and trimmed, diced"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_baker_potato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH POTATO BAKER/RUSSET 120 CT - SLICED / COOKED",
+        "normalized_name": "baker potato vegetable",
+        "canonical_name": "baker potato vegetable",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "russet 120 ct - sliced"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_granule_soy",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SOY GRANULES",
+        "normalized_name": "granule soy",
+        "canonical_name": "granule soy",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_mechanically_poultry_separated",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "POULTRY MECHANICALLY SEPARATED RAW FZ - THAWED / COOKED",
+        "normalized_name": "mechanically poultry separated",
+        "canonical_name": "mechanically poultry separated",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_dried_potato_slice_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE DRIED POTATO SLICES",
+        "normalized_name": "dried potato slice vegetable",
+        "canonical_name": "dried potato slice vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_potato_vegetable_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH POTATO WHITE/YELLOW CHEF - SLICED / COOKED",
+        "normalized_name": "potato vegetable white",
+        "canonical_name": "potato vegetable white",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "yellow chef - sliced"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ ONION DICED / COOKED",
+        "normalized_name": "onion vegetable",
+        "canonical_name": "onion vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_all_flour_purpose",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLOUR ALL PURPOSE",
+        "normalized_name": "all flour purpose",
+        "canonical_name": "all flour purpose",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ PEPPER CUT / COOKED",
+        "normalized_name": "pepper vegetable",
+        "canonical_name": "pepper vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_margarine_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE BULK UNSALTED (VEGAN)",
+        "normalized_name": "margarine unsalted",
+        "canonical_name": "margarine unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER GREEN - CORED, SEEDED, DICED / COOKED",
+        "normalized_name": "green pepper seeded vegetable",
+        "canonical_name": "green pepper seeded vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE WORCESTERSHIRE",
+        "normalized_name": "sauce worcestershire",
+        "canonical_name": "sauce worcestershire",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_spinach_stem_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH SPINACH - STEMS REMOVED, CUT / RAW",
+        "normalized_name": "spinach stem vegetable",
+        "canonical_name": "spinach stem vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_baker_potato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH POTATO BAKER/RUSSET 90 CT - SLICED / COOKED",
+        "normalized_name": "baker potato vegetable",
+        "canonical_name": "baker potato vegetable",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "russet 90 ct - sliced"
+        ]
+      }
+    },
+    {
+      "source": "M6573",
+      "target": "Ingredient_cheese_mix_sauce",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE MIX CHEESE",
+        "normalized_name": "cheese mix sauce",
+        "canonical_name": "cheese mix sauce",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A375",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M21978",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40676",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40679",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40685",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    }
+  ]
+}
