@@ -1,9 +1,0 @@
-{
-  "station_name": "Grill",
-  "meal_period": "Lunch",
-  "content": "## Overall Station Structure\n- The **Lunch** period at the Grill station offers a Made-To-Ingredients core menu including burgers, chicken sandwiches, hot dogs, and fries, complemented by an MTO Toppings Bar.\n- Current weekly offerings include 20 **Burger** items, 20 **Daily Feature** items, 20 **Vegan Option** items, and 5 **French Fry** items.\n\n## Playbook Alignment with **Where to improve:**\n> - **Burger** \u2014 limit to 1 per day to align with recommended maximum selections.\n> - **Daily Feature** \u2014 limit to 2 per day to align with recommended maximum selections.\n> - **Vegan Option** \u2014 optimize to ensure one distinct option per day, rather than multiple, to align with recommended maximum selections.\n\n## Rotation & Repetition\n- The menu demonstrates good variety with a diversity index of 1.0 and 13 unique entrees, indicating a low risk of monotony.\n- No high-repetition signals were identified among the tracked recipes.\n\n## Recommended Adjustments\n- Reduce the number of **Burger** and **Daily Feature** offerings to align with the playbook's recommended maximum selections per day.\n- Optimize **Vegan Option** offerings to ensure one distinct option is available daily, rather than exceeding the recommended single slot.\n- Diversify protein offerings by swapping at least one **Hamburger** for a non-beef alternative (e.g., turkey, chicken, or plant-based option) weekly to manage CPM effectively.",
-  "generated_at": "2026-02-27T16:32:26.497583+00:00",
-  "total_input_tokens": 2750,
-  "total_output_tokens": 1912,
-  "cost_usd": 0.0056
-}

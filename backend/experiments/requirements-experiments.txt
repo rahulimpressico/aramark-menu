@@ -1,5 +1,0 @@
-# Dependencies for the Menu Analysis PoC (experiments).
-# Install from backend: pip install -r experiments/requirements-experiments.txt
-deepagents>=0.1.0
-langchain>=0.3.0
-langgraph>=0.2.0
