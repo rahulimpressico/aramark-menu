@@ -200,6 +200,62 @@ def _read_cached_report_text(station_slug: str, meal_slug: str) -> str:
     return ""
 
 
+def _read_cached_report_json(station_slug: str, meal_slug: str) -> dict:
+    """Return full cached report dict from .json for station/meal. Empty dict if missing."""
+    station_dir = _STATION_RESPONSE_DIR / station_slug
+    json_path = station_dir / f"{meal_slug}.json"
+    if json_path.is_file():
+        try:
+            return json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {}
+
+
+@router.get("/combined/{station_slug}", response_model=dict)
+def get_combined_report(station_slug: str):
+    """
+    Return combined report for a station: Breakfast + Lunch + Dinner in one response.
+    Reads cached .txt/.json per meal period. No LLM call. 404 if no cached reports.
+    """
+    log.info("[REPORTS] GET combined report station_slug={}", station_slug)
+    periods = [("breakfast", "Breakfast"), ("lunch", "Lunch"), ("dinner", "Dinner")]
+    sections: dict[str, str] = {}
+    usage_total = {"total_input_tokens": 0, "total_output_tokens": 0, "cost_usd": 0.0}
+    for slug, label in periods:
+        content = _read_cached_report_text(station_slug, slug)
+        sections[label] = content
+        data = _read_cached_report_json(station_slug, slug)
+        if data:
+            usage_total["total_input_tokens"] += data.get("total_input_tokens") or 0
+            usage_total["total_output_tokens"] += data.get("total_output_tokens") or 0
+            usage_total["cost_usd"] += float(data.get("cost_usd") or 0)
+
+    if not any(sections[k].strip() for k in sections):
+        log.info("[REPORTS] No cached reports for combined → 404")
+        raise HTTPException(
+            status_code=404,
+            detail="No cached reports found for this station. Generate Breakfast, Lunch, and Dinner reports first.",
+        )
+
+    combined_parts = []
+    for label in ("Breakfast", "Lunch", "Dinner"):
+        body = sections[label].strip()
+        if body:
+            combined_parts.append(f"## {label}\n\n{body}")
+    combined_content = "\n\n---\n\n".join(combined_parts)
+
+    log.info("[REPORTS] Returning combined report content_len={}", len(combined_content))
+    return {
+        "content": combined_content,
+        "sections": sections,
+        "station_name": station_slug,
+        "total_input_tokens": usage_total["total_input_tokens"],
+        "total_output_tokens": usage_total["total_output_tokens"],
+        "cost_usd": round(usage_total["cost_usd"], 4),
+    }
+
+
 @router.post("/overall", response_model=dict)
 def get_overall_report(payload: OverallReportRequest):
     """
@@ -221,14 +277,24 @@ def get_overall_report(payload: OverallReportRequest):
             detail="No cached reports found for this station. Generate Breakfast, Lunch, and Dinner reports first (e.g. from the meal-period pages).",
         )
     try:
+        import sys
+        _project_root = str(Path(__file__).resolve().parents[2])
+        if _project_root not in sys.path:
+            sys.path.insert(0, _project_root)
         from experiments.overall_report import generate_overall_report
     except ImportError as e:
         log.warning("[REPORTS] Overall report not available (experiments): {}", e)
         raise HTTPException(
             status_code=503,
-            detail="Overall report requires experiments (uv sync --extra experiments) and GOOGLE_API_KEY.",
+            detail="Overall report requires experiments (uv sync --extra experiments) and GEMINI_API_KEY or GOOGLE_API_KEY in .env.",
         ) from e
-    content = generate_overall_report(reports)
+    except EnvironmentError as e:
+        log.warning("[REPORTS] Overall report API key missing: {}", e)
+        raise HTTPException(
+            status_code=503,
+            detail="GEMINI_API_KEY or GOOGLE_API_KEY not set. Add to backend/.env",
+        ) from e
+    content = generate_overall_report(reports, station_name=payload.station_name)
     if not content.strip():
         raise HTTPException(
             status_code=503,
