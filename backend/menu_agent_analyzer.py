@@ -47,85 +47,84 @@ log = logging.getLogger("menu_agent")
 # Paths
 # ---------------------------------------------------------------------------
 
-PROJECT_ROOT   = Path(__file__).resolve().parent
-NORMALIZED_KG  = PROJECT_ROOT / "normalize_graph" / "output" / "knowledge_graph_normalized.json"
+PROJECT_ROOT = Path(__file__).resolve().parent
+NORMALIZED_KG = (
+    PROJECT_ROOT / "normalize_graph" / "output" / "knowledge_graph_normalized.json"
+)
 
 # ---------------------------------------------------------------------------
 # Data models
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class GraphMetadata:
     description: str = ""
-    version:     str = "2.4-normalized"
-    cycle:       str = ""
+    version: str = "2.4-normalized"
+    cycle: str = ""
 
 
 @dataclass
 class Node:
-    id:        str
+    id: str
     node_type: str
     # Common
-    name:      str = ""
+    name: str = ""
     # Recipe
-    food_cost:              float  = 0.0
-    assembly_instructions:  str    = ""
-    special_instructions:   str    = ""
+    food_cost: float = 0.0
+    assembly_instructions: str = ""
+    special_instructions: str = ""
     # Day
-    day_no:    int = 0
-    day_name:  str = ""
-    week_no:   int = 0
+    day_no: int = 0
+    day_name: str = ""
+    week_no: int = 0
     # Ingredient / Equipment
-    description:    str = ""
+    description: str = ""
     equipment_type: str = ""
 
     @staticmethod
     def from_dict(d: dict) -> "Node":
         return Node(
-            id                    = d["id"],
-            node_type             = d["type"],
-            name                  = d.get("name", ""),
-            food_cost             = float(d["food_cost"]) if d.get("food_cost") else 0.0,
-            assembly_instructions = d.get("assembly_instructions", ""),
-            special_instructions  = d.get("special_instructions",  ""),
-            day_no                = int(d["day_no"])   if d.get("day_no")   else 0,
-            day_name              = d.get("day_name",  ""),
-            week_no               = int(d["week_no"])  if d.get("week_no")  else 0,
-            description           = d.get("description", ""),
-            equipment_type        = d.get("equipment_type", ""),
+            id=d["id"],
+            node_type=d["type"],
+            name=d.get("name", ""),
+            food_cost=float(d["food_cost"]) if d.get("food_cost") else 0.0,
+            assembly_instructions=d.get("assembly_instructions", ""),
+            special_instructions=d.get("special_instructions", ""),
+            day_no=int(d["day_no"]) if d.get("day_no") else 0,
+            day_name=d.get("day_name", ""),
+            week_no=int(d["week_no"]) if d.get("week_no") else 0,
+            description=d.get("description", ""),
+            equipment_type=d.get("equipment_type", ""),
         )
 
     @property
     def label(self) -> str:
         """Human-readable label for any node type."""
-        return (
-            self.name
-            or self.day_name
-            or self.description
-            or self.id
-        )
+        return self.name or self.day_name or self.description or self.id
 
 
 @dataclass
 class Edge:
-    source:       str
-    target:       str
+    source: str
+    target: str
     relationship: str
-    attributes:   dict = field(default_factory=dict)
+    attributes: dict = field(default_factory=dict)
 
     @staticmethod
     def from_dict(d: dict) -> "Edge":
         return Edge(
-            source       = d["source"],
-            target       = d["target"],
-            relationship = d["relationship"],
-            attributes   = d.get("attributes") or {},
+            source=d["source"],
+            target=d["target"],
+            relationship=d["relationship"],
+            attributes=d.get("attributes") or {},
         )
 
 
 # ---------------------------------------------------------------------------
 # MenuGraph — main graph container
 # ---------------------------------------------------------------------------
+
 
 class MenuGraph:
     def __init__(
@@ -135,14 +134,14 @@ class MenuGraph:
         edges: list[Edge],
     ):
         self.graph_metadata = graph_metadata
-        self.nodes  = nodes
-        self.edges  = edges
+        self.nodes = nodes
+        self.edges = edges
 
         # Fast-lookup indexes
-        self._by_id:   dict[str, Node]         = {n.id: n for n in nodes}
-        self._by_type: dict[str, list[Node]]   = defaultdict(list)
-        self._from:    dict[str, list[Edge]]   = defaultdict(list)
-        self._to:      dict[str, list[Edge]]   = defaultdict(list)
+        self._by_id: dict[str, Node] = {n.id: n for n in nodes}
+        self._by_type: dict[str, list[Node]] = defaultdict(list)
+        self._from: dict[str, list[Edge]] = defaultdict(list)
+        self._to: dict[str, list[Edge]] = defaultdict(list)
 
         for n in nodes:
             self._by_type[n.node_type].append(n)
@@ -186,7 +185,8 @@ class MenuGraph:
     def get_recipes_for_period(self, period_id: str) -> list[Node]:
         """All Recipe nodes that have SERVED_IN_PERIOD → period_id."""
         recipe_ids = {
-            e.source for e in self.get_edges_to(period_id)
+            e.source
+            for e in self.get_edges_to(period_id)
             if e.relationship == "SERVED_IN_PERIOD"
         }
         return [n for n in self.nodes if n.id in recipe_ids and n.node_type == "Recipe"]
@@ -220,15 +220,20 @@ class MenuGraph:
 
     def get_days_for_station(self) -> list[Node]:
         """All Day nodes in this graph (single station assumed)."""
-        return sorted(self.get_nodes_by_type("Day"), key=lambda n: (n.week_no, n.day_no))
+        return sorted(
+            self.get_nodes_by_type("Day"), key=lambda n: (n.week_no, n.day_no)
+        )
 
     def get_periods_for_day(self, day_id: str) -> list[Node]:
         """All MealPeriod nodes connected to a Day via HAS_PERIOD."""
         period_ids = {
-            e.target for e in self.get_edges_from(day_id)
+            e.target
+            for e in self.get_edges_from(day_id)
             if e.relationship == "HAS_PERIOD"
         }
-        return [n for n in self.nodes if n.id in period_ids and n.node_type == "MealPeriod"]
+        return [
+            n for n in self.nodes if n.id in period_ids and n.node_type == "MealPeriod"
+        ]
 
     # --- Filter -------------------------------------------------------------
 
@@ -240,8 +245,11 @@ class MenuGraph:
         """
         period_name_lower = period_name.strip().lower()
         period_node = next(
-            (n for n in self.get_meal_periods()
-             if (n.name or "").strip().lower() == period_name_lower),
+            (
+                n
+                for n in self.get_meal_periods()
+                if (n.name or "").strip().lower() == period_name_lower
+            ),
             None,
         )
         if not period_node:
@@ -271,15 +279,16 @@ class MenuGraph:
             for e in self.get_edges_from(rid):
                 target_node = self.get_node(e.target)
                 if target_node and target_node.node_type == "MealPeriod":
-                    continue   # sirf filtered period hi keep_ids mein hai
+                    continue  # sirf filtered period hi keep_ids mein hai
                 # SCHEDULED_ON edges: sirf woh days rakho jahan recipe IS period mein hai
                 # "All Day" period = har meal period mein include hota hai
                 if e.relationship == "SCHEDULED_ON":
                     edge_period = (e.attributes.get("period") or "").strip()
                     if edge_period and edge_period.lower() not in (
-                        period_name_lower, "all day",
+                        period_name_lower,
+                        "all day",
                     ):
-                        continue   # yeh edge dusre period ka hai — skip
+                        continue  # yeh edge dusre period ka hai — skip
                 keep_ids.add(e.target)
 
         # Only keep Day nodes that were added via SCHEDULED_ON (correct period)
@@ -318,15 +327,24 @@ class MenuGraph:
         )
         log.info(
             "[AGENT] filter_by_meal_period  period=%s  recipes=%d → nodes=%d edges=%d",
-            period_name, len(recipe_ids_set), len(new_nodes), len(new_edges),
+            period_name,
+            len(recipe_ids_set),
+            len(new_nodes),
+            len(new_edges),
         )
         return MenuGraph(graph_metadata=meta, nodes=new_nodes, edges=new_edges)
-
 
     def filter_by_station(self, station_name: str) -> "MenuGraph":
         """Return graph filtered to a single station name (case-insensitive)."""
         wanted = (station_name or "").strip().lower()
-        station_node = next((n for n in self.get_nodes_by_type("Station") if (n.name or "").strip().lower() == wanted), None)
+        station_node = next(
+            (
+                n
+                for n in self.get_nodes_by_type("Station")
+                if (n.name or "").strip().lower() == wanted
+            ),
+            None,
+        )
         if not station_node:
             log.warning("Station %r not found; returning empty graph", station_name)
             return MenuGraph(
@@ -342,7 +360,8 @@ class MenuGraph:
         keep_ids: set[str] = {station_node.id}
 
         week_ids = {
-            e.target for e in self.get_edges_from(station_node.id)
+            e.target
+            for e in self.get_edges_from(station_node.id)
             if e.relationship == "HAS_WEEK"
         }
         keep_ids.update(week_ids)
@@ -350,7 +369,8 @@ class MenuGraph:
         day_ids: set[str] = set()
         for wid in week_ids:
             dids = {
-                e.target for e in self.get_edges_from(wid)
+                e.target
+                for e in self.get_edges_from(wid)
                 if e.relationship == "HAS_DAY"
             }
             day_ids.update(dids)
@@ -359,7 +379,8 @@ class MenuGraph:
         period_ids: set[str] = set()
         for did in day_ids:
             pids = {
-                e.target for e in self.get_edges_from(did)
+                e.target
+                for e in self.get_edges_from(did)
                 if e.relationship == "HAS_PERIOD"
             }
             period_ids.update(pids)
@@ -375,7 +396,9 @@ class MenuGraph:
             for e in self.get_edges_from(rid):
                 keep_ids.add(e.target)
 
-        new_edges = [e for e in self.edges if e.source in keep_ids and e.target in keep_ids]
+        new_edges = [
+            e for e in self.edges if e.source in keep_ids and e.target in keep_ids
+        ]
         new_nodes = [n for n in self.nodes if n.id in keep_ids]
 
         meta = GraphMetadata(
@@ -388,24 +411,28 @@ class MenuGraph:
         )
         log.info(
             "[AGENT] filter_by_station  station=%s → nodes=%d edges=%d",
-            station_name, len(new_nodes), len(new_edges),
+            station_name,
+            len(new_nodes),
+            len(new_edges),
         )
         return MenuGraph(graph_metadata=meta, nodes=new_nodes, edges=new_edges)
 
     # --- Summary ------------------------------------------------------------
 
     def summary(self) -> dict:
-        return {
-            t: len(v) for t, v in self._by_type.items()
-        }
+        return {t: len(v) for t, v in self._by_type.items()}
 
 
 # ---------------------------------------------------------------------------
 # Graph loader
 # ---------------------------------------------------------------------------
 
+
 def _slug_station_name(station_name: str) -> str:
-    return re.sub(r"[^a-zA-Z0-9]+", "_", (station_name or "").strip().lower()).strip("_")
+    return re.sub(r"[^a-zA-Z0-9]+", "_", (station_name or "").strip().lower()).strip(
+        "_"
+    )
+
 
 def _resolve_station_graph_path(station_name: str) -> Path | None:
     slug = _slug_station_name(station_name)
@@ -424,7 +451,10 @@ def _resolve_station_graph_path(station_name: str) -> Path | None:
     matches = sorted(output_dir.glob(f"*{slug}*.json"))
     return matches[0] if matches else None
 
-def get_default_menu_graph(path: Path = NORMALIZED_KG, station_name: str | None = None) -> MenuGraph:
+
+def get_default_menu_graph(
+    path: Path = NORMALIZED_KG, station_name: str | None = None
+) -> MenuGraph:
     graph_path = path
     if station_name:
         station_path = _resolve_station_graph_path(station_name)
@@ -445,7 +475,12 @@ def get_default_menu_graph(path: Path = NORMALIZED_KG, station_name: str | None 
     )
     nodes = [Node.from_dict(n) for n in raw.get("nodes", [])]
     edges = [Edge.from_dict(e) for e in raw.get("edges", [])]
-    log.info("[GRAPH] Loaded %d nodes, %d edges from %s", len(nodes), len(edges), graph_path.name)
+    log.info(
+        "[GRAPH] Loaded %d nodes, %d edges from %s",
+        len(nodes),
+        len(edges),
+        graph_path.name,
+    )
     return MenuGraph(graph_metadata=meta, nodes=nodes, edges=edges)
 
 
@@ -453,7 +488,10 @@ def get_default_menu_graph(path: Path = NORMALIZED_KG, station_name: str | None 
 # Analysis tools  (deterministic — no LLM)
 # ---------------------------------------------------------------------------
 
-def run_analysis_tools(station_name: str, meal_period: str, filtered: MenuGraph) -> dict:
+
+def run_analysis_tools(
+    station_name: str, meal_period: str, filtered: MenuGraph
+) -> dict:
     """
     Run all deterministic analysis on the filtered graph.
     Returns a structured dict ready for the LLM report generator.
@@ -470,11 +508,11 @@ def run_analysis_tools(station_name: str, meal_period: str, filtered: MenuGraph)
     cost_stats = {}
     if costs:
         cost_stats = {
-            "min":    round(min(costs),  4),
-            "max":    round(max(costs),  4),
-            "mean":   round(statistics.mean(costs), 4),
+            "min": round(min(costs), 4),
+            "max": round(max(costs), 4),
+            "mean": round(statistics.mean(costs), 4),
             "median": round(statistics.median(costs), 4),
-            "total":  round(sum(costs),  4),
+            "total": round(sum(costs), 4),
         }
 
     # ---- Top / bottom cost recipes -----------------------------------------
@@ -497,17 +535,17 @@ def run_analysis_tools(station_name: str, meal_period: str, filtered: MenuGraph)
         all_ingredients.extend(i.name or i.description for i, _ in ings)
         recipe_ing_counts.append((r.label, len(ings)))
 
-    ing_freq   = Counter(all_ingredients)
-    top_ings   = [{"name": n, "count": c} for n, c in ing_freq.most_common(10)]
+    ing_freq = Counter(all_ingredients)
+    top_ings = [{"name": n, "count": c} for n, c in ing_freq.most_common(10)]
     unique_ings = len(ing_freq)
 
     # Per-recipe ingredient count stats
     if recipe_ing_counts:
         ing_counts_only = [c for _, c in recipe_ing_counts]
         ing_count_stats = {
-            "min":    min(ing_counts_only),
-            "max":    max(ing_counts_only),
-            "mean":   round(statistics.mean(ing_counts_only), 1),
+            "min": min(ing_counts_only),
+            "max": max(ing_counts_only),
+            "mean": round(statistics.mean(ing_counts_only), 1),
         }
     else:
         ing_count_stats = {}
@@ -519,44 +557,52 @@ def run_analysis_tools(station_name: str, meal_period: str, filtered: MenuGraph)
     all_equip: set[str] = set()
     equip_by_recipe: dict[str, list[str]] = {}
     for r in recipes:
-        eq = [e.name or e.equipment_type for e in filtered.get_equipment_for_recipe(r.id)]
+        eq = [
+            e.name or e.equipment_type for e in filtered.get_equipment_for_recipe(r.id)
+        ]
         if eq:
             equip_by_recipe[r.label] = eq
             all_equip.update(eq)
 
     # ---- Schedule summary --------------------------------------------------
-    day_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    day_order = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
     schedule: dict[str, list[str]] = defaultdict(list)
     for r in recipes:
         for day, period in filtered.get_scheduled_days(r.id):
             if period.lower() == meal_period.lower():
                 schedule[day.day_name].append(r.label)
 
-    schedule_sorted = {
-        d: sorted(schedule[d]) for d in day_order if d in schedule
-    }
+    schedule_sorted = {d: sorted(schedule[d]) for d in day_order if d in schedule}
 
     return {
-        "station_name":    station_name,
-        "meal_period":     meal_period,
-        "recipe_count":    len(recipes),
-        "cost_stats":      cost_stats,
-        "top_expensive":   top_expensive,
-        "top_affordable":  top_affordable,
+        "station_name": station_name,
+        "meal_period": meal_period,
+        "recipe_count": len(recipes),
+        "cost_stats": cost_stats,
+        "top_expensive": top_expensive,
+        "top_affordable": top_affordable,
         "unique_ingredients": unique_ings,
         "top_ingredients": top_ings,
         "ing_count_stats": ing_count_stats,
         "most_ingredients_recipes": [{"name": n, "count": c} for n, c in most_ings],
-        "equipment":       sorted(all_equip),
+        "equipment": sorted(all_equip),
         "equipment_by_recipe": equip_by_recipe,
-        "schedule":        schedule_sorted,
-        "all_recipes":     [
+        "schedule": schedule_sorted,
+        "all_recipes": [
             {
-                "id":         r.id,
-                "name":       r.label,
-                "food_cost":  r.food_cost,
-                "ing_count":  len(filtered.get_ingredients_for_recipe(r.id)),
-                "equipment":  [e.name for e in filtered.get_equipment_for_recipe(r.id)],
+                "id": r.id,
+                "name": r.label,
+                "food_cost": r.food_cost,
+                "ing_count": len(filtered.get_ingredients_for_recipe(r.id)),
+                "equipment": [e.name for e in filtered.get_equipment_for_recipe(r.id)],
             }
             for r in sorted_recipes
         ],
@@ -566,6 +612,7 @@ def run_analysis_tools(station_name: str, meal_period: str, filtered: MenuGraph)
 # ---------------------------------------------------------------------------
 # LLM runner  (stub — replace with OpenAI / Groq call)
 # ---------------------------------------------------------------------------
+
 
 def call_llm(prompt: str) -> dict:
     """
@@ -597,7 +644,11 @@ def call_llm(prompt: str) -> dict:
     log.info("[LLM] call_llm called (stub) — prompt length: %d chars", len(prompt))
     return {
         "content": _stub_report_from_prompt(prompt),
-        "usage":   {"model": "stub", "prompt_tokens": len(prompt) // 4, "completion_tokens": 0},
+        "usage": {
+            "model": "stub",
+            "prompt_tokens": len(prompt) // 4,
+            "completion_tokens": 0,
+        },
     }
 
 
@@ -613,12 +664,13 @@ def _stub_report_from_prompt(prompt: str) -> str:
 # Report builder  (builds LLM prompt + fallback report)
 # ---------------------------------------------------------------------------
 
+
 def build_report_prompt(analysis: dict) -> str:
     a = analysis
-    station     = a["station_name"]
-    period      = a["meal_period"]
-    cs          = a["cost_stats"]
-    ts          = a.get("ing_count_stats", {})
+    station = a["station_name"]
+    period = a["meal_period"]
+    cs = a["cost_stats"]
+    ts = a.get("ing_count_stats", {})
 
     md_lines = [
         f"# {station} Station — {period} Menu Analysis",
@@ -682,7 +734,9 @@ def build_report_prompt(analysis: dict) -> str:
             recipes_using = [
                 name for name, eqs in a["equipment_by_recipe"].items() if eq in eqs
             ]
-            md_lines.append(f"- **{eq}** → {len(recipes_using)} recipe(s): {', '.join(recipes_using[:4])}")
+            md_lines.append(
+                f"- **{eq}** → {len(recipes_using)} recipe(s): {', '.join(recipes_using[:4])}"
+            )
 
     if a["schedule"]:
         md_lines += ["", "---", "", f"## Weekly Schedule — {period}"]
@@ -709,23 +763,26 @@ def build_report_prompt(analysis: dict) -> str:
 
 _usage_log: list[dict] = []
 
+
 def clear_usage():
     _usage_log.clear()
 
+
 def get_usage_summary() -> dict:
-    total_prompt = sum(u.get("prompt_tokens", 0)     for u in _usage_log)
-    total_compl  = sum(u.get("completion_tokens", 0) for u in _usage_log)
+    total_prompt = sum(u.get("prompt_tokens", 0) for u in _usage_log)
+    total_compl = sum(u.get("completion_tokens", 0) for u in _usage_log)
     return {
-        "calls":             len(_usage_log),
-        "total_prompt_tokens":     total_prompt,
+        "calls": len(_usage_log),
+        "total_prompt_tokens": total_prompt,
         "total_completion_tokens": total_compl,
-        "calls_detail":      list(_usage_log),
+        "calls_detail": list(_usage_log),
     }
 
 
 # ---------------------------------------------------------------------------
 # Main entry point
 # ---------------------------------------------------------------------------
+
 
 def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     """
@@ -734,7 +791,11 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     Returns dict with "content" (report markdown) and "usage".
     Typically completes in 1-2 seconds (stub) or 5-15s (real LLM).
     """
-    log.info("[AGENT] run_analysis_fast START  station=%s  period=%s", station_name, meal_period)
+    log.info(
+        "[AGENT] run_analysis_fast START  station=%s  period=%s",
+        station_name,
+        meal_period,
+    )
 
     clear_usage()
 
@@ -749,7 +810,7 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
         log.warning("[AGENT] No recipes found for period=%s", meal_period)
         return {
             "content": f"# No data found\nNo recipes found for station **{station_name}** / period **{meal_period}**.",
-            "usage":   get_usage_summary(),
+            "usage": get_usage_summary(),
             "no_data": True,
             "error_detail": f"No data found for station {station_name} and meal period {meal_period}.",
         }
@@ -760,26 +821,32 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
 
     # Step 3b — Playbook compliance check
     from agent.menu_structure.playbook_check import checking_playbook_bounds
+
     playbook_result = checking_playbook_bounds(filtered, meal_period, "all")
 
     # Step 3c — Data integrity: period overlap check
     from agent.data_integrity.period_overlap import detecting_period_overlap
+
     overlap_result = detecting_period_overlap(filtered)
 
     # Step 3d — Rotation & Recurrence: diversity index
     from agent.rotation_recurrence.diversity_index import calculating_diversity_index
+
     diversity_result = calculating_diversity_index(filtered)
 
     # Step 3e — Rotation & Recurrence: item frequency
     from agent.rotation_recurrence.item_frequency import tracking_item_frequency
+
     frequency_result = tracking_item_frequency(filtered)
 
     # Step 3f — Nutrition & Cost: sustainability mix
     from agent.nutrition_cost.sustainability_mix import evaluating_sustainability_mix
+
     sustainability_result = evaluating_sustainability_mix(filtered)
 
     # Step 3g — Nutrition & Cost: CPM risk swaps
     from agent.nutrition_cost.cpm_risk_swaps import calculating_cpm_risk_swaps
+
     cpm_result = calculating_cpm_risk_swaps(
         filtered,
         recurrence_signals=frequency_result.to_frequency_json(),
@@ -788,35 +855,37 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     output_json = {
         "station_name": station_name,
         "meal_period": meal_period,
-        "playbook_check":      playbook_result.to_playbook_json(meal_period),
-        "data_integrity":      overlap_result.to_overlap_json(),
+        "playbook_check": playbook_result.to_playbook_json(meal_period),
+        "data_integrity": overlap_result.to_overlap_json(),
         "rotation_recurrence": {
-            "diversity_index":  diversity_result.to_diversity_json(),
-            "item_frequency":   frequency_result.to_frequency_json(),
+            "diversity_index": diversity_result.to_diversity_json(),
+            "item_frequency": frequency_result.to_frequency_json(),
         },
         "nutrition_cost": {
             "sustainability_mix": sustainability_result.to_sustainability_json(),
-            "cpm_risk_swaps":     cpm_result.to_cpm_json(),
+            "cpm_risk_swaps": cpm_result.to_cpm_json(),
         },
     }
 
     # Step 3h — Synthesizer: format into executive markdown slide
     from agent.synthesizer.executive_slide import formatting_executive_slide
+
     slide = formatting_executive_slide(output_json)
 
     log.info("[AGENT] run_analysis_fast DONE")
     return {
-        "content":       slide,          # Gemini markdown report
-        "analysis_json": output_json,    # full deterministic JSON for API consumers
-        "usage":         get_usage_summary(),
-        "analysis":      analysis,
-        "no_data":       False,
+        "content": slide,  # Gemini markdown report
+        "analysis_json": output_json,  # full deterministic JSON for API consumers
+        "usage": get_usage_summary(),
+        "analysis": analysis,
+        "no_data": False,
     }
 
 
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
+
 
 def _cli_list_periods():
     graph = get_default_menu_graph()
@@ -833,6 +902,7 @@ def _cli_list_periods():
 # Filtered graph → JSON dump
 # ---------------------------------------------------------------------------
 
+
 def dump_filtered_graph(meal_period: str, output_path: Optional[Path] = None) -> Path:
     """
     knowledge_graph_normalized.json load karo, meal_period se filter karo,
@@ -845,7 +915,7 @@ def dump_filtered_graph(meal_period: str, output_path: Optional[Path] = None) ->
     Returns:
         Path to the saved JSON file.
     """
-    graph    = get_default_menu_graph()
+    graph = get_default_menu_graph()
     filtered = graph.filter_by_meal_period(meal_period)
 
     if not filtered.nodes:
@@ -856,22 +926,31 @@ def dump_filtered_graph(meal_period: str, output_path: Optional[Path] = None) ->
     nodes_by_type: dict[str, list[dict]] = defaultdict(list)
     for n in filtered.nodes:
         d: dict = {"id": n.id, "type": n.node_type}
-        if n.name:                   d["name"]                   = n.name
-        if n.food_cost:              d["food_cost"]              = n.food_cost
-        if n.assembly_instructions:  d["assembly_instructions"]  = n.assembly_instructions
-        if n.special_instructions:   d["special_instructions"]   = n.special_instructions
-        if n.day_name:               d["day_name"]               = n.day_name
-        if n.day_no:                 d["day_no"]                 = n.day_no
-        if n.week_no:                d["week_no"]                = n.week_no
-        if n.description:            d["description"]            = n.description
-        if n.equipment_type:         d["equipment_type"]         = n.equipment_type
+        if n.name:
+            d["name"] = n.name
+        if n.food_cost:
+            d["food_cost"] = n.food_cost
+        if n.assembly_instructions:
+            d["assembly_instructions"] = n.assembly_instructions
+        if n.special_instructions:
+            d["special_instructions"] = n.special_instructions
+        if n.day_name:
+            d["day_name"] = n.day_name
+        if n.day_no:
+            d["day_no"] = n.day_no
+        if n.week_no:
+            d["week_no"] = n.week_no
+        if n.description:
+            d["description"] = n.description
+        if n.equipment_type:
+            d["equipment_type"] = n.equipment_type
         nodes_by_type[n.node_type].append(d)
 
     edges_out = []
     for e in filtered.edges:
         ed: dict = {
-            "source":       e.source,
-            "target":       e.target,
+            "source": e.source,
+            "target": e.target,
             "relationship": e.relationship,
         }
         if e.attributes:
@@ -881,33 +960,53 @@ def dump_filtered_graph(meal_period: str, output_path: Optional[Path] = None) ->
     output = {
         "meal_period": meal_period,
         "summary": {t: len(v) for t, v in nodes_by_type.items()},
-        "nodes":   nodes_by_type,
-        "edges":   edges_out,
+        "nodes": nodes_by_type,
+        "edges": edges_out,
     }
 
     # Default path
     if output_path is None:
         safe_name = re.sub(r"[^A-Za-z0-9]+", "_", meal_period.strip())
-        output_path = PROJECT_ROOT / "normalize_graph" / "output" / f"filtered_{safe_name}.json"
+        output_path = (
+            PROJECT_ROOT / "normalize_graph" / "output" / f"filtered_{safe_name}.json"
+        )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
+    output_path.write_text(
+        json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
     log.info("[DUMP] Saved filtered graph → %s", output_path)
     return output_path
 
 
 def main():
     parser = argparse.ArgumentParser(description="Menu Agent Analyzer")
-    parser.add_argument("--station", "-s", default="Grill",
-                        help="Station name (default: Grill)")
-    parser.add_argument("--period",  "-p", default=None,
-                        help="Meal period (Breakfast / Lunch / Dinner / Brunch / All Day)")
-    parser.add_argument("--list-periods", action="store_true",
-                        help="List available meal periods and exit")
-    parser.add_argument("--dump-json", action="store_true",
-                        help="Sirf filtered graph JSON save karo (no report)")
-    parser.add_argument("--output", "-o", type=Path, default=None,
-                        help="Save report/json to this file (optional)")
+    parser.add_argument(
+        "--station", "-s", default="Grill", help="Station name (default: Grill)"
+    )
+    parser.add_argument(
+        "--period",
+        "-p",
+        default=None,
+        help="Meal period (Breakfast / Lunch / Dinner / Brunch / All Day)",
+    )
+    parser.add_argument(
+        "--list-periods",
+        action="store_true",
+        help="List available meal periods and exit",
+    )
+    parser.add_argument(
+        "--dump-json",
+        action="store_true",
+        help="Sirf filtered graph JSON save karo (no report)",
+    )
+    parser.add_argument(
+        "--output",
+        "-o",
+        type=Path,
+        default=None,
+        help="Save report/json to this file (optional)",
+    )
     args = parser.parse_args()
 
     if args.list_periods:

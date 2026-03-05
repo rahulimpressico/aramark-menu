@@ -3,6 +3,7 @@ Generate one overall executive report from Breakfast, Lunch, and Dinner period r
 
 Called by POST /api/reports/overall. Requires GEMINI_API_KEY or GOOGLE_API_KEY in env.
 """
+
 import os
 from pathlib import Path
 
@@ -33,7 +34,9 @@ _OVERALL_USER_TEMPLATE = """Synthesize the following three meal-period reports f
 Produce a single Markdown document: executive summary, then synthesized sections, then recommended actions. Do not include the raw input again."""
 
 
-def generate_overall_report(reports: dict[str, str], station_name: str = "Grill") -> str:
+def generate_overall_report(
+    reports: dict[str, str], station_name: str = "Grill"
+) -> str:
     """
     Send Breakfast, Lunch, Dinner report text to Gemini and return one combined overall report (Markdown).
     reports: {"Breakfast": "...", "Lunch": "...", "Dinner": "..."}
@@ -51,14 +54,14 @@ def generate_overall_report(reports: dict[str, str], station_name: str = "Grill"
 
     try:
         from dotenv import load_dotenv
+
         _env = Path(__file__).resolve().parent.parent / ".env"
         load_dotenv(_env, override=False)
     except Exception:
         pass
 
     api_key = (
-        os.environ.get("GEMINI_API_KEY", "")
-        or os.environ.get("GOOGLE_API_KEY", "")
+        os.environ.get("GEMINI_API_KEY", "") or os.environ.get("GOOGLE_API_KEY", "")
     ).strip()
 
     if not api_key or api_key == "your_api_key_here":

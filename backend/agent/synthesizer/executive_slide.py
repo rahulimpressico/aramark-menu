@@ -63,6 +63,7 @@ _ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
 # Output dataclass
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class FormattingExecutiveSlideOutput:
     full_markdown: str = ""
@@ -142,6 +143,7 @@ STRICT RULES:
 # Prompt builder (playbook-aware, injects all relevant data)
 # ---------------------------------------------------------------------------
 
+
 def _build_prompt(state: dict[str, Any]) -> str:
     pb    = state.get("playbook_check",      {})
     di    = state.get("data_integrity",      {})
@@ -199,7 +201,7 @@ def _build_prompt(state: dict[str, Any]) -> str:
     pct      = sustain.get("plant_based_percent", 0)
     gap      = round(44 - pct, 1)
     cpm_recs = cpm.get("recommendations", [])
-    station_name = aggregated_state.get("station_name") or pb.get("station_name") or "Station"
+    station_name = state.get("station_name") or pb.get("station_name") or "Station"
 
     prompt = f"""\
 === ANALYSIS DATA ===
@@ -245,17 +247,18 @@ Use only data above. No emojis. No icons. Bold recipe names.
 # Gemini call
 # ---------------------------------------------------------------------------
 
+
 def _call_gemini(prompt: str) -> str:
     """Call Gemini 2.5 Flash. Returns markdown text. Raises on failure."""
     try:
         from dotenv import load_dotenv
+
         load_dotenv(_ENV_PATH, override=False)
     except ImportError:
         pass
 
     api_key = (
-        os.environ.get("GEMINI_API_KEY", "")
-        or os.environ.get("GOOGLE_API_KEY", "")
+        os.environ.get("GEMINI_API_KEY", "") or os.environ.get("GOOGLE_API_KEY", "")
     ).strip()
 
     if not api_key or api_key == "your_api_key_here":
@@ -274,7 +277,7 @@ def _call_gemini(prompt: str) -> str:
         contents=prompt,
         config=types.GenerateContentConfig(
             system_instruction=_SYSTEM_PROMPT,
-            temperature=0.2,        # low temp = consistent, factual output
+            temperature=0.3,  # low temp = consistent, factual output
             max_output_tokens=4096,
         ),
     )
@@ -294,23 +297,24 @@ def _call_gemini(prompt: str) -> str:
 # Deterministic fallback (no LLM needed)
 # ---------------------------------------------------------------------------
 
+
 def _section(title: str, bullets: list[str]) -> str:
     body = "\n".join(f"- {b}" for b in bullets) if bullets else "- N/A"
     return f"## {title}\n\n{body}"
 
 
 def _fallback_report(state: dict[str, Any]) -> str:
-    pb   = state.get("playbook_check",      {})
-    rr   = state.get("rotation_recurrence", {})
-    nc   = state.get("nutrition_cost",      {})
+    pb = state.get("playbook_check", {})
+    rr = state.get("rotation_recurrence", {})
+    nc = state.get("nutrition_cost", {})
 
     meal_period = pb.get("meal_period", "Unknown")
-    pb_status   = pb.get("status",      "UNKNOWN")
+    pb_status = pb.get("status", "UNKNOWN")
     station_name = state.get("station_name") or pb.get("station_name") or "Station"
-    categories  = pb.get("categories",  {})
-    div_data    = rr.get("diversity_index", {})
-    freq_data   = rr.get("item_frequency",  {})
-    sustain     = nc.get("sustainability_mix", {})
+    categories = pb.get("categories", {})
+    div_data = rr.get("diversity_index", {})
+    freq_data = rr.get("item_frequency", {})
+    sustain = nc.get("sustainability_mix", {})
 
     lines: list[str] = []
     lines.append(f"## {station_name} Station — {meal_period} Playbook Review")
@@ -326,22 +330,30 @@ def _fallback_report(state: dict[str, Any]) -> str:
         if meta.get("status") == "ok":
             continue
         has_violation = True
-        label   = cat.replace("_", " ").upper()
-        count   = meta.get("count", 0)
-        rule    = meta.get("playbook_rule", "")
+        label = cat.replace("_", " ").upper()
+        count = meta.get("count", 0)
+        rule = meta.get("playbook_rule", "")
         recipes = meta.get("recipes", [])
-        names   = ", ".join(f"**{r}**" for r in recipes) if recipes else "none"
+        names = ", ".join(f"**{r}**" for r in recipes) if recipes else "none"
         parts = rule.split()
         rule_kind = parts[0].lower() if parts else ""
-        rule_limit = int(parts[1]) if len(parts) > 1 and str(parts[1]).isdigit() else None
+        rule_limit = (
+            int(parts[1]) if len(parts) > 1 and str(parts[1]).isdigit() else None
+        )
         if rule_kind == "max" and rule_limit is not None:
             viol = f"Exceeded by {max(0, count - rule_limit)} (got {count}, max {rule_limit})"
         elif rule_kind == "min" and rule_limit is not None:
-            viol = f"Short by {max(0, rule_limit - count)} (got {count}, min {rule_limit})"
+            viol = (
+                f"Short by {max(0, rule_limit - count)} (got {count}, min {rule_limit})"
+            )
         else:
             viol = f"{count} offered, rule is {rule}"
         lines.append(f"**{label}**")
-        menu_doing = f"{count} offered — {names}" if len(recipes) == count else f"{count} on at least one day ({len(recipes)} distinct in period) — {names}"
+        menu_doing = (
+            f"{count} offered — {names}"
+            if len(recipes) == count
+            else f"{count} on at least one day ({len(recipes)} distinct in period) — {names}"
+        )
         lines.append(f"- What the menu is doing: {menu_doing}")
         lines.append(f"- Gap: {viol}")
         lines.append("")
@@ -350,10 +362,15 @@ def _fallback_report(state: dict[str, Any]) -> str:
     if not sustain.get("compliant_44"):
         has_violation = True
         gap = round(44.0 - pct, 1)
-        pb_names = ", ".join(f"**{r}**" for r in sustain.get("plant_based_recipes", [])) or "none"
+        pb_names = (
+            ", ".join(f"**{r}**" for r in sustain.get("plant_based_recipes", []))
+            or "none"
+        )
         lines.append("**PLANT-BASED**")
         lines.append(f"- What the menu is doing: {pct}% plant-based — {pb_names}")
-        lines.append("- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).")
+        lines.append(
+            "- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge)."
+        )
         lines.append(f"- Gap: {gap}% below the 44% target.")
         lines.append("")
 
@@ -366,16 +383,20 @@ def _fallback_report(state: dict[str, Any]) -> str:
     lines.append("## Rotation & Repetition Issues")
     lines.append("")
 
-    d_idx       = div_data.get("diversity_index", 0.0)
-    unique      = div_data.get("unique_entree_count", 0)
-    slots       = div_data.get("entree_slots", 0)
-    signals     = freq_data.get("recurrence_signals", [])
+    d_idx = div_data.get("diversity_index", 0.0)
+    unique = div_data.get("unique_entree_count", 0)
+    slots = div_data.get("entree_slots", 0)
+    signals = freq_data.get("recurrence_signals", [])
     frequencies = freq_data.get("frequencies", [])
 
     lines.append("### Diversity")
-    lines.append(f"- Diversity index: {d_idx} ({unique} unique entrees / {slots} scheduled slots)")
+    lines.append(
+        f"- Diversity index: {d_idx} ({unique} unique entrees / {slots} scheduled slots)"
+    )
     if signals:
-        lines.append("- Playbook says daily features must rotate. Items appearing on 4+ days:")
+        lines.append(
+            "- Playbook says daily features must rotate. Items appearing on 4+ days:"
+        )
         for s in signals:
             matched_days: list[str] = []
             for fi in frequencies:
@@ -404,18 +425,26 @@ def _fallback_report(state: dict[str, Any]) -> str:
     for cat, meta in categories.items():
         if meta.get("status") == "ok":
             continue
-        rule  = meta.get("playbook_rule", "")
+        rule = meta.get("playbook_rule", "")
         count = meta.get("count", 0)
         label = cat.replace("_", " ").title()
         if rule.startswith("max"):
-            recs.append(f'Reduce **{label}** from {count} to the maximum allowed — Playbook rule: "{label}: {rule} per day. Must rotate daily."')
+            recs.append(
+                f'Reduce **{label}** from {count} to the maximum allowed — Playbook rule: "{label}: {rule} per day. Must rotate daily."'
+            )
         elif rule.startswith("min"):
-            recs.append(f'Add at least one **{label}** item — Playbook rule: "{label}: {rule} per day."')
+            recs.append(
+                f'Add at least one **{label}** item — Playbook rule: "{label}: {rule} per day."'
+            )
     if not sustain.get("compliant_44"):
-        recs.append(f'Increase plant-based offerings from {pct}% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."')
+        recs.append(
+            f'Increase plant-based offerings from {pct}% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."'
+        )
     if signals:
         sig_names = ", ".join(f'**{s["recipe_name"]}**' for s in signals[:2])
-        recs.append(f'Rotate {sig_names} — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."')
+        recs.append(
+            f'Rotate {sig_names} — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."'
+        )
     for i, rec in enumerate(recs, 1):
         lines.append(f"{i}. {rec}")
 
@@ -425,6 +454,7 @@ def _fallback_report(state: dict[str, Any]) -> str:
 # ---------------------------------------------------------------------------
 # Public entry point
 # ---------------------------------------------------------------------------
+
 
 def formatting_executive_slide(aggregated_state: dict[str, Any]) -> str:
     """
@@ -437,7 +467,7 @@ def formatting_executive_slide(aggregated_state: dict[str, Any]) -> str:
     )
 
     try:
-        prompt   = _build_prompt(aggregated_state)
+        prompt = _build_prompt(aggregated_state)
         markdown = _call_gemini(prompt).strip()
 
         if len(markdown) >= 200:
@@ -456,7 +486,8 @@ def formatting_executive_slide(aggregated_state: dict[str, Any]) -> str:
     except Exception as e:
         log.warning(
             "[AGENT-TOOL] synthesizer: Gemini call failed (%s: %s) — using fallback",
-            type(e).__name__, e,
+            type(e).__name__,
+            e,
         )
 
     result = _fallback_report(aggregated_state)
