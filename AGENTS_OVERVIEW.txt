@@ -1,0 +1,327 @@
+================================================================================
+              ARAMARK GRILL STATION — WHAT EACH AGENT DOES
+================================================================================
+
+Think of this system like a team of checkers. Each checker (agent) has one
+specific job. They all look at the weekly menu and check different things.
+At the end, one person writes up the final report.
+
+Here is what each checker does, in simple words.
+
+================================================================================
+AGENT 1 — Menu Loader
+================================================================================
+
+WHAT IT DOES:
+  Opens and reads the menu data file. Then cuts it down so that only the
+  items for the right restaurant station (e.g. Grill Station) and the right
+  meal time (e.g. Lunch) are included. All other checkers work on this
+  filtered-down menu.
+
+HOW IT WORKS:
+  Step 1 — Open the menu data file.
+  Step 2 — Remove everything that does not belong to the requested station.
+  Step 3 — Remove everything that is not in the requested meal period.
+  Step 4 — Hand the clean, smaller menu to all the other agents.
+
+SIMPLE EXAMPLE:
+  Imagine a full school timetable for the whole school.
+  This agent cuts it down to just "Class 5B, Monday".
+
+================================================================================
+AGENT 2 — Cost & Ingredient Summary
+================================================================================
+
+WHAT IT DOES:
+  Looks at all the menu items and pulls out basic numbers — how much each
+  dish costs to make, which ingredients are used most often, and what
+  equipment is needed. This is just background information used in the report.
+
+HOW IT WORKS:
+  Step 1 — Collect the food cost of every dish on the menu.
+  Step 2 — Find the most expensive 5 dishes and the cheapest 5 dishes.
+  Step 3 — Count which ingredients appear most across all dishes.
+  Step 4 — List all the equipment needed (grill, fryer, etc.).
+  Step 5 — Show which dishes are scheduled on which day of the week.
+
+FORMULA:
+  Average cost = add up all dish costs, then divide by the number of dishes
+  Middle cost  = line all costs from low to high and pick the one in the middle
+
+SIMPLE EXAMPLE:
+  Like a chef looking at next week's menu and writing down:
+  "We use chicken the most. Our most expensive dish is the steak burger.
+   We need the grill every day."
+
+================================================================================
+AGENT 3 — Playbook Check
+================================================================================
+
+WHAT IT DOES:
+  Checks if the menu is following the official rules set in the Grill Station
+  Playbook. The playbook says how many burgers, vegan options, fries, and
+  special daily items should appear each day.
+
+HOW IT WORKS:
+  Step 1 — Read every dish name and put it into one of these groups:
+    • SIDE     — toppings, sauces, or garnishes (e.g. "sliced tomato",
+                 "shredded lettuce", "pickle"). These are not counted.
+    • VEGAN    — plant-based dishes (e.g. "black bean burger",
+                 "veggie burger"). Checked first.
+    • BURGER   — beef burgers (e.g. "cheeseburger", "smash burger").
+    • FRIES    — fries or potato sides (e.g. "french fries", "waffle fries").
+    • DAILY FEATURE — everything else (rotating specials, sandwiches, etc.)
+
+  Step 2 — Count how many dishes from each group appear each day.
+
+  Step 3 — Compare the counts against the playbook limits:
+    • Burger        → maximum 1 per day
+    • Daily Feature → maximum 2 per day
+    • Vegan         → minimum 1 per day (must have at least 1)
+    • Fries         → minimum 1 per day (must have at least 1)
+
+  Step 4 — If all counts are within the limits → PASS. Otherwise → FAIL.
+
+FORMULA:
+  VIOLATION (too many) → actual count is MORE than the allowed maximum
+  VIOLATION (too few)  → actual count is LESS than the required minimum
+  PASS = no violations found on any day
+
+SIMPLE EXAMPLE:
+  On Tuesday the menu has 2 beef burgers.
+  The playbook says max 1 burger per day.
+  Result → VIOLATION. Too many burgers on Tuesday.
+
+================================================================================
+AGENT 4 — Duplicate Checker
+================================================================================
+
+WHAT IT DOES:
+  Looks for mistakes in the menu data — specifically if the same dish was
+  accidentally added to the same day more than once.
+
+HOW IT WORKS:
+  Check 1 — Same day, same meal time:
+    Look at every meal period on every day. If the same dish appears twice
+    in the same slot → that is a duplicate mistake.
+
+  Check 2 — Same dish across different meal times:
+    If a dish is listed under both Lunch AND Dinner on the same day
+    (when it should only be in one) → that is also flagged.
+
+FORMULA:
+  DUPLICATE = same dish appearing 2 or more times in the same day/meal slot
+
+SIMPLE EXAMPLE:
+  "Cheeseburger" appears twice on Wednesday Lunch.
+  This agent spots it and flags it as a data error.
+
+================================================================================
+AGENT 5 — Variety Score
+================================================================================
+
+WHAT IT DOES:
+  Gives the menu a variety score between 0 and 1. A high score means
+  customers see many different dishes across the week. A low score means
+  the same few dishes repeat too often.
+
+HOW IT WORKS:
+  Step 1 — Set aside the sides, sauces, and toppings (they are the same
+           every day and do not count toward variety).
+  Step 2 — Count how many total dish-slots are filled across the week
+           (e.g. a dish scheduled 5 days fills 5 slots).
+  Step 3 — Count how many unique (different) main dishes exist.
+  Step 4 — Divide unique dishes by total slots to get the score.
+  Step 5 — Read the score:
+    0.6 or above → Great variety. Customers see lots of different things.
+    0.3 to 0.6   → Okay variety. Could add more rotation.
+    Below 0.3    → Poor variety. The same dishes repeat too much.
+
+FORMULA:
+  Variety Score = Number of unique dishes ÷ Total dish-slots for the week
+
+SIMPLE EXAMPLE:
+  5 different main dishes each running across 8 slots = 5 ÷ 8 = 0.625 → Great
+  2 different main dishes each running across 8 slots = 2 ÷ 8 = 0.250 → Poor
+
+================================================================================
+AGENT 6 — Repetition Tracker
+================================================================================
+
+WHAT IT DOES:
+  For every single dish on the menu, counts exactly how many days it appears.
+  Raises a flag if any main dish shows up on 4 or more days in the same week,
+  because that is too repetitive for customers.
+
+HOW IT WORKS:
+  Step 1 — Look at each dish and count the number of different days it is
+           scheduled.
+  Step 2 — If a main dish (not a side) appears on 4 or more days → flag it.
+  Step 3 — Sort all dishes with the most-repeated ones at the top.
+
+THRESHOLD:
+  4 or more days in one week = HIGH REPETITION flag
+
+SIMPLE EXAMPLE:
+  "Cheeseburger" is on the menu Monday, Tuesday, Wednesday, and Thursday.
+  That is 4 days → flagged as repeating too often.
+  "Grilled Chicken Sandwich" appears only on Monday and Friday → fine.
+
+================================================================================
+AGENT 7 — Plant-Based Check
+================================================================================
+
+WHAT IT DOES:
+  Counts what percentage of the weekly menu is made up of plant-based
+  (vegan/vegetarian) dishes. Aramark has pledged that at least 44% of
+  all offerings should be plant-based. This agent checks whether the
+  menu meets that promise.
+
+HOW IT WORKS:
+  Step 1 — For each dish, check if it is plant-based.
+    First look: does the dish name contain words like "vegan", "black bean",
+    "tofu", "beyond", "impossible", "plant-based", or "veggie burger"?
+    Second look: if the name does not say it, check the recipe instructions
+    and ingredient list for plant-based clues.
+
+  Step 2 — Skip toppings and condiments (cheese, tomato, ketchup, lettuce,
+           mayo) so they don't unfairly boost the plant-based count.
+
+  Step 3 — Add up the total number of dish slots for the week.
+           Add up the number of those slots that are plant-based.
+
+  Step 4 — Calculate the percentage and check if it hits 44%.
+
+FORMULA:
+  Plant-Based % = (Number of plant-based dish slots ÷ Total dish slots) × 100
+  PASS = Plant-Based % is 44% or higher
+  GAP  = 44% minus the actual % (how much more is needed)
+
+SIMPLE EXAMPLE:
+  10 total dish slots this week, 3 are plant-based.
+  3 ÷ 10 × 100 = 30%.
+  30% is below 44% → NOT compliant. Gap = 14%. Need more plant-based options.
+
+================================================================================
+AGENT 8 — Protein Balance Check
+================================================================================
+
+WHAT IT DOES:
+  Looks at the protein choices on the menu (beef vs. chicken, turkey, fish,
+  or plant-based) and checks if beef appears too much. If beef dominates,
+  it raises the food cost risk. The playbook says swapping just one beef
+  dish per week for a non-beef option reduces the cost risk by 18%.
+
+HOW IT WORKS:
+  Step 1 — Sort every dish into one of two groups:
+    • BEEF       — dishes with beef, cheeseburger, smash burger, etc.
+    • ALTERNATIVE — dishes with chicken, turkey, fish, black bean,
+                    tofu, beyond meat, impossible burger, etc.
+    (If a dish has zero scheduled days, it is skipped.)
+
+  Step 2 — Count the total scheduled slots for beef and for alternatives.
+
+  Step 3 — Decide the risk level:
+    HIGH risk   → beef appears 5+ times AND alternatives appear 1 or fewer
+    HIGH risk   → beef appears 3+ times AND alternatives appear fewer than 2
+    MEDIUM risk → beef appears 3+ times BUT alternatives appear 2 or more
+    LOW risk    → beef appears fewer than 3 times AND alternatives appear 2+
+
+  Step 4 — Write a recommendation based on the risk level.
+
+FORMULA:
+  Beef appearing 3 or more days     = too much beef
+  Alternatives appearing 2 or more  = good enough variety
+  1 beef-to-alternative swap per week = 18% lower cost risk (per playbook)
+
+SIMPLE EXAMPLE:
+  Beef burger appears 4 days. Chicken sandwich appears only 1 day.
+  → HIGH risk. Recommendation: swap one beef day for chicken or plant-based.
+
+================================================================================
+AGENT 9 — Report Writer
+================================================================================
+
+WHAT IT DOES:
+  Takes all the findings from the 6 checkers above and writes them up into
+  one clean, easy-to-read report for managers. It uses an AI writing tool
+  (Google Gemini) to put everything together in plain language. If the AI
+  is not available, it falls back to a ready-made template.
+
+HOW IT WORKS:
+  Path A — With AI (Google Gemini):
+    Step 1 — Give Gemini all the findings: what passed, what failed, variety
+             score, repetition flags, plant-based %, protein balance.
+    Step 2 — Ask Gemini to write a structured report with:
+             • Overall status (pass or fail)
+             • What rules were broken and why
+             • Rotation and repetition issues
+             • Plant-based gap (if any)
+             • Numbered recommendations with playbook references
+    Step 3 — If Gemini's reply is too short or something goes wrong,
+             switch to Path B.
+
+  Path B — Without AI (backup template):
+    Step 1 — Loop through each failed check and write a plain description.
+    Step 2 — Add plant-based gap if below 44%.
+    Step 3 — List any high-repetition dishes.
+    Step 4 — Print numbered recommendations with exact playbook quotes.
+
+SIMPLE EXAMPLE:
+  Think of this agent as the manager who collects all the checkers' notes
+  and writes one final summary email to send to the team.
+
+================================================================================
+AGENT 10 — Full Day Summary
+================================================================================
+
+WHAT IT DOES:
+  Takes the three separate reports (one for Breakfast, one for Lunch, one
+  for Dinner) and combines them into a single summary for the whole day.
+  This is the final big-picture view for senior managers.
+
+HOW IT WORKS:
+  Step 1 — Receive the three meal-period reports as input.
+  Step 2 — Ask Google Gemini AI to combine them into one overall report.
+  Step 3 — The combined report includes:
+            • A short 2-3 sentence summary of the whole day
+            • How well the playbook was followed across all meals
+            • Variety and rotation patterns for the full day
+            • Cost and nutrition highlights
+            • 3-5 clear action steps for improvement
+            • Total length kept under 800 words (easy to read)
+  Step 4 — Clean up the output and send back the final report.
+
+SIMPLE EXAMPLE:
+  Breakfast report says vegan is missing.
+  Lunch report says too many beef burgers.
+  Dinner report says great variety.
+  This agent reads all three and writes:
+  "Today the station struggled with protein balance at lunch and missed vegan
+   requirements at breakfast, but dinner rotation was excellent.
+   Recommended actions: ..."
+
+================================================================================
+                         QUICK SUMMARY — ALL AGENTS
+================================================================================
+
+  Agent                | What it checks
+  ---------------------|---------------------------------------------------
+  1. Menu Loader       | Opens the data and filters it to the right station
+                       | and meal time
+  2. Cost Summary      | Average costs, top 5 expensive, top 5 cheap,
+                       | most-used ingredients
+  3. Playbook Check    | Are burger, vegan, fries, and daily feature counts
+                       | within the allowed limits?
+  4. Duplicate Check   | Is any dish accidentally listed twice on the same day?
+  5. Variety Score     | Score 0–1: how many different dishes vs. how many
+                       | total slots (higher = more variety)
+  6. Repetition Tracker| Is any dish appearing on 4 or more days this week?
+  7. Plant-Based Check | Is at least 44% of the menu plant-based?
+  8. Protein Balance   | Is beef dominating? Are there enough alternatives?
+  9. Report Writer     | Combines all findings into one readable report
+                       | (uses AI, falls back to a template)
+ 10. Full Day Summary  | Combines Breakfast + Lunch + Dinner into one
+                       | executive summary for the whole day
+
+================================================================================
