@@ -1,0 +1,48 @@
+## Pizza Station — Lunch Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 7 on at least one day (19 distinct in period) — **Newcomb Taco Pizza**, **Newcomb Chopped Italian Herb Blend**, **Newcomb Street Corn Pizza**, **Newcomb Pizza Crust Butter**, **Caesar Pasta Salad**, **Creamy Ranch Pasta Salad**, **Caramelized Onion & Pepper Pizza**, **Black Olive Pizza**, **Buffalo Chicken Pizza**, **Margherita Pizza**, **Caesar Salad**, **Mediterranean Pasta Salad**, **BBQ Chicken Pizza**, **Deluxe Pizza**, **Mushroom & Sausage Pizza**, **Primavera Pizza**, **Classic Cheese Pizza**, **Pepperoni Pizza**, **BEEF POT ROAST (PCKD)**
+- Gap: Exceeded by 5 (got 7, max 2)
+
+**VEGAN**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**FRIES**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**PLANT-BASED**
+- What the menu is doing: 0.0% plant-based — none
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 44.0% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 0.64 (18 unique entrees / 28 scheduled slots)
+- Playbook says daily features must rotate. Items appearing on 4+ days:
+    - **Classic Cheese Pizza**: 6 days (Monday, Tuesday, Wednesday, Thursday, Friday, Sunday)
+    - **Pepperoni Pizza**: 6 days (Monday, Tuesday, Wednesday, Thursday, Friday, Sunday)
+
+### Plant-Based
+- Current: 0.0% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 44.0% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 7 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Add at least one **Vegan** item — Playbook rule: "Vegan: min 1 per day."
+3. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+4. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."
+5. Rotate **Classic Cheese Pizza**, **Pepperoni Pizza** — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."

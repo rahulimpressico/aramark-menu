@@ -1,0 +1,732 @@
+{
+  "station_name": "Simply Vegan",
+  "meal_period": "Dinner",
+  "content": "## Grill Station — Dinner Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 17 offered — **Grilled Green Beans**, **Balsamic Glazed Roasted Carrots**, **Steamed Peas & Onions**, **Garlic Broccoli**, **California Blend Vegetables**, **Mediterranean Saute with Orzo**, **Hummus**, **Spicy Vegetable Gumbo**, **Root Vegetable Farro Salad**, **Roasted Red Pepper Hummus**, **Buffalo Cauliflower Wings**, **Potato & Kale Enchiladas**, **Roasted Garlic Rice**, **Roasted Beet & Orange Salad**, **Seasoned Rice**, **Roasted Red Potatoes**, **Roasted Garlic Potatoes**\n- What the Playbook says: Max 2 per day.\n- Gap: Too many daily features (got 17, max 2)\n\n**FRIES**\n- What the menu is doing: 0 offered — none\n- What the Playbook says: Min 1 per day.\n- Gap: Too many daily features (got 17, max 2)\n\n**PLANT-BASED**\n- What the menu is doing: 5.7% plant-based — **Plant-Based Sausage Mac Casserole**, **Potato & Kale Enchiladas**\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 38.3% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 0.51 (18 unique entrees / 35 scheduled slots)\n- Playbook says daily features must rotate. Items appearing on 4+ days:\n    - **Hummus**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Root Vegetable Farro Salad**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Roasted Red Pepper Hummus**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Roasted Beet & Orange Salad**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n\n### Plant-Based\n- Current: 5.7% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 38.3% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Reduce **Daily Feature** from 17 to the maximum allowed — Playbook rule: \"Daily Feature: max 2 per day. Must rotate daily.\"\n2. Add at least one **Fries** item — Playbook rule: \"Fries: min 1 per day.\"\n3. Increase plant-based offerings from 5.7% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"\n4. Rotate **Hummus**, **Root Vegetable Farro Salad** — Playbook rule: \"Daily Features must rotate daily. High repetition across multiple days signals poor rotation.\"",
+  "analysis_json": {
+    "playbook_check": {
+      "meal_period": "Dinner",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 17,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Grilled Green Beans",
+            "Balsamic Glazed Roasted Carrots",
+            "Steamed Peas & Onions",
+            "Garlic Broccoli",
+            "California Blend Vegetables",
+            "Mediterranean Saute with Orzo",
+            "Hummus",
+            "Spicy Vegetable Gumbo",
+            "Root Vegetable Farro Salad",
+            "Roasted Red Pepper Hummus",
+            "Buffalo Cauliflower Wings",
+            "Potato & Kale Enchiladas",
+            "Roasted Garlic Rice",
+            "Roasted Beet & Orange Salad",
+            "Seasoned Rice",
+            "Roasted Red Potatoes",
+            "Roasted Garlic Potatoes"
+          ]
+        },
+        "vegan": {
+          "count": 1,
+          "playbook_rule": "min 1",
+          "status": "ok",
+          "recipes": [
+            "Plant-Based Sausage Mac Casserole"
+          ]
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        }
+      },
+      "violations": [
+        "Too many daily features (got 17, max 2)",
+        "Missing fries option"
+      ],
+      "sides": {
+        "count": 0,
+        "recipes": []
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 0.51,
+        "unique_entree_count": 18,
+        "repeated_static_count": 17,
+        "entree_slots": 35,
+        "total_slots": 35,
+        "side_count": 0,
+        "message": "Moderate entree variety; consider rotating daily features.",
+        "entree_serve_counts": {
+          "Grilled Green Beans": 1,
+          "Balsamic Glazed Roasted Carrots": 1,
+          "Steamed Peas & Onions": 1,
+          "Garlic Broccoli": 2,
+          "California Blend Vegetables": 1,
+          "Plant-Based Sausage Mac Casserole": 1,
+          "Mediterranean Saute with Orzo": 1,
+          "Hummus": 5,
+          "Spicy Vegetable Gumbo": 1,
+          "Root Vegetable Farro Salad": 5,
+          "Roasted Red Pepper Hummus": 5,
+          "Buffalo Cauliflower Wings": 1,
+          "Potato & Kale Enchiladas": 1,
+          "Roasted Garlic Rice": 1,
+          "Roasted Beet & Orange Salad": 5,
+          "Seasoned Rice": 1,
+          "Roasted Red Potatoes": 1,
+          "Roasted Garlic Potatoes": 1
+        },
+        "side_recipes": []
+      },
+      "item_frequency": {
+        "total_recipes": 18,
+        "recurrence_signals": [
+          {
+            "recipe_id": "M21969",
+            "recipe_name": "Hummus",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "M33117",
+            "recipe_name": "Root Vegetable Farro Salad",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "M34682",
+            "recipe_name": "Roasted Red Pepper Hummus",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "M6667",
+            "recipe_name": "Roasted Beet & Orange Salad",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          }
+        ],
+        "message": "4 recipe(s) appear ≥ 4 days (Hummus, Root Vegetable Farro Salad, Roasted Red Pepper Hummus, Roasted Beet & Orange Salad). Consider rotating to improve variety.",
+        "frequencies": [
+          {
+            "recipe_id": "M21969",
+            "recipe_name": "Hummus",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M6667",
+            "recipe_name": "Roasted Beet & Orange Salad",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M34682",
+            "recipe_name": "Roasted Red Pepper Hummus",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M33117",
+            "recipe_name": "Root Vegetable Farro Salad",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M11967",
+            "recipe_name": "Garlic Broccoli",
+            "appearance_count": 2,
+            "days": [
+              "Monday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M10514",
+            "recipe_name": "Balsamic Glazed Roasted Carrots",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M34960",
+            "recipe_name": "Buffalo Cauliflower Wings",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M15288",
+            "recipe_name": "California Blend Vegetables",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M10050",
+            "recipe_name": "Grilled Green Beans",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M21921",
+            "recipe_name": "Mediterranean Saute with Orzo",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M21047",
+            "recipe_name": "Plant-Based Sausage Mac Casserole",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M34965",
+            "recipe_name": "Potato & Kale Enchiladas",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M9876",
+            "recipe_name": "Roasted Garlic Potatoes",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M36073",
+            "recipe_name": "Roasted Garlic Rice",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M9781",
+            "recipe_name": "Roasted Red Potatoes",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M9560",
+            "recipe_name": "Seasoned Rice",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M3223",
+            "recipe_name": "Spicy Vegetable Gumbo",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M10687",
+            "recipe_name": "Steamed Peas & Onions",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 5.7,
+        "vegan_percent": 5.7,
+        "compliant_44": false,
+        "total_offerings": 35,
+        "plant_based_count": 2,
+        "message": "5.7% plant-based — 38.3% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": [
+          "Plant-Based Sausage Mac Casserole",
+          "Potato & Kale Enchiladas"
+        ]
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "medium",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": false,
+        "beef_slots": 0,
+        "alt_slots": 1,
+        "beef_recipes": [],
+        "alt_recipes": [
+          "Plant-Based Sausage Mac Casserole"
+        ],
+        "recommendations": [
+          "Increase protein diversity: add at least two non-beef alternatives weekly."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=1; CPM risk level=MEDIUM."
+      }
+    }
+  },
+  "analysis": {
+    "station_name": "Simply Vegan",
+    "meal_period": "Dinner",
+    "recipe_count": 18,
+    "cost_stats": {
+      "min": 0.0854,
+      "max": 4.5973,
+      "mean": 0.9775,
+      "median": 0.4316,
+      "total": 17.5954
+    },
+    "top_expensive": [
+      {
+        "id": "M21969",
+        "name": "Hummus",
+        "food_cost": 4.5973
+      },
+      {
+        "id": "M34682",
+        "name": "Roasted Red Pepper Hummus",
+        "food_cost": 4.4321
+      },
+      {
+        "id": "M34960",
+        "name": "Buffalo Cauliflower Wings",
+        "food_cost": 1.2298
+      },
+      {
+        "id": "M34965",
+        "name": "Potato & Kale Enchiladas",
+        "food_cost": 1.1726
+      },
+      {
+        "id": "M21921",
+        "name": "Mediterranean Saute with Orzo",
+        "food_cost": 1.1705
+      }
+    ],
+    "top_affordable": [
+      {
+        "id": "M9560",
+        "name": "Seasoned Rice",
+        "food_cost": 0.0854
+      },
+      {
+        "id": "M36073",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187
+      },
+      {
+        "id": "M9781",
+        "name": "Roasted Red Potatoes",
+        "food_cost": 0.1534
+      },
+      {
+        "id": "M9876",
+        "name": "Roasted Garlic Potatoes",
+        "food_cost": 0.1642
+      },
+      {
+        "id": "M15288",
+        "name": "California Blend Vegetables",
+        "food_cost": 0.2336
+      }
+    ],
+    "unique_ingredients": 82,
+    "top_ingredients": [
+      {
+        "name": "blend oil vegetable",
+        "count": 11
+      },
+      {
+        "name": "salt",
+        "count": 11
+      },
+      {
+        "name": "black grind pepper spice table",
+        "count": 10
+      },
+      {
+        "name": "water",
+        "count": 7
+      },
+      {
+        "name": "clove garlic minced peeled vegetable whole",
+        "count": 4
+      },
+      {
+        "name": "carrot trimmed vegetable",
+        "count": 3
+      },
+      {
+        "name": "canned chopped garlic vegetable water",
+        "count": 3
+      },
+      {
+        "name": "bread crumb panko",
+        "count": 3
+      },
+      {
+        "name": "celery trimmed vegetable",
+        "count": 3
+      },
+      {
+        "name": "added base gf ls msg no vegetable",
+        "count": 3
+      }
+    ],
+    "ing_count_stats": {
+      "min": 1,
+      "max": 22,
+      "mean": 8.1
+    },
+    "most_ingredients_recipes": [
+      {
+        "name": "Plant-Based Sausage Mac Casserole",
+        "count": 22
+      },
+      {
+        "name": "Spicy Vegetable Gumbo",
+        "count": 22
+      },
+      {
+        "name": "Mediterranean Saute with Orzo",
+        "count": 17
+      },
+      {
+        "name": "Seasoned Rice",
+        "count": 16
+      },
+      {
+        "name": "Potato & Kale Enchiladas",
+        "count": 13
+      }
+    ],
+    "equipment": [
+      "grill",
+      "oven",
+      "steam_table",
+      "stockpot"
+    ],
+    "equipment_by_recipe": {
+      "Grilled Green Beans": [
+        "grill"
+      ],
+      "Balsamic Glazed Roasted Carrots": [
+        "oven",
+        "stockpot"
+      ],
+      "Steamed Peas & Onions": [
+        "steam_table"
+      ],
+      "California Blend Vegetables": [
+        "steam_table"
+      ],
+      "Plant-Based Sausage Mac Casserole": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ],
+      "Spicy Vegetable Gumbo": [
+        "oven",
+        "stockpot"
+      ],
+      "Buffalo Cauliflower Wings": [
+        "oven"
+      ],
+      "Potato & Kale Enchiladas": [
+        "oven",
+        "steam_table"
+      ],
+      "Roasted Garlic Rice": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ],
+      "Roasted Beet & Orange Salad": [
+        "oven"
+      ],
+      "Seasoned Rice": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ],
+      "Roasted Red Potatoes": [
+        "oven"
+      ],
+      "Roasted Garlic Potatoes": [
+        "oven"
+      ]
+    },
+    "schedule": {
+      "Monday": [
+        "Garlic Broccoli",
+        "Hummus",
+        "Potato & Kale Enchiladas",
+        "Roasted Beet & Orange Salad",
+        "Roasted Garlic Rice",
+        "Roasted Red Pepper Hummus",
+        "Root Vegetable Farro Salad"
+      ],
+      "Tuesday": [
+        "Hummus",
+        "Roasted Beet & Orange Salad",
+        "Roasted Red Pepper Hummus",
+        "Root Vegetable Farro Salad",
+        "Seasoned Rice",
+        "Spicy Vegetable Gumbo",
+        "Steamed Peas & Onions"
+      ],
+      "Wednesday": [
+        "Buffalo Cauliflower Wings",
+        "California Blend Vegetables",
+        "Hummus",
+        "Roasted Beet & Orange Salad",
+        "Roasted Garlic Potatoes",
+        "Roasted Red Pepper Hummus",
+        "Root Vegetable Farro Salad"
+      ],
+      "Thursday": [
+        "Grilled Green Beans",
+        "Hummus",
+        "Mediterranean Saute with Orzo",
+        "Roasted Beet & Orange Salad",
+        "Roasted Red Pepper Hummus",
+        "Roasted Red Potatoes",
+        "Root Vegetable Farro Salad"
+      ],
+      "Sunday": [
+        "Balsamic Glazed Roasted Carrots",
+        "Garlic Broccoli",
+        "Hummus",
+        "Plant-Based Sausage Mac Casserole",
+        "Roasted Beet & Orange Salad",
+        "Roasted Red Pepper Hummus",
+        "Root Vegetable Farro Salad"
+      ]
+    },
+    "all_recipes": [
+      {
+        "id": "M21969",
+        "name": "Hummus",
+        "food_cost": 4.5973,
+        "ing_count": 1,
+        "equipment": []
+      },
+      {
+        "id": "M34682",
+        "name": "Roasted Red Pepper Hummus",
+        "food_cost": 4.4321,
+        "ing_count": 3,
+        "equipment": []
+      },
+      {
+        "id": "M34960",
+        "name": "Buffalo Cauliflower Wings",
+        "food_cost": 1.2298,
+        "ing_count": 8,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M34965",
+        "name": "Potato & Kale Enchiladas",
+        "food_cost": 1.1726,
+        "ing_count": 13,
+        "equipment": [
+          "oven",
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M21921",
+        "name": "Mediterranean Saute with Orzo",
+        "food_cost": 1.1705,
+        "ing_count": 17,
+        "equipment": []
+      },
+      {
+        "id": "M33117",
+        "name": "Root Vegetable Farro Salad",
+        "food_cost": 0.8615,
+        "ing_count": 2,
+        "equipment": []
+      },
+      {
+        "id": "M21047",
+        "name": "Plant-Based Sausage Mac Casserole",
+        "food_cost": 0.8555,
+        "ing_count": 22,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M10050",
+        "name": "Grilled Green Beans",
+        "food_cost": 0.7292,
+        "ing_count": 2,
+        "equipment": [
+          "grill"
+        ]
+      },
+      {
+        "id": "M3223",
+        "name": "Spicy Vegetable Gumbo",
+        "food_cost": 0.4358,
+        "ing_count": 22,
+        "equipment": [
+          "oven",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M10514",
+        "name": "Balsamic Glazed Roasted Carrots",
+        "food_cost": 0.4275,
+        "ing_count": 6,
+        "equipment": [
+          "oven",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M6667",
+        "name": "Roasted Beet & Orange Salad",
+        "food_cost": 0.3842,
+        "ing_count": 6,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M11967",
+        "name": "Garlic Broccoli",
+        "food_cost": 0.296,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "M10687",
+        "name": "Steamed Peas & Onions",
+        "food_cost": 0.2481,
+        "ing_count": 6,
+        "equipment": [
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M15288",
+        "name": "California Blend Vegetables",
+        "food_cost": 0.2336,
+        "ing_count": 5,
+        "equipment": [
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M9876",
+        "name": "Roasted Garlic Potatoes",
+        "food_cost": 0.1642,
+        "ing_count": 4,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M9781",
+        "name": "Roasted Red Potatoes",
+        "food_cost": 0.1534,
+        "ing_count": 3,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M36073",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187,
+        "ing_count": 5,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M9560",
+        "name": "Seasoned Rice",
+        "food_cost": 0.0854,
+        "ing_count": 16,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      }
+    ]
+  },
+  "generated_at": "2026-03-03T11:25:20.588866+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

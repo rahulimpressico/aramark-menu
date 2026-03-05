@@ -1,0 +1,3335 @@
+{
+  "graph_metadata": {
+    "version": "2.4-normalized",
+    "description": "Normalized graph: canonical ingredients + equipment nodes. Auto-merged near-duplicates.",
+    "source": {
+      "schema_version": "1.0.0",
+      "source_file": "knowledge_graph_halal_street_eats.json",
+      "original_meta": {
+        "source_file": "halal_street_eats_station_only.xlsx",
+        "station_name": "Halal Street Eats",
+        "warnings_count": 0,
+        "validation_issues_count": 0
+      }
+    },
+    "stats": {
+      "base_nodes": 35,
+      "ingredient_nodes": 66,
+      "equipment_nodes": 5,
+      "total_nodes": 106,
+      "total_edges": 281,
+      "ingredients_merged": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "station_Halal Street Eats",
+      "type": "Station",
+      "name": "Halal Street Eats"
+    },
+    {
+      "id": "week_3",
+      "type": "Week",
+      "week_no": 3
+    },
+    {
+      "id": "day_Monday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 1,
+      "day_name": "Monday"
+    },
+    {
+      "id": "day_Tuesday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 2,
+      "day_name": "Tuesday"
+    },
+    {
+      "id": "day_Wednesday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 3,
+      "day_name": "Wednesday"
+    },
+    {
+      "id": "day_Thursday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 4,
+      "day_name": "Thursday"
+    },
+    {
+      "id": "day_Friday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 5,
+      "day_name": "Friday"
+    },
+    {
+      "id": "day_Sunday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 7,
+      "day_name": "Sunday"
+    },
+    {
+      "id": "period_Dinner",
+      "type": "MealPeriod",
+      "name": "Dinner"
+    },
+    {
+      "id": "period_Lunch",
+      "type": "MealPeriod",
+      "name": "Lunch"
+    },
+    {
+      "id": "A4307",
+      "type": "Recipe",
+      "name": "Bulgogi Ground Turkey",
+      "food_cost": 1.4655,
+      "assembly_instructions": "1. In sauté pan or rondeau over medium-high heat, cook ground turkey until browned. Drain. 2. Add BBQ sauce and gochujang. Mix well. Bring to a simmer, then remove from heat. 3. Cover. Keep hot for service or use as directed in recipe.",
+      "special_instructions": "IDDSI Level 7 1-oz spoodle = 5/8 oz 2-oz spoodle = 1 3/4 oz 3-oz spoodle = 2 3/8 oz 4-oz spoodle = 3 1/2 oz 6-oz spoodle = 5 1/4 oz 8-oz spoodle = 7 oz #30 scoop = 1 oz #24 scoop = 1 1/4 oz #20 scoop = 1 1/2 oz #16 scoop = 1 3/4 oz #12 scoop = 2 3/8 oz #10 scoop = 2 7/8 oz #8 scoop = 3 1/2 oz"
+    },
+    {
+      "id": "A4308",
+      "type": "Recipe",
+      "name": "Sesame Spinach",
+      "food_cost": 4.0061,
+      "assembly_instructions": "1. In mixing bowl, combine soy sauce, sesame oil, vinegar, sugar and sesame seeds. Using whisk, mix well so that sugar dissolves. 2. Add marinade to well-drained spinach. Mix well to distribute marinade and sesame seeds. 3. Cover. Keep chilled for service or use as directed in a recipe.",
+      "special_instructions": "1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz"
+    },
+    {
+      "id": "A4603",
+      "type": "Recipe",
+      "name": "Gochujang Beef Bowl",
+      "food_cost": 4.5152,
+      "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving container, place 1 each #8 scoops Rice. 2. Place the following over Rice: 2-oz spoodle Beef 3. Arrange the following around Rice: 1-oz spoodle Daikon 1-oz spoodle Pickled Cucumber 1-oz spoodle Kimchi 4. Layer the following on top of Beef: 1 Fried Egg 1 tbl Gochujang sauce 1 tbl scallion 5. Serve immediately."
+    },
+    {
+      "id": "A526",
+      "type": "Recipe",
+      "name": "Gochujang Bulgogi Beef",
+      "food_cost": 8.988,
+      "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. On griddle or in saute pan over medium-high heat, heat oil. 3. Add beef. Cook 1 minute. Using 2 metal spatulas, turn beef and begin pulling beef apart. Add remaining ingredients. Cook until beef is browned and internal temperature reaches 160 F, 3-4 minutes. 4. Cover. Keep hot for service or use as directed in recipe.",
+      "special_instructions": "Recipe submitted by Chef Toni Thomas 1-oz spoodle = 1/2 oz 2-oz spoodle = 1 oz 3-oz spoodle = 1 1/2 oz 4-oz spoodle = 2 oz 6-oz spoodle = 3 oz 8-oz spoodle = 4 oz"
+    },
+    {
+      "id": "A7977",
+      "type": "Recipe",
+      "name": "Asian Seared Chicken",
+      "food_cost": 3.2376,
+      "assembly_instructions": "1. Prepare sub-assembly recipe(s). 2. Cover. Keep chilled for service."
+    },
+    {
+      "id": "A8326",
+      "type": "Recipe",
+      "name": "Sesame Green Cabbage",
+      "food_cost": 0.3164,
+      "assembly_instructions": "1. Combine all ingredients. Toss to coat. 2. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw"
+    },
+    {
+      "id": "L392180",
+      "type": "Recipe",
+      "name": "Street Eatz Bibimbap",
+      "food_cost": 1.4462,
+      "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving plate, place 4-oz spoodle Jasmine rice. 2. Arrange the following around rice: 2-oz spoodle Asian chicken 2-oz spoodle sesame soy spinach 1-oz spoodle kimchi 1-oz spoodle pickled water chestnuts 3. Layer the following on top of rice: 1 fried egg 1 tbl Gochujang sauce 1 tbl scallion 4. Serve immediately.",
+      "special_instructions": "Created without main protein for customizable bowl."
+    },
+    {
+      "id": "L392181",
+      "type": "Recipe",
+      "name": "Street Eatz Loaded Bulgogi Fries",
+      "food_cost": 0.8021,
+      "assembly_instructions": "FOR 1 SERVING: 1. On a serving plate, place the following: 8-oz spoodle Fries 2-oz spoodle Beef 2-oz ladle Queso 1-oz spoodle Pickled Cucumber 1-oz spoodle Kimchi 1 T Mayonnaise 1 tsp cilantro 1 tsp scallion 2. Serve immediately."
+    },
+    {
+      "id": "L392896",
+      "type": "Recipe",
+      "name": "Street Eatz Korean BBQ Fish Taco",
+      "food_cost": 1.5092,
+      "assembly_instructions": "FOR 1 SERVING: 1. Layer the following across center of 1 tortilla: 2-oz spoodle lettuce 1-oz spoodle Kimchi 1 piece haddock 1 Tbl Korean BBQ sauce 4 Slices jalapeno 2. Cover. Keep hot for service."
+    },
+    {
+      "id": "L392900",
+      "type": "Recipe",
+      "name": "Street Eatz Kimchi Sushi Bowl",
+      "food_cost": 2.0244,
+      "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving container, place 1 each #8 scoop Sushi Rice. 2. Arrange the following around rice: 2 pieces Pollock 2-oz spoode kimchi 1-oz spoodle jalapeno 1-oz spoodle scallion 3. Layer the following on top of rice: 1 tbl Spicy Mayonnaise 4. Serve immediately."
+    },
+    {
+      "id": "M10140",
+      "type": "Recipe",
+      "name": "Pickled Carrot & Daikon",
+      "food_cost": 22.0545,
+      "assembly_instructions": "1. Combine vinegar and sugar. Whisk until well blended. Add daikon and carrot. Toss to coat. Let stand 2 hours or overnight. Drain. 2. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 1/2 oz 2-oz spoodle = 1 oz 3-oz spoodle = 1 1/2 oz 4-oz spoodle = 2 oz 6-oz spoodle = 3 oz 8-oz spoodle = 4 oz"
+    },
+    {
+      "id": "M16592",
+      "type": "Recipe",
+      "name": "Korean BBQ Tofu",
+      "food_cost": 0.2772,
+      "assembly_instructions": "1. In saute pan or wok over high heat, heat oil. Add tofu. Stir-fry until browned, 2 to 3 minutes. Remove from pan. 2. To same pan, add broccoli, onion, cabbage, carrot and celery. Stir-fry until tender-crisp, 2 to 3 minutes. 3. Add cooked tofu and sauce. Stir-fry until coated and heated through. 4. Cover. Keep hot for service. EXHIBITION SERVICE FOR EACH 6 (1/2 cup) SERVINGS: 1. In saucepan or wok over high heat, heat 1 1/2 tsp oil. 2. Add the following: 2 each 6-oz spoodles tofu Stir-fry until browned, 2 to 3 minutes. Remove from pan. 3. To same pan, add: 8-oz spoodle broccoli 6-oz spoodle onion 6-oz spoodle cabbage 3-oz spoodle carrot 3-oz spoodle celery Stir-fry until vegetables are tender-crisp, 2 to 3 minutes. 4. Add: Cooked tofu 6-oz ladle sauce Stir-fry until coated and heated through, 2 to 3 minutes. TO PLATE 1 SERVING: 1. On serving plate, place the following: 4-oz spoodle stir-fry mixture 2. Serve immediately."
+    },
+    {
+      "id": "M17310",
+      "type": "Recipe",
+      "name": "TURKEY GD ROTINI 10/3",
+      "food_cost": 0.9322,
+      "assembly_instructions": "1. In stockpot over medium-high heat, bring water, base, gingerroot, soy sauce, salt, Thai seasoning and sugar to a boil. Reduce heat. Simmer 5 minutes. FOR 1 SERVING: 1. In serving bowl, place the following: 3-oz spoodle Noodles 1-oz spoodle carrot 1-oz spoodle bean sprouts 2-oz spoodle tofu 1 tbl scallion 3 slices jalapeno 1 tsp cilantro 8-oz ladle broth 1 leaf basil 2. Serve immediately with 1 wedge lime.",
+      "special_instructions": "IDDSI Level 7"
+    },
+    {
+      "id": "M21426",
+      "type": "Recipe",
+      "name": "Korean BBQ Chicken",
+      "food_cost": 4.6248,
+      "assembly_instructions": "1. Combine chicken and marinade. Toss to coat. 2. Place chicken with marinade in covered non-reactive shallow pan(s) or sealable plastic bag(s). Refrigerate 1 hour. 3. Preheat flat-top griddle to 350 F. 4. Drain chicken. Discard marinade. 5. Cook chicken strips 2 minutes. Turn strips over. Brush with BBQ sauce. Cook until caramelized, 2 to 3 minutes. 6. Cover. Keep hot for service or use as directed in recipe.",
+      "special_instructions": "2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz"
+    },
+    {
+      "id": "M32304",
+      "type": "Recipe",
+      "name": "Kimchi",
+      "food_cost": 1.5106,
+      "assembly_instructions": "1. Preheat steamer. 2. In 2\" perforated steam table pan(s), steam cabbage 2 minutes. Drain. 3. Immediately rinse with cold water to stop the cooking process. Drain. 4. Cover. 5. Combine vinegar, fish sauce, Gochujang paste, garlic and gingerroot. Whisk until well blended. 2. Combine all ingredients. Toss to mix. 3. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 1/2 oz 2-oz spoodle = 1 1/8 oz 3-oz spoodle = 1 5/8 oz 4-oz spoodle = 2 1/4 oz 6-oz spoodle = 3 3/8 oz 8-oz spoodle = 4 1/2 oz"
+    },
+    {
+      "id": "M32306",
+      "type": "Recipe",
+      "name": "Gochujang Sauce",
+      "food_cost": 0.2293,
+      "assembly_instructions": "1. Preheat convection oven to 300 F. 2. On sheet pan(s), spread sesame seed in thin layer. 3. Bake, stirring once, until lightly toasted and aromatic, 4 to 6 minutes. Cool. 4. Combine all ingredients. Whisk until well blended. 5. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 1 1/8 oz 2-oz spoodle = 2 1/4 oz 3-oz spoodle = 3 3/8 oz 4-oz spoodle = 4 1/2 oz 6-oz spoodle = 6 3/4 oz 8-oz spoodle = 9 oz"
+    },
+    {
+      "id": "M32308",
+      "type": "Recipe",
+      "name": "Asian Seared Tofu",
+      "food_cost": 2.7541,
+      "assembly_instructions": "1. Combine tofu and Marinade. Toss to coat. 2. Place tofu with marinade in covered non-reactive shallow pan(s) or sealable plastic bag(s). Refrigerate 2 hours or overnight. 3. Preheat flat-top griddle to 350 F. 4. Drain tofu. Discard marinade. 5. Cook tofu until caramelized, 2 to 3 minutes. 6. Cover. Keep hot for service or use as directed in recipe.",
+      "special_instructions": "2-oz spoodle = 1 3/4 oz 3-oz spoodle = 2 5/8 oz 4-oz spoodle = 3 1/2 oz 6-oz spoodle = 5 1/4 oz 8-oz spoodle = 7 oz"
+    },
+    {
+      "id": "M32316",
+      "type": "Recipe",
+      "name": "Kimchi Fried Rice",
+      "food_cost": 0.9395,
+      "assembly_instructions": "1. In saute pan over medium-high heat, heat oil. 2. Add gingerroot and garlic. Saute until aromatic, 30 seconds. 3. Add Kimchi and scallion. Saute until tender-crisp, 2 to 3 minutes. 4. Add Rice. Saute until heated through. 5. Cover. Keep hot for service."
+    },
+    {
+      "id": "M32354",
+      "type": "Recipe",
+      "name": "Korean Noodle Bowl",
+      "food_cost": 2.2155,
+      "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving plate, place 4-oz spoodle noodles. 2. Arrange the following around noodles: 2-oz spoodle tofu 2-oz spoodle mushrooms 6-oz ladle broth 1-oz spoodle kimchi 1-oz spoodle carrot daikon 3. Top with 1 tbsp scallion 4. Serve immediately."
+    },
+    {
+      "id": "M36626",
+      "type": "Recipe",
+      "name": "Spicy Asian Burrito",
+      "food_cost": 1.4471,
+      "assembly_instructions": "FOR 1 SERVING: 1. Layer the following across center of 1 tortilla: #12 scoop Basmati Rice #8 scoop Asian Coleslaw 1-oz spoodle Sriracha Edamame 2-oz spoodle snow peas Fold lower third of tortilla up over filling. Fold in right and left edges of tortilla about 1\" on each side. Roll burrito closed. Place seam side down. 2. Cut diagonally in half. 3. Cover. Keep hot for service."
+    },
+    {
+      "id": "M38517",
+      "type": "Recipe",
+      "name": "Crispy Sesame Tofu",
+      "food_cost": 3.2908,
+      "assembly_instructions": "1. Preheat deep-fat fryer to 350 F. 2. Combine tofu and soy sauce. Toss gently to coat. 3. In mixing bowl, combine cornstarch, salt and sesame seeds. Toss to mix. 4. Combine tofu mixture and cornstarch mixture. Toss to coat. 5. Fry tofu until golden brown, 2 to 3 minutes. Drain. Cool. 6. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full. 1-oz spoodle = 1/2 ozw 2-oz spoodle = 1 ozw 3-oz spoodle = 1 1/2 ozw 4-oz spoodle = 2 ozw 6-oz spoodle = 3 ozw 8-oz spoodle = 4 ozw"
+    },
+    {
+      "id": "M38622",
+      "type": "Recipe",
+      "name": "Pickled Cucumber",
+      "food_cost": 2.0114,
+      "assembly_instructions": "1. Combine cucumbers, sugar and salt. Toss to coat. Let stand for 15 to 20 minutes, stirring once. 2. Combine cucumbers and vinegar. Toss to coat. 3. Cover. Keep chilled for service or use as directed in recipe. 4. Drain before serving.",
+      "special_instructions": "1 tbl = 1/2 ozw 1-oz spoodle = 7/8 ozw 2-oz spoodle = 1 5/8 ozw 3-oz spoodle = 2 3/8 ozw 4-oz spoodle = 3 1/4 ozw 6-oz spoodle = 4 7/8 ozw 8-oz spoodle = 6 1/2 ozw"
+    },
+    {
+      "id": "M39294",
+      "type": "Recipe",
+      "name": "Kimchi",
+      "food_cost": 4.9733,
+      "assembly_instructions": "1. Cover. Keep chilled for service.",
+      "special_instructions": "1 tbl = 1/2 ozw 1-oz spoodle = 7/8 ozw 2-oz spoodle = 1 3/4 ozw 3-oz spoodle = 2 5/8 ozw 4-oz spoodle = 3 1/2 ozw 6-oz spoodle = 5 1/4 ozw 8-oz spoodle = 7 ozw"
+    },
+    {
+      "id": "M40821",
+      "type": "Recipe",
+      "name": "Roasted Garlic Rice",
+      "food_cost": 0.1187,
+      "assembly_instructions": "RANGE-TOP METHOD 1. In stockpot over high heat, bring water to a boil. Add rice, oil, salt, pepper and Roasted Garlic. Stir. Return to a boil. Reduce heat. Cover. 2. Simmer until rice is tender and liquid is absorbed, 18 to 20 minutes. Remove from heat. Let stand 10 minutes. Fluff with fork. 3. Cover. Keep hot for service or use as directed in recipe. OVEN / STEAMER METHOD 1. Preheat oven to 350 F or preheat steamer. FOR EACH 24 (1/2 cup) SERVINGS: 1. In 2\" full steam table pan, place the following: 2 qt boiling water 1 lb + 12 oz rice 2 tbl oil 1 1/2 tsp salt 1/4 tsp pepper 2 oz Roasted Garlic Stir. Cover. 2. Bake or steam until rice is tender and liquid is absorbed, 30 to 35 minutes. Let stand 10 minutes. Fluff with fork. 3. Cover. Keep hot for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 3/4 oz 2-oz spoodle = 1 1/2 oz 3-oz spoodle = 2 1/4 oz 4-oz spoodle = 3 oz 6-oz spoodle = 4 1/2 oz 8-oz spoodle = 6 oz #40 scoop = 1/2 oz #30 scoop = 3/4 oz #24 scoop = 1 oz #20 scoop = 1 1/4 oz #16 scoop = 1 1/2 oz #12 scoop = 2 oz #10 scoop = 2 1/4 oz #8 scoop = 3 oz"
+    },
+    {
+      "id": "M6349",
+      "type": "Recipe",
+      "name": "Sliced Scallions",
+      "food_cost": 6.0301,
+      "assembly_instructions": "1. Cover. Keep chilled for service."
+    },
+    {
+      "id": "Ingredient_gochujang_paste",
+      "type": "Ingredient",
+      "name": "gochujang paste"
+    },
+    {
+      "id": "Ingredient_ground_turkey",
+      "type": "Ingredient",
+      "name": "ground turkey"
+    },
+    {
+      "id": "Ingredient_bbq_korean_sauce",
+      "type": "Ingredient",
+      "name": "bbq korean sauce"
+    },
+    {
+      "id": "Ingredient_oil_sesame",
+      "type": "Ingredient",
+      "name": "oil sesame"
+    },
+    {
+      "id": "Ingredient_rice_seasoned_vinegar",
+      "type": "Ingredient",
+      "name": "rice seasoned vinegar"
+    },
+    {
+      "id": "Ingredient_extra_fine_granulated_sugar",
+      "type": "Ingredient",
+      "name": "extra fine granulated sugar"
+    },
+    {
+      "id": "Ingredient_seed_sesame_spice_white_whole",
+      "type": "Ingredient",
+      "name": "seed sesame spice white whole"
+    },
+    {
+      "id": "Ingredient_gf_less_sauce_sodium_soy_tamari",
+      "type": "Ingredient",
+      "name": "gf less sauce sodium soy tamari"
+    },
+    {
+      "id": "Ingredient_chopped_drained_iqf_spinach_vegetable",
+      "type": "Ingredient",
+      "name": "chopped drained iqf spinach vegetable"
+    },
+    {
+      "id": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "green onion scallion trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_fish_sauce",
+      "type": "Ingredient",
+      "name": "fish sauce"
+    },
+    {
+      "id": "Ingredient_brown_light_sugar",
+      "type": "Ingredient",
+      "name": "brown light sugar"
+    },
+    {
+      "id": "Ingredient_ginger_minced_peeled_root_vegetable",
+      "type": "Ingredient",
+      "name": "ginger minced peeled root vegetable"
+    },
+    {
+      "id": "Ingredient_beef_sandwich_steak",
+      "type": "Ingredient",
+      "name": "beef sandwich steak"
+    },
+    {
+      "id": "Ingredient_chopped_cilantro_herb_leave",
+      "type": "Ingredient",
+      "name": "chopped cilantro herb leave"
+    },
+    {
+      "id": "Ingredient_clove_garlic_minced_peeled_vegetable_whole",
+      "type": "Ingredient",
+      "name": "clove garlic minced peeled vegetable whole"
+    },
+    {
+      "id": "Ingredient_blend_oil_vegetable",
+      "type": "Ingredient",
+      "name": "blend oil vegetable"
+    },
+    {
+      "id": "Ingredient_juice_lime_pasteurized",
+      "type": "Ingredient",
+      "name": "juice lime pasteurized"
+    },
+    {
+      "id": "Ingredient_chili_hot_oil",
+      "type": "Ingredient",
+      "name": "chili hot oil"
+    },
+    {
+      "id": "Ingredient_water",
+      "type": "Ingredient",
+      "name": "water"
+    },
+    {
+      "id": "Ingredient_cabbage_green_vegetable",
+      "type": "Ingredient",
+      "name": "cabbage green vegetable"
+    },
+    {
+      "id": "Ingredient_salt",
+      "type": "Ingredient",
+      "name": "salt"
+    },
+    {
+      "id": "Ingredient_blk_cage_crckd_egg_free_hmstyl_ppr",
+      "type": "Ingredient",
+      "name": "blk cage crckd egg free hmstyl ppr"
+    },
+    {
+      "id": "Ingredient_coat_crinkle_fry_potato",
+      "type": "Ingredient",
+      "name": "coat crinkle fry potato"
+    },
+    {
+      "id": "Ingredient_cabbage_kimchi_nappa_vegetable",
+      "type": "Ingredient",
+      "name": "cabbage kimchi nappa vegetable"
+    },
+    {
+      "id": "Ingredient_hot_ken_korean_sauce_taco",
+      "type": "Ingredient",
+      "name": "hot ken korean sauce taco"
+    },
+    {
+      "id": "Ingredient_battered_fillet_fish_iqf_pollock",
+      "type": "Ingredient",
+      "name": "battered fillet fish iqf pollock"
+    },
+    {
+      "id": "Ingredient_chili_jalapeno_pepper_vegetable",
+      "type": "Ingredient",
+      "name": "chili jalapeno pepper vegetable"
+    },
+    {
+      "id": "Ingredient_iceberg_lettuce_vegetable",
+      "type": "Ingredient",
+      "name": "iceberg lettuce vegetable"
+    },
+    {
+      "id": "Ingredient_flour_shelf_stable_tortilla_white",
+      "type": "Ingredient",
+      "name": "flour shelf stable tortilla white"
+    },
+    {
+      "id": "Ingredient_radish_red_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "radish red trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_vinegar_white",
+      "type": "Ingredient",
+      "name": "vinegar white"
+    },
+    {
+      "id": "Ingredient_daikon_peeled_radish_vegetable",
+      "type": "Ingredient",
+      "name": "daikon peeled radish vegetable"
+    },
+    {
+      "id": "Ingredient_carrot_vegetable",
+      "type": "Ingredient",
+      "name": "carrot vegetable"
+    },
+    {
+      "id": "Ingredient_firm_high_protein_super_tofu",
+      "type": "Ingredient",
+      "name": "firm high protein super tofu"
+    },
+    {
+      "id": "Ingredient_broccoli_floret_vegetable",
+      "type": "Ingredient",
+      "name": "broccoli floret vegetable"
+    },
+    {
+      "id": "Ingredient_celery_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "celery trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_onion_trimmed_vegetable_yellow",
+      "type": "Ingredient",
+      "name": "onion trimmed vegetable yellow"
+    },
+    {
+      "id": "Ingredient_broccoli_crown_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "broccoli crown trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_carrot_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "carrot trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_gd_turkey",
+      "type": "Ingredient",
+      "name": "gd turkey"
+    },
+    {
+      "id": "Ingredient_garlic_powder_spice",
+      "type": "Ingredient",
+      "name": "garlic powder spice"
+    },
+    {
+      "id": "Ingredient_onion_vegetable_yellow",
+      "type": "Ingredient",
+      "name": "onion vegetable yellow"
+    },
+    {
+      "id": "Ingredient_base_beef_flavored",
+      "type": "Ingredient",
+      "name": "base beef flavored"
+    },
+    {
+      "id": "Ingredient_canned_paste_tomato_vegetable",
+      "type": "Ingredient",
+      "name": "canned paste tomato vegetable"
+    },
+    {
+      "id": "Ingredient_onion_vegetable",
+      "type": "Ingredient",
+      "name": "onion vegetable"
+    },
+    {
+      "id": "Ingredient_added_base_gf_ls_msg_no_vegetable",
+      "type": "Ingredient",
+      "name": "added base gf ls msg no vegetable"
+    },
+    {
+      "id": "Ingredient_basil_herb_leave",
+      "type": "Ingredient",
+      "name": "basil herb leave"
+    },
+    {
+      "id": "Ingredient_black_ground_imitation_pepper_spice",
+      "type": "Ingredient",
+      "name": "black ground imitation pepper spice"
+    },
+    {
+      "id": "Ingredient_fruit_lime_seeded",
+      "type": "Ingredient",
+      "name": "fruit lime seeded"
+    },
+    {
+      "id": "Ingredient_dry_pasta_rotini",
+      "type": "Ingredient",
+      "name": "dry pasta rotini"
+    },
+    {
+      "id": "Ingredient_sauce_worcestershire",
+      "type": "Ingredient",
+      "name": "sauce worcestershire"
+    },
+    {
+      "id": "Ingredient_dried_herb_leave_thyme",
+      "type": "Ingredient",
+      "name": "dried herb leave thyme"
+    },
+    {
+      "id": "Ingredient_bean_canned_drained_sprout_vegetable",
+      "type": "Ingredient",
+      "name": "bean canned drained sprout vegetable"
+    },
+    {
+      "id": "Ingredient_granulated_sugar_white",
+      "type": "Ingredient",
+      "name": "granulated sugar white"
+    },
+    {
+      "id": "Ingredient_dried_herb_leaf_oregano",
+      "type": "Ingredient",
+      "name": "dried herb leaf oregano"
+    },
+    {
+      "id": "Ingredient_chicken_random_sknl_thigh",
+      "type": "Ingredient",
+      "name": "chicken random sknl thigh"
+    },
+    {
+      "id": "Ingredient_canned_chopped_garlic_vegetable_water",
+      "type": "Ingredient",
+      "name": "canned chopped garlic vegetable water"
+    },
+    {
+      "id": "Ingredient_cider_vinegar",
+      "type": "Ingredient",
+      "name": "cider vinegar"
+    },
+    {
+      "id": "Ingredient_pea_snow_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "pea snow trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_cornstarch",
+      "type": "Ingredient",
+      "name": "cornstarch"
+    },
+    {
+      "id": "Ingredient_black_seed_sesame_spice_whole",
+      "type": "Ingredient",
+      "name": "black seed sesame spice whole"
+    },
+    {
+      "id": "Ingredient_cucumber_english_vegetable",
+      "type": "Ingredient",
+      "name": "cucumber english vegetable"
+    },
+    {
+      "id": "Ingredient_black_grind_pepper_spice_table",
+      "type": "Ingredient",
+      "name": "black grind pepper spice table"
+    },
+    {
+      "id": "Ingredient_canola_oil_salad",
+      "type": "Ingredient",
+      "name": "canola oil salad"
+    },
+    {
+      "id": "Ingredient_grain_long_parboiled_rice_white",
+      "type": "Ingredient",
+      "name": "grain long parboiled rice white"
+    },
+    {
+      "id": "Equipment_griddle",
+      "type": "Equipment",
+      "name": "griddle",
+      "equipment_type": "griddle"
+    },
+    {
+      "id": "Equipment_stockpot",
+      "type": "Equipment",
+      "name": "stockpot",
+      "equipment_type": "stockpot"
+    },
+    {
+      "id": "Equipment_steam_table",
+      "type": "Equipment",
+      "name": "steam_table",
+      "equipment_type": "steam_table"
+    },
+    {
+      "id": "Equipment_oven",
+      "type": "Equipment",
+      "name": "oven",
+      "equipment_type": "oven"
+    },
+    {
+      "id": "Equipment_fryer",
+      "type": "Equipment",
+      "name": "fryer",
+      "equipment_type": "fryer"
+    }
+  ],
+  "edges": [
+    {
+      "source": "A4307",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A4307",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4307",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A4308",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A4308",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A4308",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A4603",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A4603",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A4603",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A526",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A526",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "A526",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A7977",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A7977",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "A7977",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A8326",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "A8326",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "A8326",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L392180",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L392180",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "L392180",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L392180",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L392180",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L392181",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L392181",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "L392181",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L392181",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L392181",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L392896",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L392896",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "L392896",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L392900",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L392900",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "L392900",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M10140",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M10140",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M10140",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M16592",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M16592",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M17310",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M17310",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M21426",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M21426",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M21426",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M21426",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32304",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M32304",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32306",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M32306",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32306",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32308",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M32308",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32308",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M32308",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32308",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32316",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M32316",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32316",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M32354",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M32354",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M32354",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M36626",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M36626",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M36626",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M38517",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M38517",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M38622",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M38622",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M38622",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M39294",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M39294",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M39294",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M39294",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M39294",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M39294",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M39294",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M39294",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40821",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40821",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M40821",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M6349",
+      "target": "station_Halal Street Eats",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M6349",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M6349",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "day_Friday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Sunday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "station_Halal Street Eats",
+      "target": "week_3",
+      "relationship": "HAS_WEEK"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Friday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Monday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Sunday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Thursday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Tuesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Wednesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "A4307",
+      "target": "Ingredient_gochujang_paste",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTE GOCHUJANG",
+        "normalized_name": "gochujang paste",
+        "canonical_name": "gochujang paste",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4307",
+      "target": "Ingredient_ground_turkey",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TURKEY GROUND BULK 90/10 FZ - THAWED / COOKED",
+        "normalized_name": "ground turkey",
+        "canonical_name": "ground turkey",
+        "quantity": null,
+        "states": [
+          "10 fz - thawed",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "A4307",
+      "target": "Ingredient_bbq_korean_sauce",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE KOREAN BBQ",
+        "normalized_name": "bbq korean sauce",
+        "canonical_name": "bbq korean sauce",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "Ingredient_oil_sesame",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL SESAME",
+        "normalized_name": "oil sesame",
+        "canonical_name": "oil sesame",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "Ingredient_rice_seasoned_vinegar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR RICE SEASONED",
+        "normalized_name": "rice seasoned vinegar",
+        "canonical_name": "rice seasoned vinegar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "Ingredient_seed_sesame_spice_white_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE SESAME SEED WHOLE WHITE",
+        "normalized_name": "seed sesame spice white whole",
+        "canonical_name": "seed sesame spice white whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "Ingredient_gf_less_sauce_sodium_soy_tamari",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE SOY TAMARI 40% LESS SODIUM GF",
+        "normalized_name": "gf less sauce sodium soy tamari",
+        "canonical_name": "gf less sauce sodium soy tamari",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A4308",
+      "target": "Ingredient_chopped_drained_iqf_spinach_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FROZEN SPINACH CHOPPED IQF - THAWED, DRAINED / COOKED",
+        "normalized_name": "chopped drained iqf spinach vegetable",
+        "canonical_name": "chopped drained iqf spinach vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "A4603",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_gochujang_paste",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTE GOCHUJANG",
+        "normalized_name": "gochujang paste",
+        "canonical_name": "gochujang paste",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_oil_sesame",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL SESAME",
+        "normalized_name": "oil sesame",
+        "canonical_name": "oil sesame",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_fish_sauce",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE FISH",
+        "normalized_name": "fish sauce",
+        "canonical_name": "fish sauce",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_brown_light_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR BROWN LIGHT",
+        "normalized_name": "brown light sugar",
+        "canonical_name": "brown light sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_ginger_minced_peeled_root_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GINGER ROOT - PEELED, MINCED / RAW",
+        "normalized_name": "ginger minced peeled root vegetable",
+        "canonical_name": "ginger minced peeled root vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_beef_sandwich_steak",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BEEF STEAK SANDWICH BULK RAW FZ - THAWED / SAUTEED, GRILLED OR STIR FRIED",
+        "normalized_name": "beef sandwich steak",
+        "canonical_name": "beef sandwich steak",
+        "quantity": null,
+        "states": [
+          "sauteed, grilled or stir fried"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_chopped_cilantro_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW",
+        "normalized_name": "chopped cilantro herb leave",
+        "canonical_name": "chopped cilantro herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_clove_garlic_minced_peeled_vegetable_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GARLIC WHOLE CLOVES AP PEELED - MINCED / RAW",
+        "normalized_name": "clove garlic minced peeled vegetable whole",
+        "canonical_name": "clove garlic minced peeled vegetable whole",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_juice_lime_pasteurized",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "JUICE BULK LIME PASTEURIZED REFRIGERATED",
+        "normalized_name": "juice lime pasteurized",
+        "canonical_name": "juice lime pasteurized",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_chili_hot_oil",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL CHILI HOT",
+        "normalized_name": "chili hot oil",
+        "canonical_name": "chili hot oil",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Ingredient_gf_less_sauce_sodium_soy_tamari",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE SOY TAMARI 40% LESS SODIUM GF",
+        "normalized_name": "gf less sauce sodium soy tamari",
+        "canonical_name": "gf less sauce sodium soy tamari",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_oil_sesame",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL SESAME",
+        "normalized_name": "oil sesame",
+        "canonical_name": "oil sesame",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_rice_seasoned_vinegar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR RICE SEASONED",
+        "normalized_name": "rice seasoned vinegar",
+        "canonical_name": "rice seasoned vinegar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_cabbage_green_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CABBAGE GREEN - SHREDDED / RAW",
+        "normalized_name": "cabbage green vegetable",
+        "canonical_name": "cabbage green vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, CUT / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A8326",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L392180",
+      "target": "Ingredient_blk_cage_crckd_egg_free_hmstyl_ppr",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "EGG FRIED HMSTYL CRCKD BLK PPR CAGE FREE 1.5 OZ FZ - THAWED",
+        "normalized_name": "blk cage crckd egg free hmstyl ppr",
+        "canonical_name": "blk cage crckd egg free hmstyl ppr",
+        "quantity": "1.5 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "L392180",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L392181",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / COOKED",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "L392181",
+      "target": "Ingredient_coat_crinkle_fry_potato",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "POTATO FZ FRIES CRINKLE CUT COAT 3/8\" XL 3761 / COOKED",
+        "normalized_name": "coat crinkle fry potato",
+        "canonical_name": "coat crinkle fry potato",
+        "quantity": null,
+        "states": [
+          "8\" xl 3761",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "L392181",
+      "target": "Ingredient_chopped_cilantro_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW",
+        "normalized_name": "chopped cilantro herb leave",
+        "canonical_name": "chopped cilantro herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L392181",
+      "target": "Ingredient_cabbage_kimchi_nappa_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CABBAGE CUT NAPPA KIMCHI",
+        "normalized_name": "cabbage kimchi nappa vegetable",
+        "canonical_name": "cabbage kimchi nappa vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L392896",
+      "target": "Ingredient_hot_ken_korean_sauce_taco",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE, KOREAN HOT TACO KENS 65 OZ",
+        "normalized_name": "hot ken korean sauce taco",
+        "canonical_name": "hot ken korean sauce taco",
+        "quantity": "65 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "L392896",
+      "target": "Ingredient_battered_fillet_fish_iqf_pollock",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FISH POLLOCK FILLET BATTERED 3 OZ RAW IQF / DEEP FAT FRIED",
+        "normalized_name": "battered fillet fish iqf pollock",
+        "canonical_name": "battered fillet fish iqf pollock",
+        "quantity": "3 OZ",
+        "states": [
+          "deep fat fried"
+        ]
+      }
+    },
+    {
+      "source": "L392896",
+      "target": "Ingredient_chili_jalapeno_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER CHILI JALAPENO - SLICED / RAW",
+        "normalized_name": "chili jalapeno pepper vegetable",
+        "canonical_name": "chili jalapeno pepper vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L392896",
+      "target": "Ingredient_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG - SHREDDED / RAW",
+        "normalized_name": "iceberg lettuce vegetable",
+        "canonical_name": "iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L392896",
+      "target": "Ingredient_flour_shelf_stable_tortilla_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TORTILLA FLOUR 6\" WHITE 1.09 OZ SHELF STABLE",
+        "normalized_name": "flour shelf stable tortilla white",
+        "canonical_name": "flour shelf stable tortilla white",
+        "quantity": "1.09 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "L392900",
+      "target": "Ingredient_battered_fillet_fish_iqf_pollock",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FISH POLLOCK FILLET BATTERED 3 OZ RAW IQF / DEEP FAT FRIED",
+        "normalized_name": "battered fillet fish iqf pollock",
+        "canonical_name": "battered fillet fish iqf pollock",
+        "quantity": "3 OZ",
+        "states": [
+          "deep fat fried"
+        ]
+      }
+    },
+    {
+      "source": "L392900",
+      "target": "Ingredient_radish_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH RADISH RED AP TRIMMED - SHREDDED / RAW",
+        "normalized_name": "radish red trimmed vegetable",
+        "canonical_name": "radish red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L392900",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L392900",
+      "target": "Ingredient_chili_jalapeno_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER CHILI JALAPENO - SLICED / RAW",
+        "normalized_name": "chili jalapeno pepper vegetable",
+        "canonical_name": "chili jalapeno pepper vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "Ingredient_vinegar_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR WHITE",
+        "normalized_name": "vinegar white",
+        "canonical_name": "vinegar white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "Ingredient_daikon_peeled_radish_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH RADISH DAIKON - PEELED, CUT / RAW",
+        "normalized_name": "daikon peeled radish vegetable",
+        "canonical_name": "daikon peeled radish vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M10140",
+      "target": "Ingredient_carrot_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / RAW",
+        "normalized_name": "carrot vegetable",
+        "canonical_name": "carrot vegetable",
+        "quantity": null,
+        "states": [
+          "8\"",
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_hot_ken_korean_sauce_taco",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE, KOREAN HOT TACO KENS 65 OZ",
+        "normalized_name": "hot ken korean sauce taco",
+        "canonical_name": "hot ken korean sauce taco",
+        "quantity": "65 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_firm_high_protein_super_tofu",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TOFU HIGH PROTEIN SUPER FIRM - DICED",
+        "normalized_name": "firm high protein super tofu",
+        "canonical_name": "firm high protein super tofu",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_broccoli_floret_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH BROCCOLI AP FLORETS - CUT / COOKED",
+        "normalized_name": "broccoli floret vegetable",
+        "canonical_name": "broccoli floret vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_cabbage_green_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CABBAGE GREEN - CUT / COOKED",
+        "normalized_name": "cabbage green vegetable",
+        "canonical_name": "cabbage green vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_celery_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CELERY - TRIMMED, SLICED / COOKED",
+        "normalized_name": "celery trimmed vegetable",
+        "canonical_name": "celery trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_onion_trimmed_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW - TRIMMED, CUT / COOKED",
+        "normalized_name": "onion trimmed vegetable yellow",
+        "canonical_name": "onion trimmed vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_broccoli_crown_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH BROCCOLI AP CROWNS - TRIMMED, CUT / COOKED",
+        "normalized_name": "broccoli crown trimmed vegetable",
+        "canonical_name": "broccoli crown trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M16592",
+      "target": "Ingredient_carrot_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT - TRIMMED, SLICED / COOKED",
+        "normalized_name": "carrot trimmed vegetable",
+        "canonical_name": "carrot trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_gd_turkey",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TURKEY GD BULK RAW FZ - THAWED / COOKED",
+        "normalized_name": "gd turkey",
+        "canonical_name": "gd turkey",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_garlic_powder_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE GARLIC POWDER",
+        "normalized_name": "garlic powder spice",
+        "canonical_name": "garlic powder spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_onion_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED",
+        "normalized_name": "onion vegetable yellow",
+        "canonical_name": "onion vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked",
+          "white - peeled and trimmed, diced"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_carrot_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / COOKED",
+        "normalized_name": "carrot vegetable",
+        "canonical_name": "carrot vegetable",
+        "quantity": null,
+        "states": [
+          "8\"",
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_base_beef_flavored",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE BEEF FLAVORED (VEGAN)",
+        "normalized_name": "base beef flavored",
+        "canonical_name": "base beef flavored",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_canned_paste_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED TOMATO PASTE",
+        "normalized_name": "canned paste tomato vegetable",
+        "canonical_name": "canned paste tomato vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_carrot_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT - TRIMMED, SHREDDED / COOKED",
+        "normalized_name": "carrot trimmed vegetable",
+        "canonical_name": "carrot trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_firm_high_protein_super_tofu",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TOFU HIGH PROTEIN SUPER FIRM - DICED",
+        "normalized_name": "firm high protein super tofu",
+        "canonical_name": "firm high protein super tofu",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_onion_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FZ ONION DICED / COOKED",
+        "normalized_name": "onion vegetable",
+        "canonical_name": "onion vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_added_base_gf_ls_msg_no_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BASE VEGETABLE LS NO ADDED MSG GF",
+        "normalized_name": "added base gf ls msg no vegetable",
+        "canonical_name": "added base gf ls msg no vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_ginger_minced_peeled_root_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GINGER ROOT - PEELED, MINCED / RAW",
+        "normalized_name": "ginger minced peeled root vegetable",
+        "canonical_name": "ginger minced peeled root vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_basil_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH BASIL - LEAVES / RAW",
+        "normalized_name": "basil herb leave",
+        "canonical_name": "basil herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_black_ground_imitation_pepper_spice",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK GROUND IMITATION",
+        "normalized_name": "black ground imitation pepper spice",
+        "canonical_name": "black ground imitation pepper spice",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_fruit_lime_seeded",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT FRESH LIME - SEEDED, CUT / RAW",
+        "normalized_name": "fruit lime seeded",
+        "canonical_name": "fruit lime seeded",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_dry_pasta_rotini",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTA DRY ROTINI / COOKED",
+        "normalized_name": "dry pasta rotini",
+        "canonical_name": "dry pasta rotini",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_chopped_cilantro_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW",
+        "normalized_name": "chopped cilantro herb leave",
+        "canonical_name": "chopped cilantro herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_sauce_worcestershire",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE WORCESTERSHIRE",
+        "normalized_name": "sauce worcestershire",
+        "canonical_name": "sauce worcestershire",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_chili_jalapeno_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER CHILI JALAPENO - SLICED / RAW",
+        "normalized_name": "chili jalapeno pepper vegetable",
+        "canonical_name": "chili jalapeno pepper vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_dried_herb_leave_thyme",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED THYME LEAVES",
+        "normalized_name": "dried herb leave thyme",
+        "canonical_name": "dried herb leave thyme",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_bean_canned_drained_sprout_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED SPROUT BEAN - DRAINED",
+        "normalized_name": "bean canned drained sprout vegetable",
+        "canonical_name": "bean canned drained sprout vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_gf_less_sauce_sodium_soy_tamari",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE SOY TAMARI 40% LESS SODIUM GF",
+        "normalized_name": "gf less sauce sodium soy tamari",
+        "canonical_name": "gf less sauce sodium soy tamari",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_granulated_sugar_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR WHITE GRANULATED",
+        "normalized_name": "granulated sugar white",
+        "canonical_name": "granulated sugar white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M17310",
+      "target": "Ingredient_dried_herb_leaf_oregano",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB DRIED OREGANO LEAF",
+        "normalized_name": "dried herb leaf oregano",
+        "canonical_name": "dried herb leaf oregano",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M21426",
+      "target": "Ingredient_chicken_random_sknl_thigh",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHICKEN THIGH BNLS SKNLS RANDOM RAW - CUT / STEAMED, SIMMERED OR STEWED",
+        "normalized_name": "chicken random sknl thigh",
+        "canonical_name": "chicken random sknl thigh",
+        "quantity": null,
+        "states": [
+          "steamed, simmered or stewed"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_gochujang_paste",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTE GOCHUJANG",
+        "normalized_name": "gochujang paste",
+        "canonical_name": "gochujang paste",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_fish_sauce",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE FISH",
+        "normalized_name": "fish sauce",
+        "canonical_name": "fish sauce",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_cabbage_green_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CABBAGE GREEN - CUT / RAW",
+        "normalized_name": "cabbage green vegetable",
+        "canonical_name": "cabbage green vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_canned_chopped_garlic_vegetable_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED GARLIC AP CHOPPED IN WATER / RAW",
+        "normalized_name": "canned chopped garlic vegetable water",
+        "canonical_name": "canned chopped garlic vegetable water",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_vinegar_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR WHITE",
+        "normalized_name": "vinegar white",
+        "canonical_name": "vinegar white",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_ginger_minced_peeled_root_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GINGER ROOT - PEELED, MINCED / RAW",
+        "normalized_name": "ginger minced peeled root vegetable",
+        "canonical_name": "ginger minced peeled root vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_daikon_peeled_radish_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH RADISH DAIKON - PEELED, CUT / RAW",
+        "normalized_name": "daikon peeled radish vegetable",
+        "canonical_name": "daikon peeled radish vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, CUT / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_clove_garlic_minced_peeled_vegetable_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GARLIC WHOLE CLOVES AP PEELED - MINCED / RAW",
+        "normalized_name": "clove garlic minced peeled vegetable whole",
+        "canonical_name": "clove garlic minced peeled vegetable whole",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32304",
+      "target": "Ingredient_carrot_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / RAW",
+        "normalized_name": "carrot vegetable",
+        "canonical_name": "carrot vegetable",
+        "quantity": null,
+        "states": [
+          "8\"",
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_gochujang_paste",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PASTE GOCHUJANG",
+        "normalized_name": "gochujang paste",
+        "canonical_name": "gochujang paste",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_oil_sesame",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL SESAME",
+        "normalized_name": "oil sesame",
+        "canonical_name": "oil sesame",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_canned_chopped_garlic_vegetable_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED GARLIC AP CHOPPED IN WATER / RAW",
+        "normalized_name": "canned chopped garlic vegetable water",
+        "canonical_name": "canned chopped garlic vegetable water",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_cider_vinegar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR CIDER",
+        "normalized_name": "cider vinegar",
+        "canonical_name": "cider vinegar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_seed_sesame_spice_white_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE SESAME SEED WHOLE WHITE",
+        "normalized_name": "seed sesame spice white whole",
+        "canonical_name": "seed sesame spice white whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32306",
+      "target": "Ingredient_clove_garlic_minced_peeled_vegetable_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GARLIC WHOLE CLOVES AP PEELED - MINCED / RAW",
+        "normalized_name": "clove garlic minced peeled vegetable whole",
+        "canonical_name": "clove garlic minced peeled vegetable whole",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32308",
+      "target": "Ingredient_firm_high_protein_super_tofu",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TOFU HIGH PROTEIN SUPER FIRM - DICED",
+        "normalized_name": "firm high protein super tofu",
+        "canonical_name": "firm high protein super tofu",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M32316",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, CUT / COOKED",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M32316",
+      "target": "Ingredient_ginger_minced_peeled_root_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GINGER ROOT - PEELED, MINCED / RAW",
+        "normalized_name": "ginger minced peeled root vegetable",
+        "canonical_name": "ginger minced peeled root vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32316",
+      "target": "Ingredient_clove_garlic_minced_peeled_vegetable_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH GARLIC WHOLE CLOVES AP PEELED - MINCED / RAW",
+        "normalized_name": "clove garlic minced peeled vegetable whole",
+        "canonical_name": "clove garlic minced peeled vegetable whole",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M32316",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "M32354",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36626",
+      "target": "Ingredient_pea_snow_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEA SNOW - TRIMMED, SLICED / RAW",
+        "normalized_name": "pea snow trimmed vegetable",
+        "canonical_name": "pea snow trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36626",
+      "target": "Ingredient_flour_shelf_stable_tortilla_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TORTILLA FLOUR 10\" WHITE 2.5 OZ SHELF STABLE",
+        "normalized_name": "flour shelf stable tortilla white",
+        "canonical_name": "flour shelf stable tortilla white",
+        "quantity": "2.5 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "Ingredient_firm_high_protein_super_tofu",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "TOFU HIGH PROTEIN SUPER FIRM - DICED / DEEP FAT FRIED",
+        "normalized_name": "firm high protein super tofu",
+        "canonical_name": "firm high protein super tofu",
+        "quantity": null,
+        "states": [
+          "deep fat fried"
+        ]
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "Ingredient_cornstarch",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CORNSTARCH",
+        "normalized_name": "cornstarch",
+        "canonical_name": "cornstarch",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "Ingredient_seed_sesame_spice_white_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE SESAME SEED WHOLE WHITE",
+        "normalized_name": "seed sesame spice white whole",
+        "canonical_name": "seed sesame spice white whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "Ingredient_gf_less_sauce_sodium_soy_tamari",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE SOY TAMARI 40% LESS SODIUM GF",
+        "normalized_name": "gf less sauce sodium soy tamari",
+        "canonical_name": "gf less sauce sodium soy tamari",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38517",
+      "target": "Ingredient_black_seed_sesame_spice_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE SESAME SEED WHOLE BLACK",
+        "normalized_name": "black seed sesame spice whole",
+        "canonical_name": "black seed sesame spice whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "Ingredient_rice_seasoned_vinegar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR RICE SEASONED",
+        "normalized_name": "rice seasoned vinegar",
+        "canonical_name": "rice seasoned vinegar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "Ingredient_cucumber_english_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CUCUMBER ENGLISH - SLICED / RAW",
+        "normalized_name": "cucumber english vegetable",
+        "canonical_name": "cucumber english vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "Ingredient_extra_fine_granulated_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SUGAR GRANULATED EXTRA FINE",
+        "normalized_name": "extra fine granulated sugar",
+        "canonical_name": "extra fine granulated sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M38622",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M39294",
+      "target": "Ingredient_cabbage_kimchi_nappa_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CABBAGE CUT NAPPA KIMCHI",
+        "normalized_name": "cabbage kimchi nappa vegetable",
+        "canonical_name": "cabbage kimchi nappa vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40821",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40821",
+      "target": "Ingredient_black_grind_pepper_spice_table",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK TABLE GRIND",
+        "normalized_name": "black grind pepper spice table",
+        "canonical_name": "black grind pepper spice table",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40821",
+      "target": "Ingredient_canola_oil_salad",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL SALAD CANOLA",
+        "normalized_name": "canola oil salad",
+        "canonical_name": "canola oil salad",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40821",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40821",
+      "target": "Ingredient_grain_long_parboiled_rice_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "RICE WHITE LONG GRAIN PARBOILED / COOKED",
+        "normalized_name": "grain long parboiled rice white",
+        "canonical_name": "grain long parboiled rice white",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M6349",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "A526",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M17310",
+      "target": "Equipment_stockpot",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M21426",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M32304",
+      "target": "Equipment_steam_table",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M32306",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M32308",
+      "target": "Equipment_griddle",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M38517",
+      "target": "Equipment_fryer",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40821",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40821",
+      "target": "Equipment_steam_table",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40821",
+      "target": "Equipment_stockpot",
+      "relationship": "USES_EQUIPMENT"
+    }
+  ]
+}

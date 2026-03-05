@@ -36,9 +36,18 @@ function ensureBlockNewlines(md: string): string {
     .replace(/\s+(>\s*\*?\s*)/g, "\n\n$1");  // keep "> " or "> * "
 }
 
+/** Fix comma-on-next-line artifacts from model output: "Item\n,\nNext" -> "Item, Next". */
+function normalizeCommaBreaks(md: string): string {
+  if (!md?.trim()) return md;
+  return md
+    .replace(/\n\s*,\s*\n/g, ", ")
+    .replace(/\n\s*,\s*/g, ", ")
+    .replace(/,\s*\n(?=[A-Za-z0-9])/g, ", ");
+}
+
 export function ReportMarkdown({ content }: { content: string }) {
-  const normalized = ensureBlockNewlines(
-    normalizeBoldDelimiters(normalizeMarkdownTables(content ?? ""))
+  const normalized = normalizeCommaBreaks(
+    ensureBlockNewlines(normalizeBoldDelimiters(normalizeMarkdownTables(content ?? "")))
   );
   return (
     <article className="report-markdown animate-fade-in w-full min-w-0 max-w-none text-gray-800">
@@ -95,15 +104,10 @@ export function ReportMarkdown({ content }: { content: string }) {
             );
           },
           ul: ({ children }) => (
-            <ul className="report-ul list-none pl-0 my-3 space-y-2 text-[0.9375rem] text-gray-700">
-              {children}
-            </ul>
+            <ul className="report-ul list-disc pl-5 my-3 space-y-2 text-[0.9375rem] text-gray-700">{children}</ul>
           ),
           li: ({ children }) => (
-            <li className="report-li flex items-start gap-2.5 leading-[1.6]">
-              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" aria-hidden />
-              {children}
-            </li>
+            <li className="report-li leading-[1.6]">{children}</li>
           ),
           strong: ({ children }) => (
             <strong className="report-strong font-semibold text-gray-900">{children}</strong>

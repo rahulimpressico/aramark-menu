@@ -39,139 +39,18 @@ Entry point:
 from __future__ import annotations
 
 import logging
+import re
 from dataclasses import dataclass, field
 from typing import Any
 
 log = logging.getLogger("menu_agent.playbook")
 
-# ---------------------------------------------------------------------------
-# Keyword lists  (all matched against recipe NAME only — never assembly text)
-#
-# Playbook category definitions
-# ──────────────────────────────
-# BURGER        → Beef burger (max 1/day). Non-beef alternatives (turkey, chicken,
-#                 fish, veggie) are NOT burgers — they count as Daily Features or Vegan.
-# DAILY_FEATURE → Rotating enhancements: grilled chicken, hot dog/corn dog,
-#                 grilled cheese, chicken sandwich, turkey burger, fish sandwich,
-#                 wraps, soups, sliders, snackers, pancakes, etc.
-# VEGAN         → Plant-based main item (min 1/day): black bean burger, beyond,
-#                 impossible, plant-based patty, etc.
-# FRIES         → French fry / fried starch (min 1/day).
-# SIDE          → MTO Toppings Bar items: toppings, garnishes, condiments.
-# ---------------------------------------------------------------------------
-
-# ── BURGER  (beef only, max 1/day) ──────────────────────────────────────────
-# Specific phrases first, then the broad "burger" catch-all.
-# The classifier guards against vegan + non-beef alternatives via _BURGER_EXCLUDE.
-_PLAYBOOK_BURGER_KEYWORDS: tuple[str, ...] = (
-    "double burger",
-    "smash burger",
-    "cheeseburger",
-    "hamburger",
-    "beef burger",
-    "burger",           # broad catch-all — exclusion guard applied at classify time
-)
-
-# Non-beef alternatives that contain "burger" → go to VEGAN or DAILY_FEATURE instead
-_BURGER_EXCLUDE_KEYWORDS: tuple[str, ...] = (
-    "black bean burger",
-    "veggie burger",
-    "vegan burger",
-    "turkey burger",
-    "chicken burger",
-    "fish burger",
-    "plant-based burger",
-    "beyond burger",
-    "impossible burger",
-    "plant-based",
-    "plant based",
-    "vegan",
-    "black bean",
-)
-
-# ── FRIES  (french fry / fried starch, min 1/day) ───────────────────────────
-# Uses full phrases to avoid matching cooking verbs like "fry" in assembly text.
-_PLAYBOOK_FRIES_KEYWORDS: tuple[str, ...] = (
-    "french fries",
-    "crinkle french",       # "Crinkle French Fries"
-    "crinkle fries",
-    "waffle fries",
-    "steak fries",
-    "sweet potato fries",
-    "tater tots",
-    "hash brown",
-    "onion rings",
-    "fries",
-)
-
-# ── VEGAN  (plant-based main item, min 1/day) ────────────────────────────────
-# Chef Tip: non-beef burgers (turkey, chicken, fish) are Daily Features, not Vegan.
-# Only dedicated plant-based items count here.
-_PLAYBOOK_VEGAN_KEYWORDS: tuple[str, ...] = (
-    "black bean burger",
-    "veggie burger",
-    "vegan burger",
-    "plant-based burger",
-    "beyond burger",
-    "impossible burger",
-    "vegan",
-    "plant-based",
-    "plant based",
-)
-
-# ── DAILY_FEATURE  (rotating enhancements, max 2/day) ───────────────────────
-# Anything not matching burger / fries / vegan / side is a Daily Feature.
-# Examples from playbook: grilled chicken, hot dog, grilled cheese, chicken
-# sandwich, turkey burger, fish sandwich, wraps, soups, sliders, snackers.
-# No explicit keyword list needed — this is the default / fallback category.
-
-# ── SIDE / MTO TOPPINGS BAR ──────────────────────────────────────────────────
-# Playbook: "MTO Toppings Bar" — individual ingredients served as condiments.
-# Classification rules:
-#   • Use multi-word phrases where a single word would over-match
-#     (e.g. "sliced tomato" not bare "tomato" → "Creamy Tomato Basil Soup" is safe)
-#   • Standalone ingredient names (lettuce, egg) are safe as single words
-#     because a recipe named only "Lettuce" or "Egg" is clearly a bar topping.
-_SIDE_OR_CONDIMENT_KEYWORDS: tuple[str, ...] = (
-    # ── Produce toppings (sliced / diced → specific phrases) ──
-    "sliced tomato",
-    "diced tomato",
-    "sliced red onion",
-    "sliced onion",
-    "diced onion",
-    "sliced mushroom",
-    "chopped fresh spinach",
-    "sliced mixed bell pepper",
-    "bell pepper",
-    # ── Standalone produce (recipe name IS the ingredient) ────
-    "lettuce",
-    "spinach",
-    # ── Cheese toppings ───────────────────────────────────────
-    "american cheese",
-    "shredded cheddar",
-    "shredded cheese",
-    "feta cheese",
-    "cheese crumble",
-    # ── Pickle / brined condiment ─────────────────────────────
-    "dill pickle",
-    "pickle slice",
-    # ── Protein add-ons / garnishes ───────────────────────────
-    "diced ham",
-    "ham cubes",
-    "crumbled plant-based",     # plant-based chorizo topping (not a main item)
-    # ── Standalone eggs (pancake / breakfast bar topping) ─────
-    "eggs",
-    "egg",
-    # ── Burger / sandwich trim tray ───────────────────────────
-    "trim salad",
-    # ── Pure condiments ───────────────────────────────────────
-    "ketchup",
-    "mustard",
-    "relish",
-    "coleslaw",
-    "slaw",
-    "mayonnaise",
-    "mayo",
+from .keywords import (
+    BURGER_EXCLUDE_KEYWORDS as _BURGER_EXCLUDE_KEYWORDS,
+    PLAYBOOK_BURGER_KEYWORDS as _PLAYBOOK_BURGER_KEYWORDS,
+    PLAYBOOK_FRIES_KEYWORDS as _PLAYBOOK_FRIES_KEYWORDS,
+    PLAYBOOK_VEGAN_KEYWORDS as _PLAYBOOK_VEGAN_KEYWORDS,
+    SIDE_OR_CONDIMENT_KEYWORDS as _SIDE_OR_CONDIMENT_KEYWORDS,
 )
 
 # ---------------------------------------------------------------------------
@@ -224,8 +103,9 @@ class CheckingPlaybookBoundsOutput:
         """
         cat_names: dict[str, list[str]] = {}
         for rc in self.recipe_classifications:
-            cat_names.setdefault(rc["category"], []).append(rc["name"])
-
+            names = cat_names.setdefault(rc["category"], [])
+            if rc["name"] not in names:
+                names.append(rc["name"])
         return {
             "meal_period": meal_period,
             "compliant":   self.compliant,
@@ -253,15 +133,35 @@ class CheckingPlaybookBoundsOutput:
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+def _tokenize_text(text: str) -> tuple[str, ...]:
+    cleaned = re.sub(r"[^a-z0-9]+", " ", (text or "").lower()).strip()
+    if not cleaned:
+        return ()
+    return tuple(tok for tok in cleaned.split() if tok)
+
+
+def _contains_phrase(tokens: tuple[str, ...], phrase: tuple[str, ...]) -> bool:
+    if not phrase:
+        return False
+    if len(phrase) == 1:
+        return phrase[0] in tokens
+    n = len(phrase)
+    return any(tokens[i:i + n] == phrase for i in range(0, len(tokens) - n + 1))
+
 
 def _recipe_name(recipe: Any) -> str:
-    """Return the recipe name (lower-cased). Classification uses NAME ONLY to avoid
-    false matches from cooking verbs in assembly text (e.g. 'fry', 'tomato', 'onion')."""
-    return (getattr(recipe, "name", "") or "").lower()
+    """Return normalized recipe name text used for token comparisons."""
+    return " ".join(_tokenize_text(getattr(recipe, "name", "") or ""))
 
 
 def _text_matches_any(text: str, keywords: tuple[str, ...]) -> bool:
-    return any(kw in text for kw in keywords)
+    tokens = _tokenize_text(text)
+    if not tokens:
+        return False
+    for kw in keywords:
+        if _contains_phrase(tokens, _tokenize_text(kw)):
+            return True
+    return False
 
 
 def _is_side_or_condiment(name: str) -> bool:
@@ -378,11 +278,6 @@ def _check_playbook_bounds_deterministic(graph: Any) -> CheckingPlaybookBoundsOu
         # edge is Recipe → Day, so e.target is day, e.source is recipe
         day_id_to_recipe_ids.setdefault(e.target, set()).add(e.source)
 
-    day_burger  = counts["burger"]
-    day_feature = counts["daily_feature"]
-    day_vegan   = counts["vegan"]
-    day_fries   = counts["fries"]
-
     day_recipe_counts: list[dict] = []
     days = graph.get_days_for_station()
     for day in days:
@@ -419,10 +314,10 @@ def _check_playbook_bounds_deterministic(graph: Any) -> CheckingPlaybookBoundsOu
 
         per_day.append({
             "day":                    day_name,
-            "burger":                 day_burger,
-            "daily_feature":          day_feature,
-            "vegan":                  day_vegan,
-            "fries":                  day_fries,
+            "burger":                 day_cats["burger"],
+            "daily_feature":          day_cats["daily_feature"],
+            "vegan":                  day_cats["vegan"],
+            "fries":                  day_cats["fries"],
             "playbook_burger":        _PLAYBOOK_PER_DAY["burger"],
             "playbook_daily_feature": _PLAYBOOK_PER_DAY["daily_feature"],
             "playbook_vegan":         _PLAYBOOK_PER_DAY["vegan"],
@@ -468,35 +363,43 @@ def _check_playbook_bounds_deterministic(graph: Any) -> CheckingPlaybookBoundsOu
         })
 
     # Compliance checks
-    if day_vegan < 1:
-        under_offered.append("Missing vegan option")
-    if day_fries < 1:
-        under_offered.append("Missing fries option")
-    if day_burger > _PLAYBOOK_PER_DAY["burger"]:
-        over_offered.append(f"Too many burgers (got {day_burger}, max {_PLAYBOOK_PER_DAY['burger']})")
-    if day_feature > _PLAYBOOK_PER_DAY["daily_feature"]:
-        over_offered.append(f"Too many daily features (got {day_feature}, max {_PLAYBOOK_PER_DAY['daily_feature']})")
+    max_burger = max((d["burger"] for d in day_recipe_counts), default=0)
+    max_feature = max((d["daily_feature"] for d in day_recipe_counts), default=0)
+    min_vegan = min((d["vegan"] for d in day_recipe_counts), default=0)
+    min_fries = min((d["fries"] for d in day_recipe_counts), default=0)
+
+    day_summary_counts = {
+        "burger": max_burger,
+        "daily_feature": max_feature,
+        "vegan": min_vegan,
+        "fries": min_fries,
+    }
+
+    if min_vegan < 1:
+        under_offered.append(f"Missing vegan option (minimum observed per day: {min_vegan})")
+    if min_fries < 1:
+        under_offered.append(f"Missing fries option (minimum observed per day: {min_fries})")
+    if max_burger > _PLAYBOOK_PER_DAY["burger"]:
+        over_offered.append(f"Too many burgers (max on a day: {max_burger}, limit {_PLAYBOOK_PER_DAY['burger']})")
+    if max_feature > _PLAYBOOK_PER_DAY["daily_feature"]:
+        over_offered.append(f"Too many daily features (max on a day: {max_feature}, limit {_PLAYBOOK_PER_DAY['daily_feature']})")
 
     compliant = (len(under_offered) == 0 and len(over_offered) == 0)
 
     summary_line = (
-        f"burger={day_burger} (max {_PLAYBOOK_PER_DAY['burger']}), "
-        f"daily_feature={day_feature} (max {_PLAYBOOK_PER_DAY['daily_feature']}), "
-        f"vegan={day_vegan} (min {_PLAYBOOK_PER_DAY['vegan']}), "
-        f"fries={day_fries} (min {_PLAYBOOK_PER_DAY['fries']})."
+        f"burger max/day={max_burger} (limit {_PLAYBOOK_PER_DAY['burger']}), "
+        f"daily_feature max/day={max_feature} (limit {_PLAYBOOK_PER_DAY['daily_feature']}), "
+        f"vegan min/day={min_vegan} (limit {_PLAYBOOK_PER_DAY['vegan']}), "
+        f"fries min/day={min_fries} (limit {_PLAYBOOK_PER_DAY['fries']})."
     )
     status_prefix = "Within playbook bounds. " if compliant else "PLAYBOOK VIOLATION. "
-    message = (
-        status_prefix
-        + "Per-day vs playbook (same lineup each day; graph has no day-level recipe assignment). "
-        + summary_line
-    )
+    message = status_prefix + "Per-day counts evaluated from SCHEDULED_ON data. " + summary_line
 
     return CheckingPlaybookBoundsOutput(
         compliant=compliant,
         under_offered=under_offered,
         over_offered=over_offered,
-        counts=counts,
+        counts=day_summary_counts,
         playbook_limits={
             "burger":        {"limit": _PLAYBOOK_PER_DAY["burger"],        "rule": "max"},
             "daily_feature": {"limit": _PLAYBOOK_PER_DAY["daily_feature"], "rule": "max"},

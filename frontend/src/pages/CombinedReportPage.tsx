@@ -1,13 +1,11 @@
 import { useCallback, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { DEFAULT_STATION, REPORT_OVERALL_API } from "../api/reports";
+import { Link, useParams } from "react-router-dom";
+import { REPORT_OVERALL_API } from "../api/reports";
 import { AramarkLogo } from "../components/AramarkLogo";
 import { ReportMarkdown } from "../components/ReportMarkdown";
+import { backendStationNameFromSlug, stationNameFromSlug } from "../data/stations";
 
-/** Prevents duplicate overall POST in React StrictMode (double mount). Resets after delay so revisiting page can fetch again. */
-let _overallFetchInFlight = false;
-
-function useOverallReport() {
+function useOverallReport(stationName: string) {
   const [overallContent, setOverallContent] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -19,7 +17,7 @@ function useOverallReport() {
       const res = await fetch(REPORT_OVERALL_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ station_name: DEFAULT_STATION }),
+        body: JSON.stringify({ station_name: stationName }),
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
@@ -39,31 +37,28 @@ function useOverallReport() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [stationName]);
 
   return { overallContent, loading, error, fetchOverall };
 }
 
 export function CombinedReportPage() {
-  const { overallContent, loading, error, fetchOverall } = useOverallReport();
+  const { stationSlug } = useParams<{ stationSlug: string }>();
+  const normalizedStationSlug = stationSlug?.trim().toLowerCase() || "grill";
+  const displayStationName = stationNameFromSlug(normalizedStationSlug);
+  const stationName = backendStationNameFromSlug(normalizedStationSlug);
+  const { overallContent, loading, error, fetchOverall } = useOverallReport(stationName);
 
   useEffect(() => {
-    if (_overallFetchInFlight) return;
-    _overallFetchInFlight = true;
-    fetchOverall().finally(() => {
-      setTimeout(() => {
-        _overallFetchInFlight = false;
-      }, 2000);
-    });
+    fetchOverall();
   }, [fetchOverall]);
 
   return (
     <main className="min-h-0 flex-1 flex flex-col bg-[#f5f5f5]">
-      {/* Premium header */}
       <header className="shrink-0 border-b border-gray-200/90 bg-white shadow-sm">
         <div className="w-full max-w-full mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4">
           <Link
-            to="/meal-period"
+            to={`/stations/${normalizedStationSlug}/meal-period`}
             className="inline-flex items-center gap-2 text-[0.9375rem] font-medium text-gray-500 no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 rounded shrink-0"
           >
             <span aria-hidden>←</span>
@@ -75,19 +70,17 @@ export function CombinedReportPage() {
         </div>
       </header>
 
-      {/* Hero strip */}
       <div className="shrink-0 bg-gradient-to-r from-footer-bg via-[#034078] to-[#055c9e] text-white">
         <div className="w-full max-w-full mx-auto px-5 py-6">
           <h1 className="m-0 text-xl sm:text-2xl font-bold tracking-tight">
             Combined Menu Report
           </h1>
           <p className="m-0 mt-1.5 text-sm text-white/90 max-w-[50ch]">
-            Full analysis across all meal periods — structure, playbook alignment, rotation, and recommendations.
+            Full {displayStationName} analysis across all meal periods — structure, playbook alignment, rotation, and recommendations.
           </p>
         </div>
       </div>
 
-      {/* Report content */}
       <div className="flex-1 min-h-0 overflow-y-auto">
         <div className="w-full max-w-full mx-auto px-5 py-6">
           <div className="rounded-2xl border border-gray-200/90 bg-white shadow-sm overflow-hidden">

@@ -1,0 +1,395 @@
+{
+  "station_name": "Salad Bar",
+  "meal_period": "Lunch",
+  "content": "## Salad Bar Station — Lunch Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**VEGAN**\n- What the menu is doing: 0 offered — none\n- Gap: Short by 1 (got 0, min 1)\n\n**FRIES**\n- What the menu is doing: 0 offered — none\n- Gap: Short by 1 (got 0, min 1)\n\n**PLANT-BASED**\n- What the menu is doing: 0.0% plant-based — none\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 44.0% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 1.0 (10 unique entrees / 10 scheduled slots)\n- No high-repetition items. Good rotation.\n\n### Plant-Based\n- Current: 0.0% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 44.0% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Add at least one **Vegan** item — Playbook rule: \"Vegan: min 1 per day.\"\n2. Add at least one **Fries** item — Playbook rule: \"Fries: min 1 per day.\"\n3. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"",
+  "analysis_json": {
+    "station_name": "Salad Bar",
+    "meal_period": "Lunch",
+    "playbook_check": {
+      "meal_period": "Lunch",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 0,
+          "playbook_rule": "max 2",
+          "status": "ok",
+          "recipes": [
+            "Tropical Pumpkin Smoothie",
+            "Carot Cake Smoothie",
+            "blueberry peach smoothie",
+            "UVA Tropical Smoothie",
+            "Mixed Berry Cucumber Smoothie",
+            "UVA Tropical Green Smoothie",
+            "Strawberry-Banana Smoothie",
+            "Blueberry-Banana Smoothie",
+            "Pineapple-Banana Smoothie",
+            "Pineapple Mango Smoothie"
+          ]
+        },
+        "vegan": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        }
+      },
+      "violations": [
+        "Missing vegan option (minimum observed per day: 0)",
+        "Missing fries option (minimum observed per day: 0)"
+      ],
+      "sides": {
+        "count": 0,
+        "recipes": []
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No Day nodes found in graph.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 1.0,
+        "unique_entree_count": 10,
+        "repeated_static_count": 0,
+        "entree_slots": 10,
+        "total_slots": 10,
+        "side_count": 0,
+        "message": "Good entree variety; low monotony risk.",
+        "entree_serve_counts": {
+          "Tropical Pumpkin Smoothie": 1,
+          "Carot Cake Smoothie": 1,
+          "blueberry peach smoothie": 1,
+          "UVA Tropical Smoothie": 1,
+          "Mixed Berry Cucumber Smoothie": 1,
+          "UVA Tropical Green Smoothie": 1,
+          "Strawberry-Banana Smoothie": 1,
+          "Blueberry-Banana Smoothie": 1,
+          "Pineapple-Banana Smoothie": 1,
+          "Pineapple Mango Smoothie": 1
+        },
+        "side_recipes": []
+      },
+      "item_frequency": {
+        "total_recipes": 10,
+        "recurrence_signals": [],
+        "message": "No high-repetition items (threshold: 4 days). Good rotation.",
+        "frequencies": [
+          {
+            "recipe_id": "M214",
+            "recipe_name": "Blueberry-Banana Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "L295985",
+            "recipe_name": "Carot Cake Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "L333192",
+            "recipe_name": "Mixed Berry Cucumber Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "M35251",
+            "recipe_name": "Pineapple Mango Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "M287",
+            "recipe_name": "Pineapple-Banana Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "M12320",
+            "recipe_name": "Strawberry-Banana Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "A9711",
+            "recipe_name": "Tropical Pumpkin Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "L386167",
+            "recipe_name": "UVA Tropical Green Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "L329238",
+            "recipe_name": "UVA Tropical Smoothie",
+            "appearance_count": 0,
+            "days": []
+          },
+          {
+            "recipe_id": "L329236",
+            "recipe_name": "blueberry peach smoothie",
+            "appearance_count": 0,
+            "days": []
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 0.0,
+        "vegan_percent": 0.0,
+        "compliant_44": false,
+        "total_offerings": 10,
+        "plant_based_count": 0,
+        "message": "0.0% plant-based — 44.0% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": []
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "medium",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": false,
+        "beef_slots": 0,
+        "alt_slots": 0,
+        "beef_recipes": [],
+        "alt_recipes": [],
+        "recommendations": [
+          "Increase protein diversity: add at least two non-beef alternatives weekly."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=0; CPM risk level=MEDIUM."
+      }
+    }
+  },
+  "analysis": {
+    "station_name": "Salad Bar",
+    "meal_period": "Lunch",
+    "recipe_count": 10,
+    "cost_stats": {
+      "min": 0.2879,
+      "max": 0.9337,
+      "mean": 0.5989,
+      "median": 0.6195,
+      "total": 5.9888
+    },
+    "top_expensive": [
+      {
+        "id": "L329236",
+        "name": "blueberry peach smoothie",
+        "food_cost": 0.9337
+      },
+      {
+        "id": "M287",
+        "name": "Pineapple-Banana Smoothie",
+        "food_cost": 0.7601
+      },
+      {
+        "id": "M214",
+        "name": "Blueberry-Banana Smoothie",
+        "food_cost": 0.6729
+      },
+      {
+        "id": "M35251",
+        "name": "Pineapple Mango Smoothie",
+        "food_cost": 0.6279
+      },
+      {
+        "id": "L333192",
+        "name": "Mixed Berry Cucumber Smoothie",
+        "food_cost": 0.6247
+      }
+    ],
+    "top_affordable": [
+      {
+        "id": "L295985",
+        "name": "Carot Cake Smoothie",
+        "food_cost": 0.2879
+      },
+      {
+        "id": "L386167",
+        "name": "UVA Tropical Green Smoothie",
+        "food_cost": 0.4309
+      },
+      {
+        "id": "L329238",
+        "name": "UVA Tropical Smoothie",
+        "food_cost": 0.4417
+      },
+      {
+        "id": "M12320",
+        "name": "Strawberry-Banana Smoothie",
+        "food_cost": 0.5947
+      },
+      {
+        "id": "A9711",
+        "name": "Tropical Pumpkin Smoothie",
+        "food_cost": 0.6143
+      }
+    ],
+    "unique_ingredients": 32,
+    "top_ingredients": [
+      {
+        "name": "cube ice",
+        "count": 8
+      },
+      {
+        "name": "banana fruit peeled",
+        "count": 5
+      },
+      {
+        "name": "apple juice",
+        "count": 5
+      },
+      {
+        "name": "barista blend milk oat plain",
+        "count": 3
+      },
+      {
+        "name": "water",
+        "count": 3
+      },
+      {
+        "name": "non vanilla yogurt",
+        "count": 3
+      },
+      {
+        "name": "honey",
+        "count": 2
+      },
+      {
+        "name": "chunk fruit iqf pineapple",
+        "count": 2
+      },
+      {
+        "name": "cinnamon ground spice",
+        "count": 2
+      },
+      {
+        "name": "blueberry fruit iqf",
+        "count": 2
+      }
+    ],
+    "ing_count_stats": {
+      "min": 5,
+      "max": 9,
+      "mean": 5.9
+    },
+    "most_ingredients_recipes": [
+      {
+        "name": "Tropical Pumpkin Smoothie",
+        "count": 9
+      },
+      {
+        "name": "Carot Cake Smoothie",
+        "count": 8
+      },
+      {
+        "name": "UVA Tropical Green Smoothie",
+        "count": 7
+      },
+      {
+        "name": "blueberry peach smoothie",
+        "count": 5
+      },
+      {
+        "name": "UVA Tropical Smoothie",
+        "count": 5
+      }
+    ],
+    "equipment": [],
+    "equipment_by_recipe": {},
+    "schedule": {},
+    "all_recipes": [
+      {
+        "id": "L329236",
+        "name": "blueberry peach smoothie",
+        "food_cost": 0.9337,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "M287",
+        "name": "Pineapple-Banana Smoothie",
+        "food_cost": 0.7601,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "M214",
+        "name": "Blueberry-Banana Smoothie",
+        "food_cost": 0.6729,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "M35251",
+        "name": "Pineapple Mango Smoothie",
+        "food_cost": 0.6279,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "L333192",
+        "name": "Mixed Berry Cucumber Smoothie",
+        "food_cost": 0.6247,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "A9711",
+        "name": "Tropical Pumpkin Smoothie",
+        "food_cost": 0.6143,
+        "ing_count": 9,
+        "equipment": []
+      },
+      {
+        "id": "M12320",
+        "name": "Strawberry-Banana Smoothie",
+        "food_cost": 0.5947,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "L329238",
+        "name": "UVA Tropical Smoothie",
+        "food_cost": 0.4417,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "L386167",
+        "name": "UVA Tropical Green Smoothie",
+        "food_cost": 0.4309,
+        "ing_count": 7,
+        "equipment": []
+      },
+      {
+        "id": "L295985",
+        "name": "Carot Cake Smoothie",
+        "food_cost": 0.2879,
+        "ing_count": 8,
+        "equipment": []
+      }
+    ]
+  },
+  "generated_at": "2026-03-05T04:57:13.544301+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

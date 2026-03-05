@@ -1,0 +1,47 @@
+## Halal Street Eats Station — Lunch Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 9 on at least one day (17 distinct in period) — **Gochujang Bulgogi Beef**, **Asian Seared Chicken**, **Sesame Green Cabbage**, **Street Eatz Bibimbap**, **Street Eatz Korean BBQ Fish Taco**, **Street Eatz Kimchi Sushi Bowl**, **Pickled Carrot & Daikon**, **Korean BBQ Tofu**, **Kimchi**, **Gochujang Sauce**, **Asian Seared Tofu**, **Kimchi Fried Rice**, **Korean Noodle Bowl**, **Crispy Sesame Tofu**, **Pickled Cucumber**, **Roasted Garlic Rice**, **Sliced Scallions**
+- Gap: Exceeded by 7 (got 9, max 2)
+
+**VEGAN**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**FRIES**
+- What the menu is doing: 0 on at least one day (1 distinct in period) — **Street Eatz Loaded Bulgogi Fries**
+- Gap: Short by 1 (got 0, min 1)
+
+**PLANT-BASED**
+- What the menu is doing: 17.4% plant-based — **Asian Seared Tofu**, **Crispy Sesame Tofu**, **Korean BBQ Tofu**, **Korean Noodle Bowl**
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 26.6% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 1.0 (18 unique entrees / 18 scheduled slots)
+- Playbook says daily features must rotate. Items appearing on 4+ days:
+    - **Kimchi**: 4 days (Monday, Tuesday, Thursday, Friday)
+
+### Plant-Based
+- Current: 17.4% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 26.6% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 9 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Add at least one **Vegan** item — Playbook rule: "Vegan: min 1 per day."
+3. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+4. Increase plant-based offerings from 17.4% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."
+5. Rotate **Kimchi** — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."

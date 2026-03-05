@@ -1,0 +1,312 @@
+{
+  "station_name": "True Balan",
+  "meal_period": "Dinner",
+  "content": "## Grill Station — Dinner Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 8 offered — **Buffalo Chicken Grilled Cheese**, **Crispy Chicken BBQ Snacker**, **Creamy Tomato Basil Soup**, **Nacho Grilled Cheese**, **Classic Grilled Cheese**, **Grilled Ham & Cheese Sandwich**, **Crispy Chicken Sandwich**, **Grilled Herb Chicken Sandwich**\n- What the Playbook says: Max 2 per day.\n- Gap: Too many daily features (got 8, max 2)\n\n**PLANT-BASED**\n- What the menu is doing: 9.5% plant-based — **Grilled Black Bean Burger**\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 34.5% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 0.59 (10 unique entrees / 17 scheduled slots)\n- Playbook says daily features must rotate. Items appearing on 4+ days:\n    - **Crinkle French Fries**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Grilled Black Bean Burger**: 4 days (Monday, Tuesday, Thursday, Sunday)\n\n### Plant-Based\n- Current: 9.5% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 34.5% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Reduce **Daily Feature** from 8 to the maximum allowed — Playbook rule: \"Daily Feature: max 2 per day. Must rotate daily.\"\n2. Increase plant-based offerings from 9.5% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"\n3. Rotate **Crinkle French Fries**, **Grilled Black Bean Burger** — Playbook rule: \"Daily Features must rotate daily. High repetition across multiple days signals poor rotation.\"",
+  "analysis_json": {
+    "playbook_check": {
+      "meal_period": "Dinner",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 8,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Buffalo Chicken Grilled Cheese",
+            "Crispy Chicken BBQ Snacker",
+            "Creamy Tomato Basil Soup",
+            "Nacho Grilled Cheese",
+            "Classic Grilled Cheese",
+            "Grilled Ham & Cheese Sandwich",
+            "Crispy Chicken Sandwich",
+            "Grilled Herb Chicken Sandwich"
+          ]
+        },
+        "vegan": {
+          "count": 1,
+          "playbook_rule": "min 1",
+          "status": "ok",
+          "recipes": [
+            "Grilled Black Bean Burger"
+          ]
+        },
+        "fries": {
+          "count": 1,
+          "playbook_rule": "min 1",
+          "status": "ok",
+          "recipes": [
+            "Crinkle French Fries"
+          ]
+        }
+      },
+      "violations": [
+        "Too many daily features (got 8, max 2)"
+      ],
+      "sides": {
+        "count": 6,
+        "recipes": [
+          "Sliced Tomatoes",
+          "American Cheese",
+          "Sliced Red Onions",
+          "Dill Pickle Slices",
+          "Lettuce",
+          "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE"
+        ]
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 0.59,
+        "unique_entree_count": 10,
+        "repeated_static_count": 7,
+        "entree_slots": 17,
+        "total_slots": 42,
+        "side_count": 6,
+        "message": "Moderate entree variety; consider rotating daily features.",
+        "entree_serve_counts": {
+          "Crinkle French Fries": 5,
+          "Buffalo Chicken Grilled Cheese": 1,
+          "Crispy Chicken BBQ Snacker": 1,
+          "Creamy Tomato Basil Soup": 1,
+          "Nacho Grilled Cheese": 1,
+          "Classic Grilled Cheese": 1,
+          "Grilled Ham & Cheese Sandwich": 1,
+          "Crispy Chicken Sandwich": 1,
+          "Grilled Black Bean Burger": 4,
+          "Grilled Herb Chicken Sandwich": 1
+        },
+        "side_recipes": [
+          "American Cheese",
+          "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE",
+          "Dill Pickle Slices",
+          "Lettuce",
+          "Sliced Red Onions",
+          "Sliced Tomatoes"
+        ]
+      },
+      "item_frequency": {
+        "total_recipes": 16,
+        "recurrence_signals": [
+          {
+            "recipe_id": "A5763",
+            "recipe_name": "Crinkle French Fries",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "M8170",
+            "recipe_name": "Grilled Black Bean Burger",
+            "days": 4,
+            "signal": "High repetition: scheduled on 4 days (Monday, Tuesday, Thursday, Sunday)"
+          }
+        ],
+        "message": "2 recipe(s) appear ≥ 4 days (Crinkle French Fries, Grilled Black Bean Burger). Consider rotating to improve variety.",
+        "frequencies": [
+          {
+            "recipe_id": "M8958",
+            "recipe_name": "BURGER/SDW TRIM SALAD - LETTUCE, TOMATO, PICKLE",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "A5763",
+            "recipe_name": "Crinkle French Fries",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M14301",
+            "recipe_name": "American Cheese",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M14856",
+            "recipe_name": "Dill Pickle Slices",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M8170",
+            "recipe_name": "Grilled Black Bean Burger",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M33196",
+            "recipe_name": "Lettuce",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M14343",
+            "recipe_name": "Sliced Red Onions",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M13541",
+            "recipe_name": "Sliced Tomatoes",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M19508",
+            "recipe_name": "Buffalo Chicken Grilled Cheese",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M7941",
+            "recipe_name": "Classic Grilled Cheese",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M34430",
+            "recipe_name": "Creamy Tomato Basil Soup",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M20589",
+            "recipe_name": "Crispy Chicken BBQ Snacker",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M8095",
+            "recipe_name": "Crispy Chicken Sandwich",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M7972",
+            "recipe_name": "Grilled Ham & Cheese Sandwich",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M8295",
+            "recipe_name": "Grilled Herb Chicken Sandwich",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M35397",
+            "recipe_name": "Nacho Grilled Cheese",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 9.5,
+        "vegan_percent": 9.5,
+        "compliant_44": false,
+        "total_offerings": 42,
+        "plant_based_count": 4,
+        "message": "9.5% plant-based — 34.5% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": [
+          "Grilled Black Bean Burger"
+        ]
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 0,
+        "alt_slots": 8,
+        "beef_recipes": [],
+        "alt_recipes": [
+          "Buffalo Chicken Grilled Cheese",
+          "Crispy Chicken BBQ Snacker",
+          "Crispy Chicken Sandwich",
+          "Grilled Black Bean Burger",
+          "Grilled Herb Chicken Sandwich"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=8; CPM risk level=LOW."
+      }
+    }
+  },
+  "generated_at": "2026-03-03T11:03:24.696926+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

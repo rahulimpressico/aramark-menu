@@ -1,0 +1,45 @@
+## Deli Station — Lunch Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 7 on at least one day (15 distinct in period) — **Lemon Orzo Soup**, **Newcomb Grilled Chicken Parmesan Sandwich**, **Ranch Potato Chips**, **Jalapeno Peppers**, **Banana Peppers**, **Black Bean Soup**, **Mushroom Barley Soup**, **Chipotle Chicken Tortilla Soup**, **Chicken Gumbo with Brown Rice**, **Chicken Noodle Soup**, **New England Clam Chowder**, **Tomato Basil Soup**, **Moroccan Chickpea Soup**, **Chimichurri Potato Salad**, **Pickled Red Onion**
+- Gap: Exceeded by 5 (got 7, max 2)
+
+**VEGAN**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**FRIES**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**PLANT-BASED**
+- What the menu is doing: 5.3% plant-based — **Black Bean Soup**
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 38.7% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 1.0 (14 unique entrees / 14 scheduled slots)
+- No high-repetition items. Good rotation.
+
+### Plant-Based
+- Current: 5.3% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 38.7% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 7 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Add at least one **Vegan** item — Playbook rule: "Vegan: min 1 per day."
+3. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+4. Increase plant-based offerings from 5.3% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."

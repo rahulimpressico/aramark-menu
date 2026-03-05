@@ -1,0 +1,47 @@
+## Grill Station — Dinner Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 17 offered — **Grilled Green Beans**, **Balsamic Glazed Roasted Carrots**, **Steamed Peas & Onions**, **Garlic Broccoli**, **California Blend Vegetables**, **Mediterranean Saute with Orzo**, **Hummus**, **Spicy Vegetable Gumbo**, **Root Vegetable Farro Salad**, **Roasted Red Pepper Hummus**, **Buffalo Cauliflower Wings**, **Potato & Kale Enchiladas**, **Roasted Garlic Rice**, **Roasted Beet & Orange Salad**, **Seasoned Rice**, **Roasted Red Potatoes**, **Roasted Garlic Potatoes**
+- What the Playbook says: Max 2 per day.
+- Gap: Too many daily features (got 17, max 2)
+
+**FRIES**
+- What the menu is doing: 0 offered — none
+- What the Playbook says: Min 1 per day.
+- Gap: Too many daily features (got 17, max 2)
+
+**PLANT-BASED**
+- What the menu is doing: 5.7% plant-based — **Plant-Based Sausage Mac Casserole**, **Potato & Kale Enchiladas**
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 38.3% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 0.51 (18 unique entrees / 35 scheduled slots)
+- Playbook says daily features must rotate. Items appearing on 4+ days:
+    - **Hummus**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Root Vegetable Farro Salad**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Roasted Red Pepper Hummus**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Roasted Beet & Orange Salad**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+
+### Plant-Based
+- Current: 5.7% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 38.3% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 17 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+3. Increase plant-based offerings from 5.7% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."
+4. Rotate **Hummus**, **Root Vegetable Farro Salad** — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."

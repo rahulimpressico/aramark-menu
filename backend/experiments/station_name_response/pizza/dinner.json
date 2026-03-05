@@ -1,0 +1,702 @@
+{
+  "station_name": "Pizza",
+  "meal_period": "Dinner",
+  "content": "## Grill Station — Dinner Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 18 offered — **Newcomb Taco Pizza**, **Newcomb Chopped Italian Herb Blend**, **Newcomb Street Corn Pizza**, **Newcomb Pizza Crust Butter**, **Creamy Ranch Pasta Salad**, **Caramelized Onion & Pepper Pizza**, **Black Olive Pizza**, **Buffalo Chicken Pizza**, **Margherita Pizza**, **Caesar Salad**, **Avocado Salad**, **BBQ Chicken Pizza**, **Deluxe Pizza**, **Mushroom & Sausage Pizza**, **Primavera Pizza**, **Classic Cheese Pizza**, **Pepperoni Pizza**, **BEEF POT ROAST (PCKD)**\n- What the Playbook says: Max 2 per day.\n- Gap: Too many daily features (got 18, max 2)\n\n**VEGAN**\n- What the menu is doing: 0 offered — none\n- What the Playbook says: Min 1 per day.\n- Gap: Too many daily features (got 18, max 2)\n\n**FRIES**\n- What the menu is doing: 0 offered — none\n- What the Playbook says: Min 1 per day.\n- Gap: Too many daily features (got 18, max 2)\n\n**PLANT-BASED**\n- What the menu is doing: 0.0% plant-based — none\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 44.0% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 0.5 (17 unique entrees / 34 scheduled slots)\n- Playbook says daily features must rotate. Items appearing on 4+ days:\n    - **Newcomb Chopped Italian Herb Blend**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Newcomb Pizza Crust Butter**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Classic Cheese Pizza**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n    - **Pepperoni Pizza**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)\n\n### Plant-Based\n- Current: 0.0% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 44.0% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Reduce **Daily Feature** from 18 to the maximum allowed — Playbook rule: \"Daily Feature: max 2 per day. Must rotate daily.\"\n2. Add at least one **Vegan** item — Playbook rule: \"Vegan: min 1 per day.\"\n3. Add at least one **Fries** item — Playbook rule: \"Fries: min 1 per day.\"\n4. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"\n5. Rotate **Newcomb Chopped Italian Herb Blend**, **Newcomb Pizza Crust Butter** — Playbook rule: \"Daily Features must rotate daily. High repetition across multiple days signals poor rotation.\"",
+  "analysis_json": {
+    "playbook_check": {
+      "meal_period": "Dinner",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 18,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Newcomb Taco Pizza",
+            "Newcomb Chopped Italian Herb Blend",
+            "Newcomb Street Corn Pizza",
+            "Newcomb Pizza Crust Butter",
+            "Creamy Ranch Pasta Salad",
+            "Caramelized Onion & Pepper Pizza",
+            "Black Olive Pizza",
+            "Buffalo Chicken Pizza",
+            "Margherita Pizza",
+            "Caesar Salad",
+            "Avocado Salad",
+            "BBQ Chicken Pizza",
+            "Deluxe Pizza",
+            "Mushroom & Sausage Pizza",
+            "Primavera Pizza",
+            "Classic Cheese Pizza",
+            "Pepperoni Pizza",
+            "BEEF POT ROAST (PCKD)"
+          ]
+        },
+        "vegan": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        }
+      },
+      "violations": [
+        "Too many daily features (got 18, max 2)",
+        "Missing vegan option",
+        "Missing fries option"
+      ],
+      "sides": {
+        "count": 0,
+        "recipes": []
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 0.5,
+        "unique_entree_count": 17,
+        "repeated_static_count": 17,
+        "entree_slots": 34,
+        "total_slots": 35,
+        "side_count": 1,
+        "message": "Moderate entree variety; consider rotating daily features.",
+        "entree_serve_counts": {
+          "Newcomb Taco Pizza": 1,
+          "Newcomb Chopped Italian Herb Blend": 5,
+          "Newcomb Street Corn Pizza": 1,
+          "Newcomb Pizza Crust Butter": 5,
+          "Caramelized Onion & Pepper Pizza": 1,
+          "Black Olive Pizza": 1,
+          "Buffalo Chicken Pizza": 1,
+          "Margherita Pizza": 1,
+          "Caesar Salad": 2,
+          "Avocado Salad": 1,
+          "BBQ Chicken Pizza": 1,
+          "Deluxe Pizza": 1,
+          "Mushroom & Sausage Pizza": 1,
+          "Primavera Pizza": 1,
+          "Classic Cheese Pizza": 5,
+          "Pepperoni Pizza": 5,
+          "BEEF POT ROAST (PCKD)": 1
+        },
+        "side_recipes": [
+          "Creamy Ranch Pasta Salad"
+        ]
+      },
+      "item_frequency": {
+        "total_recipes": 18,
+        "recurrence_signals": [
+          {
+            "recipe_id": "L391788",
+            "recipe_name": "Newcomb Chopped Italian Herb Blend",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "L391897",
+            "recipe_name": "Newcomb Pizza Crust Butter",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "M40447",
+            "recipe_name": "Classic Cheese Pizza",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          },
+          {
+            "recipe_id": "M40449",
+            "recipe_name": "Pepperoni Pizza",
+            "days": 5,
+            "signal": "High repetition: scheduled on 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)"
+          }
+        ],
+        "message": "4 recipe(s) appear ≥ 4 days (Newcomb Chopped Italian Herb Blend, Newcomb Pizza Crust Butter, Classic Cheese Pizza, Pepperoni Pizza). Consider rotating to improve variety.",
+        "frequencies": [
+          {
+            "recipe_id": "M40447",
+            "recipe_name": "Classic Cheese Pizza",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "L391788",
+            "recipe_name": "Newcomb Chopped Italian Herb Blend",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "L391897",
+            "recipe_name": "Newcomb Pizza Crust Butter",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M40449",
+            "recipe_name": "Pepperoni Pizza",
+            "appearance_count": 5,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M20949",
+            "recipe_name": "Caesar Salad",
+            "appearance_count": 2,
+            "days": [
+              "Monday",
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M36651",
+            "recipe_name": "Avocado Salad",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M40427",
+            "recipe_name": "BBQ Chicken Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M5731",
+            "recipe_name": "BEEF POT ROAST (PCKD)",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M15845",
+            "recipe_name": "Black Olive Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M20849",
+            "recipe_name": "Buffalo Chicken Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M15842",
+            "recipe_name": "Caramelized Onion & Pepper Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M14932",
+            "recipe_name": "Creamy Ranch Pasta Salad",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M40434",
+            "recipe_name": "Deluxe Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M20851",
+            "recipe_name": "Margherita Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M40437",
+            "recipe_name": "Mushroom & Sausage Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "L391791",
+            "recipe_name": "Newcomb Street Corn Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "L380562",
+            "recipe_name": "Newcomb Taco Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M40445",
+            "recipe_name": "Primavera Pizza",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 0.0,
+        "vegan_percent": 0.0,
+        "compliant_44": false,
+        "total_offerings": 35,
+        "plant_based_count": 0,
+        "message": "0.0% plant-based — 44.0% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": []
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 1,
+        "alt_slots": 2,
+        "beef_recipes": [
+          "BEEF POT ROAST (PCKD)"
+        ],
+        "alt_recipes": [
+          "BBQ Chicken Pizza",
+          "Buffalo Chicken Pizza"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=1, Non-beef alternative slots=2; CPM risk level=LOW."
+      }
+    }
+  },
+  "analysis": {
+    "station_name": "Pizza",
+    "meal_period": "Dinner",
+    "recipe_count": 18,
+    "cost_stats": {
+      "min": 0.0335,
+      "max": 5.4725,
+      "mean": 0.6365,
+      "median": 0.3728,
+      "total": 11.4564
+    },
+    "top_expensive": [
+      {
+        "id": "L391897",
+        "name": "Newcomb Pizza Crust Butter",
+        "food_cost": 5.4725
+      },
+      {
+        "id": "M15845",
+        "name": "Black Olive Pizza",
+        "food_cost": 0.5975
+      },
+      {
+        "id": "L391791",
+        "name": "Newcomb Street Corn Pizza",
+        "food_cost": 0.5677
+      },
+      {
+        "id": "M15842",
+        "name": "Caramelized Onion & Pepper Pizza",
+        "food_cost": 0.5334
+      },
+      {
+        "id": "M40437",
+        "name": "Mushroom & Sausage Pizza",
+        "food_cost": 0.4185
+      }
+    ],
+    "top_affordable": [
+      {
+        "id": "L391788",
+        "name": "Newcomb Chopped Italian Herb Blend",
+        "food_cost": 0.0335
+      },
+      {
+        "id": "M5731",
+        "name": "BEEF POT ROAST (PCKD)",
+        "food_cost": 0.1815
+      },
+      {
+        "id": "M40447",
+        "name": "Classic Cheese Pizza",
+        "food_cost": 0.2215
+      },
+      {
+        "id": "M14932",
+        "name": "Creamy Ranch Pasta Salad",
+        "food_cost": 0.2314
+      },
+      {
+        "id": "M40449",
+        "name": "Pepperoni Pizza",
+        "food_cost": 0.289
+      }
+    ],
+    "unique_ingredients": 63,
+    "top_ingredients": [
+      {
+        "name": "cheese feather mozzarella part skim",
+        "count": 11
+      },
+      {
+        "name": "cheese milk mozzarella whole",
+        "count": 10
+      },
+      {
+        "name": "blend oil vegetable",
+        "count": 3
+      },
+      {
+        "name": "onion red trimmed vegetable",
+        "count": 3
+      },
+      {
+        "name": "iceberg lettuce vegetable",
+        "count": 3
+      },
+      {
+        "name": "black drained olive",
+        "count": 2
+      },
+      {
+        "name": "salt",
+        "count": 2
+      },
+      {
+        "name": "plum tomato vegetable",
+        "count": 2
+      },
+      {
+        "name": "water",
+        "count": 2
+      },
+      {
+        "name": "ball dough pizza white",
+        "count": 2
+      }
+    ],
+    "ing_count_stats": {
+      "min": 2,
+      "max": 14,
+      "mean": 5.4
+    },
+    "most_ingredients_recipes": [
+      {
+        "name": "BEEF POT ROAST (PCKD)",
+        "count": 14
+      },
+      {
+        "name": "Avocado Salad",
+        "count": 10
+      },
+      {
+        "name": "Primavera Pizza",
+        "count": 8
+      },
+      {
+        "name": "Newcomb Street Corn Pizza",
+        "count": 7
+      },
+      {
+        "name": "Black Olive Pizza",
+        "count": 7
+      }
+    ],
+    "equipment": [
+      "oven",
+      "stockpot"
+    ],
+    "equipment_by_recipe": {
+      "Newcomb Taco Pizza": [
+        "oven",
+        "stockpot"
+      ],
+      "Newcomb Street Corn Pizza": [
+        "oven",
+        "stockpot"
+      ],
+      "Caramelized Onion & Pepper Pizza": [
+        "oven"
+      ],
+      "Black Olive Pizza": [
+        "oven"
+      ],
+      "Buffalo Chicken Pizza": [
+        "oven"
+      ],
+      "Margherita Pizza": [
+        "oven"
+      ],
+      "BBQ Chicken Pizza": [
+        "oven"
+      ],
+      "Deluxe Pizza": [
+        "oven"
+      ],
+      "Mushroom & Sausage Pizza": [
+        "oven"
+      ],
+      "Primavera Pizza": [
+        "oven"
+      ],
+      "Classic Cheese Pizza": [
+        "oven"
+      ],
+      "Pepperoni Pizza": [
+        "oven"
+      ]
+    },
+    "schedule": {
+      "Monday": [
+        "BBQ Chicken Pizza",
+        "Caesar Salad",
+        "Newcomb Chopped Italian Herb Blend",
+        "Newcomb Pizza Crust Butter",
+        "Newcomb Street Corn Pizza"
+      ],
+      "Tuesday": [
+        "Creamy Ranch Pasta Salad",
+        "Margherita Pizza",
+        "Newcomb Chopped Italian Herb Blend",
+        "Newcomb Pizza Crust Butter",
+        "Newcomb Taco Pizza"
+      ],
+      "Wednesday": [
+        "BEEF POT ROAST (PCKD)",
+        "Caramelized Onion & Pepper Pizza",
+        "Deluxe Pizza",
+        "Newcomb Chopped Italian Herb Blend",
+        "Newcomb Pizza Crust Butter"
+      ],
+      "Thursday": [
+        "Avocado Salad",
+        "Black Olive Pizza",
+        "Mushroom & Sausage Pizza",
+        "Newcomb Chopped Italian Herb Blend",
+        "Newcomb Pizza Crust Butter"
+      ],
+      "Sunday": [
+        "Buffalo Chicken Pizza",
+        "Caesar Salad",
+        "Newcomb Chopped Italian Herb Blend",
+        "Newcomb Pizza Crust Butter",
+        "Primavera Pizza"
+      ]
+    },
+    "all_recipes": [
+      {
+        "id": "L391897",
+        "name": "Newcomb Pizza Crust Butter",
+        "food_cost": 5.4725,
+        "ing_count": 6,
+        "equipment": []
+      },
+      {
+        "id": "M15845",
+        "name": "Black Olive Pizza",
+        "food_cost": 0.5975,
+        "ing_count": 7,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "L391791",
+        "name": "Newcomb Street Corn Pizza",
+        "food_cost": 0.5677,
+        "ing_count": 7,
+        "equipment": [
+          "oven",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M15842",
+        "name": "Caramelized Onion & Pepper Pizza",
+        "food_cost": 0.5334,
+        "ing_count": 6,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M40437",
+        "name": "Mushroom & Sausage Pizza",
+        "food_cost": 0.4185,
+        "ing_count": 3,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M40434",
+        "name": "Deluxe Pizza",
+        "food_cost": 0.4119,
+        "ing_count": 4,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M36651",
+        "name": "Avocado Salad",
+        "food_cost": 0.4021,
+        "ing_count": 10,
+        "equipment": []
+      },
+      {
+        "id": "M20851",
+        "name": "Margherita Pizza",
+        "food_cost": 0.3961,
+        "ing_count": 5,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "L380562",
+        "name": "Newcomb Taco Pizza",
+        "food_cost": 0.3858,
+        "ing_count": 4,
+        "equipment": [
+          "oven",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M40445",
+        "name": "Primavera Pizza",
+        "food_cost": 0.3598,
+        "ing_count": 8,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M40427",
+        "name": "BBQ Chicken Pizza",
+        "food_cost": 0.3471,
+        "ing_count": 3,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M20849",
+        "name": "Buffalo Chicken Pizza",
+        "food_cost": 0.3144,
+        "ing_count": 4,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M20949",
+        "name": "Caesar Salad",
+        "food_cost": 0.2927,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "M40449",
+        "name": "Pepperoni Pizza",
+        "food_cost": 0.289,
+        "ing_count": 3,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M14932",
+        "name": "Creamy Ranch Pasta Salad",
+        "food_cost": 0.2314,
+        "ing_count": 4,
+        "equipment": []
+      },
+      {
+        "id": "M40447",
+        "name": "Classic Cheese Pizza",
+        "food_cost": 0.2215,
+        "ing_count": 2,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M5731",
+        "name": "BEEF POT ROAST (PCKD)",
+        "food_cost": 0.1815,
+        "ing_count": 14,
+        "equipment": []
+      },
+      {
+        "id": "L391788",
+        "name": "Newcomb Chopped Italian Herb Blend",
+        "food_cost": 0.0335,
+        "ing_count": 3,
+        "equipment": []
+      }
+    ]
+  },
+  "generated_at": "2026-03-03T11:25:20.603791+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

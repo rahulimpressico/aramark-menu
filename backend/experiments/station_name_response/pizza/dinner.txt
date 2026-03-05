@@ -1,0 +1,53 @@
+## Grill Station — Dinner Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 18 offered — **Newcomb Taco Pizza**, **Newcomb Chopped Italian Herb Blend**, **Newcomb Street Corn Pizza**, **Newcomb Pizza Crust Butter**, **Creamy Ranch Pasta Salad**, **Caramelized Onion & Pepper Pizza**, **Black Olive Pizza**, **Buffalo Chicken Pizza**, **Margherita Pizza**, **Caesar Salad**, **Avocado Salad**, **BBQ Chicken Pizza**, **Deluxe Pizza**, **Mushroom & Sausage Pizza**, **Primavera Pizza**, **Classic Cheese Pizza**, **Pepperoni Pizza**, **BEEF POT ROAST (PCKD)**
+- What the Playbook says: Max 2 per day.
+- Gap: Too many daily features (got 18, max 2)
+
+**VEGAN**
+- What the menu is doing: 0 offered — none
+- What the Playbook says: Min 1 per day.
+- Gap: Too many daily features (got 18, max 2)
+
+**FRIES**
+- What the menu is doing: 0 offered — none
+- What the Playbook says: Min 1 per day.
+- Gap: Too many daily features (got 18, max 2)
+
+**PLANT-BASED**
+- What the menu is doing: 0.0% plant-based — none
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 44.0% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 0.5 (17 unique entrees / 34 scheduled slots)
+- Playbook says daily features must rotate. Items appearing on 4+ days:
+    - **Newcomb Chopped Italian Herb Blend**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Newcomb Pizza Crust Butter**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Classic Cheese Pizza**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Pepperoni Pizza**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+
+### Plant-Based
+- Current: 0.0% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 44.0% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 18 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Add at least one **Vegan** item — Playbook rule: "Vegan: min 1 per day."
+3. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+4. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."
+5. Rotate **Newcomb Chopped Italian Herb Blend**, **Newcomb Pizza Crust Butter** — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."

@@ -1,0 +1,5128 @@
+{
+  "entities": {
+    "Station": [
+      {
+        "id": "station_Salad Bar",
+        "type": "Station",
+        "name": "Salad Bar"
+      }
+    ],
+    "Week": [
+      {
+        "id": "week_3",
+        "type": "Week",
+        "week_no": 3
+      }
+    ],
+    "Day": [
+      {
+        "id": "day_Monday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 1,
+        "day_name": "Monday"
+      },
+      {
+        "id": "day_Tuesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 2,
+        "day_name": "Tuesday"
+      },
+      {
+        "id": "day_Wednesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 3,
+        "day_name": "Wednesday"
+      },
+      {
+        "id": "day_Thursday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 4,
+        "day_name": "Thursday"
+      },
+      {
+        "id": "day_Friday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 5,
+        "day_name": "Friday"
+      },
+      {
+        "id": "day_Sunday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 7,
+        "day_name": "Sunday"
+      }
+    ],
+    "MealPeriod": [
+      {
+        "id": "period_All Day",
+        "type": "MealPeriod",
+        "name": "All Day"
+      },
+      {
+        "id": "period_Breakfast",
+        "type": "MealPeriod",
+        "name": "Breakfast"
+      },
+      {
+        "id": "period_Lunch",
+        "type": "MealPeriod",
+        "name": "Lunch"
+      }
+    ],
+    "Recipe": [
+      {
+        "id": "A9711",
+        "type": "Recipe",
+        "name": "Tropical Pumpkin Smoothie",
+        "food_cost": 0.6143,
+        "assembly_instructions": "FOR SIX SERVINGS: 1. In blender, place the following: 8-oz spoodle pumpkin 6-oz spoodle banana 4-oz spoodle pineapple 1-oz spoodle honey 1 tsp cinnamon 1/4 tsp nutmeg 1/2 tsp ginger 1/2 cup oat milk 1/4 cup apple juice 2. Blend until smooth, 15-20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "L295985",
+        "type": "Recipe",
+        "name": "Carot Cake Smoothie",
+        "food_cost": 0.2879,
+        "assembly_instructions": "FOR Five 8-OZV SERVINGS: 1. In blender, place the following: 1 each banana 10-oz diced peeled carrot 2 Cups of ice 1/2 Teaspoon of ginger 1/2 teaspoon of ground cinnamon 16 oz. Almond Milk 1 Tbs. Honey 1/2 Cup Oats 2. Blend until smooth, 15-20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "L329236",
+        "type": "Recipe",
+        "name": "blueberry peach smoothie",
+        "food_cost": 0.9337,
+        "assembly_instructions": "1. blend all ingredients to make smoothie"
+      },
+      {
+        "id": "L329238",
+        "type": "Recipe",
+        "name": "UVA Tropical Smoothie",
+        "food_cost": 0.4417,
+        "assembly_instructions": "1. blend all ingredients to make smoothy"
+      },
+      {
+        "id": "L333192",
+        "type": "Recipe",
+        "name": "Mixed Berry Cucumber Smoothie",
+        "food_cost": 0.6247,
+        "assembly_instructions": "1. In food processor, combine basil, parsley, Parmesan, garlic, salt and pepper. Pulse until basil and parsley are finely chopped. Add lemon juice. 2. With processor running, slowly add oil in a thin, steady stream until mixture is creamy. 3. Cover. Keep chilled for service or use as directed in recipe. 4. Whisk before using."
+      },
+      {
+        "id": "L386167",
+        "type": "Recipe",
+        "name": "UVA Tropical Green Smoothie",
+        "food_cost": 0.4309,
+        "assembly_instructions": "FOR 12 SERVING: 1. In blender, place the following: 3 each 4-oz spoodle pineapple 3 each 4-oz spoodle ice 3 each 4-oz spoodle kale 6-oz spoodle spinach 3 each 4-oz ladle almond milk 1-1/2 tsp ginger 3/4 tsp turmeric 2. Blend until smooth, 15 to 20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "M12320",
+        "type": "Recipe",
+        "name": "Strawberry-Banana Smoothie",
+        "food_cost": 0.5947,
+        "assembly_instructions": "FOR FOUR 8-OZV SERVINGS: 1. In blender, place the following: 2 each 6-oz spoodles banana 2 each 8-oz spoodles frozen strawberries 8-oz spoodle ice #8 scoop yogurt 4-oz ladle apple juice 2. Blend until smooth, 15-20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "M12882",
+        "type": "Recipe",
+        "name": "Sliced Beets",
+        "food_cost": 1.6432,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M13844",
+        "type": "Recipe",
+        "name": "Nonfat Vanilla Yogurt",
+        "food_cost": 1.2037,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M13850",
+        "type": "Recipe",
+        "name": "Nonfat Strawberry Yogurt",
+        "food_cost": 1.2037,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 4"
+      },
+      {
+        "id": "M14258",
+        "type": "Recipe",
+        "name": "Shredded Cheddar Cheese",
+        "food_cost": 2.338,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz IDDSI Level 7"
+      },
+      {
+        "id": "M14287",
+        "type": "Recipe",
+        "name": "Dried Cranberries",
+        "food_cost": 2.891,
+        "assembly_instructions": "1. Cover. Hold at room temperature for service.",
+        "special_instructions": "1 tbl = 3/8 ozw 1-oz spoodle = 5/8 ozw 2-oz spoodle = 1 1/8 ozw 3-oz spoodle = 1 3/4 ozw 4-oz spoodle = 2 1/4 ozw 6-oz spoodle = 3 3/8 ozw 8-oz spoodle = 4 1/2 ozw"
+      },
+      {
+        "id": "M14290",
+        "type": "Recipe",
+        "name": "Feta Cheese Crumbles",
+        "food_cost": 2.829,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1 tbl = 3/8 ozw 1-oz spoodle = 5/8 ozw 2-oz spoodle = 1 1/4 ozw 3-oz spoodle = 1 7/8 ozw 4-oz spoodle = 2 1/2 ozw 6-oz spoodle = 3 3/4 ozw 8-oz spoodle = 5 ozw"
+      },
+      {
+        "id": "M14336",
+        "type": "Recipe",
+        "name": "Grape Tomatoes",
+        "food_cost": 2.949,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw"
+      },
+      {
+        "id": "M14342",
+        "type": "Recipe",
+        "name": "Diced Pineapple",
+        "food_cost": 0.2286,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "POUR 4 GALLONS INTO STEAM TABLE PAN EACH PAN SHOULD SERVE 64 PORTIONS"
+      },
+      {
+        "id": "M14363",
+        "type": "Recipe",
+        "name": "Chopped Hard-Cooked Egg",
+        "food_cost": 2.995,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "Chopped 1/4\": 1 tbl = 1/4 oz 1-oz spoodle = 3/4 oz 2-oz spoodle = 1 1/2 oz 3-oz spoodle = 2 1/4 oz 4-oz spoodle = 3 oz 6-oz spoodle = 4 1/2 oz 8-oz spoodle = 6 oz"
+      },
+      {
+        "id": "M14536",
+        "type": "Recipe",
+        "name": "Red Kidney Beans",
+        "food_cost": 1.4078,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M14548",
+        "type": "Recipe",
+        "name": "Baby Corn",
+        "food_cost": 3.8856,
+        "assembly_instructions": "Cover. Keep chilled for service.",
+        "special_instructions": "If the menu calls for margarine to be served with the meal, only with Kosher Pareve margarine may be used."
+      },
+      {
+        "id": "M14571",
+        "type": "Recipe",
+        "name": "Cucumbers",
+        "food_cost": 0.7399,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M14638",
+        "type": "Recipe",
+        "name": "Red Grapes",
+        "food_cost": 2.1621,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M14870",
+        "type": "Recipe",
+        "name": "Sliced Mixed Bell Peppers",
+        "food_cost": 1.7715,
+        "assembly_instructions": "1. Combine peppers. Toss to mix well. 2. Cover. Keep chilled for service.",
+        "special_instructions": "For Grab-n-Go: Wrap sandwich. Keep hot for service."
+      },
+      {
+        "id": "M14885",
+        "type": "Recipe",
+        "name": "Oil & Vinegar",
+        "food_cost": 1.7819,
+        "assembly_instructions": "1. Combine oil and vinegar. 2. Cover. Keep chilled for service. 3. Whisk before using."
+      },
+      {
+        "id": "M14891",
+        "type": "Recipe",
+        "name": "Ranch Dressing",
+        "food_cost": 5.3453,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "For Grab-n-Go: Place sandwich into specified cello bag. Tape bag closed. Keep chilled for service."
+      },
+      {
+        "id": "M14894",
+        "type": "Recipe",
+        "name": "Honey Mustard Dressing",
+        "food_cost": 6.1628,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M14899",
+        "type": "Recipe",
+        "name": "Goldfish® Crackers",
+        "food_cost": 5.8464,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M15668",
+        "type": "Recipe",
+        "name": "Raisins",
+        "food_cost": 3.286,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M19242",
+        "type": "Recipe",
+        "name": "Lite Italian Dressing",
+        "food_cost": 4.4245,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M19735",
+        "type": "Recipe",
+        "name": "Balsamic Vinaigrette",
+        "food_cost": 5.3029,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M20082",
+        "type": "Recipe",
+        "name": "Honey Granola",
+        "food_cost": 3.0426,
+        "assembly_instructions": "1. Cover. Hold at room temperature for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M20083",
+        "type": "Recipe",
+        "name": "Creamy Caesar Dressing",
+        "food_cost": 6.3412,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M20084",
+        "type": "Recipe",
+        "name": "Fat-Free French Dressing",
+        "food_cost": 5.5012,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M20114",
+        "type": "Recipe",
+        "name": "Baby Spinach",
+        "food_cost": 4.657,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M20121",
+        "type": "Recipe",
+        "name": "Diced Chicken",
+        "food_cost": 2.6752,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1-oz spoodle = 1/2 ozw 2-oz spoodle = 1 1/4 ozw 3-oz spoodle = 1 3/4 ozw 4-oz spoodle = 2 1/2 ozw 6-oz spoodle = 3 3/4 ozw 8-oz spoodle = 5 ozw"
+      },
+      {
+        "id": "M214",
+        "type": "Recipe",
+        "name": "Blueberry-Banana Smoothie",
+        "food_cost": 0.6729,
+        "assembly_instructions": "FOR FOUR 8-OZV SERVINGS: 1. In blender, place the following: 2 each 6-oz spoodles banana 2 each 8-oz spoodles frozen blueberries 8-oz spoodle ice #8 scoop yogurt 4-oz ladle apple juice 2. Blend until smooth, 15-20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "M21491",
+        "type": "Recipe",
+        "name": "Nonfat Greek Yogurt",
+        "food_cost": 2.0642,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M21621",
+        "type": "Recipe",
+        "name": "Toasted Coconut",
+        "food_cost": 4.6834,
+        "assembly_instructions": "1. Preheat convection oven to 300 F. 2. On sheet pan(s), spread coconut in thin layer. 3. Bake, stirring once, until coconut is lightly toasted, 6 to 8 minutes. Cool. 4. Cover. Hold at room temperature for service or use as directed in recipe.",
+        "special_instructions": "1 T = 1/4 ozw 1-oz spoodle = 1/2 ozw 2-oz spoodle = 1 ozw 3-oz spoodle = 1 1/2 ozw 4-oz spoodle = 2 ozw 6-oz spoodle = 3 ozw 8-oz spoodle = 4 ozw"
+      },
+      {
+        "id": "M287",
+        "type": "Recipe",
+        "name": "Pineapple-Banana Smoothie",
+        "food_cost": 0.7601,
+        "assembly_instructions": "FOR FOUR 8-OZV SERVINGS: 1. In blender, place the following: 2 each 6-oz spoodles banana 2 each 6-oz spoodles pineapple 8-oz spoodle ice #8 scoop yogurt 4-oz ladle apple juice 2. Blend until smooth, 15-20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "M35251",
+        "type": "Recipe",
+        "name": "Pineapple Mango Smoothie",
+        "food_cost": 0.6279,
+        "assembly_instructions": "FOR 1 SERVING: 1. In blender, place the following: 8-oz spoodle pineapple 4-oz spoodle mango 2 each 8-oz spoodle ice 6 T orange juice 2 T almond milk 2. Blend until smooth, 15-20 seconds. 3. Serve immediately."
+      },
+      {
+        "id": "M6557",
+        "type": "Recipe",
+        "name": "Sliced Mushrooms",
+        "food_cost": 2.5278,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M6570",
+        "type": "Recipe",
+        "name": "Romaine Lettuce",
+        "food_cost": 3.5208,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M6578",
+        "type": "Recipe",
+        "name": "Shredded Carrots",
+        "food_cost": 0.994,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7 1 tbl = 3/8 ozw 1-oz spoodle = 5/8 ozw 2-oz spoodle = 1 1/4 ozw 3-oz spoodle = 1 7/8 ozw 4-oz spoodle = 2 1/2 ozw 6-oz spoodle = 3 3/4 ozw 8-oz spoodle = 5 ozw"
+      },
+      {
+        "id": "M6847",
+        "type": "Recipe",
+        "name": "Croutons",
+        "food_cost": 2.577,
+        "assembly_instructions": "1. Cover. Hold at room temperature for service.",
+        "special_instructions": "1-oz spoodle = 1/4 oz 2-oz spoodle = 1/2 oz 3-oz spoodle = 3/4 oz 4-oz spoodle = 1 oz 6-oz spoodle = 1 1/2 oz 8-oz spoodle = 2 oz"
+      }
+    ],
+    "Ingredient": [
+      {
+        "id": "ing_02219666ff12",
+        "type": "Ingredient",
+        "description": "TURKEY GD BULK RAW FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_047eb7a03f2b",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING HONEY MUSTARD DIJON"
+      },
+      {
+        "id": "ing_0969ba3f0f3c",
+        "type": "Ingredient",
+        "description": "BASE CHICKEN FLAVORED (VEGAN)"
+      },
+      {
+        "id": "ing_0c1544110c8d",
+        "type": "Ingredient",
+        "description": "SPICE GARLIC POWDER"
+      },
+      {
+        "id": "ing_0fde8d1bda1e",
+        "type": "Ingredient",
+        "description": "JUICE BULK ORANGE"
+      },
+      {
+        "id": "ing_0fdfed2af169",
+        "type": "Ingredient",
+        "description": "CHEESE FETA AP CRUMBLED"
+      },
+      {
+        "id": "ing_11b3b4a61123",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_12a067629a37",
+        "type": "Ingredient",
+        "description": "FRUIT CANNED PUMPKIN SOLID PACK"
+      },
+      {
+        "id": "ing_16ced41bbc44",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING RANCH HOMESTYLE"
+      },
+      {
+        "id": "ing_17b99860a8e6",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH KALE GREEN - STEMS REMOVED, CHOPPED"
+      },
+      {
+        "id": "ing_18edcafed03f",
+        "type": "Ingredient",
+        "description": "CHEESE CHEDDAR YELLOW MILD AP SHREDDED FEATHER"
+      },
+      {
+        "id": "ing_1915bdf6ba7c",
+        "type": "Ingredient",
+        "description": "ROLL BUN HAMBURGER WHITE 1.8 OZ (LOCAL BAKERY)"
+      },
+      {
+        "id": "ing_1af9d1a97035",
+        "type": "Ingredient",
+        "description": "BASE BEEF FLAVORED (VEGAN)"
+      },
+      {
+        "id": "ing_1bb6952a9682",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED CORN BABY WHOLE - DRAINED"
+      },
+      {
+        "id": "ing_2270ae65691e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER RED BELL - SEEDED, SLICED / RAW"
+      },
+      {
+        "id": "ing_265aa74a8780",
+        "type": "Ingredient",
+        "description": "PASTA DRY ELBOW MACARONI WG (SYSCO) / COOKED"
+      },
+      {
+        "id": "ing_270648683d53",
+        "type": "Ingredient",
+        "description": "EGG SHELL MEDIUM - SHELLED / COOKED"
+      },
+      {
+        "id": "ing_2817867c3f16",
+        "type": "Ingredient",
+        "description": "NUT COCONUT SWEETENED FLAKED"
+      },
+      {
+        "id": "ing_2a95aba9c4da",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE GREEN LEAF HEADS - CORED, CUT / RAW"
+      },
+      {
+        "id": "ing_2add2964642f",
+        "type": "Ingredient",
+        "description": "WATER"
+      },
+      {
+        "id": "ing_2ca73790fda2",
+        "type": "Ingredient",
+        "description": "VEGETABLE DRIED POTATO SLICES"
+      },
+      {
+        "id": "ing_2f60045161c2",
+        "type": "Ingredient",
+        "description": "YOGURT BULK NON FAT VANILLA"
+      },
+      {
+        "id": "ing_2f86e9cb6504",
+        "type": "Ingredient",
+        "description": "DELI TURKEY DARK CURED - DICED"
+      },
+      {
+        "id": "ing_30098ad6c00c",
+        "type": "Ingredient",
+        "description": "FRUIT FRESH BANANA - PEELED, SLICED / RAW"
+      },
+      {
+        "id": "ing_31081ff911e5",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO WHITE/YELLOW CHEF - SLICED / COOKED"
+      },
+      {
+        "id": "ing_3217712707ab",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CELERY - TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_33a0383a9e1c",
+        "type": "Ingredient",
+        "description": "FRUIT DRIED RAISIN SEEDLESS / COOKED"
+      },
+      {
+        "id": "ing_368a159675ab",
+        "type": "Ingredient",
+        "description": "TORTILLA FLOUR 6\" (MISSION)"
+      },
+      {
+        "id": "ing_3719c80c1d80",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING FRENCH CALIFORNIA FF"
+      },
+      {
+        "id": "ing_375e0d577e06",
+        "type": "Ingredient",
+        "description": "SUGAR GRANULATED EXTRA FINE"
+      },
+      {
+        "id": "ing_38db8b1ec337",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING BALSAMIC VINAIGRETTE"
+      },
+      {
+        "id": "ing_392ad3af9dba",
+        "type": "Ingredient",
+        "description": "HONEY BULK"
+      },
+      {
+        "id": "ing_3941e15f7df4",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ROMAINE - CUT / RAW"
+      },
+      {
+        "id": "ing_41a1533f1afa",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CUCUMBER - SLICED / RAW"
+      },
+      {
+        "id": "ing_434eb3e8bceb",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, SLICED / RAW"
+      },
+      {
+        "id": "ing_45fab5e96352",
+        "type": "Ingredient",
+        "description": "CRACKER BULK GOLDFISH CHEESE"
+      },
+      {
+        "id": "ing_48276b530c44",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN PEACH DICED IQF"
+      },
+      {
+        "id": "ing_490bb3eee4eb",
+        "type": "Ingredient",
+        "description": "FRUIT DRIED CRANBERRY"
+      },
+      {
+        "id": "ing_525891faa5dc",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ ONION DICED / COOKED"
+      },
+      {
+        "id": "ing_529de98e2e72",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN MANGO CHUNKS IQF - THAWED"
+      },
+      {
+        "id": "ing_53f8bbeb07b7",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN PINEAPPLE CHUNKS IQF - THAWED"
+      },
+      {
+        "id": "ing_5423ba8174e6",
+        "type": "Ingredient",
+        "description": "VINEGAR WHITE"
+      },
+      {
+        "id": "ing_58f9033ee30e",
+        "type": "Ingredient",
+        "description": "MUFFIN ENGLISH 2 OZ FZ"
+      },
+      {
+        "id": "ing_65234858f189",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN STRAWBERRY WHOLE IQF"
+      },
+      {
+        "id": "ing_65d5108f009a",
+        "type": "Ingredient",
+        "description": "SPICE NUTMEG GROUND"
+      },
+      {
+        "id": "ing_6a9248bfbaba",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING CAESAR CREAMY BULK"
+      },
+      {
+        "id": "ing_6af193d1f58b",
+        "type": "Ingredient",
+        "description": "FLOUR ALL PURPOSE"
+      },
+      {
+        "id": "ing_6c425dd57a32",
+        "type": "Ingredient",
+        "description": "BEEF/POULTRY PATTY CHARBROIL 4 OZ CKD FZ"
+      },
+      {
+        "id": "ing_6c4306538a00",
+        "type": "Ingredient",
+        "description": "KETCHUP BULK"
+      },
+      {
+        "id": "ing_6eb0207d6694",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN MIXED BERRIES WHOLE IQF - THAWED"
+      },
+      {
+        "id": "ing_6effd6524a72",
+        "type": "Ingredient",
+        "description": "YOGURT BULK NON FAT STRAWBERRY"
+      },
+      {
+        "id": "ing_703201f120f5",
+        "type": "Ingredient",
+        "description": "BAKING SODA"
+      },
+      {
+        "id": "ing_710ed3288d67",
+        "type": "Ingredient",
+        "description": "HERB DRIED SAGE RUBBED"
+      },
+      {
+        "id": "ing_71963f82bfb3",
+        "type": "Ingredient",
+        "description": "EGG SHELL MEDIUM / COOKED / REFUSE SHELL"
+      },
+      {
+        "id": "ing_733b65489d20",
+        "type": "Ingredient",
+        "description": "CHEESE AMERICAN YELLOW OR WHITE AP SLICES 0.5 OZ"
+      },
+      {
+        "id": "ing_73a0f852e8a2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH GINGER ROOT - PEELED, MINCED / RAW"
+      },
+      {
+        "id": "ing_7686af97b917",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER BLACK GROUND IMITATION"
+      },
+      {
+        "id": "ing_76b45087d4a2",
+        "type": "Ingredient",
+        "description": "MILK OAT PLAIN BARISTA BLEND 32 OZ"
+      },
+      {
+        "id": "ing_7b262af4c8c1",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ PEPPER CUT / COOKED"
+      },
+      {
+        "id": "ing_7b5f515218fc",
+        "type": "Ingredient",
+        "description": "ENTREE (SV): BEEF POT ROAST MEAL PASSOVER"
+      },
+      {
+        "id": "ing_80d2b87f8189",
+        "type": "Ingredient",
+        "description": "BREAD LOAF 51% WG 24 SLICE 24 OZ FZ (SYSCO) - THAWED, ENDS REMOVED"
+      },
+      {
+        "id": "ing_81f72968c4de",
+        "type": "Ingredient",
+        "description": "PEANUT BUTTER BULK UNSALTED"
+      },
+      {
+        "id": "ing_82983adc5221",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO - CORED, SLICED / RAW"
+      },
+      {
+        "id": "ing_850d39f35d6d",
+        "type": "Ingredient",
+        "description": "CEREAL OATS OLD FASHIONED / COOKED"
+      },
+      {
+        "id": "ing_8b2f667417d1",
+        "type": "Ingredient",
+        "description": "PASTA DRY ROTINI / COOKED"
+      },
+      {
+        "id": "ing_8bcb55d6e5e7",
+        "type": "Ingredient",
+        "description": "CROUTONS HOMESTYLE SEASONED"
+      },
+      {
+        "id": "ing_8e5f1d6027af",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH MUSHROOM - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_927435b8396d",
+        "type": "Ingredient",
+        "description": "YOGURT BULK GREEK NONFAT PLAIN"
+      },
+      {
+        "id": "ing_972abb591446",
+        "type": "Ingredient",
+        "description": "JUICE APPLE BULK"
+      },
+      {
+        "id": "ing_9813ffdc9b48",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING BULK ITALIAN LITE"
+      },
+      {
+        "id": "ing_98425ace8284",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT - TRIMMED, SHREDDED / RAW"
+      },
+      {
+        "id": "ing_9929f4cb4b31",
+        "type": "Ingredient",
+        "description": "EXTRACT VANILLA IMITATION FLAVOR"
+      },
+      {
+        "id": "ing_9b6dcffd69db",
+        "type": "Ingredient",
+        "description": "JUICE BULK PINEAPPLE"
+      },
+      {
+        "id": "ing_9c55398007fe",
+        "type": "Ingredient",
+        "description": "SUGAR BROWN"
+      },
+      {
+        "id": "ing_a0af14ec9c3b",
+        "type": "Ingredient",
+        "description": "MARGARINE BULK UNSALTED (VEGAN)"
+      },
+      {
+        "id": "ing_a0b62cd38d75",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SPINACH BABY / RAW"
+      },
+      {
+        "id": "ing_a43f45c6ad4f",
+        "type": "Ingredient",
+        "description": "MILK SOY UNSWEETEND SHELF STABLE"
+      },
+      {
+        "id": "ing_a6a6a0d22507",
+        "type": "Ingredient",
+        "description": "SPICE TURMERIC GROUND"
+      },
+      {
+        "id": "ing_a9d5e1836dca",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN - CORED, SEEDED, DICED / COOKED"
+      },
+      {
+        "id": "ing_aa3aaf396964",
+        "type": "Ingredient",
+        "description": "EGG SCRAMBLED MIX FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_aaa5b1ae30e7",
+        "type": "Ingredient",
+        "description": "SAUCE WORCESTERSHIRE"
+      },
+      {
+        "id": "ing_ad5eea823d5a",
+        "type": "Ingredient",
+        "description": "DELI PORK HAM BUFFET STYLE - SLICED"
+      },
+      {
+        "id": "ing_addebf849224",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO GRAPE / RAW"
+      },
+      {
+        "id": "ing_ae0ddbc04280",
+        "type": "Ingredient",
+        "description": "SHORTENING VEGETABLE"
+      },
+      {
+        "id": "ing_b12cf4c24581",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / RAW"
+      },
+      {
+        "id": "ing_b37fa2d8615e",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN PINEAPPLE CHUNKS IQF - THAWED, PUREED"
+      },
+      {
+        "id": "ing_ba53a9bb0e5e",
+        "type": "Ingredient",
+        "description": "OIL BLEND VEGETABLE 90 / EVO 10"
+      },
+      {
+        "id": "ing_bb3862183373",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ CELERY DICED / COOKED"
+      },
+      {
+        "id": "ing_bdcd6c65c753",
+        "type": "Ingredient",
+        "description": "MILK ALMOND ESL REFRIGERATED"
+      },
+      {
+        "id": "ing_bfad64c3b4d8",
+        "type": "Ingredient",
+        "description": "BEEF/POULTRY PATTY CHARBROIL 3 OZ CKD FZ"
+      },
+      {
+        "id": "ing_c1f4b4007a7c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ BLEND IRISH - THAWED"
+      },
+      {
+        "id": "ing_c32a93666ca7",
+        "type": "Ingredient",
+        "description": "FRUIT CANNED PINEAPPLE TIDBITS IN NATURAL JUICE - DRAINED"
+      },
+      {
+        "id": "ing_c730b141c89b",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH MUSHROOM AP SLICED / RAW"
+      },
+      {
+        "id": "ing_c7c7f1c923f0",
+        "type": "Ingredient",
+        "description": "TORTILLA FLOUR 6\""
+      },
+      {
+        "id": "ing_ca5983e01745",
+        "type": "Ingredient",
+        "description": "SPICE CINNAMON GROUND"
+      },
+      {
+        "id": "ing_cb49da422cce",
+        "type": "Ingredient",
+        "description": "CEREAL OATS ROLLED"
+      },
+      {
+        "id": "ing_ce78812c67f8",
+        "type": "Ingredient",
+        "description": "SEASONING POULTRY (SYSCO)"
+      },
+      {
+        "id": "ing_ce99c843f2d8",
+        "type": "Ingredient",
+        "description": "ICE CUBES"
+      },
+      {
+        "id": "ing_d47139244f08",
+        "type": "Ingredient",
+        "description": "EGG AP HARD COOKED WHL PEELED IN BRINE CAGE FREE - DRAINED, DICED"
+      },
+      {
+        "id": "ing_dc3a036e8622",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED BEAN KIDNEY DARK RED LS - RINSED, DRAINED"
+      },
+      {
+        "id": "ing_de07faceff0f",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING ITALIAN LITE"
+      },
+      {
+        "id": "ing_e7ed58fb1b57",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH GINGER ROOT - PEELED, CUT / RAW"
+      },
+      {
+        "id": "ing_ed27c28e9802",
+        "type": "Ingredient",
+        "description": "FRUIT FRESH GRAPE RED SEEDLESS - STEMS REMOVED / RAW"
+      },
+      {
+        "id": "ing_ee9bfe95e255",
+        "type": "Ingredient",
+        "description": "CHEESE CHEDDAR AP SHREDS"
+      },
+      {
+        "id": "ing_eecd521ea0b7",
+        "type": "Ingredient",
+        "description": "BREAD LOAF WHOLE WHEAT 1 OZ SLICE (LOCAL BAKERY) - DRIED, CUBED"
+      },
+      {
+        "id": "ing_f00ba6e1ec54",
+        "type": "Ingredient",
+        "description": "SAUCE MIX CHEESE"
+      },
+      {
+        "id": "ing_f0ed53e038df",
+        "type": "Ingredient",
+        "description": "FRUIT FROZEN BLUEBERRY IQF"
+      },
+      {
+        "id": "ing_f1ffca669447",
+        "type": "Ingredient",
+        "description": "BISCUIT DOUGH SOUTHERN 2.2 OZ FZ / COOKED"
+      },
+      {
+        "id": "ing_f280125bc63b",
+        "type": "Ingredient",
+        "description": "FRUIT FRESH PINEAPPLE - PEELED, CORED, DICED / RAW"
+      },
+      {
+        "id": "ing_f93c1329f3b9",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED BEET RED SLICED MEDIUM - DRAINED"
+      },
+      {
+        "id": "ing_fa5a13dee83e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH GINGER ROOT - PEELED, GRATED / RAW"
+      },
+      {
+        "id": "ing_fe3a9108723b",
+        "type": "Ingredient",
+        "description": "HONEY PURE BULK"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_12a067629a37"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_30098ad6c00c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_392ad3af9dba"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_53f8bbeb07b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_65d5108f009a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_73a0f852e8a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_76b45087d4a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_972abb591446"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A9711",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ca5983e01745"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_30098ad6c00c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_392ad3af9dba"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_76b45087d4a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_850d39f35d6d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b12cf4c24581"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ca5983e01745"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L295985",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e7ed58fb1b57"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_48276b530c44"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_76b45087d4a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329236",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f0ed53e038df"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_529de98e2e72"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_53f8bbeb07b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9b6dcffd69db"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L329238",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_41a1533f1afa"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6eb0207d6694"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_972abb591446"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L333192",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_17b99860a8e6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0b62cd38d75"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a43f45c6ad4f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a6a6a0d22507"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b37fa2d8615e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L386167",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fa5a13dee83e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2f60045161c2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_30098ad6c00c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_65234858f189"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_972abb591446"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12320",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12882",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f93c1329f3b9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2f60045161c2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_368a159675ab"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6c4306538a00"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_733b65489d20"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13844",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c7c7f1c923f0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6effd6524a72"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_aa3aaf396964"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ee9bfe95e255"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13850",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f1ffca669447"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_11b3b4a61123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3217712707ab"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_525891faa5dc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_710ed3288d67"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bb3862183373"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce78812c67f8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14258",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eecd521ea0b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14287",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_490bb3eee4eb"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14290",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0fdfed2af169"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14336",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_addebf849224"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_265aa74a8780"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9813ffdc9b48"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c1f4b4007a7c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14342",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f280125bc63b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14363",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d47139244f08"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14536",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dc3a036e8622"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1bb6952a9682"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14548",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7b5f515218fc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1915bdf6ba7c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_41a1533f1afa"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6c425dd57a32"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_733b65489d20"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14571",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bfad64c3b4d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14638",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ed27c28e9802"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2270ae65691e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_434eb3e8bceb"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_58f9033ee30e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_733b65489d20"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14870",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ad5eea823d5a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_270648683d53"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5423ba8174e6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6af193d1f58b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_703201f120f5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_81f72968c4de"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9929f4cb4b31"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c55398007fe"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0af14ec9c3b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ae0ddbc04280"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_cb49da422cce"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14885",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fe3a9108723b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_16ced41bbc44"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2a95aba9c4da"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_80d2b87f8189"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_82983adc5221"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_047eb7a03f2b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14894",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_71963f82bfb3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14899",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_45fab5e96352"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_02219666ff12"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0c1544110c8d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_11b3b4a61123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1af9d1a97035"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_33a0383a9e1c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_525891faa5dc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6af193d1f58b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8b2f667417d1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15668",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0af14ec9c3b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19242",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_de07faceff0f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19735",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_38db8b1ec337"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20082",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20083",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6a9248bfbaba"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20084",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3719c80c1d80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20114",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0b62cd38d75"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20121",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2f60045161c2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_30098ad6c00c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_972abb591446"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M214",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f0ed53e038df"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21491",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_927435b8396d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21621",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2817867c3f16"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2f60045161c2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_30098ad6c00c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_972abb591446"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c32a93666ca7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M287",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0fde8d1bda1e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_529de98e2e72"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b37fa2d8615e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bdcd6c65c753"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M35251",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ce99c843f2d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8e5f1d6027af"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6557",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c730b141c89b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6570",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3941e15f7df4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_98425ace8284"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6578",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b12cf4c24581"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Salad Bar"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0969ba3f0f3c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_11b3b4a61123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2ca73790fda2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2f86e9cb6504"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_31081ff911e5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_525891faa5dc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6af193d1f58b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7b262af4c8c1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8bcb55d6e5e7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0af14ec9c3b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a9d5e1836dca"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_aaa5b1ae30e7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6847",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f00ba6e1ec54"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Station",
+      "from_id": "station_Salad Bar",
+      "predicate": "HAS_WEEK",
+      "to_type": "Week",
+      "to_id": "week_3"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Friday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Monday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Sunday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Thursday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Tuesday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Wednesday"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "meta": {
+    "source_file": "salad_bar_station_only.xlsx",
+    "station_name": "Salad Bar",
+    "warnings_count": 0,
+    "validation_issues_count": 0
+  }
+}

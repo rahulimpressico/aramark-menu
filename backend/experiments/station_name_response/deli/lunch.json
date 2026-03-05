@@ -1,0 +1,676 @@
+{
+  "station_name": "Deli",
+  "meal_period": "Lunch",
+  "content": "## Deli Station — Lunch Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 7 on at least one day (15 distinct in period) — **Lemon Orzo Soup**, **Newcomb Grilled Chicken Parmesan Sandwich**, **Ranch Potato Chips**, **Jalapeno Peppers**, **Banana Peppers**, **Black Bean Soup**, **Mushroom Barley Soup**, **Chipotle Chicken Tortilla Soup**, **Chicken Gumbo with Brown Rice**, **Chicken Noodle Soup**, **New England Clam Chowder**, **Tomato Basil Soup**, **Moroccan Chickpea Soup**, **Chimichurri Potato Salad**, **Pickled Red Onion**\n- Gap: Exceeded by 5 (got 7, max 2)\n\n**VEGAN**\n- What the menu is doing: 0 offered — none\n- Gap: Short by 1 (got 0, min 1)\n\n**FRIES**\n- What the menu is doing: 0 offered — none\n- Gap: Short by 1 (got 0, min 1)\n\n**PLANT-BASED**\n- What the menu is doing: 5.3% plant-based — **Black Bean Soup**\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 38.7% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 1.0 (14 unique entrees / 14 scheduled slots)\n- No high-repetition items. Good rotation.\n\n### Plant-Based\n- Current: 5.3% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 38.7% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Reduce **Daily Feature** from 7 to the maximum allowed — Playbook rule: \"Daily Feature: max 2 per day. Must rotate daily.\"\n2. Add at least one **Vegan** item — Playbook rule: \"Vegan: min 1 per day.\"\n3. Add at least one **Fries** item — Playbook rule: \"Fries: min 1 per day.\"\n4. Increase plant-based offerings from 5.3% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"",
+  "analysis_json": {
+    "station_name": "Deli",
+    "meal_period": "Lunch",
+    "playbook_check": {
+      "meal_period": "Lunch",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 7,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Lemon Orzo Soup",
+            "Newcomb Grilled Chicken Parmesan Sandwich",
+            "Ranch Potato Chips",
+            "Jalapeno Peppers",
+            "Banana Peppers",
+            "Black Bean Soup",
+            "Mushroom Barley Soup",
+            "Chipotle Chicken Tortilla Soup",
+            "Chicken Gumbo with Brown Rice",
+            "Chicken Noodle Soup",
+            "New England Clam Chowder",
+            "Tomato Basil Soup",
+            "Moroccan Chickpea Soup",
+            "Chimichurri Potato Salad",
+            "Pickled Red Onion"
+          ]
+        },
+        "vegan": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        }
+      },
+      "violations": [
+        "Too many daily features (max on a day: 7, limit 2)",
+        "Missing vegan option (minimum observed per day: 0)",
+        "Missing fries option (minimum observed per day: 0)"
+      ],
+      "sides": {
+        "count": 4,
+        "recipes": [
+          "Iceberg Lettuce",
+          "Sliced Tomatoes",
+          "Dill Pickle Spears",
+          "Spinach Artichoke Panini"
+        ]
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 1.0,
+        "unique_entree_count": 14,
+        "repeated_static_count": 0,
+        "entree_slots": 14,
+        "total_slots": 19,
+        "side_count": 5,
+        "message": "Good entree variety; low monotony risk.",
+        "entree_serve_counts": {
+          "Lemon Orzo Soup": 1,
+          "Newcomb Grilled Chicken Parmesan Sandwich": 1,
+          "Jalapeno Peppers": 1,
+          "Banana Peppers": 1,
+          "Black Bean Soup": 1,
+          "Mushroom Barley Soup": 1,
+          "Chipotle Chicken Tortilla Soup": 1,
+          "Chicken Gumbo with Brown Rice": 1,
+          "Chicken Noodle Soup": 1,
+          "New England Clam Chowder": 1,
+          "Tomato Basil Soup": 1,
+          "Moroccan Chickpea Soup": 1,
+          "Chimichurri Potato Salad": 1,
+          "Pickled Red Onion": 1
+        },
+        "side_recipes": [
+          "Dill Pickle Spears",
+          "Iceberg Lettuce",
+          "Ranch Potato Chips",
+          "Sliced Tomatoes",
+          "Spinach Artichoke Panini"
+        ]
+      },
+      "item_frequency": {
+        "total_recipes": 19,
+        "recurrence_signals": [],
+        "message": "No high-repetition items (threshold: 4 days). Good rotation.",
+        "frequencies": [
+          {
+            "recipe_id": "M14553",
+            "recipe_name": "Banana Peppers",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M34433",
+            "recipe_name": "Black Bean Soup",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M34466",
+            "recipe_name": "Chicken Gumbo with Brown Rice",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M34469",
+            "recipe_name": "Chicken Noodle Soup",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M40959",
+            "recipe_name": "Chimichurri Potato Salad",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M34461",
+            "recipe_name": "Chipotle Chicken Tortilla Soup",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M14344",
+            "recipe_name": "Dill Pickle Spears",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M13463",
+            "recipe_name": "Iceberg Lettuce",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M14530",
+            "recipe_name": "Jalapeno Peppers",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "A2605",
+            "recipe_name": "Lemon Orzo Soup",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M40808",
+            "recipe_name": "Moroccan Chickpea Soup",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M34450",
+            "recipe_name": "Mushroom Barley Soup",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M34477",
+            "recipe_name": "New England Clam Chowder",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "L382351",
+            "recipe_name": "Newcomb Grilled Chicken Parmesan Sandwich",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M5794",
+            "recipe_name": "Pickled Red Onion",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M10461",
+            "recipe_name": "Ranch Potato Chips",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M13541",
+            "recipe_name": "Sliced Tomatoes",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M41095",
+            "recipe_name": "Spinach Artichoke Panini",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M40029",
+            "recipe_name": "Tomato Basil Soup",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 5.3,
+        "vegan_percent": 5.3,
+        "compliant_44": false,
+        "total_offerings": 19,
+        "plant_based_count": 1,
+        "message": "5.3% plant-based — 38.7% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": [
+          "Black Bean Soup"
+        ]
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 0,
+        "alt_slots": 5,
+        "beef_recipes": [],
+        "alt_recipes": [
+          "Black Bean Soup",
+          "Chicken Gumbo with Brown Rice",
+          "Chicken Noodle Soup",
+          "Chipotle Chicken Tortilla Soup",
+          "Newcomb Grilled Chicken Parmesan Sandwich"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=5; CPM risk level=LOW."
+      }
+    }
+  },
+  "analysis": {
+    "station_name": "Deli",
+    "meal_period": "Lunch",
+    "recipe_count": 19,
+    "cost_stats": {
+      "min": 0.0309,
+      "max": 2.7374,
+      "mean": 0.9024,
+      "median": 0.4775,
+      "total": 17.1454
+    },
+    "top_expensive": [
+      {
+        "id": "M14553",
+        "name": "Banana Peppers",
+        "food_cost": 2.7374
+      },
+      {
+        "id": "M13463",
+        "name": "Iceberg Lettuce",
+        "food_cost": 2.3283
+      },
+      {
+        "id": "M14530",
+        "name": "Jalapeno Peppers",
+        "food_cost": 2.3166
+      },
+      {
+        "id": "M5794",
+        "name": "Pickled Red Onion",
+        "food_cost": 1.9041
+      },
+      {
+        "id": "M13541",
+        "name": "Sliced Tomatoes",
+        "food_cost": 1.6152
+      }
+    ],
+    "top_affordable": [
+      {
+        "id": "M14344",
+        "name": "Dill Pickle Spears",
+        "food_cost": 0.0309
+      },
+      {
+        "id": "M10461",
+        "name": "Ranch Potato Chips",
+        "food_cost": 0.245
+      },
+      {
+        "id": "M40959",
+        "name": "Chimichurri Potato Salad",
+        "food_cost": 0.2457
+      },
+      {
+        "id": "M34450",
+        "name": "Mushroom Barley Soup",
+        "food_cost": 0.2813
+      },
+      {
+        "id": "M34469",
+        "name": "Chicken Noodle Soup",
+        "food_cost": 0.3462
+      }
+    ],
+    "unique_ingredients": 92,
+    "top_ingredients": [
+      {
+        "name": "water",
+        "count": 10
+      },
+      {
+        "name": "salt",
+        "count": 10
+      },
+      {
+        "name": "black grind pepper spice table",
+        "count": 9
+      },
+      {
+        "name": "onion vegetable yellow",
+        "count": 8
+      },
+      {
+        "name": "onion trimmed vegetable yellow",
+        "count": 8
+      },
+      {
+        "name": "bay dried herb leave whole",
+        "count": 7
+      },
+      {
+        "name": "celery vegetable",
+        "count": 7
+      },
+      {
+        "name": "celery trimmed vegetable",
+        "count": 7
+      },
+      {
+        "name": "canned chopped garlic vegetable water",
+        "count": 6
+      },
+      {
+        "name": "clove garlic minced peeled vegetable whole",
+        "count": 6
+      }
+    ],
+    "ing_count_stats": {
+      "min": 1,
+      "max": 25,
+      "mean": 10.9
+    },
+    "most_ingredients_recipes": [
+      {
+        "name": "Moroccan Chickpea Soup",
+        "count": 25
+      },
+      {
+        "name": "Chicken Gumbo with Brown Rice",
+        "count": 22
+      },
+      {
+        "name": "Lemon Orzo Soup",
+        "count": 18
+      },
+      {
+        "name": "Black Bean Soup",
+        "count": 18
+      },
+      {
+        "name": "New England Clam Chowder",
+        "count": 18
+      }
+    ],
+    "equipment": [
+      "fryer",
+      "grill",
+      "panini_press",
+      "steam_table",
+      "stockpot"
+    ],
+    "equipment_by_recipe": {
+      "Lemon Orzo Soup": [
+        "stockpot"
+      ],
+      "Newcomb Grilled Chicken Parmesan Sandwich": [
+        "grill"
+      ],
+      "Ranch Potato Chips": [
+        "fryer"
+      ],
+      "Black Bean Soup": [
+        "stockpot"
+      ],
+      "Mushroom Barley Soup": [
+        "stockpot"
+      ],
+      "Chipotle Chicken Tortilla Soup": [
+        "stockpot"
+      ],
+      "Chicken Gumbo with Brown Rice": [
+        "stockpot"
+      ],
+      "Chicken Noodle Soup": [
+        "stockpot"
+      ],
+      "New England Clam Chowder": [
+        "stockpot"
+      ],
+      "Moroccan Chickpea Soup": [
+        "stockpot"
+      ],
+      "Chimichurri Potato Salad": [
+        "steam_table"
+      ],
+      "Spinach Artichoke Panini": [
+        "panini_press"
+      ]
+    },
+    "schedule": {
+      "Monday": [
+        "Chicken Noodle Soup",
+        "Mushroom Barley Soup"
+      ],
+      "Tuesday": [
+        "Black Bean Soup",
+        "Chipotle Chicken Tortilla Soup"
+      ],
+      "Wednesday": [
+        "Chicken Gumbo with Brown Rice",
+        "Moroccan Chickpea Soup"
+      ],
+      "Thursday": [
+        "Lemon Orzo Soup",
+        "Tomato Basil Soup"
+      ],
+      "Friday": [
+        "Banana Peppers",
+        "Chimichurri Potato Salad",
+        "Dill Pickle Spears",
+        "Iceberg Lettuce",
+        "Jalapeno Peppers",
+        "New England Clam Chowder",
+        "Newcomb Grilled Chicken Parmesan Sandwich",
+        "Pickled Red Onion",
+        "Ranch Potato Chips",
+        "Sliced Tomatoes",
+        "Spinach Artichoke Panini"
+      ]
+    },
+    "all_recipes": [
+      {
+        "id": "M14553",
+        "name": "Banana Peppers",
+        "food_cost": 2.7374,
+        "ing_count": 10,
+        "equipment": []
+      },
+      {
+        "id": "M13463",
+        "name": "Iceberg Lettuce",
+        "food_cost": 2.3283,
+        "ing_count": 2,
+        "equipment": []
+      },
+      {
+        "id": "M14530",
+        "name": "Jalapeno Peppers",
+        "food_cost": 2.3166,
+        "ing_count": 8,
+        "equipment": []
+      },
+      {
+        "id": "M5794",
+        "name": "Pickled Red Onion",
+        "food_cost": 1.9041,
+        "ing_count": 6,
+        "equipment": []
+      },
+      {
+        "id": "M13541",
+        "name": "Sliced Tomatoes",
+        "food_cost": 1.6152,
+        "ing_count": 8,
+        "equipment": []
+      },
+      {
+        "id": "L382351",
+        "name": "Newcomb Grilled Chicken Parmesan Sandwich",
+        "food_cost": 0.9572,
+        "ing_count": 5,
+        "equipment": [
+          "grill"
+        ]
+      },
+      {
+        "id": "M40029",
+        "name": "Tomato Basil Soup",
+        "food_cost": 0.8041,
+        "ing_count": 1,
+        "equipment": []
+      },
+      {
+        "id": "M34477",
+        "name": "New England Clam Chowder",
+        "food_cost": 0.6609,
+        "ing_count": 18,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M41095",
+        "name": "Spinach Artichoke Panini",
+        "food_cost": 0.6009,
+        "ing_count": 3,
+        "equipment": [
+          "panini_press"
+        ]
+      },
+      {
+        "id": "M34433",
+        "name": "Black Bean Soup",
+        "food_cost": 0.4775,
+        "ing_count": 18,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M34466",
+        "name": "Chicken Gumbo with Brown Rice",
+        "food_cost": 0.4405,
+        "ing_count": 22,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "A2605",
+        "name": "Lemon Orzo Soup",
+        "food_cost": 0.408,
+        "ing_count": 18,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M40808",
+        "name": "Moroccan Chickpea Soup",
+        "food_cost": 0.3889,
+        "ing_count": 25,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M34461",
+        "name": "Chipotle Chicken Tortilla Soup",
+        "food_cost": 0.3567,
+        "ing_count": 17,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M34469",
+        "name": "Chicken Noodle Soup",
+        "food_cost": 0.3462,
+        "ing_count": 16,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M34450",
+        "name": "Mushroom Barley Soup",
+        "food_cost": 0.2813,
+        "ing_count": 17,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M40959",
+        "name": "Chimichurri Potato Salad",
+        "food_cost": 0.2457,
+        "ing_count": 1,
+        "equipment": [
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M10461",
+        "name": "Ranch Potato Chips",
+        "food_cost": 0.245,
+        "ing_count": 4,
+        "equipment": [
+          "fryer"
+        ]
+      },
+      {
+        "id": "M14344",
+        "name": "Dill Pickle Spears",
+        "food_cost": 0.0309,
+        "ing_count": 8,
+        "equipment": []
+      }
+    ]
+  },
+  "generated_at": "2026-03-05T04:57:42.006706+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

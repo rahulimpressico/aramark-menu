@@ -199,11 +199,12 @@ def _build_prompt(state: dict[str, Any]) -> str:
     pct      = sustain.get("plant_based_percent", 0)
     gap      = round(44 - pct, 1)
     cpm_recs = cpm.get("recommendations", [])
+    station_name = aggregated_state.get("station_name") or pb.get("station_name") or "Station"
 
     prompt = f"""\
 === ANALYSIS DATA ===
 
-STATION: Grill (Fresh & Fast)
+STATION: {station_name}
 MEAL PERIOD: {meal_period}
 OVERALL STATUS: {pb_status}
 
@@ -305,14 +306,14 @@ def _fallback_report(state: dict[str, Any]) -> str:
 
     meal_period = pb.get("meal_period", "Unknown")
     pb_status   = pb.get("status",      "UNKNOWN")
+    station_name = state.get("station_name") or pb.get("station_name") or "Station"
     categories  = pb.get("categories",  {})
-    violations  = pb.get("violations",  [])
     div_data    = rr.get("diversity_index", {})
     freq_data   = rr.get("item_frequency",  {})
     sustain     = nc.get("sustainability_mix", {})
 
     lines: list[str] = []
-    lines.append(f"## Grill Station — {meal_period} Playbook Review")
+    lines.append(f"## {station_name} Station — {meal_period} Playbook Review")
     lines.append(f"**Status:** {pb_status}")
     lines.append("")
     lines.append("---")
@@ -330,10 +331,18 @@ def _fallback_report(state: dict[str, Any]) -> str:
         rule    = meta.get("playbook_rule", "")
         recipes = meta.get("recipes", [])
         names   = ", ".join(f"**{r}**" for r in recipes) if recipes else "none"
-        viol    = violations[0] if violations else f"{count} offered, rule is {rule}"
+        parts = rule.split()
+        rule_kind = parts[0].lower() if parts else ""
+        rule_limit = int(parts[1]) if len(parts) > 1 and str(parts[1]).isdigit() else None
+        if rule_kind == "max" and rule_limit is not None:
+            viol = f"Exceeded by {max(0, count - rule_limit)} (got {count}, max {rule_limit})"
+        elif rule_kind == "min" and rule_limit is not None:
+            viol = f"Short by {max(0, rule_limit - count)} (got {count}, min {rule_limit})"
+        else:
+            viol = f"{count} offered, rule is {rule}"
         lines.append(f"**{label}**")
-        lines.append(f"- What the menu is doing: {count} offered — {names}")
-        lines.append(f"- What the Playbook says: {rule.capitalize()} per day.")
+        menu_doing = f"{count} offered — {names}" if len(recipes) == count else f"{count} on at least one day ({len(recipes)} distinct in period) — {names}"
+        lines.append(f"- What the menu is doing: {menu_doing}")
         lines.append(f"- Gap: {viol}")
         lines.append("")
 

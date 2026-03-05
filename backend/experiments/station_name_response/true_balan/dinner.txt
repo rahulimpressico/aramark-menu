@@ -1,0 +1,39 @@
+## Grill Station — Dinner Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 8 offered — **Buffalo Chicken Grilled Cheese**, **Crispy Chicken BBQ Snacker**, **Creamy Tomato Basil Soup**, **Nacho Grilled Cheese**, **Classic Grilled Cheese**, **Grilled Ham & Cheese Sandwich**, **Crispy Chicken Sandwich**, **Grilled Herb Chicken Sandwich**
+- What the Playbook says: Max 2 per day.
+- Gap: Too many daily features (got 8, max 2)
+
+**PLANT-BASED**
+- What the menu is doing: 9.5% plant-based — **Grilled Black Bean Burger**
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 34.5% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 0.59 (10 unique entrees / 17 scheduled slots)
+- Playbook says daily features must rotate. Items appearing on 4+ days:
+    - **Crinkle French Fries**: 5 days (Monday, Tuesday, Wednesday, Thursday, Sunday)
+    - **Grilled Black Bean Burger**: 4 days (Monday, Tuesday, Thursday, Sunday)
+
+### Plant-Based
+- Current: 9.5% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 34.5% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 8 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Increase plant-based offerings from 9.5% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."
+3. Rotate **Crinkle French Fries**, **Grilled Black Bean Burger** — Playbook rule: "Daily Features must rotate daily. High repetition across multiple days signals poor rotation."

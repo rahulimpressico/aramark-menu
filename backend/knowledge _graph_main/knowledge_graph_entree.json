@@ -1,0 +1,5480 @@
+{
+  "entities": {
+    "Station": [
+      {
+        "id": "station_Entree",
+        "type": "Station",
+        "name": "Entree"
+      }
+    ],
+    "Week": [
+      {
+        "id": "week_3",
+        "type": "Week",
+        "week_no": 3
+      }
+    ],
+    "Day": [
+      {
+        "id": "day_Monday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 1,
+        "day_name": "Monday"
+      },
+      {
+        "id": "day_Tuesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 2,
+        "day_name": "Tuesday"
+      },
+      {
+        "id": "day_Wednesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 3,
+        "day_name": "Wednesday"
+      },
+      {
+        "id": "day_Thursday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 4,
+        "day_name": "Thursday"
+      },
+      {
+        "id": "day_Friday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 5,
+        "day_name": "Friday"
+      },
+      {
+        "id": "day_Sunday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 7,
+        "day_name": "Sunday"
+      }
+    ],
+    "MealPeriod": [
+      {
+        "id": "period_Breakfast",
+        "type": "MealPeriod",
+        "name": "Breakfast"
+      },
+      {
+        "id": "period_Brunch",
+        "type": "MealPeriod",
+        "name": "Brunch"
+      },
+      {
+        "id": "period_Dinner",
+        "type": "MealPeriod",
+        "name": "Dinner"
+      },
+      {
+        "id": "period_Lunch",
+        "type": "MealPeriod",
+        "name": "Lunch"
+      }
+    ],
+    "Recipe": [
+      {
+        "id": "A2679",
+        "type": "Recipe",
+        "name": "Cheesy Scrambled Eggs",
+        "food_cost": 0.5123,
+        "assembly_instructions": "FOR 24 SERVINGS: FLAT-TOP GRIDDLE / RANGE-TOP METHOD: 1. Preheat flat-top griddle to 350F. 2. Coat flat-top griddle or sauté pan(s) over medium heat with cooking spray. Add egg. Sprinkle cheese on top of eggs. 3. Cook, stirring occasionally, until eggs are set but still soft and the cheese has melted. 4. Cover. Keep hot for service or use as directed in recipe. FOR 6 SERVINGS: FLAT-TOP GRIDDLE / RANGE-TOP METHOD: 1. Preheat flat-top griddle to 350F. 2. Coat flat-top griddle or sauté pan(s) over medium heat with cooking spray. Add 2 cups egg (1# 2 ozw) Sprinkle 6-oz spoodle cheese on top of eggs. 3. Cook, stirring occasionally, until eggs are set but still soft and the cheese has melted. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "IDDSI Level 7 #30 scoop = 1 1/8 oz #24 scoop = 1 1/2 oz #20 scoop = 1 3/4 oz #16 scoop = 2 3/8 oz #12 scoop = 3 1/2 oz #10 scoop = 3 3/4 oz #8 scoop = 4 3/4 oz 1-oz spoodle = 1 1/8 oz 2-oz spoodle =2 3/8 oz 3-oz spoodle = 3 1/2 oz 4-oz spoodle = 4 5/8 oz 6-oz spoodle =7 oz 8-oz spoodle = 9 1/4 oz"
+      },
+      {
+        "id": "A352",
+        "type": "Recipe",
+        "name": "Jerk Chicken, Grits & Spicy Greens Bowl",
+        "food_cost": 1.5427,
+        "assembly_instructions": "FOR 1 SERVING: 1. In specified serving bowl, layer the following: #8 scoop Cheddar Grits (With back of scoop, make a well in center of Grits) 4-oz spoodle Spicy Greens 4-oz spoodle Jerk Chicken 1 tbl hot sauce, drizzled over the top of bowl 2. Serve immediately.",
+        "special_instructions": "Chef Spotlight recipe submitted by Chef David Leicht"
+      },
+      {
+        "id": "A4611",
+        "type": "Recipe",
+        "name": "Smoked Maple Sausage",
+        "food_cost": 0.5183,
+        "assembly_instructions": "OVEN METHOD 1. Preheat convection oven to 350 F. 2. On parchment-lined sheet pan(s), place sausage slices. 3. Bake until internal temperature reaches 140 F, 4 to 6 minutes. 4. Cover. Keep hot for service or use as directed in recipe. FLAT-TOP GRIDDLE METHOD 1. Preheat flat-top griddle to 350 F. 2. Cook sausage 2 minutes. Turn sausage over. Cook until internal temperature reaches 140 F, 2 to 3 minutes. 3. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "A5802",
+        "type": "Recipe",
+        "name": "Sausage Gravy",
+        "food_cost": 0.3089,
+        "assembly_instructions": "1. In stockpot over medium heat, bring gravy to a boil, 5 to 7 minutes. 2. Reduce heat. Simmer, stirring often, 5 minutes. 3. Cover. Keep hot for service."
+      },
+      {
+        "id": "L363496",
+        "type": "Recipe",
+        "name": "UVA Buffalo-Style Chicken Wings",
+        "food_cost": 1.9344,
+        "assembly_instructions": "1. Into 2-oz portion cups with lids, place 1 1/2 oz-ladle dressing. Keep chilled for service. 2. Preheat deep-fat fryer to 350 F. 3. Fry frozen wings until golden brown and internal temperature reaches 180 F and juices run clear, 8 to 10 minutes. Drain. 4. Combine wings and sauce. Toss to coat. FOR 1 SERVING: 1. On serving plate, place the following 5 coated wings 3 celery sticks 2 carrot sticks 1oz portion cup dressing 2. Serve immediately.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "L379779",
+        "type": "Recipe",
+        "name": "UVA Boneless Chicken Wings",
+        "food_cost": 0.8375,
+        "assembly_instructions": "Into portion cups, place 1 1/2 oz-ladle sauce. Cover. Keep chilled for service. Preheat deep-fat fryer to 350 F. Fry frozen chicken nuggets until golden brown and internal temperature reaches 165 F, 3-4 minutes. Drain. For one serving: On serving plate, place the following: 6 chicken nuggets tossed in the sauce of the guest's choice Serve immediately.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "L384137",
+        "type": "Recipe",
+        "name": "UVA Cajun Baked Chicken",
+        "food_cost": -0.944,
+        "assembly_instructions": "1. Preheat convection oven to 350 F. FOR FROZEN CHICKEN 1. Coat chicken with cooking spray. 2. Place chicken and seasoning in a bowl. Toss to coat. 3. On sheet pan(s), place frozen chicken skin side up in single layer. 4. Bake until internal temperature reaches 180 F and juices run clear, 35 to 40 minutes. 5. Cover. Keep hot for service or use as directed in recipe. FOR THAWED CHICKEN: 1. Place chicken and seasoning in a bowl. Toss to coat. 2. On sheet pan(s), place chicken skin side up in single layer. 3. Bake until internal temperature reaches 180 F and juices run clear, 25 to 30 minutes. 4. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "L392119",
+        "type": "Recipe",
+        "name": "Newcomb Egg & Cheese Croissant",
+        "food_cost": 1.1822,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following on bottom half of 1 croissant: 1 Fried Egg 1 slice cheese Top half of croissant 2. Cover. Keep hot for service."
+      },
+      {
+        "id": "M10175",
+        "type": "Recipe",
+        "name": "Seasoned Steamed Green Beans",
+        "food_cost": 0.5771,
+        "assembly_instructions": "1. Preheat steamer. 2. In 2\" perforated steam table pan(s), steam frozen beans until tender-crisp, 3 to 4 minutes. Drain. 3. Combine green beans and seasoning. Toss to mix. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M10187",
+        "type": "Recipe",
+        "name": "Zucchini & Tomatoes",
+        "food_cost": 0.3518,
+        "assembly_instructions": "1. Drain tomatoes, reserving liquid. 2. In stockpot over medium-high heat, heat oil. Add onion and pepper. Saute until tender-crisp, 2 to 3 minutes. 3. Combine reserved liquid, cornstarch and sugar. Whisk until well blended. Add to vegetable mixture. Cook, whisking constantly, until mixture thickens and boils, 2 to 3 minutes. 4. Add tomato and zucchini. Return to boil. Reduce heat. Simmer until zucchini is tender-crisp, 3 to 4 minutes. 5. Cover. Keep hot for service."
+      },
+      {
+        "id": "M10503",
+        "type": "Recipe",
+        "name": "Lemon Wedges",
+        "food_cost": 0.0334,
+        "assembly_instructions": "1. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M10583",
+        "type": "Recipe",
+        "name": "Hash Brown Potato Patty",
+        "food_cost": 0.2471,
+        "assembly_instructions": "1. Preheat deep-fat fryer to 350 F. 2. Fry frozen potato patties until golden brown and crisp, 2 to 3 minutes. Drain. 3. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "M10588",
+        "type": "Recipe",
+        "name": "Pork Sausage Patty",
+        "food_cost": 0.2954,
+        "assembly_instructions": "OVEN METHOD 1. Preheat convection oven to 350 F. 2. On parchment-lined sheet pan(s), place sausage patties 1/2\" apart. 3. Bake until internal temperature reaches 140 F, 5 to 8 minutes. Drain. 4. Cover. Keep hot for service or use as directed in recipe. FLAT-TOP GRIDDLE METHOD 1. Preheat flat-top griddle to 350 F. 2. Cook sausage patties 2 minutes. Turn sausage patties over. Cook until internal temperature reaches 140 F, 2 to 3 minutes. Drain. 3. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "IDDSI Level 7 Diced 1/2\": 1-oz spoodle = 5/8 oz 2-oz spoodle = 1 1/8 oz 3-oz spoodle = 1 3/4 oz 4-oz spoodle = 2 1/4 oz 6-oz spoodle = 3 3/8 oz 8-oz spoodle = 4 1/2 oz"
+      },
+      {
+        "id": "M11563",
+        "type": "Recipe",
+        "name": "Cilantro Lime Rice",
+        "food_cost": 0.124,
+        "assembly_instructions": "RANGE-TOP METHOD 1. In stockpot over high heat, bring water, lime juice, base and pepper to a boil. Add rice. Stir. Return to a boil. Reduce heat. Cover. Simmer until rice is tender and liquid is absorbed, 18 to 20 minutes. Remove from heat. Let stand 10 minutes. Fluff with fork. 2. Cover. Keep hot for service or use as directed in recipe. 3. At time of service, stir in cilantro. OVEN / STEAMER METHOD 1. Preheat convection oven to 350 F or preheat steamer. FOR EACH 24 (1/2 cup) SERVINGS: 1. In 4\" half steam table pan, place the following: 1 lb + 12 oz rice 1 qt + 3 cup boiling water 1/4 cup lime juice 1 1/4 oz base 1/2 tsp pepper Stir. Cover. 2. Bake or steam until rice is tender and liquid is absorbed, 30 to 35 minutes. Let stand 10 minutes. Fluff with fork. 3. Cover. Keep hot for service or use as directed in recipe. 4. At time of service, stir in 3 tbl cilantro.",
+        "special_instructions": "1-oz spoodle = 3/4 oz 2-oz spoodle = 1 1/2 oz 3-oz spoodle = 2 1/4 oz 4-oz spoodle = 3 oz 6-oz spoodle = 4 1/2 oz 8-oz spoodle = 6 oz #30 scoop = 7/8 oz #24 scoop = 1 oz #20 scoop = 1 1/4 oz #16 scoop = 1 1/2 oz #12 scoop = 2 oz #10 scoop = 2 1/4 oz #8 scoop = 3 oz"
+      },
+      {
+        "id": "M11568",
+        "type": "Recipe",
+        "name": "Mexi-Rice",
+        "food_cost": 0.168,
+        "assembly_instructions": "1. Preheat convection oven to 350 F or preheat steamer. FOR EACH 24 (1/2 cup) SERVINGS: 1. In 4\" half steam table pan, combine the following: 1 lb + 12 ozw rice 1 qt + 3 cup boiling water 2 1/2 ozw taco seasoning Stir. Cover. 2. Bake or steam until rice is tender and liquid is absorbed, 30 to 35 minutes. Remove from heat. Let stand 10 minutes. Fluff with fork. 3. Cover. Keep hot for service or use as directed in recipe. 4. Before serving, add 1 cup salsa and fluff with fork.",
+        "special_instructions": "#30 scoop = 3/4 oz #24 scoop = 1 oz #20 scoop = 1 1/4 oz #16 scoop = 1 1/2 oz #12 scoop = 2 oz #10 scoop = 2 1/4 oz #8 scoop = 3 oz 1-oz spoodle = 3/4 oz 2-oz spoodle = 1 1/2 oz 3-oz spoodle = 2 1/4 oz 4-oz spoodle = 3 oz 6-oz spoodle = 4 1/2 oz 8-oz spoodle = 6 oz IDDSI Level 7"
+      },
+      {
+        "id": "M11769",
+        "type": "Recipe",
+        "name": "Diced Tomatoes",
+        "food_cost": 1.6152,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7 1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw"
+      },
+      {
+        "id": "M12296",
+        "type": "Recipe",
+        "name": "Turkey Bacon",
+        "food_cost": 0.2232,
+        "assembly_instructions": "1. Preheat convection boven to 325 F. 2. On rack(s) in full sheet pan(s), place bacon slices in single layer. 3. Bake until browned, 5 to 6 minutes. Drain. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "Diced 1/4\": 1 tbl = 1/4 oz 1-oz spoodle = 1/2 oz 2-oz spoodle = 1 oz 3-oz spoodle = 1 1/2 oz 4-oz spoodle = 2 oz 6-oz spoodle = 3 oz 8-oz spoodle = 4 oz IDDSI Level 7"
+      },
+      {
+        "id": "M13463",
+        "type": "Recipe",
+        "name": "Iceberg Lettuce",
+        "food_cost": 2.3283,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7 1-oz spoodle = 1/4 ozw 2-oz spoodle = 1/2 ozw 3-oz spoodle = 3/4 ozw 4-oz spoodle = 1 ozw 6-oz spoodle = 1 1/2 ozw 8-oz spoodle = 2 ozw"
+      },
+      {
+        "id": "M13660",
+        "type": "Recipe",
+        "name": "Crispy Waffle Fries",
+        "food_cost": 0.436,
+        "assembly_instructions": "Preheat deep-fat fryer to 350 F. Fry frozen potatoes until golden brown and crisp, 2-3 minutes. Drain. For one serving: In 5 1/2-oz paper cup, place 3 ozw fries. Serve immediately.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full."
+      },
+      {
+        "id": "M14469",
+        "type": "Recipe",
+        "name": "Diced Red Onions",
+        "food_cost": 0.7786,
+        "assembly_instructions": "1. Keep chilled for service."
+      },
+      {
+        "id": "M14647",
+        "type": "Recipe",
+        "name": "Turkey Sausage Patty",
+        "food_cost": 0.3619,
+        "assembly_instructions": "OVEN METHOD: 1. Preheat convection oven to 350 F. 2. On parchment-lined sheet pan(s), place sausage patties in single layer 1/2\" apart. 3. Bake until internal temperature reaches 140 F, 5 to 8 minutes. Drain. 4. Cover. Keep hot for service or use as directed in recipe. FLAT-TOP GRIDDLE METHOD: 1. Preheat flat-top griddle to 350 F. 2. Cook sausage patties 2 minutes. Turn sausage patties over. Cook until internal temperature reaches 140 F, 2 to 3 minutes. Drain. 3. Cover. Keep hot for service or use as directed in recipe. MERRYCHEF INSTRUCTIONS FOR 1 SERVING: 1. On parchment-lined one-eighth sheet pan, place 1 turkey sausage patty onto pan. 2. Place in Merry Chef and push \"SAUSAGE PATTY\" button. 3. When finished, remove from oven using PPE. 4. Keep hot for service or use as directed in a recipe.",
+        "special_instructions": "Diced 1/2\": 1-oz spoodle = 5/8 oz 2-oz spoodle = 1 1/8 oz 3-oz spoodle = 1 3/4 oz 4-oz spoodle = 2 1/4 oz 6-oz spoodle = 3 3/8 oz 8-oz spoodle = 4 1/2 oz IDDSI Level 7"
+      },
+      {
+        "id": "M14891",
+        "type": "Recipe",
+        "name": "Ranch Dressing",
+        "food_cost": 5.3453,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "For Grab-n-Go: Place sandwich into specified cello bag. Tape bag closed. Keep chilled for service."
+      },
+      {
+        "id": "M15073",
+        "type": "Recipe",
+        "name": "Capri Blend Vegetables",
+        "food_cost": 0.2969,
+        "assembly_instructions": "1. Preheat steamer. 2. In 2\" perforated steam table pan(s), combine all ingredients. Toss to mix. Steam vegetables until tender-crisp, 7 to 9 minutes. Drain. 3. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M15232",
+        "type": "Recipe",
+        "name": "Dijon Orange BBQ Sauce",
+        "food_cost": 0.0983,
+        "assembly_instructions": "1. In stockpot over medium-high heat, combine all ingredients. Bring to a boil. Reduce heat. Simmer, stirring often, 6-8 minutes. Cool. 2. Cover. Keep chilled for service or use as directed in recipe."
+      },
+      {
+        "id": "M18921",
+        "type": "Recipe",
+        "name": "Crispy Catfish",
+        "food_cost": 1.431,
+        "assembly_instructions": "1. Combine flour, biscuit mix, cornmeal, salt, pepper and paprika. Whisk until well blended. 2. Into 2-oz portion cups with lids, place #30 scoop Tartar Sauce. Keep chilled for service. 3. Combine fish and Marinade. Turn to coat. 4. Place fish with Marinade in covered nonreactive shallow pan(s) or sealable plastic bag(s). Refrigerate 1 hour. 5. Preheat deep-fat fryer to 350 F. 6. Drain fish. Discard Marinade. 7. Dredge fish in seasoned flour. Shake off excess. 8. Fry fish until golden brown and internal temperature reaches 145 F, 4 to 6 minutes. FOR 1 SERVING: 1. On serving plate, place the following: 1 piece fish 1 portion cup Tartar Sauce 2. Serve immediately.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full. IDDSI Level 7"
+      },
+      {
+        "id": "M19180",
+        "type": "Recipe",
+        "name": "Salisbury Steak & Mushroom Sauce",
+        "food_cost": 0.8701,
+        "assembly_instructions": "1. In saute pan over medium heat, bring onion, water, base and granulated garlic to a boil. Reduce heat. Simmer until onion is translucent, 3 to 5 minutes. Cool. 2. Preheat convection oven to 300 F. 3. In mixer bowl with paddle attachment, combine ground beef, ground turkey, bread crumbs, egg, mustard, Worcestershire sauce, salt, ground black pepper, thyme and onion mixture. Mix on low speed until well combined, 3 to 4 minutes. DO NOT OVERMIX. 4. Using a level #8 scoop, portion out meat mixture. Shape each portion into an oval patty, 1/2\" thick. 5. On parchment-lined sheet pan(s), place patties 1\" apart. 6. Bake until internal temperature reaches 165 F, 25 to 30 minutes. Drain. 7. Cover. Keep hot for service. 8. In stockpot over medium-high heat, heat oil. Add mushroom. Saute until tender, 4 to 6 minutes. Add garlic. Saute 30 seconds. 9. Add Gravy. Whisk until well blended. Bring to a boil. Reduce heat. Simmer 3 minutes. 10. Cover. Keep hot for service. TO PLATE 1 SERVING: 1. On serving plate, layer the following: 1 steak 3-oz ladle sauce 1/2 tsp parsley 2. Serve immediately."
+      },
+      {
+        "id": "M20099",
+        "type": "Recipe",
+        "name": "Salsa",
+        "food_cost": 4.4547,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M20188",
+        "type": "Recipe",
+        "name": "Linguine",
+        "food_cost": 0.7099,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      },
+      {
+        "id": "M20609",
+        "type": "Recipe",
+        "name": "Barbecue Sauce",
+        "food_cost": 3.3991,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "IDDSI Level 3"
+      },
+      {
+        "id": "M20651",
+        "type": "Recipe",
+        "name": "Chicken Pot Pie",
+        "food_cost": 0.8277,
+        "assembly_instructions": "1. Preheat convection oven to 400 F. FOR 1 SERVING: 1. In 10-oz casserole dish, layer the following. 6-oz ladle filling 1 Southern Biscuit 2. Serve immediately."
+      },
+      {
+        "id": "M21429",
+        "type": "Recipe",
+        "name": "Bacon-Potato Breakfast Scramble",
+        "food_cost": 0.6387,
+        "assembly_instructions": "FOR EACH 6 SERVINGS: 1. In saute pan over medium heat, heat 2 tsp oil. 2. Add the following: 2-oz spoodle onion 2-oz spoodle green pepper Saute until tender-crisp, 2 to 3 minutes. 3. Add: 4-oz spoodle Steamed Potatoes 4-oz spoodle bacon Saute until heated through, 1 to 2 minutes. 4. Add: 2 each 8-oz ladles egg Cook, stirring occasionally, until eggs are set but still soft. FOR 1 SERVING: 1. On serving plate, layer the following: 4-oz spoodle egg mixture 1-oz spoodle cheese 2. Serve immediately."
+      },
+      {
+        "id": "M22100",
+        "type": "Recipe",
+        "name": "Cheddar & Onion Frittata",
+        "food_cost": 0.481,
+        "assembly_instructions": "1. Combine egg, salt and black pepper. Whisk until well combined. FOR 1 SERVING: 1. In saute pan over medium heat, heat 1 tbl oil. 2. Add the following: 2-oz spoodle potato 1-oz spoodle onion Cook, stirring occasionally, until potato is browned, 3 to 5 minutes. 3. Add 2-oz ladle egg mixture. Cook 1 minute. 4. Turn frittata over. Top with 1-oz spoodle cheese. Cook 1 minute. 5. Serve immediately."
+      },
+      {
+        "id": "M32625",
+        "type": "Recipe",
+        "name": "Sour Cream",
+        "food_cost": 1.802,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1-oz spoodle = 1 1/8 ozw 2-oz spoodle = 2 1/8 ozw 3-oz spoodle = 3 1/4 ozw 4-oz spoodle = 4 1/4 ozw 6-oz spoodle = 6 3/8 ozw 8-oz spoodle = 8 1/2 ozw"
+      },
+      {
+        "id": "M32626",
+        "type": "Recipe",
+        "name": "Shredded Monterey Jack",
+        "food_cost": 2.338,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1-oz spoodle = 1/2 oz 2-oz spoodle = 1 oz 3-oz spoodle = 1 1/2 oz 4-oz spoodle = 2 oz 6-oz spoodle = 3 oz 8-oz spoodle = 4 oz"
+      },
+      {
+        "id": "M32683",
+        "type": "Recipe",
+        "name": "Beef Taco",
+        "food_cost": 0.6602,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following in 1 taco shell: #30 scoop Taco Filling 1-oz spoodle cheese 1-oz spoodle lettuce 1-oz spoodle tomato 1 tbl Sour Cream 2 slices jalapeno 2. Cover. Keep hot for service."
+      },
+      {
+        "id": "M32820",
+        "type": "Recipe",
+        "name": "Mac & Cheese",
+        "food_cost": 0.2472,
+        "assembly_instructions": "1. In stockpot over medium-high heat, melt butter. Add flour, salt, mustard and pepper. Whisk until well blended. Cook, whisking often, 4 minutes. DO NOT BROWN. 2. Add milk. Whisk until well blended. Cook, whisking constantly, until mixture thickens and boils. Remove from heat. 3. Add American and cheddar cheeses, and hot sauce. Whisk until cheeses are melted. 4. Combine Hot Pasta and sauce. Toss to coat. FOR EACH 24 (1/2 cup) SERVINGS: 1. In 2\" half steam table pan, place the following: 3 qt pasta mixture 2. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M32832",
+        "type": "Recipe",
+        "name": "Pimento Cheese-Style Grits",
+        "food_cost": 0.2163,
+        "assembly_instructions": "1. In stockpot over high heat, bring water and milk to a boil. 2. Gradually add grits, whisking constantly, until mixture returns to a boil. Reduce heat. Simmer, whisking occasionally, 6 minutes. 3. Add remaining ingredients. Whisk until well blended. 4. Cover. Keep hot for service."
+      },
+      {
+        "id": "M33113",
+        "type": "Recipe",
+        "name": "Turkey Enchilada with Red Sauce",
+        "food_cost": 0.8168,
+        "assembly_instructions": "1. Preheat convection oven to 350 F. 2. In saute pan over medium-high heat, heat oil. Add onion, green pepper and garlic. Saute 3 minutes. 3. Stir in Turkey Burrito Filling, beans, tomato, chili powder, cumin, salt, hot sauce and black pepper. Saute until heated through. FOR 1 ENCHILADA (1 per serving): 1. Spread 4-oz spoodle turkey-bean mixture over lower half of 1 tortilla. Roll tortilla closed. FOR EACH 8 SERVINGS: 1. In 2\" full steam table pan coated with cooking spray, layer the following: 4-oz ladle Enchilada Sauce 8 enchiladas, seam side down 4-oz ladle enchilada sauce Cover tightly with foil. 2. Bake until internal temperature reaches 165 F, 10 to 15 minutes. Remove foil. Sprinkle each enchilada with 1 tbl cheese. 3. Bake until cheese is melted, 2 to 3 minutes. 4. Cover. Keep hot for service. FOR INDIVIDUAL CASSEROLES: 1. In specified individual ovenproof dish layer the following: 1 tbl Enchilada Sauce 1 enchilada 1 tbl enchilada sauce Cover tightly with foil. 2. Bake until internal temperature reaches 165 F, 8 to 10 minutes. Remove foil. Sprinkle enchilada with 1 tbl cheese. 3. Bake until cheese is melted, 2 minutes. 4. Cover. Keep hot for service.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M33336",
+        "type": "Recipe",
+        "name": "Roasted Veggies",
+        "food_cost": 0.4047,
+        "assembly_instructions": "1. Preheat convection oven to 350 F. 2. Combine all ingredients. Toss to mix. 3. On sheet pan(s), spread vegetable mixture in single layer. 4. Bake until vegetables are caramelized, 18 to 20 minutes. 5. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 5/8 oz 2-oz spoodle = 1 1/4 oz 3-oz spoodle = 1 7/8 oz 4-oz spoodle = 2 1/2 oz 6-oz spoodle = 3 3/4 oz 8-oz spoodle = 5 oz"
+      },
+      {
+        "id": "M33393",
+        "type": "Recipe",
+        "name": "Seasoned Black Beans",
+        "food_cost": 0.3117,
+        "assembly_instructions": "1. Preheat convection oven to 350 F. 2. Combine all ingredients. Mix well. FOR EACH 24 (1/2 cup) SERVINGS: 1. In 4\" half steam table pan, pour 3 qts bean mixture. Cover. 2. Bake until internal temperature reaches 165 F, 40 to 50 minutes. 3. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 1 1/8 oz 2-oz spoodle = 2 1/4 oz 3-oz spoodle = 3 3/8 oz 4-oz spoodle = 4 1/2 oz 6-oz spoodle = 6 3/4 oz 8-oz spoodle = 9 oz"
+      },
+      {
+        "id": "M33770",
+        "type": "Recipe",
+        "name": "Steamed Summer Vegetable Blend",
+        "food_cost": 0.2761,
+        "assembly_instructions": "1. Preheat steamer. 2. In 2\" perforated steam table pan(s), steam vegetables until tender-crisp, 4 to 5 minutes. Drain. 3. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M34527",
+        "type": "Recipe",
+        "name": "Tartar Sauce",
+        "food_cost": 0.1319,
+        "assembly_instructions": "1. Combine all ingredients. Whisk until well blended. 2. Cover. Keep chilled for service or use as directed in recipe."
+      },
+      {
+        "id": "M34544",
+        "type": "Recipe",
+        "name": "Cajun Gravy",
+        "food_cost": 0.0366,
+        "assembly_instructions": "1. In stockpot over medium heat, melt butter. Add onion, celery, green pepper and garlic. Saute until onion is translucent, 3 to 5 minutes. 2. Add flour. Whisk until well blended. Cook, whisking often, 4 minutes. DO NOT BROWN. Stir in base. 3. Add water, Cajun seasoning and salt. Whisk until well blended. Cook, whisking constantly, until mixture thickens and boils. 4. Reduce heat. Simmer, stirring often, 5 minutes. 5. Cover. Keep hot for service."
+      },
+      {
+        "id": "M3742",
+        "type": "Recipe",
+        "name": "Chicken with Marsala Sauce",
+        "food_cost": 0.8096,
+        "assembly_instructions": "1. Preheat convection oven to 400 F. 2. On sheet pan(s) coated with cooking spray, place chicken in single layer. Coat chicken with cooking spray. Season with salt and pepper. 3. Bake until internal temperature reaches 165 F and juices run clear, 12 to 15 minutes. 4. Cover. Keep hot. 5. In stockpot over medium-high heat, heat oil. Add mushrooms, onion, garlic and thyme. Saute until mushrooms are tender-crisp, 2 to 3 minutes. 6. Add flour, salt and pepper. Cook, stirring often, until flour is golden brown, 10 to 12 minutes. Stir in base. 7. Add water. wine and sugar. Whisk until well blended. Cook, whisking constantly, until mixture thickens and boils. Reduce heat. Simmer 10 minutes. Stir in chopped parsley. 8. Cover. Keep hot. FOR EACH 24 SERVINGS: 1. In 2\" full steam table pan, place 24 baked chicken breasts in single layer. Pour 1 qt + 2 cups sauce over chicken breasts in pan. 2. Cover. Keep hot for service. FOR 1 SERVING: 1. On serving plate, layer the following: 1 chicken breast (3 ozw) 2-oz ladle sauce (2 ozw) 2. Serve immediately."
+      },
+      {
+        "id": "M38867",
+        "type": "Recipe",
+        "name": "French Toast Sticks",
+        "food_cost": 0.4369,
+        "assembly_instructions": "1. Preheat convection oven to 375 F. 2. On parchment-lined sheet pan(s), place frozen French toast sticks in single layer. 3. Bake until internal temperature reaches 140 F, turning over sticks after half the baking time, convection oven 5 to 7 minutes. 4. Cover. Keep hot for service. FOR 1 SERVING: 1. In specified serving container, place the following: 4 french toast sticks 2. Close container. Keep hot for service.",
+        "special_instructions": "When using convection oven, rotate pan(s) one-half turn halfway through baking."
+      },
+      {
+        "id": "M40314",
+        "type": "Recipe",
+        "name": "Whole Grain Garlic Toast",
+        "food_cost": 0.3184,
+        "assembly_instructions": "1. Preheat conv oven to 375 F. 2. On parchment-lined sheet pan(s), place bread in single layer. 3. Bake until golden brown, 3-4 minutes. Allow to cool 10 minutes. 4. Cover. Hold for service or use as directed in recipe."
+      },
+      {
+        "id": "M40849",
+        "type": "Recipe",
+        "name": "Lyonnaise Potatoes",
+        "food_cost": 0.2757,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. Coat griddle with oil. Add onion. Saute until translucent, 3 to 5 minutes. Add potatoes, salt and pepper. Cook potatoes, turning occasionally, until tender and golden brown, 8 to 10 minutes. 3. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M4644",
+        "type": "Recipe",
+        "name": "Baked Pit Ham",
+        "food_cost": 0.9275,
+        "assembly_instructions": "1. Preheat convection oven to 275 F. 2. Score fat side of ham 1/4\" deep in crosshatch pattern. 3. On rack in shallow roasting pan(s), place ham fat side up. 4. Add 1/2\" water to pan(s). Cover tightly with foil. 5. Bake until internal temperature reaches 145 F, 2 to 2 1/2 hours. Uncover. Bake until caramelized, 25 to 30 minutes. 6. Let rest 15 minutes before slicing. 7. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M5768",
+        "type": "Recipe",
+        "name": "Crispy Tater Tots",
+        "food_cost": 0.2621,
+        "assembly_instructions": "1. Preheat deep-fat fryer to 350 F. 2. Fry frozen potatoes until golden brown and crisp, 2 to 3 minutes. Drain. 3. Keep hot for service.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full. 4-oz spoodle = 8 tater bites"
+      },
+      {
+        "id": "M5804",
+        "type": "Recipe",
+        "name": "Old-Fashioned Coleslaw",
+        "food_cost": 0.145,
+        "assembly_instructions": "1. Combine mayonnaise, vinegar, sugar, celery seed, salt and black pepper. Whisk until well blended. 2. Add cabbage and carrot. Toss to coat. 3. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "For Grab-n-Go: In specified container with lid, place #8 scoop coleslaw. Close container. Keep chilled for service. 1 tbl = 1/4 oz 1-oz spoodle = 3/4 oz IDDSI Level 7 2-oz spoodle = 1 1/2 oz 3-oz spoodle = 2 1/4 oz 4-oz spoodle = 3 oz 6-oz spoodle = 4 1/2 oz 8-oz spoodle = 6 oz #30 scoop = 3/4 oz #24 scoop = 1 oz #20 scoop = 1 1/4 oz #16 scoop = 1 1/2 oz #12 scoop = 2 oz #10 scoop = 2 1/4 oz #8 scoop = 3 oz"
+      },
+      {
+        "id": "M729",
+        "type": "Recipe",
+        "name": "Southern Biscuit",
+        "food_cost": 0.2675,
+        "assembly_instructions": "1. Preheat convection oven to 325 F. 2. On parchment-lined sheet pan(s), place frozen biscuits 1\" apart. 3. Bake until golden brown, 18 to 22 minutes. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "Rotate pan(s) one-half turn halfway through baking."
+      },
+      {
+        "id": "M8442",
+        "type": "Recipe",
+        "name": "CHILI, CHICKEN (AP DICED), WHITE BEAN",
+        "food_cost": 0.4234,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following across center of 1 tortilla: 1 tbl cheese #24 scoop Taco Filling 1-oz spoodle lettuce 1 tbl tomato 2 slices jalapeno 2. Cover. Keep hot for service. 3. Serve immediately.",
+        "special_instructions": "SCALE OFF 32 LBS. INTO EACH 6\" PAN ONE 6\" PAN SHOULD SERVE 51 PORTIONS SELECT UTENSIL BASED ON PORTION SIZE. RANDOMLY CHECK ON SCALE."
+      },
+      {
+        "id": "M859",
+        "type": "Recipe",
+        "name": "Scrambled Eggs",
+        "food_cost": 0.5856,
+        "assembly_instructions": "FLAT-TOP GRIDDLE / RANGE-TOP METHOD: 1. Preheat flat-top griddle to 350 F. 2. Coat flat-top griddle or saute pan(s) with cooking spray. On griddle or in saute pan(s) over medium heat, add egg. 3. Cook, stirring occasionally, until eggs are set but still soft. 4. Cover. Keep hot for service or use as directed in recipe. OVEN METHOD: 1. Preheat convection oven to 300 F. FOR EACH 24 PORTIONS: 1. Into 2\" full steam table pan(s) coated with cooking spray, pour 3 qt + 1 cup egg. 2. Bake until eggs are partially set, 8 to 10 minutes. Stir. 3. Bake until eggs are set but still soft, 5 to 7 minutes. Stir. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "#30 scoop = 1 oz #24 scoop = 1 1/4 oz #20 scoop = 1 1/2 oz #16 scoop = 2 oz #12 scoop = 2 1/2 oz #10 scoop = 3 oz #8 scoop = 4 oz 1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz"
+      },
+      {
+        "id": "M9519",
+        "type": "Recipe",
+        "name": "Bacon",
+        "food_cost": 0.5425,
+        "assembly_instructions": "1. Preheat convection oven to 325 F. 2. On full sheet pan(s), place bacon layouts, paper-side down, in single layer. 3. Bake until golden brown, 12 to 15 minutes. 4. Remove from paper. Drain. 5. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "Diced 1/4\", 1/2\": 1-oz spoodle = 3/8 oz 2-oz spoodle = 3/4 oz 3-oz spoodle = 1 1/8 oz IDDSI Level 7 4-oz spoodle = 1 1/2 oz 6-oz spoodle = 2 1/4 oz 8-oz spoodle = 3 oz"
+      },
+      {
+        "id": "M9722",
+        "type": "Recipe",
+        "name": "Home Fries",
+        "food_cost": 0.1854,
+        "assembly_instructions": "1. Preheat convection oven to 350 F. 2. Combine all ingredients. Toss to coat. 3. On sheet pan(s), spread potato mixture in thin layer. 4. Bake until potatoes are tender and golden brown, 25 to 30 minutes. 5. Cover. Keep hot for service or use as directed in recipe."
+      },
+      {
+        "id": "M9734",
+        "type": "Recipe",
+        "name": "O'Brien Potatoes",
+        "food_cost": 0.3048,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. Coat griddle with oil. Add onion, green pepper and red pepper. Saute until peppers are tender-crisp, 2 to 3 minutes. 3. Add potatoes, salt and pepper. Cook until potatoes are tender and golden brown, 8 to 10 minutes. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw"
+      },
+      {
+        "id": "M9791",
+        "type": "Recipe",
+        "name": "Creamy Mashed Potatoes",
+        "food_cost": 0.1395,
+        "assembly_instructions": "1. Preheat steamer. 2. In perforated steam table pan(s), steam potatoes until fork-tender, 15 to 20 minutes. 3. Combine milk and butter. Heat to 140 F. 4. In mixer bowl with whisk attachment, beat potatoes on low speed until no lumps remain, 2 to 3 minutes. 5. Add milk mixture, scallions, salt and pepper. Mix until well blended. DO NOT OVERMIX. 6. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "#30 scoop = 1 oz #24 scoop = 1 1/4 oz #20 scoop = 1 1/2 oz #16 scoop = 1 3/4 oz #12 scoop = 2 1/2 oz #10 scoop = 3 oz #8 scoop = 3 3/4 oz 1-oz spoodle = 3/4 oz 2-oz spoodle = 1 3/4 oz 3-oz spoodle = 2 3/4 oz 4-oz spoodle = 3 3/4 oz 6-oz spoodle = 5 1/2 oz 8-oz spoodle = 7 1/2 oz"
+      },
+      {
+        "id": "M9802",
+        "type": "Recipe",
+        "name": "Garlic Mashed Sweet Potatoes",
+        "food_cost": 0.2724,
+        "assembly_instructions": "1. Preheat steamer. 2. In perforated steam table pan(s), steam potatoes until fork-tender, 25 to 30 minutes. 3. Combine milk, butter and Roasted Garlic. Heat to 140 F. Mix until well blended. 4. In mixer bowl with whisk attachment, beat potatoes on low speed until no lumps remain, 2 to 3 minutes. 5. Add milk mixture, salt and pepper. Mix until well blended. DO NOT OVERMIX. 6. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "#30 scoop = 1 oz #24 scoop = 1 1/4 oz #20 scoop = 1 1/2 oz #16 scoop = 2 oz #12 scoop = 2 3/4 oz #10 scoop = 3 1/4 oz #8 scoop = 4 1/4 oz 1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 1/4 oz 6-oz spoodle = 6 1/4 oz 8-oz spoodle = 8 1/2 oz"
+      },
+      {
+        "id": "M9876",
+        "type": "Recipe",
+        "name": "Roasted Garlic Potatoes",
+        "food_cost": 0.1642,
+        "assembly_instructions": "1. Preheat convection oven to 350 F. 2. Combine all ingredients. Toss to coat. 3. On sheet pan(s), place potatoes in single layer. 4. Bake, turning once, until golden brown and fork-tender, 16 to 22 minutes. 5. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "2-oz spoodle = 1 1/4 ozw 3-oz spoodle = 2 ozw 4-oz spoodle = 2 3/4 ozw 6-oz spoodle = 4 ozw 8-oz spoodle = 5 1/2 ozw"
+      }
+    ],
+    "Ingredient": [
+      {
+        "id": "ing_01db32e2c3f7",
+        "type": "Ingredient",
+        "description": "WATER - BOILING"
+      },
+      {
+        "id": "ing_0496bfb541b5",
+        "type": "Ingredient",
+        "description": "CHICKEN WING 1ST & 2ND JOINT 1.42 OZW RAW / DEEP FAT FRIED / REFUSE BONE"
+      },
+      {
+        "id": "ing_0802828a66ce",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN - CHOPPED / RAW"
+      },
+      {
+        "id": "ing_090ef011c709",
+        "type": "Ingredient",
+        "description": "HERB FRESH PARSLEY CURLY - LEAVES, CHOPPED / RAW"
+      },
+      {
+        "id": "ing_0969ba3f0f3c",
+        "type": "Ingredient",
+        "description": "BASE CHICKEN FLAVORED (VEGAN)"
+      },
+      {
+        "id": "ing_09ac64e278e0",
+        "type": "Ingredient",
+        "description": "SAUCE HOT STINGIN' HONEY GARLIC"
+      },
+      {
+        "id": "ing_0be47d12f7aa",
+        "type": "Ingredient",
+        "description": "SAUCE BBQ SWEET BABY RAY'S"
+      },
+      {
+        "id": "ing_0c1544110c8d",
+        "type": "Ingredient",
+        "description": "SPICE GARLIC POWDER"
+      },
+      {
+        "id": "ing_0c6145fc4dd0",
+        "type": "Ingredient",
+        "description": "PEPPERS,RED,FRESH - DICED"
+      },
+      {
+        "id": "ing_0d28d9d8218c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CAULIFLOWER - CUT / COOKED"
+      },
+      {
+        "id": "ing_0d9651cdc9f0",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING BULK MAYO-TYPE"
+      },
+      {
+        "id": "ing_0fde8d1bda1e",
+        "type": "Ingredient",
+        "description": "JUICE BULK ORANGE"
+      },
+      {
+        "id": "ing_102fd1656168",
+        "type": "Ingredient",
+        "description": "SAUCE WORCESTERSHIRE BULK"
+      },
+      {
+        "id": "ing_11b3b4a61123",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_12d422b51124",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW - TRIMMED, MINCED / COOKED"
+      },
+      {
+        "id": "ing_1324db683128",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ CORN CUT / COOKED"
+      },
+      {
+        "id": "ing_15d858d9afe2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT AP STICKS 4\" .5 OZ / RAW"
+      },
+      {
+        "id": "ing_16a7a5b4ef9a",
+        "type": "Ingredient",
+        "description": "PASTA DRY ROTINI WG (SYSCO) / COOKED"
+      },
+      {
+        "id": "ing_16b20282f298",
+        "type": "Ingredient",
+        "description": "JUICE BULK LEMON PASTEURIZED REFRIGERATED"
+      },
+      {
+        "id": "ing_16ced41bbc44",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING RANCH HOMESTYLE"
+      },
+      {
+        "id": "ing_17f10d649c02",
+        "type": "Ingredient",
+        "description": "SEASONING CHILI POWDER"
+      },
+      {
+        "id": "ing_1879984cc2a4",
+        "type": "Ingredient",
+        "description": "SALSA MEDIUM THICK AND CHUNKY"
+      },
+      {
+        "id": "ing_18edcafed03f",
+        "type": "Ingredient",
+        "description": "CHEESE CHEDDAR YELLOW MILD AP SHREDDED FEATHER"
+      },
+      {
+        "id": "ing_1a4db6a6debc",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW - TRIMMED, MINCED / RAW"
+      },
+      {
+        "id": "ing_1b4e9796e69b",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER RED BELL - SEEDED, DICED / STEAMED, SIMMERED OR STEWED"
+      },
+      {
+        "id": "ing_1b6111cac95d",
+        "type": "Ingredient",
+        "description": "HERB DRIED BAY LEAVES WHOLE"
+      },
+      {
+        "id": "ing_1b96056036c1",
+        "type": "Ingredient",
+        "description": "FRUIT FRESH LEMON 165 CT - SEEDED, CUT / RAW / REFUSE PEEL"
+      },
+      {
+        "id": "ing_1ba5195d95e3",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CELERY AP DICED 1/4\" / COOKED"
+      },
+      {
+        "id": "ing_1e22ab106ec2",
+        "type": "Ingredient",
+        "description": "BASE PORK NO ADDED MSG GF"
+      },
+      {
+        "id": "ing_1efc9bf5be16",
+        "type": "Ingredient",
+        "description": "CEREAL GRITS QUICK / COOKED"
+      },
+      {
+        "id": "ing_206fac081f6c",
+        "type": "Ingredient",
+        "description": "VINEGAR,BALSAMIC"
+      },
+      {
+        "id": "ing_24d716bfb877",
+        "type": "Ingredient",
+        "description": "MUSTARD DIJON"
+      },
+      {
+        "id": "ing_254be190810e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH BEAN GREEN WHOLE - TRIMMED / COOKED"
+      },
+      {
+        "id": "ing_260293c075d5",
+        "type": "Ingredient",
+        "description": "BACON LAYOUT 18/22 FZ - THAWED / COOKED / REFUSE EXCESS FAT"
+      },
+      {
+        "id": "ing_26eb4dc704a3",
+        "type": "Ingredient",
+        "description": "EGG LIQUID WHITE CAGE FREE FRESH / COOKED"
+      },
+      {
+        "id": "ing_27b74adf5549",
+        "type": "Ingredient",
+        "description": "POTATO FZ HASH BROWN SHREDDED LOOSE 224A - THAWED / SAUTEED, GRILLED OR STIR FRIED"
+      },
+      {
+        "id": "ing_29f30cb3c4da",
+        "type": "Ingredient",
+        "description": "SAUSAGE TURKEY PATTY 1.41 OZ CKD FZ - THAWED"
+      },
+      {
+        "id": "ing_2a95aba9c4da",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE GREEN LEAF HEADS - CORED, CUT / RAW"
+      },
+      {
+        "id": "ing_2add2964642f",
+        "type": "Ingredient",
+        "description": "WATER"
+      },
+      {
+        "id": "ing_2bffd0a098b7",
+        "type": "Ingredient",
+        "description": "EGG LIQUID BREAKFAST BLEND FRESH CAGE FREE / COOKED"
+      },
+      {
+        "id": "ing_2ea900971925",
+        "type": "Ingredient",
+        "description": "JELLY PC GRAPE 0.5 OZ"
+      },
+      {
+        "id": "ing_3217712707ab",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CELERY - TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_345d6b33fe84",
+        "type": "Ingredient",
+        "description": "HERB DRIED THYME LEAF WHOLE"
+      },
+      {
+        "id": "ing_346edc7eb5a9",
+        "type": "Ingredient",
+        "description": "TURKEY GROUND BULK 90/10 FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_35992192757c",
+        "type": "Ingredient",
+        "description": "OIL BLEND VEGETABLE"
+      },
+      {
+        "id": "ing_374addd642a8",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH BEAN GREEN WHOLE - TRIMMED, CUT / COOKED"
+      },
+      {
+        "id": "ing_375e0d577e06",
+        "type": "Ingredient",
+        "description": "SUGAR GRANULATED EXTRA FINE"
+      },
+      {
+        "id": "ing_3b13621d3018",
+        "type": "Ingredient",
+        "description": "DAIRY BLEND"
+      },
+      {
+        "id": "ing_3bf66374f33d",
+        "type": "Ingredient",
+        "description": "SAR FIX (FOR INTERNAL PURPOSES ONLY)"
+      },
+      {
+        "id": "ing_3ca8a3ff5d80",
+        "type": "Ingredient",
+        "description": "YOGURT SS LIGHT BLUEBERRY 5.3 OZ"
+      },
+      {
+        "id": "ing_416b3db7504b",
+        "type": "Ingredient",
+        "description": "CORNSTARCH"
+      },
+      {
+        "id": "ing_424c3bb06732",
+        "type": "Ingredient",
+        "description": "SPICE CHILI POWDER DARK"
+      },
+      {
+        "id": "ing_42b9b6cbda2a",
+        "type": "Ingredient",
+        "description": "SAUSAGE SMOKED MAPLE SLICED BIAS FZ - THAWED, CUT / COOKED"
+      },
+      {
+        "id": "ing_44668a5234d8",
+        "type": "Ingredient",
+        "description": "POTATO FZ TATER BITES 215A / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_46f085d72d91",
+        "type": "Ingredient",
+        "description": "CHICKEN BREAST BNLS SKNLS 4 OZ RAW - THAWED / COOKED"
+      },
+      {
+        "id": "ing_47231c6dcd69",
+        "type": "Ingredient",
+        "description": "RELISH PICKLE SWEET - DRAINED"
+      },
+      {
+        "id": "ing_4a7739884433",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED GARLIC AP CHOPPED IN WATER / RAW"
+      },
+      {
+        "id": "ing_4da94fa7b28a",
+        "type": "Ingredient",
+        "description": "CHEESE CHEDDAR MONTEREY JACK AP SHREDDED FANCY"
+      },
+      {
+        "id": "ing_4eb99fc652de",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH ZUCCHINI - TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_4ee0dc0814c1",
+        "type": "Ingredient",
+        "description": "GARLIC CLOVES,FRESH - PEELED, MINCED"
+      },
+      {
+        "id": "ing_50c38fb870a7",
+        "type": "Ingredient",
+        "description": "CREAM SOUR BULK"
+      },
+      {
+        "id": "ing_525891faa5dc",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ ONION DICED / COOKED"
+      },
+      {
+        "id": "ing_540001deee09",
+        "type": "Ingredient",
+        "description": "MUSTARD BULK YELLOW PREPARED"
+      },
+      {
+        "id": "ing_5423ba8174e6",
+        "type": "Ingredient",
+        "description": "VINEGAR WHITE"
+      },
+      {
+        "id": "ing_55c3b9381f05",
+        "type": "Ingredient",
+        "description": "EGG PATTY SCRAMBLED 3.5\" 1.5 OZ CAGE FREE FZ"
+      },
+      {
+        "id": "ing_57a6d9606a5b",
+        "type": "Ingredient",
+        "description": "TORTILLA FLOUR 10\" WG 2.18 OZ SHELF STABLE"
+      },
+      {
+        "id": "ing_581e50fecbb1",
+        "type": "Ingredient",
+        "description": "CROISSANT MARGARINE SLICED 2 OZ ZTF FZ - THAWED"
+      },
+      {
+        "id": "ing_5c8eb1dde687",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED TOMATILLO CRUSHED"
+      },
+      {
+        "id": "ing_5ca0f7d9ee8c",
+        "type": "Ingredient",
+        "description": "BASE VEGETABLE LS NO ADDED MSG GF"
+      },
+      {
+        "id": "ing_5edfe39255f0",
+        "type": "Ingredient",
+        "description": "VINEGAR CIDER"
+      },
+      {
+        "id": "ing_609476883904",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO RUSSET 120 CT - PEELED, CUT / COOKED"
+      },
+      {
+        "id": "ing_673eec64acca",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO AP SLICED 1/8\" CKD 70% / COOKED"
+      },
+      {
+        "id": "ing_67532a6b7c82",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG AP SHREDDED / RAW"
+      },
+      {
+        "id": "ing_677875bcbbfc",
+        "type": "Ingredient",
+        "description": "BASE CHICKEN LS NO ADDED MSG GF"
+      },
+      {
+        "id": "ing_6a3f09e01271",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO CHEF - PEELED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_6af193d1f58b",
+        "type": "Ingredient",
+        "description": "FLOUR ALL PURPOSE"
+      },
+      {
+        "id": "ing_71fb0cd3b77e",
+        "type": "Ingredient",
+        "description": "CHEESE AMERICAN YELLOW RS AP SLICED 160 CT"
+      },
+      {
+        "id": "ing_730cd663131c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH ZUCCHINI - TRIMMED, CUBED / COOKED"
+      },
+      {
+        "id": "ing_7686af97b917",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER BLACK GROUND IMITATION"
+      },
+      {
+        "id": "ing_781a98058a55",
+        "type": "Ingredient",
+        "description": "BREAD TEXAS TOAST GARLIC WG 1.31 OZ FZ - THAWED / BAKED"
+      },
+      {
+        "id": "ing_7984994ae3d0",
+        "type": "Ingredient",
+        "description": "SUGAR,WHITE,GRANULATED"
+      },
+      {
+        "id": "ing_798b93d41fc8",
+        "type": "Ingredient",
+        "description": "SPICE,CAJUN MCCORMICKS"
+      },
+      {
+        "id": "ing_7bee3724a6c4",
+        "type": "Ingredient",
+        "description": "PASTA DRY SPAGHETTI / COOKED"
+      },
+      {
+        "id": "ing_7c338656864b",
+        "type": "Ingredient",
+        "description": "SEASONING BLEND GARLIC & HERB SALT FREE"
+      },
+      {
+        "id": "ing_7f473d5fc9c8",
+        "type": "Ingredient",
+        "description": "BACON AP PIECES 1/4\" CKD REFRIGERATED"
+      },
+      {
+        "id": "ing_7f829488c602",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED BEAN BLACK LS - RINSED, DRAINED"
+      },
+      {
+        "id": "ing_80d2b87f8189",
+        "type": "Ingredient",
+        "description": "BREAD LOAF 51% WG 24 SLICE 24 OZ FZ (SYSCO) - THAWED, ENDS REMOVED"
+      },
+      {
+        "id": "ing_82983adc5221",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO - CORED, SLICED / RAW"
+      },
+      {
+        "id": "ing_84131aa9b7c4",
+        "type": "Ingredient",
+        "description": "MIX BISCUIT BUTTERMILK 5 LB"
+      },
+      {
+        "id": "ing_84debbd0884e",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING BLUE CHEESE CHUNKY"
+      },
+      {
+        "id": "ing_893d2f762b23",
+        "type": "Ingredient",
+        "description": "BACON TURKEY LAYOUT .5 OZ SLICE FZ - THAWED / COOKED / REFUSE EXCESS FAT"
+      },
+      {
+        "id": "ing_89ae194cef21",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW AP DICED 3/8\" / COOKED"
+      },
+      {
+        "id": "ing_89f593b13bab",
+        "type": "Ingredient",
+        "description": "DOUGH BISCUIT SOUTHERN 2.2 OZ ZTF FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_8a7a8c947b31",
+        "type": "Ingredient",
+        "description": "FRENCH TOAST STICK .94 OZ FZ"
+      },
+      {
+        "id": "ing_8b2eb3fb85ae",
+        "type": "Ingredient",
+        "description": "CHICKEN AP DICED CKD FZ - THAWED"
+      },
+      {
+        "id": "ing_8e8d868c308e",
+        "type": "Ingredient",
+        "description": "SPICE MUSTARD DRY"
+      },
+      {
+        "id": "ing_8edcdcef0179",
+        "type": "Ingredient",
+        "description": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW"
+      },
+      {
+        "id": "ing_8f9bfcd1588e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO AP DICED / BAKED OR ROASTED"
+      },
+      {
+        "id": "ing_9210c54fb310",
+        "type": "Ingredient",
+        "description": "SAUCE CHILI SWEET RTU"
+      },
+      {
+        "id": "ing_9234cb77d1ed",
+        "type": "Ingredient",
+        "description": "HAM SMOKED PIT STYLE BNLS FC FTR / COOKED"
+      },
+      {
+        "id": "ing_92a31a899b78",
+        "type": "Ingredient",
+        "description": "ONIONS,FRESH,YELLOW,COOKING - DICED"
+      },
+      {
+        "id": "ing_93a8c1298787",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW - TRIMMED, DICED / RAW"
+      },
+      {
+        "id": "ing_95cc70b09407",
+        "type": "Ingredient",
+        "description": "SPICE CUMIN (COMINO) GROUND"
+      },
+      {
+        "id": "ing_9763119cbec3",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN AP SHREDDED / RAW"
+      },
+      {
+        "id": "ing_98425ace8284",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT - TRIMMED, SHREDDED / RAW"
+      },
+      {
+        "id": "ing_98ded96ae5e0",
+        "type": "Ingredient",
+        "description": "SPICE CUMIN GROUND"
+      },
+      {
+        "id": "ing_99b0990be458",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH MUSHROOM AP SLICED / COOKED"
+      },
+      {
+        "id": "ing_9b2d6d346e25",
+        "type": "Ingredient",
+        "description": "SAUCE HOT PEPPER FRANK'S"
+      },
+      {
+        "id": "ing_9bebbc964004",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, DICED / STEAMED, SIMMERED OR STEWED"
+      },
+      {
+        "id": "ing_9c5445dccc5b",
+        "type": "Ingredient",
+        "description": "FLOUR ALL-PURPOSE"
+      },
+      {
+        "id": "ing_9c8659a2bb3d",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER BLACK TABLE GRIND"
+      },
+      {
+        "id": "ing_9cdb53137969",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO AP PEELED DICE 5/8\" CKD 70% / COOKED"
+      },
+      {
+        "id": "ing_9e19d03fd701",
+        "type": "Ingredient",
+        "description": "CHICKEN BREAST BNLS SKNLS RANDOM RAW - DRAINED, TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_a0af14ec9c3b",
+        "type": "Ingredient",
+        "description": "MARGARINE BULK UNSALTED (VEGAN)"
+      },
+      {
+        "id": "ing_a1024ec5171e",
+        "type": "Ingredient",
+        "description": "SPICE CELERY SEED WHOLE"
+      },
+      {
+        "id": "ing_a1356358c835",
+        "type": "Ingredient",
+        "description": "SEASONING CAJUN"
+      },
+      {
+        "id": "ing_a141484c8eec",
+        "type": "Ingredient",
+        "description": "PEPPERS,GREEN,FRESH,CHOPPER - DICED"
+      },
+      {
+        "id": "ing_a4e7cf1929ee",
+        "type": "Ingredient",
+        "description": "MILK BULK WHOLE"
+      },
+      {
+        "id": "ing_a56b5244f13d",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH GARLIC WHOLE CLOVES AP PEELED - MINCED / RAW"
+      },
+      {
+        "id": "ing_a68cb266dd8f",
+        "type": "Ingredient",
+        "description": "BREAD LOAF WHITE 0.9 OZ SLICE (LOCAL BAKERY)"
+      },
+      {
+        "id": "ing_a7c857c4fb37",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION RED - TRIMMED, DICED / RAW"
+      },
+      {
+        "id": "ing_a7cc197cded1",
+        "type": "Ingredient",
+        "description": "MARGARINE PC 5 G"
+      },
+      {
+        "id": "ing_a8d85f99974d",
+        "type": "Ingredient",
+        "description": "HERB FRESH PARSLEY CURLY - LEAVES, MINCED / RAW"
+      },
+      {
+        "id": "ing_a90e9690c4bc",
+        "type": "Ingredient",
+        "description": "SAUCE HOT PEPPER TABASCO"
+      },
+      {
+        "id": "ing_aa32765eae26",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO UTILITY - CORED, DICED / SAUTEED, GRILLED OR STIR FRIED"
+      },
+      {
+        "id": "ing_aa4f50224123",
+        "type": "Ingredient",
+        "description": "CHICKEN NUGGET BREAST BATTERED .68 OZ RAW FZ / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_abb33f5250d2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_ad12f160f183",
+        "type": "Ingredient",
+        "description": "TOMATOES,CRUSHED,CANNED,WO/NA PRIMO"
+      },
+      {
+        "id": "ing_adab868bebb2",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED PEPPER RED ROASTED WHOLE - DRAINED, DICED"
+      },
+      {
+        "id": "ing_adcc0241fada",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH YELLOW - TRIMMED, CUBED / COOKED"
+      },
+      {
+        "id": "ing_ae811f661723",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO SWEET 75 CT - PEELED, CUT / COOKED"
+      },
+      {
+        "id": "ing_af7471d7316d",
+        "type": "Ingredient",
+        "description": "OIL SALAD CANOLA"
+      },
+      {
+        "id": "ing_b12cf4c24581",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / RAW"
+      },
+      {
+        "id": "ing_b20fd041d485",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH ZUCCHINI - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_b28b5f69827a",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER CHILI JALAPENO - SLICED / RAW"
+      },
+      {
+        "id": "ing_b34958cb4497",
+        "type": "Ingredient",
+        "description": "SAUCE BUFFALO WING"
+      },
+      {
+        "id": "ing_b3ccc3c5d5f4",
+        "type": "Ingredient",
+        "description": "MAYONNAISE BULK"
+      },
+      {
+        "id": "ing_b61029e97bf0",
+        "type": "Ingredient",
+        "description": "GRAVY CANNED SAUSAGE"
+      },
+      {
+        "id": "ing_b7b6c01046a3",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CELERY - TRIMMED, CUT / RAW"
+      },
+      {
+        "id": "ing_b8c6a693df3a",
+        "type": "Ingredient",
+        "description": "SAUSAGE PORK PATTY 1.5 OZ CKD FZ - THAWED"
+      },
+      {
+        "id": "ing_ba53a9bb0e5e",
+        "type": "Ingredient",
+        "description": "OIL BLEND VEGETABLE 90 / EVO 10"
+      },
+      {
+        "id": "ing_bc878276a40f",
+        "type": "Ingredient",
+        "description": "POTATO FZ FRIES WAFFLE SKON REDSTONE 3623 / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_bc8ba390573e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER RED BELL - SEEDED, DICED / COOKED"
+      },
+      {
+        "id": "ing_bf12005ee1e5",
+        "type": "Ingredient",
+        "description": "VEGETABLE FROZEN BEAN GREEN CUT / STEAMED, SIMMERED OR STEWED"
+      },
+      {
+        "id": "ing_bf58a33a1e7b",
+        "type": "Ingredient",
+        "description": "CHICKEN THIGH BNLS SKNLS RANDOM RAW - CUT / COOKED"
+      },
+      {
+        "id": "ing_c0d7b1b6862f",
+        "type": "Ingredient",
+        "description": "CHEESE AMERICAN IMIT VEGETARIAN SLICES"
+      },
+      {
+        "id": "ing_c222bf9dd51b",
+        "type": "Ingredient",
+        "description": "BEEF GROUND BULK 75/25 - THAWED / COOKED / REFUSE EXCESS FAT"
+      },
+      {
+        "id": "ing_c2780fdd965d",
+        "type": "Ingredient",
+        "description": "JUICE BULK LIME PASTEURIZED REFRIGERATED"
+      },
+      {
+        "id": "ing_c6210767c1c2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL AP DICED 1/4\" / STEAMED, SIMMERED OR STEWED"
+      },
+      {
+        "id": "ing_c787fb442e80",
+        "type": "Ingredient",
+        "description": "SALT KOSHER"
+      },
+      {
+        "id": "ing_c7a82d2cf0c7",
+        "type": "Ingredient",
+        "description": "SEASONING TACO (SYSCO)"
+      },
+      {
+        "id": "ing_c97f70dad6ac",
+        "type": "Ingredient",
+        "description": "RICE WHITE LONG GRAIN PARBOILED / COOKED"
+      },
+      {
+        "id": "ing_c9c831458730",
+        "type": "Ingredient",
+        "description": "TORTILLA CORN TACO SHELL 6\" WG"
+      },
+      {
+        "id": "ing_cddf92bae119",
+        "type": "Ingredient",
+        "description": "CORNMEAL YELLOW DEGERMED ENRICHED"
+      },
+      {
+        "id": "ing_d0b48010ea13",
+        "type": "Ingredient",
+        "description": "POTATO FZ HASH BROWN PATTY 2.25 OZ 589A / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_d15949989d10",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO UTILITY - CORED, DICED / RAW"
+      },
+      {
+        "id": "ing_d21324f07b76",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH YELLOW - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_d25331d9537f",
+        "type": "Ingredient",
+        "description": "CHEESE CREAM LOAF - SOFTENED"
+      },
+      {
+        "id": "ing_d5c875b5e23a",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, DICED / RAW"
+      },
+      {
+        "id": "ing_d5dbc2aca663",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH MUSHROOM - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_d9e2ab5aa54e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, DICED / RAW"
+      },
+      {
+        "id": "ing_da198971e36f",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH POTATO RED SIZE SMALL \"B\" - CUT / COOKED"
+      },
+      {
+        "id": "ing_db3892b5086e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG - SHREDDED / RAW"
+      },
+      {
+        "id": "ing_df704fbdb11c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL AP DICED 1/4\" / COOKED"
+      },
+      {
+        "id": "ing_dff03dd19e32",
+        "type": "Ingredient",
+        "description": "BASE BEEF LS NO ADDED MSG GF"
+      },
+      {
+        "id": "ing_dff472312641",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED TOMATO DICED"
+      },
+      {
+        "id": "ing_e226ef73aba8",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED PEPPER GREEN CHILES DICED"
+      },
+      {
+        "id": "ing_e40570036ba2",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED BEAN BLACK LS - DRAINED"
+      },
+      {
+        "id": "ing_e5f2e17047f7",
+        "type": "Ingredient",
+        "description": "ALCOHOL WINE MARSALA"
+      },
+      {
+        "id": "ing_e8413199a244",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER CAYENNE GROUND"
+      },
+      {
+        "id": "ing_e85cb51ecf8e",
+        "type": "Ingredient",
+        "description": "DELI TURKEY BOLOGNA AP SLICED 0.5 OZ"
+      },
+      {
+        "id": "ing_e921ebc08f94",
+        "type": "Ingredient",
+        "description": "SPICE GARLIC GRANULATED"
+      },
+      {
+        "id": "ing_ec3c05355031",
+        "type": "Ingredient",
+        "description": "HERB FRESH THYME - LEAVES, MINCED / RAW"
+      },
+      {
+        "id": "ing_eea88965e91c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW - TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_efd1e611f30a",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, DICED / SAUTEED, GRILLED OR STIR FRIED"
+      },
+      {
+        "id": "ing_f2ac7183823d",
+        "type": "Ingredient",
+        "description": "RICE BROWN LONG GRAIN PARBOILED"
+      },
+      {
+        "id": "ing_f52233599931",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, DICED / COOKED"
+      },
+      {
+        "id": "ing_f5f7046847e4",
+        "type": "Ingredient",
+        "description": "OIL,100% CANOLA"
+      },
+      {
+        "id": "ing_f689017ecb4b",
+        "type": "Ingredient",
+        "description": "TORTILLA FLOUR 6\" WHITE 1.09 OZ SHELF STABLE"
+      },
+      {
+        "id": "ing_f6baf4e41bc4",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED TOMATO DICED IN JUICE NSA"
+      },
+      {
+        "id": "ing_f736a2b0bd27",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN AP CHOPPED W/ CARROT / RAW"
+      },
+      {
+        "id": "ing_f8b42226cc30",
+        "type": "Ingredient",
+        "description": "SPICE PAPRIKA"
+      },
+      {
+        "id": "ing_f9117f29953d",
+        "type": "Ingredient",
+        "description": "HERB DRIED OREGANO LEAF"
+      },
+      {
+        "id": "ing_fa945c8d250d",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT - TRIMMED, CUT / COOKED"
+      },
+      {
+        "id": "ing_fac9aefb40bb",
+        "type": "Ingredient",
+        "description": "SEASONING TACO"
+      },
+      {
+        "id": "ing_facf9c26a045",
+        "type": "Ingredient",
+        "description": "BREAD CRUMBS DRY PLAIN"
+      },
+      {
+        "id": "ing_fb0456bdc651",
+        "type": "Ingredient",
+        "description": "FISH CATFISH FILLET3-5 OZ RAW IQF - THAWED, CUT / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_fdc0144dd769",
+        "type": "Ingredient",
+        "description": "BUTTER SOLID UNSALTED"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "from_type": "Recipe",
+      "from_id": "A2679",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A2679",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A2679",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A2679",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A2679",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2bffd0a098b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A352",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A352",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A352",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A352",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9b2d6d346e25"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4611",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4611",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4611",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4611",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_42b9b6cbda2a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A5802",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A5802",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A5802",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A5802",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b61029e97bf0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0496bfb541b5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_15d858d9afe2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_84debbd0884e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b34958cb4497"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L363496",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b7b6c01046a3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L379779",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L379779",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L379779",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L379779",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_09ac64e278e0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L379779",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9210c54fb310"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L379779",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_aa4f50224123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L384137",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L384137",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L384137",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L384137",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a1356358c835"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L384137",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bf58a33a1e7b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392119",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392119",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392119",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392119",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_55c3b9381f05"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392119",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_581e50fecbb1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392119",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_71fb0cd3b77e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_16a7a5b4ef9a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_35992192757c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7c338656864b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10175",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bf12005ee1e5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_416b3db7504b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4eb99fc652de"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_89ae194cef21"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_df704fbdb11c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eea88965e91c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f52233599931"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10187",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f6baf4e41bc4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0d9651cdc9f0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1b96056036c1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_540001deee09"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a68cb266dd8f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c0d7b1b6862f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10503",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e85cb51ecf8e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10583",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10583",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Brunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10583",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10583",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3ca8a3ff5d80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10583",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d0b48010ea13"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10588",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10588",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10588",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10588",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10588",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b8c6a693df3a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5ca0f7d9ee8c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8edcdcef0179"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c2780fdd965d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11563",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c97f70dad6ac"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_01db32e2c3f7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1879984cc2a4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c97f70dad6ac"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11568",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fac9aefb40bb"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11769",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11769",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11769",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11769",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d15949989d10"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11769",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d5c875b5e23a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0c1544110c8d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_17f10d649c02"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_893d2f762b23"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_98ded96ae5e0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c7a82d2cf0c7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f2ac7183823d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M12296",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f9117f29953d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13463",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13463",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13463",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13463",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_67532a6b7c82"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13463",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_db3892b5086e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13660",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13660",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13660",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M13660",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bc878276a40f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0969ba3f0f3c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0c1544110c8d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_11b3b4a61123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3b13621d3018"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_525891faa5dc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6af193d1f58b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7bee3724a6c4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0af14ec9c3b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14469",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a7c857c4fb37"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Brunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_29f30cb3c4da"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2ea900971925"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14647",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a7cc197cded1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_16ced41bbc44"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2a95aba9c4da"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_80d2b87f8189"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14891",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_82983adc5221"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_374addd642a8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b20fd041d485"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d21324f07b76"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15073",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fa945c8d250d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0be47d12f7aa"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0fde8d1bda1e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_24d716bfb877"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15232",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5edfe39255f0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_84131aa9b7c4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c5445dccc5b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_cddf92bae119"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f8b42226cc30"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M18921",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fb0456bdc651"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_102fd1656168"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_26eb4dc704a3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_345d6b33fe84"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_346edc7eb5a9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_89ae194cef21"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8e8d868c308e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_99b0990be458"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a8d85f99974d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c222bf9dd51b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d5dbc2aca663"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dff03dd19e32"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e921ebc08f94"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eea88965e91c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M19180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_facf9c26a045"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20099",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20099",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20099",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20099",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1879984cc2a4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20188",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20188",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20188",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20609",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20609",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20609",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20609",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0be47d12f7aa"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20651",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20651",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20651",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3bf66374f33d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2bffd0a098b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7f473d5fc9c8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a7c857c4fb37"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21429",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d9e2ab5aa54e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_27b74adf5549"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2bffd0a098b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_93a8c1298787"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M22100",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32625",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32625",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32625",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32625",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_50c38fb870a7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32626",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32626",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32626",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32626",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4da94fa7b28a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_67532a6b7c82"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b28b5f69827a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c9c831458730"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d15949989d10"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d5c875b5e23a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32683",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_db3892b5086e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_71fb0cd3b77e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8e8d868c308e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c5445dccc5b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a4e7cf1929ee"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a90e9690c4bc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32820",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fdc0144dd769"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1efc9bf5be16"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a4e7cf1929ee"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a90e9690c4bc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_adab868bebb2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d25331d9537f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32832",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e8413199a244"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_424c3bb06732"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_57a6d9606a5b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7f829488c602"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_89ae194cef21"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8f9bfcd1588e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_95cc70b09407"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9bebbc964004"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a90e9690c4bc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_aa32765eae26"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c6210767c1c2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eea88965e91c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33113",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_efd1e611f30a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0d28d9d8218c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4eb99fc652de"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bc8ba390573e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33336",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1b6111cac95d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1e22ab106ec2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33393",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e40570036ba2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33770",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33770",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33770",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33770",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_254be190810e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33770",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_730cd663131c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M33770",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_adcc0241fada"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_102fd1656168"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_16b20282f298"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1a4db6a6debc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_47231c6dcd69"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a8d85f99974d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a90e9690c4bc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b3ccc3c5d5f4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34527",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1ba5195d95e3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3217712707ab"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_89ae194cef21"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9bebbc964004"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c5445dccc5b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a1356358c835"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c6210767c1c2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dff03dd19e32"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eea88965e91c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34544",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fdc0144dd769"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_090ef011c709"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_12d422b51124"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_46f085d72d91"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_677875bcbbfc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_99b0990be458"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c5445dccc5b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9e19d03fd701"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d5dbc2aca663"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e5f2e17047f7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M3742",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ec3c05355031"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38867",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38867",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Brunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38867",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38867",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8a7a8c947b31"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40314",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40314",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40314",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40314",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_781a98058a55"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_673eec64acca"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_89ae194cef21"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af7471d7316d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eea88965e91c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M4644",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M4644",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M4644",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M4644",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9234cb77d1ed"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5768",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5768",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5768",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5768",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_44668a5234d8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0802828a66ce"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5423ba8174e6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9763119cbec3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_98425ace8284"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a1024ec5171e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b12cf4c24581"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b3ccc3c5d5f4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5804",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f736a2b0bd27"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0c6145fc4dd0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_206fac081f6c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4ee0dc0814c1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7984994ae3d0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_798b93d41fc8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_89f593b13bab"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_92a31a899b78"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a141484c8eec"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ad12f160f183"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M729",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f5f7046847e4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_11b3b4a61123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1324db683128"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_35992192757c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5c8eb1dde687"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_67532a6b7c82"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8b2eb3fb85ae"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_98ded96ae5e0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b28b5f69827a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d15949989d10"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d5c875b5e23a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_db3892b5086e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dff472312641"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e226ef73aba8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e921ebc08f94"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f689017ecb4b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M8442",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f9117f29953d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Brunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M859",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2bffd0a098b7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Brunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9519",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_260293c075d5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6a3f09e01271"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9722",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1b4e9796e69b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9bebbc964004"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9cdb53137969"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9734",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eea88965e91c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_609476883904"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a4e7cf1929ee"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fdc0144dd769"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a4e7cf1929ee"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ae811f661723"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9802",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fdc0144dd769"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Entree"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Breakfast"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M9876",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_da198971e36f"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Breakfast"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Station",
+      "from_id": "station_Entree",
+      "predicate": "HAS_WEEK",
+      "to_type": "Week",
+      "to_id": "week_3"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Friday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Monday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Sunday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Thursday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Tuesday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Wednesday"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "meta": {
+    "source_file": "entree_station_only.xlsx",
+    "station_name": "Entree",
+    "warnings_count": 0,
+    "validation_issues_count": 1,
+    "validation_issues": [
+      "Recipe 'L384137' has invalid food_cost: -0.944"
+    ]
+  }
+}

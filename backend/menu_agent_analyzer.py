@@ -322,6 +322,76 @@ class MenuGraph:
         )
         return MenuGraph(graph_metadata=meta, nodes=new_nodes, edges=new_edges)
 
+
+    def filter_by_station(self, station_name: str) -> "MenuGraph":
+        """Return graph filtered to a single station name (case-insensitive)."""
+        wanted = (station_name or "").strip().lower()
+        station_node = next((n for n in self.get_nodes_by_type("Station") if (n.name or "").strip().lower() == wanted), None)
+        if not station_node:
+            log.warning("Station %r not found; returning empty graph", station_name)
+            return MenuGraph(
+                graph_metadata=GraphMetadata(
+                    description=f"{self.graph_metadata.description}; filtered for station: {station_name} (not found)",
+                    version=self.graph_metadata.version,
+                    cycle=self.graph_metadata.cycle,
+                ),
+                nodes=[],
+                edges=[],
+            )
+
+        keep_ids: set[str] = {station_node.id}
+
+        week_ids = {
+            e.target for e in self.get_edges_from(station_node.id)
+            if e.relationship == "HAS_WEEK"
+        }
+        keep_ids.update(week_ids)
+
+        day_ids: set[str] = set()
+        for wid in week_ids:
+            dids = {
+                e.target for e in self.get_edges_from(wid)
+                if e.relationship == "HAS_DAY"
+            }
+            day_ids.update(dids)
+        keep_ids.update(day_ids)
+
+        period_ids: set[str] = set()
+        for did in day_ids:
+            pids = {
+                e.target for e in self.get_edges_from(did)
+                if e.relationship == "HAS_PERIOD"
+            }
+            period_ids.update(pids)
+        keep_ids.update(period_ids)
+
+        recipe_ids: set[str] = set()
+        for e in self.edges:
+            if e.relationship == "BELONGS_TO_STATION" and e.target == station_node.id:
+                recipe_ids.add(e.source)
+        keep_ids.update(recipe_ids)
+
+        for rid in recipe_ids:
+            for e in self.get_edges_from(rid):
+                keep_ids.add(e.target)
+
+        new_edges = [e for e in self.edges if e.source in keep_ids and e.target in keep_ids]
+        new_nodes = [n for n in self.nodes if n.id in keep_ids]
+
+        meta = GraphMetadata(
+            description=(
+                f"{self.graph_metadata.description}; "
+                f"filtered for station: {station_name}"
+            ),
+            version=self.graph_metadata.version,
+            cycle=self.graph_metadata.cycle,
+        )
+        log.info(
+            "[AGENT] filter_by_station  station=%s → nodes=%d edges=%d",
+            station_name, len(new_nodes), len(new_edges),
+        )
+        return MenuGraph(graph_metadata=meta, nodes=new_nodes, edges=new_edges)
+
     # --- Summary ------------------------------------------------------------
 
     def summary(self) -> dict:
@@ -334,13 +404,39 @@ class MenuGraph:
 # Graph loader
 # ---------------------------------------------------------------------------
 
-def get_default_menu_graph(path: Path = NORMALIZED_KG) -> MenuGraph:
-    if not path.exists():
+def _slug_station_name(station_name: str) -> str:
+    return re.sub(r"[^a-zA-Z0-9]+", "_", (station_name or "").strip().lower()).strip("_")
+
+def _resolve_station_graph_path(station_name: str) -> Path | None:
+    slug = _slug_station_name(station_name)
+    if not slug:
+        return None
+    output_dir = PROJECT_ROOT / "normalize_graph" / "output"
+    candidates = [
+        output_dir / f"knowledge_graph_normalized_{slug}.json",
+        output_dir / f"{slug}_knowledge_graph_normalized.json",
+        output_dir / f"knowledge_graph_{slug}.json",
+        output_dir / "knowledge_graph_normalized.json",
+    ]
+    for p in candidates:
+        if p.exists():
+            return p
+    matches = sorted(output_dir.glob(f"*{slug}*.json"))
+    return matches[0] if matches else None
+
+def get_default_menu_graph(path: Path = NORMALIZED_KG, station_name: str | None = None) -> MenuGraph:
+    graph_path = path
+    if station_name:
+        station_path = _resolve_station_graph_path(station_name)
+        if station_path and station_path.exists():
+            graph_path = station_path
+
+    if not graph_path.exists():
         raise FileNotFoundError(
-            f"Normalized graph not found: {path}\n"
+            f"Normalized graph not found: {graph_path}\n"
             "Pehle run karo:  python normalize_graph/extract_graph_v2.py"
         )
-    raw = json.loads(path.read_text(encoding="utf-8"))
+    raw = json.loads(graph_path.read_text(encoding="utf-8"))
     meta_raw = raw.get("graph_metadata", {})
     meta = GraphMetadata(
         description=meta_raw.get("description", ""),
@@ -349,7 +445,7 @@ def get_default_menu_graph(path: Path = NORMALIZED_KG) -> MenuGraph:
     )
     nodes = [Node.from_dict(n) for n in raw.get("nodes", [])]
     edges = [Edge.from_dict(e) for e in raw.get("edges", [])]
-    log.info("[GRAPH] Loaded %d nodes, %d edges from %s", len(nodes), len(edges), path.name)
+    log.info("[GRAPH] Loaded %d nodes, %d edges from %s", len(nodes), len(edges), graph_path.name)
     return MenuGraph(graph_metadata=meta, nodes=nodes, edges=edges)
 
 
@@ -643,16 +739,19 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     clear_usage()
 
     # Step 1 — Load graph
-    graph = get_default_menu_graph()
+    graph = get_default_menu_graph(station_name=station_name)
 
-    # Step 2 — Filter by meal period
-    filtered = graph.filter_by_meal_period(meal_period)
+    # Step 2 — Filter by station, then by meal period
+    station_filtered = graph.filter_by_station(station_name)
+    filtered = station_filtered.filter_by_meal_period(meal_period)
 
     if not filtered.get_recipes():
         log.warning("[AGENT] No recipes found for period=%s", meal_period)
         return {
             "content": f"# No data found\nNo recipes found for station **{station_name}** / period **{meal_period}**.",
             "usage":   get_usage_summary(),
+            "no_data": True,
+            "error_detail": f"No data found for station {station_name} and meal period {meal_period}.",
         }
 
     # Step 3 — Run deterministic analysis tools
@@ -687,6 +786,8 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     )
 
     output_json = {
+        "station_name": station_name,
+        "meal_period": meal_period,
         "playbook_check":      playbook_result.to_playbook_json(meal_period),
         "data_integrity":      overlap_result.to_overlap_json(),
         "rotation_recurrence": {
@@ -703,17 +804,13 @@ def run_analysis_fast(station_name: str, meal_period: str) -> dict:
     from agent.synthesizer.executive_slide import formatting_executive_slide
     slide = formatting_executive_slide(output_json)
 
-    print(json.dumps(output_json, indent=2, ensure_ascii=False))
-    print("\n" + "=" * 70)
-    print(slide)
-    print("=" * 70)
-
     log.info("[AGENT] run_analysis_fast DONE")
     return {
         "content":       slide,          # Gemini markdown report
         "analysis_json": output_json,    # full deterministic JSON for API consumers
         "usage":         get_usage_summary(),
         "analysis":      analysis,
+        "no_data":       False,
     }
 
 

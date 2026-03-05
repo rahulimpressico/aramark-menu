@@ -163,18 +163,23 @@ def _calculate_diversity_index_deterministic(
             entrees.append(r)
 
     # ── Count slots ─────────────────────────────────────────────────────────
-    entree_counts: dict[str, int] = {
-        (r.name or r.id): _scheduled_on_count(graph, r.id)
-        for r in entrees
-    }
-    side_slots  = sum(_scheduled_on_count(graph, r.id) for r in sides)
+    entree_counts: dict[str, int] = {}
+    for r in entrees:
+        c = _scheduled_on_count(graph, r.id)
+        # Some station files miss period-qualified SCHEDULED_ON attributes; keep a 1-slot fallback.
+        if c <= 0:
+            c = 1
+        entree_counts[(r.name or r.id)] = c
+
+    side_slots   = sum(_scheduled_on_count(graph, r.id) for r in sides)
     entree_slots = sum(entree_counts.values())
     total_slots  = entree_slots + side_slots
 
-    unique   = len(entrees)
+    unique   = len(entree_counts)
+    if entree_slots and unique > entree_slots:
+        unique = entree_slots
     repeated = max(0, entree_slots - unique)
     diversity = round(unique / entree_slots, 2) if entree_slots else 0.0
-
     if diversity >= 0.6:
         msg = "Good entree variety; low monotony risk."
     elif diversity >= 0.3:

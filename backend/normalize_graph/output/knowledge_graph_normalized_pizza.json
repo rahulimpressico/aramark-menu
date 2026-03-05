@@ -1,0 +1,2975 @@
+{
+  "graph_metadata": {
+    "version": "2.4-normalized",
+    "description": "Normalized graph: canonical ingredients + equipment nodes. Auto-merged near-duplicates.",
+    "source": {
+      "schema_version": "1.0.0",
+      "source_file": "knowledge_graph_pizza.json",
+      "original_meta": {
+        "source_file": "pizza_station_only.xlsx",
+        "station_name": "Pizza",
+        "warnings_count": 0,
+        "validation_issues_count": 0
+      }
+    },
+    "stats": {
+      "base_nodes": 32,
+      "ingredient_nodes": 69,
+      "equipment_nodes": 2,
+      "total_nodes": 103,
+      "total_edges": 258,
+      "ingredients_merged": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "station_Pizza",
+      "type": "Station",
+      "name": "Pizza"
+    },
+    {
+      "id": "week_3",
+      "type": "Week",
+      "week_no": 3
+    },
+    {
+      "id": "day_Monday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 1,
+      "day_name": "Monday"
+    },
+    {
+      "id": "day_Tuesday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 2,
+      "day_name": "Tuesday"
+    },
+    {
+      "id": "day_Wednesday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 3,
+      "day_name": "Wednesday"
+    },
+    {
+      "id": "day_Thursday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 4,
+      "day_name": "Thursday"
+    },
+    {
+      "id": "day_Friday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 5,
+      "day_name": "Friday"
+    },
+    {
+      "id": "day_Sunday",
+      "type": "Day",
+      "week_no": 3,
+      "day_no": 7,
+      "day_name": "Sunday"
+    },
+    {
+      "id": "period_All Day",
+      "type": "MealPeriod",
+      "name": "All Day"
+    },
+    {
+      "id": "period_Brunch",
+      "type": "MealPeriod",
+      "name": "Brunch"
+    },
+    {
+      "id": "period_Dinner",
+      "type": "MealPeriod",
+      "name": "Dinner"
+    },
+    {
+      "id": "period_Lunch",
+      "type": "MealPeriod",
+      "name": "Lunch"
+    },
+    {
+      "id": "L380562",
+      "type": "Recipe",
+      "name": "Newcomb Taco Pizza",
+      "food_cost": 0.3858,
+      "assembly_instructions": "1. In stockpot over medium-high heat, cook beef until browned. Drain. 2. Add taco seasoning and water. Mix well. Bring to a boil. Reduce heat. Simmer until mixture thickens, 4 to 6 minutes. 3. Chill. 4. Preheat conv oven to 375 F, impinger oven to 500 F. FOR 1 PIZZA: 1. On 16\" pizza screen coated with cooking spray, place 1 frozen dough. 2. Top dough with the following: 6-oz spoodle salsa 2 each 8-oz spoodles cheddar 3-oz spoodle olives 3-oz spoodle jalapeno 6-oz spoodle filling 3. Bake until crust is browned and cheese is bubbly, conv oven 6-8 minutes or impinger oven 4-6 minutes. 4. Cut into 1/8 wedges."
+    },
+    {
+      "id": "L391788",
+      "type": "Recipe",
+      "name": "Newcomb Chopped Italian Herb Blend",
+      "food_cost": 0.0335,
+      "assembly_instructions": "1. De-stem and finely mince oregano leaves. 2. De-stem and chop parsley & basil. 3. Combine, cover & refrigerate for service."
+    },
+    {
+      "id": "L391791",
+      "type": "Recipe",
+      "name": "Newcomb Street Corn Pizza",
+      "food_cost": 0.5677,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. In stockpot over medium-high heat, cook beef until browned. Drain. 3. Add taco seasoning and water. Mix well. Bring to a boil. Reduce heat. Simmer until mixture thickens, 4 to 6 minutes. 4. Chill. 5. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 6. Coat bottom plate of dough press with cooking spray. Place 1 Dough in center of press. Coat with cooking spray. 7. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 8. Dock Dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked Dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked Dough. Gently stretch Dough to 18\" x 13” rectangle. 1. Top Dough with the following: 6-oz spoodle poblano cream sauce 2 each 8-oz spoodles cheese blend 8-oz spoodle Roasted corn blend Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Top with cotija, cilantro & Tajin 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions.",
+      "special_instructions": "Chef Austin Rowley"
+    },
+    {
+      "id": "L391897",
+      "type": "Recipe",
+      "name": "Newcomb Pizza Crust Butter",
+      "food_cost": 5.4725,
+      "assembly_instructions": "1. in a deep 6th pan, melt margarine 2. Add remaining ingredients and whisk together to incorporate salt & ranch mix. 2. Cover. Keep warm for service or use as directed in recipe"
+    },
+    {
+      "id": "M11835",
+      "type": "Recipe",
+      "name": "Caesar Pasta Salad",
+      "food_cost": 0.2972,
+      "assembly_instructions": "1. Combine all ingredients. Toss to mix. 2. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "For Grab-n-Go: In specified 5-oz container with lid, place #8 scoop salad. Close container. Keep chilled for service."
+    },
+    {
+      "id": "M14932",
+      "type": "Recipe",
+      "name": "Creamy Ranch Pasta Salad",
+      "food_cost": 0.2314,
+      "assembly_instructions": "1. Combine all ingredients. Toss to mix. 2. Cover. Keep chilled for service or use as directed in recipe."
+    },
+    {
+      "id": "M15842",
+      "type": "Recipe",
+      "name": "Caramelized Onion & Pepper Pizza",
+      "food_cost": 0.5334,
+      "assembly_instructions": "1. Remove dough from refrigerator. Let rise at room temperature until doubled in size, 1 ½ to 2 hours. 2. Preheat convection oven to 450 F or impinger oven to 500 F. 3. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. FOR 1 PIZZA: 1. Coat bottom plate of dough press with cooking spray. Place 1 dough ball in center of press. Coat dough with cooking spray. 2. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. Dock dough to minimize blistering during baking. 3. On 16\" pizza screen coated with cooking spray, place docked dough. 4. Top dough with the following: 6-oz spoodle Sauce 2 each 8-oz spoodles mozzarella 4-oz spoodle Onions 4-oz spoodle Peppers 5. Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 6. Cut 1/8",
+      "special_instructions": "*Low speed is 1st speed on a 3-speed mixer and 2nd speed on a 4-speed mixer. **Randomly check weight of portioned cookie dough on scale prior to baking. ***Baking time may vary depending on the oven and oven load."
+    },
+    {
+      "id": "M15845",
+      "type": "Recipe",
+      "name": "Black Olive Pizza",
+      "food_cost": 0.5975,
+      "assembly_instructions": "Prepare sub-assembly recipe(s). Remove dough from refrigerator. Let rise at room temperature until doubled in size, 1 1/2-2 hours. Preheat conv oven to 450 F, std oven to 500 F or impinger oven to 500 F. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. For one pizza: Coat bottom plate of dough press with cooking spray. Place 1 dough ball (19 ozw) in center of press. Coat dough with cooking spray. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. Dock dough to minimize blistering during baking. 1. On 16\" pizza screen coated with cooking spray, place docked dough. 2. Top dough with the following: 6-oz spoodle Sauce (6 ozw) 2 each 8-oz spoodles mozzarella (8 ozw) 8-oz spoodle olives (4 1/2 ozw) 3. Bake until crust is browned and cheese is bubbly, conv oven 4-6 minutes, std oven 12-14 minutes or impinger oven 4-5 minutes. 4. Cut 1/8"
+    },
+    {
+      "id": "M20849",
+      "type": "Recipe",
+      "name": "Buffalo Chicken Pizza",
+      "food_cost": 0.3144,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 3-oz spoodle sauce 2 each 6-oz spoodles mozzarella cheese 3-oz spoodle blue cheese 6-oz spoodle Chicken Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M20851",
+      "type": "Recipe",
+      "name": "Margherita Pizza",
+      "food_cost": 0.3961,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 2 each 8-oz spoodles cheese 24 slices tomato 2 tbl basil 1/2 tsp Italian seasoning Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M20949",
+      "type": "Recipe",
+      "name": "Caesar Salad",
+      "food_cost": 0.2927,
+      "assembly_instructions": "FOR EACH 12 SERVINGS: 1. In bowl, place the following: 6 each 8-oz spoodles lettuce 4-oz ladle dressing 8-oz spoodle croutons 3-oz spoodle cheese Toss to coat. 2. On serving plate place 4-oz spoodle salad. 3. Serve immediately."
+    },
+    {
+      "id": "M34311",
+      "type": "Recipe",
+      "name": "Mediterranean Pasta Salad",
+      "food_cost": 0.3547,
+      "assembly_instructions": "1. Combine all ingredients. Toss to coat. 2. Cover. Keep chilled for service or use as directed in recipe.",
+      "special_instructions": "1-oz spoodle = 3/4 oz 2-oz spoodle = 1 3/8 oz 3-oz spoodle = 2 1/8 oz 4-oz spoodle = 2 3/4 oz 6-oz spoodle = 4 1/8 oz 8-oz spoodle = 5 1/2 oz #30 scoop = 3/4 oz #24 scoop = 1 oz oz #20 scoop = 1 1/8 oz #16 scoop = 1 3/8 oz #12 scoop = 1 7/8 oz #10 scoop = 2 1/4 oz #8 scoop = 2 3/4 oz"
+    },
+    {
+      "id": "M36651",
+      "type": "Recipe",
+      "name": "Avocado Salad",
+      "food_cost": 0.4021,
+      "assembly_instructions": "1. Combine all ingredients. Mix well. 2. Serve immediately."
+    },
+    {
+      "id": "M40427",
+      "type": "Recipe",
+      "name": "BBQ Chicken Pizza",
+      "food_cost": 0.3471,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Combine pizza sauce and bbq sauce. Whisk until well blended. 3. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 4. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 5. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 6. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce mixture 2 each 8-oz spoodles cheese 6-oz spoodle Onions 6-oz spoodle Chicken Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M40434",
+      "type": "Recipe",
+      "name": "Deluxe Pizza",
+      "food_cost": 0.4119,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. Dock Dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked Dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked Dough. Gently stretch Dough to 18\" x 13” rectangle. 1. Top Dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 2-oz spoodle Mushrooms 2-oz spoodle Onions 24 slices pepperoni 4-oz spoodle sausage Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M40437",
+      "type": "Recipe",
+      "name": "Mushroom & Sausage Pizza",
+      "food_cost": 0.4185,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 4-oz spoodle Sauteed Mushrooms 6-oz spoodle sausage Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M40445",
+      "type": "Recipe",
+      "name": "Primavera Pizza",
+      "food_cost": 0.3598,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. In saute pan over medium-high heat, heat oil. Add zucchini, green pepper, yellow squash, mushroom and onion. Saute until tender-crisp, 2 to 3 minutes. Chill. 3. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 4. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 5. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 6. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 2 each 6-oz spoodles vegetables Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M40447",
+      "type": "Recipe",
+      "name": "Classic Cheese Pizza",
+      "food_cost": 0.2215,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On hallf sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M40449",
+      "type": "Recipe",
+      "name": "Pepperoni Pizza",
+      "food_cost": 0.289,
+      "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 24 slices pepperoni Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+    },
+    {
+      "id": "M5731",
+      "type": "Recipe",
+      "name": "BEEF POT ROAST (PCKD)",
+      "food_cost": 0.1815,
+      "assembly_instructions": "1. Combine all ingredients. Toss to mix. 2. Cover. Keep chilled for service or use as directed in recipe."
+    },
+    {
+      "id": "Ingredient_and_chunky_medium_salsa_thick",
+      "type": "Ingredient",
+      "name": "and chunky medium salsa thick"
+    },
+    {
+      "id": "Ingredient_cheddar_cheese_feather_mild_yellow",
+      "type": "Ingredient",
+      "name": "cheddar cheese feather mild yellow"
+    },
+    {
+      "id": "Ingredient_black_drained_olive",
+      "type": "Ingredient",
+      "name": "black drained olive"
+    },
+    {
+      "id": "Ingredient_canned_chili_drained_jalapeno_pepper_vegetable",
+      "type": "Ingredient",
+      "name": "canned chili drained jalapeno pepper vegetable"
+    },
+    {
+      "id": "Ingredient_herb_leave_minced_oregano",
+      "type": "Ingredient",
+      "name": "herb leave minced oregano"
+    },
+    {
+      "id": "Ingredient_flat_herb_leaf_leave_parsley",
+      "type": "Ingredient",
+      "name": "flat herb leaf leave parsley"
+    },
+    {
+      "id": "Ingredient_basil_chopped_herb_leave",
+      "type": "Ingredient",
+      "name": "basil chopped herb leave"
+    },
+    {
+      "id": "Ingredient_country_gravy_mix",
+      "type": "Ingredient",
+      "name": "country gravy mix"
+    },
+    {
+      "id": "Ingredient_concentrate_fire_flavor_glutenfree_poblano_roasted",
+      "type": "Ingredient",
+      "name": "concentrate fire flavor glutenfree poblano roasted"
+    },
+    {
+      "id": "Ingredient_chopped_cilantro_herb_leave",
+      "type": "Ingredient",
+      "name": "chopped cilantro herb leave"
+    },
+    {
+      "id": "Ingredient_cheese_feather_jack_monterey",
+      "type": "Ingredient",
+      "name": "cheese feather jack monterey"
+    },
+    {
+      "id": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "type": "Ingredient",
+      "name": "cheese feather mozzarella part skim"
+    },
+    {
+      "id": "Ingredient_corn_roasted_vegetable",
+      "type": "Ingredient",
+      "name": "corn roasted vegetable"
+    },
+    {
+      "id": "Ingredient_cheese_cotija",
+      "type": "Ingredient",
+      "name": "cheese cotija"
+    },
+    {
+      "id": "Ingredient_canned_chopped_garlic_vegetable_water",
+      "type": "Ingredient",
+      "name": "canned chopped garlic vegetable water"
+    },
+    {
+      "id": "Ingredient_dressing_mix_ranch_salad",
+      "type": "Ingredient",
+      "name": "dressing mix ranch salad"
+    },
+    {
+      "id": "Ingredient_margarine_melted_solid_unsalted_ztf",
+      "type": "Ingredient",
+      "name": "margarine melted solid unsalted ztf"
+    },
+    {
+      "id": "Ingredient_blend_oil_vegetable",
+      "type": "Ingredient",
+      "name": "blend oil vegetable"
+    },
+    {
+      "id": "Ingredient_salt",
+      "type": "Ingredient",
+      "name": "salt"
+    },
+    {
+      "id": "Ingredient_cheese_grated_parmesan",
+      "type": "Ingredient",
+      "name": "cheese grated parmesan"
+    },
+    {
+      "id": "Ingredient_cheese_feta",
+      "type": "Ingredient",
+      "name": "cheese feta"
+    },
+    {
+      "id": "Ingredient_plum_tomato_vegetable",
+      "type": "Ingredient",
+      "name": "plum tomato vegetable"
+    },
+    {
+      "id": "Ingredient_cucumber_seeded_vegetable",
+      "type": "Ingredient",
+      "name": "cucumber seeded vegetable"
+    },
+    {
+      "id": "Ingredient_caesar_creamy_dressing_salad",
+      "type": "Ingredient",
+      "name": "caesar creamy dressing salad"
+    },
+    {
+      "id": "Ingredient_onion_red_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "onion red trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_water",
+      "type": "Ingredient",
+      "name": "water"
+    },
+    {
+      "id": "Ingredient_cheese_milk_mozzarella_whole",
+      "type": "Ingredient",
+      "name": "cheese milk mozzarella whole"
+    },
+    {
+      "id": "Ingredient_ball_dough_pizza_white",
+      "type": "Ingredient",
+      "name": "ball dough pizza white"
+    },
+    {
+      "id": "Ingredient_butter_peanut_unsalted",
+      "type": "Ingredient",
+      "name": "butter peanut unsalted"
+    },
+    {
+      "id": "Ingredient_cookie_mix_oatmeal",
+      "type": "Ingredient",
+      "name": "cookie mix oatmeal"
+    },
+    {
+      "id": "Ingredient_cookie_mix_sugar",
+      "type": "Ingredient",
+      "name": "cookie mix sugar"
+    },
+    {
+      "id": "Ingredient_base_drink_fruit_w",
+      "type": "Ingredient",
+      "name": "base drink fruit w"
+    },
+    {
+      "id": "Ingredient_blue_cheese_crumble",
+      "type": "Ingredient",
+      "name": "blue cheese crumble"
+    },
+    {
+      "id": "Ingredient_buffalo_sauce_wing",
+      "type": "Ingredient",
+      "name": "buffalo sauce wing"
+    },
+    {
+      "id": "Ingredient_basil_herb_leave_thinly_very",
+      "type": "Ingredient",
+      "name": "basil herb leave thinly very"
+    },
+    {
+      "id": "Ingredient_italian_seasoning",
+      "type": "Ingredient",
+      "name": "italian seasoning"
+    },
+    {
+      "id": "Ingredient_chopped_lettuce_romaine_vegetable",
+      "type": "Ingredient",
+      "name": "chopped lettuce romaine vegetable"
+    },
+    {
+      "id": "Ingredient_lettuce_romaine_vegetable",
+      "type": "Ingredient",
+      "name": "lettuce romaine vegetable"
+    },
+    {
+      "id": "Ingredient_crouton_homestyle_seasoned",
+      "type": "Ingredient",
+      "name": "crouton homestyle seasoned"
+    },
+    {
+      "id": "Ingredient_cheese_parmesan",
+      "type": "Ingredient",
+      "name": "cheese parmesan"
+    },
+    {
+      "id": "Ingredient_red_vinegar_wine",
+      "type": "Ingredient",
+      "name": "red vinegar wine"
+    },
+    {
+      "id": "Ingredient_drained_kalamata_olive_pitted",
+      "type": "Ingredient",
+      "name": "drained kalamata olive pitted"
+    },
+    {
+      "id": "Ingredient_extra_oil_olive_virgin",
+      "type": "Ingredient",
+      "name": "extra oil olive virgin"
+    },
+    {
+      "id": "Ingredient_black_grind_pepper_spice_table",
+      "type": "Ingredient",
+      "name": "black grind pepper spice table"
+    },
+    {
+      "id": "Ingredient_cucumber_english_vegetable",
+      "type": "Ingredient",
+      "name": "cucumber english vegetable"
+    },
+    {
+      "id": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "green onion scallion trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_canned_drained_pepper_red_roasted_vegetable_whole",
+      "type": "Ingredient",
+      "name": "canned drained pepper red roasted vegetable whole"
+    },
+    {
+      "id": "Ingredient_chopped_herb_leave_oregano",
+      "type": "Ingredient",
+      "name": "chopped herb leave oregano"
+    },
+    {
+      "id": "Ingredient_tomato_vegetable_x",
+      "type": "Ingredient",
+      "name": "tomato vegetable x"
+    },
+    {
+      "id": "Ingredient_iceberg_lettuce_vegetable",
+      "type": "Ingredient",
+      "name": "iceberg lettuce vegetable"
+    },
+    {
+      "id": "Ingredient_avocado_fruit_haa_peeled_pitted",
+      "type": "Ingredient",
+      "name": "avocado fruit haa peeled pitted"
+    },
+    {
+      "id": "Ingredient_cucumber_vegetable",
+      "type": "Ingredient",
+      "name": "cucumber vegetable"
+    },
+    {
+      "id": "Ingredient_baby_bbq_ray_s_sauce_sweet",
+      "type": "Ingredient",
+      "name": "baby bbq ray s sauce sweet"
+    },
+    {
+      "id": "Ingredient_pepperoni",
+      "type": "Ingredient",
+      "name": "pepperoni"
+    },
+    {
+      "id": "Ingredient_ckd_italian_pizza_pork_sausage_topping",
+      "type": "Ingredient",
+      "name": "ckd italian pizza pork sausage topping"
+    },
+    {
+      "id": "Ingredient_mushroom_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "mushroom trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_squash_trimmed_vegetable_yellow",
+      "type": "Ingredient",
+      "name": "squash trimmed vegetable yellow"
+    },
+    {
+      "id": "Ingredient_bell_green_pepper_seeded_vegetable",
+      "type": "Ingredient",
+      "name": "bell green pepper seeded vegetable"
+    },
+    {
+      "id": "Ingredient_squash_trimmed_vegetable_zucchini",
+      "type": "Ingredient",
+      "name": "squash trimmed vegetable zucchini"
+    },
+    {
+      "id": "Ingredient_beef_choice_ckd_homestyle_pot_roast_whole",
+      "type": "Ingredient",
+      "name": "beef choice ckd homestyle pot roast whole"
+    },
+    {
+      "id": "Ingredient_cauliflower_floret_vegetable",
+      "type": "Ingredient",
+      "name": "cauliflower floret vegetable"
+    },
+    {
+      "id": "Ingredient_cabbage_green_vegetable",
+      "type": "Ingredient",
+      "name": "cabbage green vegetable"
+    },
+    {
+      "id": "Ingredient_carrot_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "carrot trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_onion_trimmed_vegetable_yellow",
+      "type": "Ingredient",
+      "name": "onion trimmed vegetable yellow"
+    },
+    {
+      "id": "Ingredient_radish_red_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "radish red trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_celery_trimmed_vegetable",
+      "type": "Ingredient",
+      "name": "celery trimmed vegetable"
+    },
+    {
+      "id": "Ingredient_spinach_stem_vegetable",
+      "type": "Ingredient",
+      "name": "spinach stem vegetable"
+    },
+    {
+      "id": "Ingredient_chopped_iceberg_lettuce_vegetable",
+      "type": "Ingredient",
+      "name": "chopped iceberg lettuce vegetable"
+    },
+    {
+      "id": "Ingredient_cauliflower_vegetable",
+      "type": "Ingredient",
+      "name": "cauliflower vegetable"
+    },
+    {
+      "id": "Equipment_oven",
+      "type": "Equipment",
+      "name": "oven",
+      "equipment_type": "oven"
+    },
+    {
+      "id": "Equipment_stockpot",
+      "type": "Equipment",
+      "name": "stockpot",
+      "equipment_type": "stockpot"
+    }
+  ],
+  "edges": [
+    {
+      "source": "L380562",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L380562",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L380562",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L380562",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L391788",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L391788",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L391788",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L391791",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L391791",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L391791",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L391897",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "L391897",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "L391897",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M11835",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M11835",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M11835",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14932",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M14932",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M14932",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M14932",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M14932",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M15842",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M15842",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M15842",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M15845",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M15845",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M15845",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20849",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M20849",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M20849",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M20849",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20849",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20851",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M20851",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M20851",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20851",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20949",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M20949",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M20949",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M34311",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M34311",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M36651",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M36651",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40427",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40427",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M40427",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40427",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40434",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40434",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M40434",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40434",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40437",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40437",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M40437",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40437",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40445",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40445",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40445",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40447",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40447",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "period_All Day",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40447",
+      "target": "period_Brunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40447",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40447",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40449",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M40449",
+      "target": "day_Friday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "day_Monday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "day_Sunday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "day_Tuesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "period_All Day",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40449",
+      "target": "period_Brunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40449",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M40449",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M5731",
+      "target": "station_Pizza",
+      "relationship": "BELONGS_TO_STATION"
+    },
+    {
+      "source": "M5731",
+      "target": "day_Thursday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "day_Wednesday",
+      "relationship": "SCHEDULED_ON",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "period_Dinner",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "M5731",
+      "target": "period_Lunch",
+      "relationship": "SERVED_IN_PERIOD"
+    },
+    {
+      "source": "day_Friday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_All Day",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Monday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Sunday",
+      "target": "period_All Day",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Sunday",
+      "target": "period_Brunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Sunday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_All Day",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Thursday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_All Day",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Tuesday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_All Day",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_Dinner",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "day_Wednesday",
+      "target": "period_Lunch",
+      "relationship": "HAS_PERIOD"
+    },
+    {
+      "source": "station_Pizza",
+      "target": "week_3",
+      "relationship": "HAS_WEEK"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Friday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Monday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Sunday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Thursday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Tuesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "week_3",
+      "target": "day_Wednesday",
+      "relationship": "HAS_DAY"
+    },
+    {
+      "source": "L380562",
+      "target": "Ingredient_and_chunky_medium_salsa_thick",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALSA MEDIUM THICK AND CHUNKY",
+        "normalized_name": "and chunky medium salsa thick",
+        "canonical_name": "and chunky medium salsa thick",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L380562",
+      "target": "Ingredient_cheddar_cheese_feather_mild_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE CHEDDAR YELLOW MILD AP SHREDDED FEATHER",
+        "normalized_name": "cheddar cheese feather mild yellow",
+        "canonical_name": "cheddar cheese feather mild yellow",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L380562",
+      "target": "Ingredient_black_drained_olive",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OLIVE BLACK (RIPE) SLICED - DRAINED",
+        "normalized_name": "black drained olive",
+        "canonical_name": "black drained olive",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L380562",
+      "target": "Ingredient_canned_chili_drained_jalapeno_pepper_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED PEPPER CHILI JALAPENO SLICED - DRAINED",
+        "normalized_name": "canned chili drained jalapeno pepper vegetable",
+        "canonical_name": "canned chili drained jalapeno pepper vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "Ingredient_herb_leave_minced_oregano",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH OREGANO - LEAVES, MINCED / RAW",
+        "normalized_name": "herb leave minced oregano",
+        "canonical_name": "herb leave minced oregano",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "Ingredient_flat_herb_leaf_leave_parsley",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH PARSLEY FLAT LEAF (ITALIAN) - LEAVES / RAW",
+        "normalized_name": "flat herb leaf leave parsley",
+        "canonical_name": "flat herb leaf leave parsley",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L391788",
+      "target": "Ingredient_basil_chopped_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH BASIL - LEAVES, CHOPPED / RAW",
+        "normalized_name": "basil chopped herb leave",
+        "canonical_name": "basil chopped herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_country_gravy_mix",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MIX GRAVY COUNTRY 22 OZ",
+        "normalized_name": "country gravy mix",
+        "canonical_name": "country gravy mix",
+        "quantity": "22 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_concentrate_fire_flavor_glutenfree_poblano_roasted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FLAVOR CONCENTRATE POBLANO FIRE ROASTED GLUTENFREE",
+        "normalized_name": "concentrate fire flavor glutenfree poblano roasted",
+        "canonical_name": "concentrate fire flavor glutenfree poblano roasted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_chopped_cilantro_herb_leave",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW",
+        "normalized_name": "chopped cilantro herb leave",
+        "canonical_name": "chopped cilantro herb leave",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_cheese_feather_jack_monterey",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MONTEREY JACK AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather jack monterey",
+        "canonical_name": "cheese feather jack monterey",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_corn_roasted_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FROZEN CORN ROASTED CUT - THAWED",
+        "normalized_name": "corn roasted vegetable",
+        "canonical_name": "corn roasted vegetable",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391791",
+      "target": "Ingredient_cheese_cotija",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE COTIJA - SHREDDED",
+        "normalized_name": "cheese cotija",
+        "canonical_name": "cheese cotija",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "Ingredient_canned_chopped_garlic_vegetable_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED GARLIC AP CHOPPED IN WATER / RAW",
+        "normalized_name": "canned chopped garlic vegetable water",
+        "canonical_name": "canned chopped garlic vegetable water",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "Ingredient_dressing_mix_ranch_salad",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MIX SALAD DRESSING RANCH (DRY) 3.35 OZ",
+        "normalized_name": "dressing mix ranch salad",
+        "canonical_name": "dressing mix ranch salad",
+        "quantity": "3.35 OZ",
+        "states": []
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "Ingredient_margarine_melted_solid_unsalted_ztf",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "MARGARINE SOLID UNSALTED ZTF - MELTED",
+        "normalized_name": "margarine melted solid unsalted ztf",
+        "canonical_name": "margarine melted solid unsalted ztf",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "L391897",
+      "target": "Ingredient_cheese_grated_parmesan",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE PARMESAN AP GRATED",
+        "normalized_name": "cheese grated parmesan",
+        "canonical_name": "cheese grated parmesan",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M11835",
+      "target": "Ingredient_cheese_feta",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE FETA AP CRUMBLED",
+        "normalized_name": "cheese feta",
+        "canonical_name": "cheese feta",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M11835",
+      "target": "Ingredient_plum_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO PLUM - CORED, DICED / RAW",
+        "normalized_name": "plum tomato vegetable",
+        "canonical_name": "plum tomato vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M11835",
+      "target": "Ingredient_cucumber_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CUCUMBER - SEEDED, DICED / RAW",
+        "normalized_name": "cucumber seeded vegetable",
+        "canonical_name": "cucumber seeded vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M11835",
+      "target": "Ingredient_caesar_creamy_dressing_salad",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALAD DRESSING CAESAR CREAMY BULK",
+        "normalized_name": "caesar creamy dressing salad",
+        "canonical_name": "caesar creamy dressing salad",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M11835",
+      "target": "Ingredient_onion_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - TRIMMED, DICED / RAW",
+        "normalized_name": "onion red trimmed vegetable",
+        "canonical_name": "onion red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14932",
+      "target": "Ingredient_cheese_feta",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE FETA AP CRUMBLED",
+        "normalized_name": "cheese feta",
+        "canonical_name": "cheese feta",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M14932",
+      "target": "Ingredient_plum_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO PLUM - CORED, DICED / RAW",
+        "normalized_name": "plum tomato vegetable",
+        "canonical_name": "plum tomato vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14932",
+      "target": "Ingredient_cucumber_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CUCUMBER - SEEDED, DICED / RAW",
+        "normalized_name": "cucumber seeded vegetable",
+        "canonical_name": "cucumber seeded vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M14932",
+      "target": "Ingredient_onion_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - TRIMMED, DICED / RAW",
+        "normalized_name": "onion red trimmed vegetable",
+        "canonical_name": "onion red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "Ingredient_ball_dough_pizza_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DOUGH PIZZA BALL WHITE 19 OZ FZ - THAWED / COOKED",
+        "normalized_name": "ball dough pizza white",
+        "canonical_name": "ball dough pizza white",
+        "quantity": "19 OZ",
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "Ingredient_butter_peanut_unsalted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PEANUT BUTTER BULK UNSALTED",
+        "normalized_name": "butter peanut unsalted",
+        "canonical_name": "butter peanut unsalted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "Ingredient_cookie_mix_oatmeal",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "COOKIE MIX OATMEAL",
+        "normalized_name": "cookie mix oatmeal",
+        "canonical_name": "cookie mix oatmeal",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15842",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_water",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "WATER",
+        "normalized_name": "water",
+        "canonical_name": "water",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_black_drained_olive",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OLIVE BLACK (RIPE) SLICED - DRAINED",
+        "normalized_name": "black drained olive",
+        "canonical_name": "black drained olive",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_cookie_mix_sugar",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "COOKIE MIX SUGAR",
+        "normalized_name": "cookie mix sugar",
+        "canonical_name": "cookie mix sugar",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_ball_dough_pizza_white",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "DOUGH PIZZA BALL WHITE 19 OZ FZ - THAWED / COOKED",
+        "normalized_name": "ball dough pizza white",
+        "canonical_name": "ball dough pizza white",
+        "quantity": "19 OZ",
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_base_drink_fruit_w",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT DRINK BASE W/ VITAMIN C LEMONADE CLEAR",
+        "normalized_name": "base drink fruit w",
+        "canonical_name": "base drink fruit w",
+        "quantity": null,
+        "states": [
+          "vitamin c lemonade clear"
+        ]
+      }
+    },
+    {
+      "source": "M15845",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20849",
+      "target": "Ingredient_blue_cheese_crumble",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE BLUE AP CRUMBLE",
+        "normalized_name": "blue cheese crumble",
+        "canonical_name": "blue cheese crumble",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20849",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20849",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20849",
+      "target": "Ingredient_buffalo_sauce_wing",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE BUFFALO WING",
+        "normalized_name": "buffalo sauce wing",
+        "canonical_name": "buffalo sauce wing",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20851",
+      "target": "Ingredient_basil_herb_leave_thinly_very",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH BASIL - LEAVES, VERY THINLY SLICED / RAW",
+        "normalized_name": "basil herb leave thinly very",
+        "canonical_name": "basil herb leave thinly very",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20851",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20851",
+      "target": "Ingredient_plum_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO PLUM - CORED, SLICED / RAW",
+        "normalized_name": "plum tomato vegetable",
+        "canonical_name": "plum tomato vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20851",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20851",
+      "target": "Ingredient_italian_seasoning",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SEASONING ITALIAN",
+        "normalized_name": "italian seasoning",
+        "canonical_name": "italian seasoning",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "Ingredient_chopped_lettuce_romaine_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ROMAINE AP CHOPPED 1\" / RAW",
+        "normalized_name": "chopped lettuce romaine vegetable",
+        "canonical_name": "chopped lettuce romaine vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "Ingredient_lettuce_romaine_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ROMAINE - CUT / RAW",
+        "normalized_name": "lettuce romaine vegetable",
+        "canonical_name": "lettuce romaine vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "Ingredient_caesar_creamy_dressing_salad",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALAD DRESSING CAESAR CREAMY BULK",
+        "normalized_name": "caesar creamy dressing salad",
+        "canonical_name": "caesar creamy dressing salad",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "Ingredient_crouton_homestyle_seasoned",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CROUTONS HOMESTYLE SEASONED",
+        "normalized_name": "crouton homestyle seasoned",
+        "canonical_name": "crouton homestyle seasoned",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M20949",
+      "target": "Ingredient_cheese_parmesan",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE PARMESAN AP SHREDDED",
+        "normalized_name": "cheese parmesan",
+        "canonical_name": "cheese parmesan",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_cheese_feta",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE FETA AP CRUMBLED",
+        "normalized_name": "cheese feta",
+        "canonical_name": "cheese feta",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_plum_tomato_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO PLUM - CORED, DICED / RAW",
+        "normalized_name": "plum tomato vegetable",
+        "canonical_name": "plum tomato vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_red_vinegar_wine",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR RED WINE",
+        "normalized_name": "red vinegar wine",
+        "canonical_name": "red vinegar wine",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_drained_kalamata_olive_pitted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OLIVE KALAMATA PITTED - DRAINED, SLICED",
+        "normalized_name": "drained kalamata olive pitted",
+        "canonical_name": "drained kalamata olive pitted",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_extra_oil_olive_virgin",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL OLIVE EXTRA VIRGIN",
+        "normalized_name": "extra oil olive virgin",
+        "canonical_name": "extra oil olive virgin",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_black_grind_pepper_spice_table",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK TABLE GRIND",
+        "normalized_name": "black grind pepper spice table",
+        "canonical_name": "black grind pepper spice table",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_cucumber_english_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CUCUMBER ENGLISH - DICED / RAW",
+        "normalized_name": "cucumber english vegetable",
+        "canonical_name": "cucumber english vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_green_onion_scallion_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW",
+        "normalized_name": "green onion scallion trimmed vegetable",
+        "canonical_name": "green onion scallion trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_canned_drained_pepper_red_roasted_vegetable_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE CANNED PEPPER RED ROASTED WHOLE - DRAINED, DICED",
+        "normalized_name": "canned drained pepper red roasted vegetable whole",
+        "canonical_name": "canned drained pepper red roasted vegetable whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M34311",
+      "target": "Ingredient_chopped_herb_leave_oregano",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "HERB FRESH OREGANO - LEAVES, CHOPPED / RAW",
+        "normalized_name": "chopped herb leave oregano",
+        "canonical_name": "chopped herb leave oregano",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_onion_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - TRIMMED, SLICED / RAW",
+        "normalized_name": "onion red trimmed vegetable",
+        "canonical_name": "onion red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_tomato_vegetable_x",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, CUT / RAW",
+        "normalized_name": "tomato vegetable x",
+        "canonical_name": "tomato vegetable x",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_red_vinegar_wine",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VINEGAR RED WINE",
+        "normalized_name": "red vinegar wine",
+        "canonical_name": "red vinegar wine",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG AP SHREDDED / RAW",
+        "normalized_name": "iceberg lettuce vegetable",
+        "canonical_name": "iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_black_grind_pepper_spice_table",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SPICE PEPPER BLACK TABLE GRIND",
+        "normalized_name": "black grind pepper spice table",
+        "canonical_name": "black grind pepper spice table",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_avocado_fruit_haa_peeled_pitted",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "FRUIT FRESH AVOCADO HAAS - PITTED, PEELED, DICED / RAW",
+        "normalized_name": "avocado fruit haa peeled pitted",
+        "canonical_name": "avocado fruit haa peeled pitted",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_salt",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SALT KOSHER",
+        "normalized_name": "salt",
+        "canonical_name": "salt",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_cucumber_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CUCUMBER - CUT / RAW",
+        "normalized_name": "cucumber vegetable",
+        "canonical_name": "cucumber vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M36651",
+      "target": "Ingredient_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG - SHREDDED / RAW",
+        "normalized_name": "iceberg lettuce vegetable",
+        "canonical_name": "iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M40427",
+      "target": "Ingredient_baby_bbq_ray_s_sauce_sweet",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUCE BBQ SWEET BABY RAY'S",
+        "normalized_name": "baby bbq ray s sauce sweet",
+        "canonical_name": "baby bbq ray s sauce sweet",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40427",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40427",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40434",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40434",
+      "target": "Ingredient_pepperoni",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PEPPERONI AP SLICED 15/17 CT #20911",
+        "normalized_name": "pepperoni",
+        "canonical_name": "pepperoni",
+        "quantity": null,
+        "states": [
+          "17 ct #20911"
+        ]
+      }
+    },
+    {
+      "source": "M40434",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40434",
+      "target": "Ingredient_ckd_italian_pizza_pork_sausage_topping",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUSAGE PIZZA TOPPING PORK ITALIAN CKD FZ - THAWED",
+        "normalized_name": "ckd italian pizza pork sausage topping",
+        "canonical_name": "ckd italian pizza pork sausage topping",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40437",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40437",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40437",
+      "target": "Ingredient_ckd_italian_pizza_pork_sausage_topping",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "SAUSAGE PIZZA TOPPING PORK ITALIAN CKD FZ - THAWED",
+        "normalized_name": "ckd italian pizza pork sausage topping",
+        "canonical_name": "ckd italian pizza pork sausage topping",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_mushroom_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH MUSHROOM - TRIMMED, SLICED / SAUTEED, GRILLED OR STIR FRIED",
+        "normalized_name": "mushroom trimmed vegetable",
+        "canonical_name": "mushroom trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "sauteed, grilled or stir fried"
+        ]
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_squash_trimmed_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH SQUASH YELLOW - TRIMMED, CUT / COOKED",
+        "normalized_name": "squash trimmed vegetable yellow",
+        "canonical_name": "squash trimmed vegetable yellow",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_bell_green_pepper_seeded_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, DICED / STEAMED, SIMMERED OR STEWED",
+        "normalized_name": "bell green pepper seeded vegetable",
+        "canonical_name": "bell green pepper seeded vegetable",
+        "quantity": null,
+        "states": [
+          "steamed, simmered or stewed"
+        ]
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_blend_oil_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "OIL BLEND VEGETABLE 90 / EVO 10",
+        "normalized_name": "blend oil vegetable",
+        "canonical_name": "blend oil vegetable",
+        "quantity": null,
+        "states": [
+          "evo 10"
+        ]
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_onion_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION RED - TRIMMED, SLICED / COOKED",
+        "normalized_name": "onion red trimmed vegetable",
+        "canonical_name": "onion red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M40445",
+      "target": "Ingredient_squash_trimmed_vegetable_zucchini",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH SQUASH ZUCCHINI - TRIMMED, CUT / COOKED",
+        "normalized_name": "squash trimmed vegetable zucchini",
+        "canonical_name": "squash trimmed vegetable zucchini",
+        "quantity": null,
+        "states": [
+          "cooked"
+        ]
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40447",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "Ingredient_cheese_milk_mozzarella_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED",
+        "normalized_name": "cheese milk mozzarella whole",
+        "canonical_name": "cheese milk mozzarella whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "Ingredient_pepperoni",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "PEPPERONI AP SLICED 15/17 CT #20911",
+        "normalized_name": "pepperoni",
+        "canonical_name": "pepperoni",
+        "quantity": null,
+        "states": [
+          "17 ct #20911"
+        ]
+      }
+    },
+    {
+      "source": "M40449",
+      "target": "Ingredient_cheese_feather_mozzarella_part_skim",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER",
+        "normalized_name": "cheese feather mozzarella part skim",
+        "canonical_name": "cheese feather mozzarella part skim",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_beef_choice_ckd_homestyle_pot_roast_whole",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "BEEF POT ROAST CHOICE WHOLE HOMESTYLE CKD FZ - THAWED",
+        "normalized_name": "beef choice ckd homestyle pot roast whole",
+        "canonical_name": "beef choice ckd homestyle pot roast whole",
+        "quantity": null,
+        "states": []
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_chopped_lettuce_romaine_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ROMAINE AP CHOPPED 1\" / RAW",
+        "normalized_name": "chopped lettuce romaine vegetable",
+        "canonical_name": "chopped lettuce romaine vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_lettuce_romaine_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ROMAINE - CUT / RAW",
+        "normalized_name": "lettuce romaine vegetable",
+        "canonical_name": "lettuce romaine vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_cauliflower_floret_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CAULIFLOWER AP FLORETS - CUT / RAW",
+        "normalized_name": "cauliflower floret vegetable",
+        "canonical_name": "cauliflower floret vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_cabbage_green_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CABBAGE GREEN - SHREDDED / RAW",
+        "normalized_name": "cabbage green vegetable",
+        "canonical_name": "cabbage green vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG - CUT / RAW",
+        "normalized_name": "iceberg lettuce vegetable",
+        "canonical_name": "iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_carrot_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CARROT - TRIMMED, SLICED / RAW",
+        "normalized_name": "carrot trimmed vegetable",
+        "canonical_name": "carrot trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_onion_trimmed_vegetable_yellow",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH ONION YELLOW - TRIMMED, CUT / RAW",
+        "normalized_name": "onion trimmed vegetable yellow",
+        "canonical_name": "onion trimmed vegetable yellow",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_radish_red_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH RADISH RED AP TRIMMED - SLICED / RAW",
+        "normalized_name": "radish red trimmed vegetable",
+        "canonical_name": "radish red trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_cabbage_green_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CABBAGE GREEN AP SHREDDED / RAW",
+        "normalized_name": "cabbage green vegetable",
+        "canonical_name": "cabbage green vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_celery_trimmed_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CELERY - TRIMMED, SLICED / RAW",
+        "normalized_name": "celery trimmed vegetable",
+        "canonical_name": "celery trimmed vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_spinach_stem_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH SPINACH - STEMS REMOVED, CUT / RAW",
+        "normalized_name": "spinach stem vegetable",
+        "canonical_name": "spinach stem vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_chopped_iceberg_lettuce_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH LETTUCE ICEBERG AP CHOPPED 1\" / RAW",
+        "normalized_name": "chopped iceberg lettuce vegetable",
+        "canonical_name": "chopped iceberg lettuce vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "M5731",
+      "target": "Ingredient_cauliflower_vegetable",
+      "relationship": "HAS_INGREDIENT",
+      "attributes": {
+        "raw_text": "VEGETABLE FRESH CAULIFLOWER - CUT / RAW",
+        "normalized_name": "cauliflower vegetable",
+        "canonical_name": "cauliflower vegetable",
+        "quantity": null,
+        "states": [
+          "raw"
+        ]
+      }
+    },
+    {
+      "source": "L380562",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "L380562",
+      "target": "Equipment_stockpot",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "L391791",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "L391791",
+      "target": "Equipment_stockpot",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M15842",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M15845",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M20849",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M20851",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40427",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40434",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40437",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40445",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40447",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    },
+    {
+      "source": "M40449",
+      "target": "Equipment_oven",
+      "relationship": "USES_EQUIPMENT"
+    }
+  ]
+}

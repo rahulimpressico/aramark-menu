@@ -29,11 +29,9 @@ export function AppRoutes() {
         <div className="flex-1 flex flex-col min-h-0">
         <Routes location={displayLocation}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/meal-period" element={<MenuAnalysisPage />} />
-          <Route path="/report" element={<CombinedReportPage />} />
-          <Route path="/breakfast" element={<CategoryAnalysisPage />} />
-          <Route path="/lunch" element={<CategoryAnalysisPage />} />
-          <Route path="/dinner" element={<CategoryAnalysisPage />} />
+          <Route path="/stations/:stationSlug/meal-period" element={<MenuAnalysisPage />} />
+          <Route path="/stations/:stationSlug/report" element={<CombinedReportPage />} />
+          <Route path="/stations/:stationSlug/:category" element={<CategoryAnalysisPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </div>

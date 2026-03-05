@@ -1,0 +1,682 @@
+{
+  "station_name": "Halal Street Eats",
+  "meal_period": "Lunch",
+  "content": "## Halal Street Eats Station — Lunch Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 9 on at least one day (17 distinct in period) — **Gochujang Bulgogi Beef**, **Asian Seared Chicken**, **Sesame Green Cabbage**, **Street Eatz Bibimbap**, **Street Eatz Korean BBQ Fish Taco**, **Street Eatz Kimchi Sushi Bowl**, **Pickled Carrot & Daikon**, **Korean BBQ Tofu**, **Kimchi**, **Gochujang Sauce**, **Asian Seared Tofu**, **Kimchi Fried Rice**, **Korean Noodle Bowl**, **Crispy Sesame Tofu**, **Pickled Cucumber**, **Roasted Garlic Rice**, **Sliced Scallions**\n- Gap: Exceeded by 7 (got 9, max 2)\n\n**VEGAN**\n- What the menu is doing: 0 offered — none\n- Gap: Short by 1 (got 0, min 1)\n\n**FRIES**\n- What the menu is doing: 0 on at least one day (1 distinct in period) — **Street Eatz Loaded Bulgogi Fries**\n- Gap: Short by 1 (got 0, min 1)\n\n**PLANT-BASED**\n- What the menu is doing: 17.4% plant-based — **Asian Seared Tofu**, **Crispy Sesame Tofu**, **Korean BBQ Tofu**, **Korean Noodle Bowl**\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 26.6% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 1.0 (18 unique entrees / 18 scheduled slots)\n- Playbook says daily features must rotate. Items appearing on 4+ days:\n    - **Kimchi**: 4 days (Monday, Tuesday, Thursday, Friday)\n\n### Plant-Based\n- Current: 17.4% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 26.6% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Reduce **Daily Feature** from 9 to the maximum allowed — Playbook rule: \"Daily Feature: max 2 per day. Must rotate daily.\"\n2. Add at least one **Vegan** item — Playbook rule: \"Vegan: min 1 per day.\"\n3. Add at least one **Fries** item — Playbook rule: \"Fries: min 1 per day.\"\n4. Increase plant-based offerings from 17.4% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"\n5. Rotate **Kimchi** — Playbook rule: \"Daily Features must rotate daily. High repetition across multiple days signals poor rotation.\"",
+  "analysis_json": {
+    "station_name": "Halal Street Eats",
+    "meal_period": "Lunch",
+    "playbook_check": {
+      "meal_period": "Lunch",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 9,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Gochujang Bulgogi Beef",
+            "Asian Seared Chicken",
+            "Sesame Green Cabbage",
+            "Street Eatz Bibimbap",
+            "Street Eatz Korean BBQ Fish Taco",
+            "Street Eatz Kimchi Sushi Bowl",
+            "Pickled Carrot & Daikon",
+            "Korean BBQ Tofu",
+            "Kimchi",
+            "Gochujang Sauce",
+            "Asian Seared Tofu",
+            "Kimchi Fried Rice",
+            "Korean Noodle Bowl",
+            "Crispy Sesame Tofu",
+            "Pickled Cucumber",
+            "Roasted Garlic Rice",
+            "Sliced Scallions"
+          ]
+        },
+        "vegan": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": [
+            "Street Eatz Loaded Bulgogi Fries"
+          ]
+        }
+      },
+      "violations": [
+        "Too many daily features (max on a day: 9, limit 2)",
+        "Missing vegan option (minimum observed per day: 0)",
+        "Missing fries option (minimum observed per day: 0)"
+      ],
+      "sides": {
+        "count": 1,
+        "recipes": [
+          "Sesame Spinach"
+        ]
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 1.0,
+        "unique_entree_count": 18,
+        "repeated_static_count": 0,
+        "entree_slots": 18,
+        "total_slots": 19,
+        "side_count": 1,
+        "message": "Good entree variety; low monotony risk.",
+        "entree_serve_counts": {
+          "Gochujang Bulgogi Beef": 1,
+          "Asian Seared Chicken": 1,
+          "Sesame Green Cabbage": 1,
+          "Street Eatz Bibimbap": 1,
+          "Street Eatz Loaded Bulgogi Fries": 1,
+          "Street Eatz Korean BBQ Fish Taco": 1,
+          "Street Eatz Kimchi Sushi Bowl": 1,
+          "Pickled Carrot & Daikon": 1,
+          "Korean BBQ Tofu": 1,
+          "Kimchi": 1,
+          "Gochujang Sauce": 1,
+          "Asian Seared Tofu": 1,
+          "Kimchi Fried Rice": 1,
+          "Korean Noodle Bowl": 1,
+          "Crispy Sesame Tofu": 1,
+          "Pickled Cucumber": 1,
+          "Roasted Garlic Rice": 1,
+          "Sliced Scallions": 1
+        },
+        "side_recipes": [
+          "Sesame Spinach"
+        ]
+      },
+      "item_frequency": {
+        "total_recipes": 20,
+        "recurrence_signals": [
+          {
+            "recipe_id": "M32304",
+            "recipe_name": "Kimchi",
+            "days": 4,
+            "signal": "High repetition: scheduled on 4 days (Monday, Tuesday, Thursday, Friday)"
+          }
+        ],
+        "message": "1 recipe(s) appear ≥ 4 days (Kimchi). Consider rotating to improve variety.",
+        "frequencies": [
+          {
+            "recipe_id": "M32304",
+            "recipe_name": "Kimchi",
+            "appearance_count": 4,
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "A7977",
+            "recipe_name": "Asian Seared Chicken",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M32308",
+            "recipe_name": "Asian Seared Tofu",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M38517",
+            "recipe_name": "Crispy Sesame Tofu",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "A526",
+            "recipe_name": "Gochujang Bulgogi Beef",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M32306",
+            "recipe_name": "Gochujang Sauce",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M32316",
+            "recipe_name": "Kimchi Fried Rice",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M16592",
+            "recipe_name": "Korean BBQ Tofu",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M32354",
+            "recipe_name": "Korean Noodle Bowl",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M10140",
+            "recipe_name": "Pickled Carrot & Daikon",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M38622",
+            "recipe_name": "Pickled Cucumber",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M40821",
+            "recipe_name": "Roasted Garlic Rice",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "A8326",
+            "recipe_name": "Sesame Green Cabbage",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "A4308",
+            "recipe_name": "Sesame Spinach",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M6349",
+            "recipe_name": "Sliced Scallions",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "L392180",
+            "recipe_name": "Street Eatz Bibimbap",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "L392900",
+            "recipe_name": "Street Eatz Kimchi Sushi Bowl",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "L392896",
+            "recipe_name": "Street Eatz Korean BBQ Fish Taco",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "L392181",
+            "recipe_name": "Street Eatz Loaded Bulgogi Fries",
+            "appearance_count": 1,
+            "days": [
+              "Friday"
+            ]
+          },
+          {
+            "recipe_id": "M39294",
+            "recipe_name": "Kimchi",
+            "appearance_count": 0,
+            "days": []
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 17.4,
+        "vegan_percent": 17.4,
+        "compliant_44": false,
+        "total_offerings": 23,
+        "plant_based_count": 4,
+        "message": "17.4% plant-based — 26.6% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": [
+          "Asian Seared Tofu",
+          "Crispy Sesame Tofu",
+          "Korean BBQ Tofu",
+          "Korean Noodle Bowl"
+        ]
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 1,
+        "alt_slots": 5,
+        "beef_recipes": [
+          "Gochujang Bulgogi Beef"
+        ],
+        "alt_recipes": [
+          "Asian Seared Chicken",
+          "Asian Seared Tofu",
+          "Crispy Sesame Tofu",
+          "Korean BBQ Tofu",
+          "Street Eatz Korean BBQ Fish Taco"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=1, Non-beef alternative slots=5; CPM risk level=LOW."
+      }
+    }
+  },
+  "analysis": {
+    "station_name": "Halal Street Eats",
+    "meal_period": "Lunch",
+    "recipe_count": 20,
+    "cost_stats": {
+      "min": 0.1187,
+      "max": 22.0545,
+      "mean": 3.4367,
+      "median": 2.0179,
+      "total": 68.735
+    },
+    "top_expensive": [
+      {
+        "id": "M10140",
+        "name": "Pickled Carrot & Daikon",
+        "food_cost": 22.0545
+      },
+      {
+        "id": "A526",
+        "name": "Gochujang Bulgogi Beef",
+        "food_cost": 8.988
+      },
+      {
+        "id": "M6349",
+        "name": "Sliced Scallions",
+        "food_cost": 6.0301
+      },
+      {
+        "id": "M39294",
+        "name": "Kimchi",
+        "food_cost": 4.9733
+      },
+      {
+        "id": "A4308",
+        "name": "Sesame Spinach",
+        "food_cost": 4.0061
+      }
+    ],
+    "top_affordable": [
+      {
+        "id": "M40821",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187
+      },
+      {
+        "id": "M32306",
+        "name": "Gochujang Sauce",
+        "food_cost": 0.2293
+      },
+      {
+        "id": "M16592",
+        "name": "Korean BBQ Tofu",
+        "food_cost": 0.2772
+      },
+      {
+        "id": "A8326",
+        "name": "Sesame Green Cabbage",
+        "food_cost": 0.3164
+      },
+      {
+        "id": "L392181",
+        "name": "Street Eatz Loaded Bulgogi Fries",
+        "food_cost": 0.8021
+      }
+    ],
+    "unique_ingredients": 46,
+    "top_ingredients": [
+      {
+        "name": "green onion scallion trimmed vegetable",
+        "count": 8
+      },
+      {
+        "name": "extra fine granulated sugar",
+        "count": 5
+      },
+      {
+        "name": "oil sesame",
+        "count": 4
+      },
+      {
+        "name": "clove garlic minced peeled vegetable whole",
+        "count": 4
+      },
+      {
+        "name": "salt",
+        "count": 4
+      },
+      {
+        "name": "rice seasoned vinegar",
+        "count": 3
+      },
+      {
+        "name": "seed sesame spice white whole",
+        "count": 3
+      },
+      {
+        "name": "gf less sauce sodium soy tamari",
+        "count": 3
+      },
+      {
+        "name": "gochujang paste",
+        "count": 3
+      },
+      {
+        "name": "ginger minced peeled root vegetable",
+        "count": 3
+      }
+    ],
+    "ing_count_stats": {
+      "min": 0,
+      "max": 12,
+      "mean": 4.7
+    },
+    "most_ingredients_recipes": [
+      {
+        "name": "Gochujang Bulgogi Beef",
+        "count": 12
+      },
+      {
+        "name": "Kimchi",
+        "count": 10
+      },
+      {
+        "name": "Korean BBQ Tofu",
+        "count": 9
+      },
+      {
+        "name": "Gochujang Sauce",
+        "count": 8
+      },
+      {
+        "name": "Sesame Green Cabbage",
+        "count": 7
+      }
+    ],
+    "equipment": [
+      "fryer",
+      "griddle",
+      "oven",
+      "steam_table",
+      "stockpot"
+    ],
+    "equipment_by_recipe": {
+      "Gochujang Bulgogi Beef": [
+        "griddle"
+      ],
+      "Kimchi": [
+        "steam_table"
+      ],
+      "Gochujang Sauce": [
+        "oven"
+      ],
+      "Asian Seared Tofu": [
+        "griddle"
+      ],
+      "Crispy Sesame Tofu": [
+        "fryer"
+      ],
+      "Roasted Garlic Rice": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ]
+    },
+    "schedule": {
+      "Monday": [
+        "Kimchi",
+        "Kimchi Fried Rice",
+        "Street Eatz Korean BBQ Fish Taco"
+      ],
+      "Tuesday": [
+        "Asian Seared Chicken",
+        "Asian Seared Tofu",
+        "Kimchi",
+        "Street Eatz Bibimbap"
+      ],
+      "Wednesday": [
+        "Korean Noodle Bowl"
+      ],
+      "Thursday": [
+        "Crispy Sesame Tofu",
+        "Kimchi",
+        "Street Eatz Kimchi Sushi Bowl"
+      ],
+      "Friday": [
+        "Gochujang Bulgogi Beef",
+        "Gochujang Sauce",
+        "Kimchi",
+        "Korean BBQ Tofu",
+        "Pickled Carrot & Daikon",
+        "Pickled Cucumber",
+        "Roasted Garlic Rice",
+        "Sesame Green Cabbage",
+        "Sesame Spinach",
+        "Sliced Scallions",
+        "Street Eatz Loaded Bulgogi Fries"
+      ]
+    },
+    "all_recipes": [
+      {
+        "id": "M10140",
+        "name": "Pickled Carrot & Daikon",
+        "food_cost": 22.0545,
+        "ing_count": 4,
+        "equipment": []
+      },
+      {
+        "id": "A526",
+        "name": "Gochujang Bulgogi Beef",
+        "food_cost": 8.988,
+        "ing_count": 12,
+        "equipment": [
+          "griddle"
+        ]
+      },
+      {
+        "id": "M6349",
+        "name": "Sliced Scallions",
+        "food_cost": 6.0301,
+        "ing_count": 1,
+        "equipment": []
+      },
+      {
+        "id": "M39294",
+        "name": "Kimchi",
+        "food_cost": 4.9733,
+        "ing_count": 1,
+        "equipment": []
+      },
+      {
+        "id": "A4308",
+        "name": "Sesame Spinach",
+        "food_cost": 4.0061,
+        "ing_count": 6,
+        "equipment": []
+      },
+      {
+        "id": "M38517",
+        "name": "Crispy Sesame Tofu",
+        "food_cost": 3.2908,
+        "ing_count": 6,
+        "equipment": [
+          "fryer"
+        ]
+      },
+      {
+        "id": "A7977",
+        "name": "Asian Seared Chicken",
+        "food_cost": 3.2376,
+        "ing_count": 0,
+        "equipment": []
+      },
+      {
+        "id": "M32308",
+        "name": "Asian Seared Tofu",
+        "food_cost": 2.7541,
+        "ing_count": 1,
+        "equipment": [
+          "griddle"
+        ]
+      },
+      {
+        "id": "M32354",
+        "name": "Korean Noodle Bowl",
+        "food_cost": 2.2155,
+        "ing_count": 1,
+        "equipment": []
+      },
+      {
+        "id": "L392900",
+        "name": "Street Eatz Kimchi Sushi Bowl",
+        "food_cost": 2.0244,
+        "ing_count": 4,
+        "equipment": []
+      },
+      {
+        "id": "M38622",
+        "name": "Pickled Cucumber",
+        "food_cost": 2.0114,
+        "ing_count": 4,
+        "equipment": []
+      },
+      {
+        "id": "M32304",
+        "name": "Kimchi",
+        "food_cost": 1.5106,
+        "ing_count": 10,
+        "equipment": [
+          "steam_table"
+        ]
+      },
+      {
+        "id": "L392896",
+        "name": "Street Eatz Korean BBQ Fish Taco",
+        "food_cost": 1.5092,
+        "ing_count": 5,
+        "equipment": []
+      },
+      {
+        "id": "L392180",
+        "name": "Street Eatz Bibimbap",
+        "food_cost": 1.4462,
+        "ing_count": 2,
+        "equipment": []
+      },
+      {
+        "id": "M32316",
+        "name": "Kimchi Fried Rice",
+        "food_cost": 0.9395,
+        "ing_count": 4,
+        "equipment": []
+      },
+      {
+        "id": "L392181",
+        "name": "Street Eatz Loaded Bulgogi Fries",
+        "food_cost": 0.8021,
+        "ing_count": 4,
+        "equipment": []
+      },
+      {
+        "id": "A8326",
+        "name": "Sesame Green Cabbage",
+        "food_cost": 0.3164,
+        "ing_count": 7,
+        "equipment": []
+      },
+      {
+        "id": "M16592",
+        "name": "Korean BBQ Tofu",
+        "food_cost": 0.2772,
+        "ing_count": 9,
+        "equipment": []
+      },
+      {
+        "id": "M32306",
+        "name": "Gochujang Sauce",
+        "food_cost": 0.2293,
+        "ing_count": 8,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M40821",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187,
+        "ing_count": 5,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      }
+    ]
+  },
+  "generated_at": "2026-03-05T04:28:41.135303+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

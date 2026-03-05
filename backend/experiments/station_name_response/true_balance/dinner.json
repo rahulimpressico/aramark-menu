@@ -1,0 +1,628 @@
+{
+  "station_name": "True Balance",
+  "meal_period": "Dinner",
+  "content": "## Grill Station — Dinner Playbook Review\n**Status:** VIOLATION\n\n---\n\n## What Is Not Being Followed\n\n**DAILY FEATURE**\n- What the menu is doing: 15 offered — **Grilled Green Beans**, **Collard Greens**, **Grilled Bratwurst**, **Baked Russet Potato**, **Roasted Garlic Rice**, **Spicy Vegetable Gumbo**, **Spanish Rice**, **Fresh Collard Greens**, **Garlic Roasted Vegetables**, **Chicken Tinga**, **Turkey Meatloaf**, **Mashed Potatoes**, **Baked Pit Ham**, **White Rice**, **Lemon Broccoli**\n- What the Playbook says: Max 2 per day.\n- Gap: Too many daily features (got 15, max 2)\n\n**VEGAN**\n- What the menu is doing: 0 offered — none\n- What the Playbook says: Min 1 per day.\n- Gap: Too many daily features (got 15, max 2)\n\n**FRIES**\n- What the menu is doing: 0 offered — none\n- What the Playbook says: Min 1 per day.\n- Gap: Too many daily features (got 15, max 2)\n\n**PLANT-BASED**\n- What the menu is doing: 0.0% plant-based — none\n- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).\n- Gap: 44.0% below the 44% target.\n\n---\n\n## Rotation & Repetition Issues\n\n### Diversity\n- Diversity index: 1.0 (15 unique entrees / 15 scheduled slots)\n- No high-repetition items. Good rotation.\n\n### Plant-Based\n- Current: 0.0% of entrees are plant-based\n- Playbook target: 44% (Aramark Coolfood Pledge)\n- Gap: 44.0% below target\n\n---\n\n## What the Playbook Recommends\n\n1. Reduce **Daily Feature** from 15 to the maximum allowed — Playbook rule: \"Daily Feature: max 2 per day. Must rotate daily.\"\n2. Add at least one **Vegan** item — Playbook rule: \"Vegan: min 1 per day.\"\n3. Add at least one **Fries** item — Playbook rule: \"Fries: min 1 per day.\"\n4. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: \"44% of entrees should be plant-based (Aramark Coolfood Pledge).\"",
+  "analysis_json": {
+    "playbook_check": {
+      "meal_period": "Dinner",
+      "compliant": false,
+      "status": "VIOLATION",
+      "categories": {
+        "burger": {
+          "count": 0,
+          "playbook_rule": "max 1",
+          "status": "ok",
+          "recipes": []
+        },
+        "daily_feature": {
+          "count": 15,
+          "playbook_rule": "max 2",
+          "status": "FAIL",
+          "recipes": [
+            "Grilled Green Beans",
+            "Collard Greens",
+            "Grilled Bratwurst",
+            "Baked Russet Potato",
+            "Roasted Garlic Rice",
+            "Spicy Vegetable Gumbo",
+            "Spanish Rice",
+            "Fresh Collard Greens",
+            "Garlic Roasted Vegetables",
+            "Chicken Tinga",
+            "Turkey Meatloaf",
+            "Mashed Potatoes",
+            "Baked Pit Ham",
+            "White Rice",
+            "Lemon Broccoli"
+          ]
+        },
+        "vegan": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        },
+        "fries": {
+          "count": 0,
+          "playbook_rule": "min 1",
+          "status": "FAIL",
+          "recipes": []
+        }
+      },
+      "violations": [
+        "Too many daily features (got 15, max 2)",
+        "Missing vegan option",
+        "Missing fries option"
+      ],
+      "sides": {
+        "count": 0,
+        "recipes": []
+      }
+    },
+    "data_integrity": {
+      "compliant": true,
+      "total_count": 0,
+      "message": "No period overlaps detected. Data integrity: OK.",
+      "overlaps": []
+    },
+    "rotation_recurrence": {
+      "diversity_index": {
+        "diversity_index": 1.0,
+        "unique_entree_count": 15,
+        "repeated_static_count": 0,
+        "entree_slots": 15,
+        "total_slots": 15,
+        "side_count": 0,
+        "message": "Good entree variety; low monotony risk.",
+        "entree_serve_counts": {
+          "Grilled Green Beans": 1,
+          "Collard Greens": 1,
+          "Grilled Bratwurst": 1,
+          "Baked Russet Potato": 1,
+          "Roasted Garlic Rice": 1,
+          "Spicy Vegetable Gumbo": 1,
+          "Spanish Rice": 1,
+          "Fresh Collard Greens": 1,
+          "Garlic Roasted Vegetables": 1,
+          "Chicken Tinga": 1,
+          "Turkey Meatloaf": 1,
+          "Mashed Potatoes": 1,
+          "Baked Pit Ham": 1,
+          "White Rice": 1,
+          "Lemon Broccoli": 1
+        },
+        "side_recipes": []
+      },
+      "item_frequency": {
+        "total_recipes": 15,
+        "recurrence_signals": [],
+        "message": "No high-repetition items (threshold: 4 days). Good rotation.",
+        "frequencies": [
+          {
+            "recipe_id": "M4644",
+            "recipe_name": "Baked Pit Ham",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M15554",
+            "recipe_name": "Baked Russet Potato",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M40958",
+            "recipe_name": "Chicken Tinga",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M10216",
+            "recipe_name": "Collard Greens",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M40778",
+            "recipe_name": "Fresh Collard Greens",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M40885",
+            "recipe_name": "Garlic Roasted Vegetables",
+            "appearance_count": 1,
+            "days": [
+              "Wednesday"
+            ]
+          },
+          {
+            "recipe_id": "M12137",
+            "recipe_name": "Grilled Bratwurst",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M10050",
+            "recipe_name": "Grilled Green Beans",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M9975",
+            "recipe_name": "Lemon Broccoli",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M41549",
+            "recipe_name": "Mashed Potatoes",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M36073",
+            "recipe_name": "Roasted Garlic Rice",
+            "appearance_count": 1,
+            "days": [
+              "Monday"
+            ]
+          },
+          {
+            "recipe_id": "M40749",
+            "recipe_name": "Spanish Rice",
+            "appearance_count": 1,
+            "days": [
+              "Tuesday"
+            ]
+          },
+          {
+            "recipe_id": "M40734",
+            "recipe_name": "Spicy Vegetable Gumbo",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          },
+          {
+            "recipe_id": "M41107",
+            "recipe_name": "Turkey Meatloaf",
+            "appearance_count": 1,
+            "days": [
+              "Thursday"
+            ]
+          },
+          {
+            "recipe_id": "M9636",
+            "recipe_name": "White Rice",
+            "appearance_count": 1,
+            "days": [
+              "Sunday"
+            ]
+          }
+        ]
+      }
+    },
+    "nutrition_cost": {
+      "sustainability_mix": {
+        "plant_based_percent": 0.0,
+        "vegan_percent": 0.0,
+        "compliant_44": false,
+        "total_offerings": 15,
+        "plant_based_count": 0,
+        "message": "0.0% plant-based — 44.0% below the 44% target. Add more plant-based options.",
+        "plant_based_recipes": []
+      },
+      "cpm_risk_swaps": {
+        "cpm_risk_level": "low",
+        "beef_recurrence_high": false,
+        "non_beef_alternatives_diversified": true,
+        "beef_slots": 0,
+        "alt_slots": 2,
+        "beef_recipes": [],
+        "alt_recipes": [
+          "Chicken Tinga",
+          "Turkey Meatloaf"
+        ],
+        "recommendations": [
+          "Healthy protein rotation detected. Maintain balanced beef and alternative scheduling."
+        ],
+        "message": "Beef slots=0, Non-beef alternative slots=2; CPM risk level=LOW."
+      }
+    }
+  },
+  "analysis": {
+    "station_name": "True Balance",
+    "meal_period": "Dinner",
+    "recipe_count": 15,
+    "cost_stats": {
+      "min": 0.0816,
+      "max": 1.5144,
+      "mean": 0.4802,
+      "median": 0.4358,
+      "total": 7.2026
+    },
+    "top_expensive": [
+      {
+        "id": "M12137",
+        "name": "Grilled Bratwurst",
+        "food_cost": 1.5144
+      },
+      {
+        "id": "M4644",
+        "name": "Baked Pit Ham",
+        "food_cost": 0.9275
+      },
+      {
+        "id": "M10050",
+        "name": "Grilled Green Beans",
+        "food_cost": 0.7292
+      },
+      {
+        "id": "M40958",
+        "name": "Chicken Tinga",
+        "food_cost": 0.5778
+      },
+      {
+        "id": "M40778",
+        "name": "Fresh Collard Greens",
+        "food_cost": 0.5754
+      }
+    ],
+    "top_affordable": [
+      {
+        "id": "M9636",
+        "name": "White Rice",
+        "food_cost": 0.0816
+      },
+      {
+        "id": "M36073",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187
+      },
+      {
+        "id": "M15554",
+        "name": "Baked Russet Potato",
+        "food_cost": 0.14
+      },
+      {
+        "id": "M40749",
+        "name": "Spanish Rice",
+        "food_cost": 0.16
+      },
+      {
+        "id": "M41549",
+        "name": "Mashed Potatoes",
+        "food_cost": 0.2148
+      }
+    ],
+    "unique_ingredients": 69,
+    "top_ingredients": [
+      {
+        "name": "black grind pepper spice table",
+        "count": 10
+      },
+      {
+        "name": "salt",
+        "count": 9
+      },
+      {
+        "name": "onion trimmed vegetable yellow",
+        "count": 6
+      },
+      {
+        "name": "water",
+        "count": 6
+      },
+      {
+        "name": "canola oil salad",
+        "count": 6
+      },
+      {
+        "name": "onion vegetable yellow",
+        "count": 4
+      },
+      {
+        "name": "blend oil vegetable",
+        "count": 3
+      },
+      {
+        "name": "hot pepper sauce tabasco",
+        "count": 3
+      },
+      {
+        "name": "canned chopped garlic vegetable water",
+        "count": 3
+      },
+      {
+        "name": "clove garlic minced peeled vegetable whole",
+        "count": 3
+      }
+    ],
+    "ing_count_stats": {
+      "min": 1,
+      "max": 22,
+      "mean": 8.3
+    },
+    "most_ingredients_recipes": [
+      {
+        "name": "Spicy Vegetable Gumbo",
+        "count": 22
+      },
+      {
+        "name": "Spanish Rice",
+        "count": 17
+      },
+      {
+        "name": "Turkey Meatloaf",
+        "count": 16
+      },
+      {
+        "name": "Garlic Roasted Vegetables",
+        "count": 12
+      },
+      {
+        "name": "Chicken Tinga",
+        "count": 11
+      }
+    ],
+    "equipment": [
+      "griddle",
+      "grill",
+      "oven",
+      "steam_table",
+      "stockpot"
+    ],
+    "equipment_by_recipe": {
+      "Grilled Green Beans": [
+        "grill"
+      ],
+      "Collard Greens": [
+        "stockpot"
+      ],
+      "Grilled Bratwurst": [
+        "griddle",
+        "grill"
+      ],
+      "Baked Russet Potato": [
+        "oven"
+      ],
+      "Roasted Garlic Rice": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ],
+      "Spicy Vegetable Gumbo": [
+        "oven",
+        "stockpot"
+      ],
+      "Spanish Rice": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ],
+      "Fresh Collard Greens": [
+        "stockpot"
+      ],
+      "Garlic Roasted Vegetables": [
+        "oven"
+      ],
+      "Chicken Tinga": [
+        "oven"
+      ],
+      "Turkey Meatloaf": [
+        "oven",
+        "steam_table"
+      ],
+      "Mashed Potatoes": [
+        "steam_table"
+      ],
+      "Baked Pit Ham": [
+        "oven"
+      ],
+      "White Rice": [
+        "oven",
+        "steam_table",
+        "stockpot"
+      ],
+      "Lemon Broccoli": [
+        "steam_table"
+      ]
+    },
+    "schedule": {
+      "Monday": [
+        "Grilled Bratwurst",
+        "Grilled Green Beans",
+        "Roasted Garlic Rice"
+      ],
+      "Tuesday": [
+        "Chicken Tinga",
+        "Fresh Collard Greens",
+        "Spanish Rice"
+      ],
+      "Wednesday": [
+        "Baked Pit Ham",
+        "Baked Russet Potato",
+        "Garlic Roasted Vegetables"
+      ],
+      "Thursday": [
+        "Lemon Broccoli",
+        "Mashed Potatoes",
+        "Turkey Meatloaf"
+      ],
+      "Sunday": [
+        "Collard Greens",
+        "Spicy Vegetable Gumbo",
+        "White Rice"
+      ]
+    },
+    "all_recipes": [
+      {
+        "id": "M12137",
+        "name": "Grilled Bratwurst",
+        "food_cost": 1.5144,
+        "ing_count": 3,
+        "equipment": [
+          "griddle",
+          "grill"
+        ]
+      },
+      {
+        "id": "M4644",
+        "name": "Baked Pit Ham",
+        "food_cost": 0.9275,
+        "ing_count": 1,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M10050",
+        "name": "Grilled Green Beans",
+        "food_cost": 0.7292,
+        "ing_count": 2,
+        "equipment": [
+          "grill"
+        ]
+      },
+      {
+        "id": "M40958",
+        "name": "Chicken Tinga",
+        "food_cost": 0.5778,
+        "ing_count": 11,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M40778",
+        "name": "Fresh Collard Greens",
+        "food_cost": 0.5754,
+        "ing_count": 8,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M40885",
+        "name": "Garlic Roasted Vegetables",
+        "food_cost": 0.528,
+        "ing_count": 12,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M10216",
+        "name": "Collard Greens",
+        "food_cost": 0.5078,
+        "ing_count": 9,
+        "equipment": [
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M40734",
+        "name": "Spicy Vegetable Gumbo",
+        "food_cost": 0.4358,
+        "ing_count": 22,
+        "equipment": [
+          "oven",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M41107",
+        "name": "Turkey Meatloaf",
+        "food_cost": 0.4217,
+        "ing_count": 16,
+        "equipment": [
+          "oven",
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M9975",
+        "name": "Lemon Broccoli",
+        "food_cost": 0.2699,
+        "ing_count": 5,
+        "equipment": [
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M41549",
+        "name": "Mashed Potatoes",
+        "food_cost": 0.2148,
+        "ing_count": 5,
+        "equipment": [
+          "steam_table"
+        ]
+      },
+      {
+        "id": "M40749",
+        "name": "Spanish Rice",
+        "food_cost": 0.16,
+        "ing_count": 17,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M15554",
+        "name": "Baked Russet Potato",
+        "food_cost": 0.14,
+        "ing_count": 5,
+        "equipment": [
+          "oven"
+        ]
+      },
+      {
+        "id": "M36073",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187,
+        "ing_count": 5,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      },
+      {
+        "id": "M9636",
+        "name": "White Rice",
+        "food_cost": 0.0816,
+        "ing_count": 3,
+        "equipment": [
+          "oven",
+          "steam_table",
+          "stockpot"
+        ]
+      }
+    ]
+  },
+  "generated_at": "2026-03-03T11:25:20.597258+00:00",
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "cost_usd": null
+}

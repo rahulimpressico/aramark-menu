@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { AramarkLogo } from '../components/AramarkLogo';
+import { stationNameFromSlug } from '../data/stations';
 
 const backToStations = { to: '/', label: '← Back to stations' };
 
@@ -24,7 +25,6 @@ const meals = [
         <path d="M8 11V7a4 4 0 1 1 8 0v4" />
       </svg>
     ),
-    path: '/breakfast',
   },
   {
     id: 'lunch',
@@ -36,7 +36,6 @@ const meals = [
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
       </svg>
     ),
-    path: '/lunch',
   },
   {
     id: 'dinner',
@@ -47,11 +46,14 @@ const meals = [
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
       </svg>
     ),
-    path: '/dinner',
   },
 ] as const;
 
 export function MenuAnalysisPage() {
+  const { stationSlug } = useParams<{ stationSlug: string }>();
+  const normalizedStationSlug = stationSlug?.trim().toLowerCase() || "grill";
+  const stationName = stationNameFromSlug(normalizedStationSlug);
+
   return (
     <main className="h-full flex flex-col overflow-hidden bg-gray-100">
       <div className="w-full shrink-0 grid grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-3 bg-footer-bg text-white">
@@ -77,16 +79,15 @@ export function MenuAnalysisPage() {
         </div>
         <header className="flex flex-col items-center gap-4 mb-6 text-center">
           <h1 className="m-0 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
-            Menu Analysis
+            {stationName} Menu Analysis
           </h1>
           <p className="m-0 text-base text-gray-500 max-w-[40ch]">
             Select a meal period to view and analyze menu offerings, nutrition, and compliance.
           </p>
         </header>
 
-        {/* Combined report CTA */}
         <Link
-          to="/report"
+          to={`/stations/${normalizedStationSlug}/report`}
           className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-[1100px] p-5 sm:p-6 mb-6 rounded-2xl border-2 border-primary/20 bg-white shadow-md hover:shadow-lg hover:border-primary/40 transition-all duration-200 no-underline text-inherit focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 group"
         >
           <div className="shrink-0 text-primary group-hover:scale-105 transition-transform">
@@ -111,10 +112,10 @@ export function MenuAnalysisPage() {
         </p>
 
         <ul className="grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1100px] list-none m-0 p-0 pb-8" role="list">
-        {meals.map(({ id, title, description, icon, path }) => (
+        {meals.map(({ id, title, description, icon }) => (
           <li key={id}>
             <Link
-              to={path}
+              to={`/stations/${normalizedStationSlug}/${id}`}
               className="relative flex flex-col items-center justify-center min-h-[260px] p-8 bg-white rounded-xl border border-gray-200 shadow-md transition duration-200 hover:scale-[1.03] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 no-underline text-inherit"
             >
               {icon}

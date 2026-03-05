@@ -1,0 +1,40 @@
+## Salad Bar Station — Lunch Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**VEGAN**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**FRIES**
+- What the menu is doing: 0 offered — none
+- Gap: Short by 1 (got 0, min 1)
+
+**PLANT-BASED**
+- What the menu is doing: 0.0% plant-based — none
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 44.0% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 1.0 (10 unique entrees / 10 scheduled slots)
+- No high-repetition items. Good rotation.
+
+### Plant-Based
+- Current: 0.0% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 44.0% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Add at least one **Vegan** item — Playbook rule: "Vegan: min 1 per day."
+2. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+3. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."

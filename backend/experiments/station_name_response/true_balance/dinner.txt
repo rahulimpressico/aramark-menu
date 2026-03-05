@@ -1,0 +1,48 @@
+## Grill Station — Dinner Playbook Review
+**Status:** VIOLATION
+
+---
+
+## What Is Not Being Followed
+
+**DAILY FEATURE**
+- What the menu is doing: 15 offered — **Grilled Green Beans**, **Collard Greens**, **Grilled Bratwurst**, **Baked Russet Potato**, **Roasted Garlic Rice**, **Spicy Vegetable Gumbo**, **Spanish Rice**, **Fresh Collard Greens**, **Garlic Roasted Vegetables**, **Chicken Tinga**, **Turkey Meatloaf**, **Mashed Potatoes**, **Baked Pit Ham**, **White Rice**, **Lemon Broccoli**
+- What the Playbook says: Max 2 per day.
+- Gap: Too many daily features (got 15, max 2)
+
+**VEGAN**
+- What the menu is doing: 0 offered — none
+- What the Playbook says: Min 1 per day.
+- Gap: Too many daily features (got 15, max 2)
+
+**FRIES**
+- What the menu is doing: 0 offered — none
+- What the Playbook says: Min 1 per day.
+- Gap: Too many daily features (got 15, max 2)
+
+**PLANT-BASED**
+- What the menu is doing: 0.0% plant-based — none
+- What the Playbook says: 44% of entrees should be plant-based (Aramark Coolfood Pledge).
+- Gap: 44.0% below the 44% target.
+
+---
+
+## Rotation & Repetition Issues
+
+### Diversity
+- Diversity index: 1.0 (15 unique entrees / 15 scheduled slots)
+- No high-repetition items. Good rotation.
+
+### Plant-Based
+- Current: 0.0% of entrees are plant-based
+- Playbook target: 44% (Aramark Coolfood Pledge)
+- Gap: 44.0% below target
+
+---
+
+## What the Playbook Recommends
+
+1. Reduce **Daily Feature** from 15 to the maximum allowed — Playbook rule: "Daily Feature: max 2 per day. Must rotate daily."
+2. Add at least one **Vegan** item — Playbook rule: "Vegan: min 1 per day."
+3. Add at least one **Fries** item — Playbook rule: "Fries: min 1 per day."
+4. Increase plant-based offerings from 0.0% toward 44% — Playbook rule: "44% of entrees should be plant-based (Aramark Coolfood Pledge)."

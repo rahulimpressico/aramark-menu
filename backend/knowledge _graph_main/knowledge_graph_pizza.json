@@ -1,0 +1,2508 @@
+{
+  "entities": {
+    "Station": [
+      {
+        "id": "station_Pizza",
+        "type": "Station",
+        "name": "Pizza"
+      }
+    ],
+    "Week": [
+      {
+        "id": "week_3",
+        "type": "Week",
+        "week_no": 3
+      }
+    ],
+    "Day": [
+      {
+        "id": "day_Monday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 1,
+        "day_name": "Monday"
+      },
+      {
+        "id": "day_Tuesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 2,
+        "day_name": "Tuesday"
+      },
+      {
+        "id": "day_Wednesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 3,
+        "day_name": "Wednesday"
+      },
+      {
+        "id": "day_Thursday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 4,
+        "day_name": "Thursday"
+      },
+      {
+        "id": "day_Friday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 5,
+        "day_name": "Friday"
+      },
+      {
+        "id": "day_Sunday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 7,
+        "day_name": "Sunday"
+      }
+    ],
+    "MealPeriod": [
+      {
+        "id": "period_All Day",
+        "type": "MealPeriod",
+        "name": "All Day"
+      },
+      {
+        "id": "period_Brunch",
+        "type": "MealPeriod",
+        "name": "Brunch"
+      },
+      {
+        "id": "period_Dinner",
+        "type": "MealPeriod",
+        "name": "Dinner"
+      },
+      {
+        "id": "period_Lunch",
+        "type": "MealPeriod",
+        "name": "Lunch"
+      }
+    ],
+    "Recipe": [
+      {
+        "id": "L380562",
+        "type": "Recipe",
+        "name": "Newcomb Taco Pizza",
+        "food_cost": 0.3858,
+        "assembly_instructions": "1. In stockpot over medium-high heat, cook beef until browned. Drain. 2. Add taco seasoning and water. Mix well. Bring to a boil. Reduce heat. Simmer until mixture thickens, 4 to 6 minutes. 3. Chill. 4. Preheat conv oven to 375 F, impinger oven to 500 F. FOR 1 PIZZA: 1. On 16\" pizza screen coated with cooking spray, place 1 frozen dough. 2. Top dough with the following: 6-oz spoodle salsa 2 each 8-oz spoodles cheddar 3-oz spoodle olives 3-oz spoodle jalapeno 6-oz spoodle filling 3. Bake until crust is browned and cheese is bubbly, conv oven 6-8 minutes or impinger oven 4-6 minutes. 4. Cut into 1/8 wedges."
+      },
+      {
+        "id": "L391788",
+        "type": "Recipe",
+        "name": "Newcomb Chopped Italian Herb Blend",
+        "food_cost": 0.0335,
+        "assembly_instructions": "1. De-stem and finely mince oregano leaves. 2. De-stem and chop parsley & basil. 3. Combine, cover & refrigerate for service."
+      },
+      {
+        "id": "L391791",
+        "type": "Recipe",
+        "name": "Newcomb Street Corn Pizza",
+        "food_cost": 0.5677,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. In stockpot over medium-high heat, cook beef until browned. Drain. 3. Add taco seasoning and water. Mix well. Bring to a boil. Reduce heat. Simmer until mixture thickens, 4 to 6 minutes. 4. Chill. 5. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 6. Coat bottom plate of dough press with cooking spray. Place 1 Dough in center of press. Coat with cooking spray. 7. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 8. Dock Dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked Dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked Dough. Gently stretch Dough to 18\" x 13” rectangle. 1. Top Dough with the following: 6-oz spoodle poblano cream sauce 2 each 8-oz spoodles cheese blend 8-oz spoodle Roasted corn blend Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Top with cotija, cilantro & Tajin 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions.",
+        "special_instructions": "Chef Austin Rowley"
+      },
+      {
+        "id": "L391897",
+        "type": "Recipe",
+        "name": "Newcomb Pizza Crust Butter",
+        "food_cost": 5.4725,
+        "assembly_instructions": "1. in a deep 6th pan, melt margarine 2. Add remaining ingredients and whisk together to incorporate salt & ranch mix. 2. Cover. Keep warm for service or use as directed in recipe"
+      },
+      {
+        "id": "M11835",
+        "type": "Recipe",
+        "name": "Caesar Pasta Salad",
+        "food_cost": 0.2972,
+        "assembly_instructions": "1. Combine all ingredients. Toss to mix. 2. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "For Grab-n-Go: In specified 5-oz container with lid, place #8 scoop salad. Close container. Keep chilled for service."
+      },
+      {
+        "id": "M14932",
+        "type": "Recipe",
+        "name": "Creamy Ranch Pasta Salad",
+        "food_cost": 0.2314,
+        "assembly_instructions": "1. Combine all ingredients. Toss to mix. 2. Cover. Keep chilled for service or use as directed in recipe."
+      },
+      {
+        "id": "M15842",
+        "type": "Recipe",
+        "name": "Caramelized Onion & Pepper Pizza",
+        "food_cost": 0.5334,
+        "assembly_instructions": "1. Remove dough from refrigerator. Let rise at room temperature until doubled in size, 1 ½ to 2 hours. 2. Preheat convection oven to 450 F or impinger oven to 500 F. 3. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. FOR 1 PIZZA: 1. Coat bottom plate of dough press with cooking spray. Place 1 dough ball in center of press. Coat dough with cooking spray. 2. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. Dock dough to minimize blistering during baking. 3. On 16\" pizza screen coated with cooking spray, place docked dough. 4. Top dough with the following: 6-oz spoodle Sauce 2 each 8-oz spoodles mozzarella 4-oz spoodle Onions 4-oz spoodle Peppers 5. Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 6. Cut 1/8",
+        "special_instructions": "*Low speed is 1st speed on a 3-speed mixer and 2nd speed on a 4-speed mixer. **Randomly check weight of portioned cookie dough on scale prior to baking. ***Baking time may vary depending on the oven and oven load."
+      },
+      {
+        "id": "M15845",
+        "type": "Recipe",
+        "name": "Black Olive Pizza",
+        "food_cost": 0.5975,
+        "assembly_instructions": "Prepare sub-assembly recipe(s). Remove dough from refrigerator. Let rise at room temperature until doubled in size, 1 1/2-2 hours. Preheat conv oven to 450 F, std oven to 500 F or impinger oven to 500 F. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. For one pizza: Coat bottom plate of dough press with cooking spray. Place 1 dough ball (19 ozw) in center of press. Coat dough with cooking spray. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. Dock dough to minimize blistering during baking. 1. On 16\" pizza screen coated with cooking spray, place docked dough. 2. Top dough with the following: 6-oz spoodle Sauce (6 ozw) 2 each 8-oz spoodles mozzarella (8 ozw) 8-oz spoodle olives (4 1/2 ozw) 3. Bake until crust is browned and cheese is bubbly, conv oven 4-6 minutes, std oven 12-14 minutes or impinger oven 4-5 minutes. 4. Cut 1/8"
+      },
+      {
+        "id": "M20849",
+        "type": "Recipe",
+        "name": "Buffalo Chicken Pizza",
+        "food_cost": 0.3144,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 3-oz spoodle sauce 2 each 6-oz spoodles mozzarella cheese 3-oz spoodle blue cheese 6-oz spoodle Chicken Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M20851",
+        "type": "Recipe",
+        "name": "Margherita Pizza",
+        "food_cost": 0.3961,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 2 each 8-oz spoodles cheese 24 slices tomato 2 tbl basil 1/2 tsp Italian seasoning Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M20949",
+        "type": "Recipe",
+        "name": "Caesar Salad",
+        "food_cost": 0.2927,
+        "assembly_instructions": "FOR EACH 12 SERVINGS: 1. In bowl, place the following: 6 each 8-oz spoodles lettuce 4-oz ladle dressing 8-oz spoodle croutons 3-oz spoodle cheese Toss to coat. 2. On serving plate place 4-oz spoodle salad. 3. Serve immediately."
+      },
+      {
+        "id": "M34311",
+        "type": "Recipe",
+        "name": "Mediterranean Pasta Salad",
+        "food_cost": 0.3547,
+        "assembly_instructions": "1. Combine all ingredients. Toss to coat. 2. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 3/4 oz 2-oz spoodle = 1 3/8 oz 3-oz spoodle = 2 1/8 oz 4-oz spoodle = 2 3/4 oz 6-oz spoodle = 4 1/8 oz 8-oz spoodle = 5 1/2 oz #30 scoop = 3/4 oz #24 scoop = 1 oz oz #20 scoop = 1 1/8 oz #16 scoop = 1 3/8 oz #12 scoop = 1 7/8 oz #10 scoop = 2 1/4 oz #8 scoop = 2 3/4 oz"
+      },
+      {
+        "id": "M36651",
+        "type": "Recipe",
+        "name": "Avocado Salad",
+        "food_cost": 0.4021,
+        "assembly_instructions": "1. Combine all ingredients. Mix well. 2. Serve immediately."
+      },
+      {
+        "id": "M40427",
+        "type": "Recipe",
+        "name": "BBQ Chicken Pizza",
+        "food_cost": 0.3471,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Combine pizza sauce and bbq sauce. Whisk until well blended. 3. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 4. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 5. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 6. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce mixture 2 each 8-oz spoodles cheese 6-oz spoodle Onions 6-oz spoodle Chicken Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M40434",
+        "type": "Recipe",
+        "name": "Deluxe Pizza",
+        "food_cost": 0.4119,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. Dock Dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked Dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked Dough. Gently stretch Dough to 18\" x 13” rectangle. 1. Top Dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 2-oz spoodle Mushrooms 2-oz spoodle Onions 24 slices pepperoni 4-oz spoodle sausage Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M40437",
+        "type": "Recipe",
+        "name": "Mushroom & Sausage Pizza",
+        "food_cost": 0.4185,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 4-oz spoodle Sauteed Mushrooms 6-oz spoodle sausage Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M40445",
+        "type": "Recipe",
+        "name": "Primavera Pizza",
+        "food_cost": 0.3598,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. In saute pan over medium-high heat, heat oil. Add zucchini, green pepper, yellow squash, mushroom and onion. Saute until tender-crisp, 2 to 3 minutes. Chill. 3. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 4. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 5. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 6. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 2 each 6-oz spoodles vegetables Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M40447",
+        "type": "Recipe",
+        "name": "Classic Cheese Pizza",
+        "food_cost": 0.2215,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On hallf sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M40449",
+        "type": "Recipe",
+        "name": "Pepperoni Pizza",
+        "food_cost": 0.289,
+        "assembly_instructions": "1. Preheat convection oven to 450 F or impinger oven to 500 F. 2. Preheat dough press to 140 F. Preset dough press timer to 8 seconds. 3. Coat bottom plate of dough press with cooking spray. Place 1 Scratch Dough in center of press. Coat with cooking spray. 4. Close press. Timer will beep after 8 seconds. Open press. Dough should be 16\" in diameter. 5. Dock dough to minimize blistering during baking. FOR 1 ROUND PIZZA: On 16\" pizza screen coated with cooking spray, place 1 docked dough. FOR 1 RECTANGULAR PIZZA: On half sheet pan coated with cooking spray, place 1 docked dough. Gently stretch dough to 18\" x 13” rectangle. 1. Top dough with the following: 6-oz spoodle sauce 2 each 8-oz spoodles cheese 24 slices pepperoni Bake until crust is browned and cheese is bubbly, convection oven 4 to 6 minutes or impinger oven 4 to 5 minutes. 2. Cut ROUND pizza into 1/8 wedges or RECTANGULAR pizza 4 x 2 into 8 portions."
+      },
+      {
+        "id": "M5731",
+        "type": "Recipe",
+        "name": "BEEF POT ROAST (PCKD)",
+        "food_cost": 0.1815,
+        "assembly_instructions": "1. Combine all ingredients. Toss to mix. 2. Cover. Keep chilled for service or use as directed in recipe."
+      }
+    ],
+    "Ingredient": [
+      {
+        "id": "ing_0be47d12f7aa",
+        "type": "Ingredient",
+        "description": "SAUCE BBQ SWEET BABY RAY'S"
+      },
+      {
+        "id": "ing_0cd6d29f9af6",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH MUSHROOM - TRIMMED, SLICED / SAUTEED, GRILLED OR STIR FRIED"
+      },
+      {
+        "id": "ing_0df0fb17fe22",
+        "type": "Ingredient",
+        "description": "BEEF POT ROAST CHOICE WHOLE HOMESTYLE CKD FZ - THAWED"
+      },
+      {
+        "id": "ing_0fdfed2af169",
+        "type": "Ingredient",
+        "description": "CHEESE FETA AP CRUMBLED"
+      },
+      {
+        "id": "ing_13feb4f5443e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO PLUM - CORED, DICED / RAW"
+      },
+      {
+        "id": "ing_1879984cc2a4",
+        "type": "Ingredient",
+        "description": "SALSA MEDIUM THICK AND CHUNKY"
+      },
+      {
+        "id": "ing_18edcafed03f",
+        "type": "Ingredient",
+        "description": "CHEESE CHEDDAR YELLOW MILD AP SHREDDED FEATHER"
+      },
+      {
+        "id": "ing_1bc08ecac012",
+        "type": "Ingredient",
+        "description": "MIX GRAVY COUNTRY 22 OZ"
+      },
+      {
+        "id": "ing_205c6ed397a7",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ROMAINE AP CHOPPED 1\" / RAW"
+      },
+      {
+        "id": "ing_26f5d315b0b9",
+        "type": "Ingredient",
+        "description": "CHEESE BLUE AP CRUMBLE"
+      },
+      {
+        "id": "ing_2709f38fe97d",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION RED - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_2add2964642f",
+        "type": "Ingredient",
+        "description": "WATER"
+      },
+      {
+        "id": "ing_2e5733977a28",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO 6 X 6 - CORED, CUT / RAW"
+      },
+      {
+        "id": "ing_34edd9770816",
+        "type": "Ingredient",
+        "description": "HERB FRESH BASIL - LEAVES, VERY THINLY SLICED / RAW"
+      },
+      {
+        "id": "ing_359a9f920cdd",
+        "type": "Ingredient",
+        "description": "OLIVE BLACK (RIPE) SLICED - DRAINED"
+      },
+      {
+        "id": "ing_35feb4530ad3",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CUCUMBER - SEEDED, DICED / RAW"
+      },
+      {
+        "id": "ing_367168cc7338",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH YELLOW - TRIMMED, CUT / COOKED"
+      },
+      {
+        "id": "ing_3941e15f7df4",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ROMAINE - CUT / RAW"
+      },
+      {
+        "id": "ing_3e6406e14215",
+        "type": "Ingredient",
+        "description": "CHEESE MOZZARELLA WHOLE MILK AP SHREDDED"
+      },
+      {
+        "id": "ing_41f1ae305567",
+        "type": "Ingredient",
+        "description": "PEPPERONI AP SLICED 15/17 CT #20911"
+      },
+      {
+        "id": "ing_4a7739884433",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED GARLIC AP CHOPPED IN WATER / RAW"
+      },
+      {
+        "id": "ing_4ce442b8b03a",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CAULIFLOWER AP FLORETS - CUT / RAW"
+      },
+      {
+        "id": "ing_4df96417907e",
+        "type": "Ingredient",
+        "description": "VINEGAR RED WINE"
+      },
+      {
+        "id": "ing_527417521a12",
+        "type": "Ingredient",
+        "description": "COOKIE MIX SUGAR"
+      },
+      {
+        "id": "ing_556dc82ed015",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH TOMATO PLUM - CORED, SLICED / RAW"
+      },
+      {
+        "id": "ing_5cf47d2a64e9",
+        "type": "Ingredient",
+        "description": "DOUGH PIZZA BALL WHITE 19 OZ FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_5df23892ea36",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN - SHREDDED / RAW"
+      },
+      {
+        "id": "ing_61f6d68ef626",
+        "type": "Ingredient",
+        "description": "FLAVOR CONCENTRATE POBLANO FIRE ROASTED GLUTENFREE"
+      },
+      {
+        "id": "ing_65d542dad72c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG - CUT / RAW"
+      },
+      {
+        "id": "ing_66504bd92a35",
+        "type": "Ingredient",
+        "description": "OLIVE KALAMATA PITTED - DRAINED, SLICED"
+      },
+      {
+        "id": "ing_67532a6b7c82",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG AP SHREDDED / RAW"
+      },
+      {
+        "id": "ing_6a9248bfbaba",
+        "type": "Ingredient",
+        "description": "SALAD DRESSING CAESAR CREAMY BULK"
+      },
+      {
+        "id": "ing_6f4cedf906c7",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_75ae79015e50",
+        "type": "Ingredient",
+        "description": "MIX SALAD DRESSING RANCH (DRY) 3.35 OZ"
+      },
+      {
+        "id": "ing_77695250a7fb",
+        "type": "Ingredient",
+        "description": "OIL OLIVE EXTRA VIRGIN"
+      },
+      {
+        "id": "ing_7cf44e4551d9",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW - TRIMMED, CUT / RAW"
+      },
+      {
+        "id": "ing_81f72968c4de",
+        "type": "Ingredient",
+        "description": "PEANUT BUTTER BULK UNSALTED"
+      },
+      {
+        "id": "ing_828e079497d1",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH RADISH RED AP TRIMMED - SLICED / RAW"
+      },
+      {
+        "id": "ing_83c08c0d8add",
+        "type": "Ingredient",
+        "description": "MARGARINE SOLID UNSALTED ZTF - MELTED"
+      },
+      {
+        "id": "ing_85871c03bae4",
+        "type": "Ingredient",
+        "description": "COOKIE MIX OATMEAL"
+      },
+      {
+        "id": "ing_8bcb55d6e5e7",
+        "type": "Ingredient",
+        "description": "CROUTONS HOMESTYLE SEASONED"
+      },
+      {
+        "id": "ing_8edcdcef0179",
+        "type": "Ingredient",
+        "description": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW"
+      },
+      {
+        "id": "ing_9763119cbec3",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN AP SHREDDED / RAW"
+      },
+      {
+        "id": "ing_98a90011c759",
+        "type": "Ingredient",
+        "description": "CHEESE MONTEREY JACK AP SHREDDED FEATHER"
+      },
+      {
+        "id": "ing_9b234c3f5f6c",
+        "type": "Ingredient",
+        "description": "FRUIT DRINK BASE W/ VITAMIN C LEMONADE CLEAR"
+      },
+      {
+        "id": "ing_9bebbc964004",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER GREEN BELL - SEEDED, DICED / STEAMED, SIMMERED OR STEWED"
+      },
+      {
+        "id": "ing_9c8659a2bb3d",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER BLACK TABLE GRIND"
+      },
+      {
+        "id": "ing_a0c0d277a1e2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CUCUMBER ENGLISH - DICED / RAW"
+      },
+      {
+        "id": "ing_a39649a72d21",
+        "type": "Ingredient",
+        "description": "FRUIT FRESH AVOCADO HAAS - PITTED, PEELED, DICED / RAW"
+      },
+      {
+        "id": "ing_a76aa4d18894",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CELERY - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_a7c857c4fb37",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION RED - TRIMMED, DICED / RAW"
+      },
+      {
+        "id": "ing_abb33f5250d2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_adab868bebb2",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED PEPPER RED ROASTED WHOLE - DRAINED, DICED"
+      },
+      {
+        "id": "ing_af50da490869",
+        "type": "Ingredient",
+        "description": "CHEESE MOZZARELLA PART SKIM AP SHREDDED FEATHER"
+      },
+      {
+        "id": "ing_b34958cb4497",
+        "type": "Ingredient",
+        "description": "SAUCE BUFFALO WING"
+      },
+      {
+        "id": "ing_b3c7f48a5eca",
+        "type": "Ingredient",
+        "description": "SEASONING ITALIAN"
+      },
+      {
+        "id": "ing_b7ec5ea6fc84",
+        "type": "Ingredient",
+        "description": "VEGETABLE FROZEN CORN ROASTED CUT - THAWED"
+      },
+      {
+        "id": "ing_ba53a9bb0e5e",
+        "type": "Ingredient",
+        "description": "OIL BLEND VEGETABLE 90 / EVO 10"
+      },
+      {
+        "id": "ing_bac47c7a0aa7",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED PEPPER CHILI JALAPENO SLICED - DRAINED"
+      },
+      {
+        "id": "ing_be305bfa5519",
+        "type": "Ingredient",
+        "description": "HERB FRESH OREGANO - LEAVES, MINCED / RAW"
+      },
+      {
+        "id": "ing_c5fe7198f00e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SPINACH - STEMS REMOVED, CUT / RAW"
+      },
+      {
+        "id": "ing_c787fb442e80",
+        "type": "Ingredient",
+        "description": "SALT KOSHER"
+      },
+      {
+        "id": "ing_c9ab64822daf",
+        "type": "Ingredient",
+        "description": "CHEESE PARMESAN AP GRATED"
+      },
+      {
+        "id": "ing_d09072694368",
+        "type": "Ingredient",
+        "description": "CHEESE PARMESAN AP SHREDDED"
+      },
+      {
+        "id": "ing_d1a578652be4",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CUCUMBER - CUT / RAW"
+      },
+      {
+        "id": "ing_d29f9d73c36b",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG AP CHOPPED 1\" / RAW"
+      },
+      {
+        "id": "ing_d5baf8adf91c",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CAULIFLOWER - CUT / RAW"
+      },
+      {
+        "id": "ing_db3892b5086e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG - SHREDDED / RAW"
+      },
+      {
+        "id": "ing_dcf0575f56f4",
+        "type": "Ingredient",
+        "description": "HERB FRESH PARSLEY FLAT LEAF (ITALIAN) - LEAVES / RAW"
+      },
+      {
+        "id": "ing_e5929821776b",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION RED - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_eac2f050951c",
+        "type": "Ingredient",
+        "description": "SAUSAGE PIZZA TOPPING PORK ITALIAN CKD FZ - THAWED"
+      },
+      {
+        "id": "ing_f076f93144b4",
+        "type": "Ingredient",
+        "description": "HERB FRESH OREGANO - LEAVES, CHOPPED / RAW"
+      },
+      {
+        "id": "ing_f29354230b81",
+        "type": "Ingredient",
+        "description": "CHEESE COTIJA - SHREDDED"
+      },
+      {
+        "id": "ing_f46a40361fe8",
+        "type": "Ingredient",
+        "description": "HERB FRESH BASIL - LEAVES, CHOPPED / RAW"
+      },
+      {
+        "id": "ing_fc66a7037b40",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH SQUASH ZUCCHINI - TRIMMED, CUT / COOKED"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1879984cc2a4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_18edcafed03f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_359a9f920cdd"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L380562",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bac47c7a0aa7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_be305bfa5519"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dcf0575f56f4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391788",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f46a40361fe8"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1bc08ecac012"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_61f6d68ef626"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8edcdcef0179"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_98a90011c759"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b7ec5ea6fc84"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391791",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f29354230b81"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_75ae79015e50"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_83c08c0d8add"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L391897",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c9ab64822daf"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0fdfed2af169"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_13feb4f5443e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_35feb4530ad3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6a9248bfbaba"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M11835",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a7c857c4fb37"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0fdfed2af169"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_13feb4f5443e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_35feb4530ad3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M14932",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a7c857c4fb37"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5cf47d2a64e9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_81f72968c4de"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_85871c03bae4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15842",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_359a9f920cdd"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_527417521a12"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5cf47d2a64e9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9b234c3f5f6c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M15845",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_26f5d315b0b9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20849",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b34958cb4497"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_34edd9770816"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_556dc82ed015"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20851",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b3c7f48a5eca"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_205c6ed397a7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3941e15f7df4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6a9248bfbaba"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8bcb55d6e5e7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M20949",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d09072694368"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0fdfed2af169"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_13feb4f5443e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4df96417907e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_66504bd92a35"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_77695250a7fb"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a0c0d277a1e2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_adab868bebb2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M34311",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f076f93144b4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2709f38fe97d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2e5733977a28"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4df96417907e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_67532a6b7c82"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a39649a72d21"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d1a578652be4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36651",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_db3892b5086e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0be47d12f7aa"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40427",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_41f1ae305567"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40434",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eac2f050951c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40437",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_eac2f050951c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0cd6d29f9af6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_367168cc7338"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9bebbc964004"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e5929821776b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40445",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_fc66a7037b40"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40447",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "All Day"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3e6406e14215"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_41f1ae305567"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40449",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af50da490869"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Pizza"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0df0fb17fe22"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_205c6ed397a7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_3941e15f7df4"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4ce442b8b03a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5df23892ea36"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_65d542dad72c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_6f4cedf906c7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7cf44e4551d9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_828e079497d1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9763119cbec3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a76aa4d18894"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c5fe7198f00e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d29f9d73c36b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M5731",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d5baf8adf91c"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Brunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_All Day"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Station",
+      "from_id": "station_Pizza",
+      "predicate": "HAS_WEEK",
+      "to_type": "Week",
+      "to_id": "week_3"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Friday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Monday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Sunday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Thursday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Tuesday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Wednesday"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "meta": {
+    "source_file": "pizza_station_only.xlsx",
+    "station_name": "Pizza",
+    "warnings_count": 0,
+    "validation_issues_count": 0
+  }
+}

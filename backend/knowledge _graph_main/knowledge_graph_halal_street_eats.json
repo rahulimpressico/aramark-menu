@@ -1,0 +1,2813 @@
+{
+  "entities": {
+    "Station": [
+      {
+        "id": "station_Halal Street Eats",
+        "type": "Station",
+        "name": "Halal Street Eats"
+      }
+    ],
+    "Week": [
+      {
+        "id": "week_3",
+        "type": "Week",
+        "week_no": 3
+      }
+    ],
+    "Day": [
+      {
+        "id": "day_Monday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 1,
+        "day_name": "Monday"
+      },
+      {
+        "id": "day_Tuesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 2,
+        "day_name": "Tuesday"
+      },
+      {
+        "id": "day_Wednesday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 3,
+        "day_name": "Wednesday"
+      },
+      {
+        "id": "day_Thursday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 4,
+        "day_name": "Thursday"
+      },
+      {
+        "id": "day_Friday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 5,
+        "day_name": "Friday"
+      },
+      {
+        "id": "day_Sunday",
+        "type": "Day",
+        "week_no": 3,
+        "day_no": 7,
+        "day_name": "Sunday"
+      }
+    ],
+    "MealPeriod": [
+      {
+        "id": "period_Dinner",
+        "type": "MealPeriod",
+        "name": "Dinner"
+      },
+      {
+        "id": "period_Lunch",
+        "type": "MealPeriod",
+        "name": "Lunch"
+      }
+    ],
+    "Recipe": [
+      {
+        "id": "A4307",
+        "type": "Recipe",
+        "name": "Bulgogi Ground Turkey",
+        "food_cost": 1.4655,
+        "assembly_instructions": "1. In sauté pan or rondeau over medium-high heat, cook ground turkey until browned. Drain. 2. Add BBQ sauce and gochujang. Mix well. Bring to a simmer, then remove from heat. 3. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "IDDSI Level 7 1-oz spoodle = 5/8 oz 2-oz spoodle = 1 3/4 oz 3-oz spoodle = 2 3/8 oz 4-oz spoodle = 3 1/2 oz 6-oz spoodle = 5 1/4 oz 8-oz spoodle = 7 oz #30 scoop = 1 oz #24 scoop = 1 1/4 oz #20 scoop = 1 1/2 oz #16 scoop = 1 3/4 oz #12 scoop = 2 3/8 oz #10 scoop = 2 7/8 oz #8 scoop = 3 1/2 oz"
+      },
+      {
+        "id": "A4308",
+        "type": "Recipe",
+        "name": "Sesame Spinach",
+        "food_cost": 4.0061,
+        "assembly_instructions": "1. In mixing bowl, combine soy sauce, sesame oil, vinegar, sugar and sesame seeds. Using whisk, mix well so that sugar dissolves. 2. Add marinade to well-drained spinach. Mix well to distribute marinade and sesame seeds. 3. Cover. Keep chilled for service or use as directed in a recipe.",
+        "special_instructions": "1-oz spoodle = 1 oz 2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz"
+      },
+      {
+        "id": "A4603",
+        "type": "Recipe",
+        "name": "Gochujang Beef Bowl",
+        "food_cost": 4.5152,
+        "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving container, place 1 each #8 scoops Rice. 2. Place the following over Rice: 2-oz spoodle Beef 3. Arrange the following around Rice: 1-oz spoodle Daikon 1-oz spoodle Pickled Cucumber 1-oz spoodle Kimchi 4. Layer the following on top of Beef: 1 Fried Egg 1 tbl Gochujang sauce 1 tbl scallion 5. Serve immediately."
+      },
+      {
+        "id": "A526",
+        "type": "Recipe",
+        "name": "Gochujang Bulgogi Beef",
+        "food_cost": 8.988,
+        "assembly_instructions": "1. Preheat flat-top griddle to 350 F. 2. On griddle or in saute pan over medium-high heat, heat oil. 3. Add beef. Cook 1 minute. Using 2 metal spatulas, turn beef and begin pulling beef apart. Add remaining ingredients. Cook until beef is browned and internal temperature reaches 160 F, 3-4 minutes. 4. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "Recipe submitted by Chef Toni Thomas 1-oz spoodle = 1/2 oz 2-oz spoodle = 1 oz 3-oz spoodle = 1 1/2 oz 4-oz spoodle = 2 oz 6-oz spoodle = 3 oz 8-oz spoodle = 4 oz"
+      },
+      {
+        "id": "A7977",
+        "type": "Recipe",
+        "name": "Asian Seared Chicken",
+        "food_cost": 3.2376,
+        "assembly_instructions": "1. Prepare sub-assembly recipe(s). 2. Cover. Keep chilled for service."
+      },
+      {
+        "id": "A8326",
+        "type": "Recipe",
+        "name": "Sesame Green Cabbage",
+        "food_cost": 0.3164,
+        "assembly_instructions": "1. Combine all ingredients. Toss to coat. 2. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 3/4 ozw 2-oz spoodle = 1 1/2 ozw 3-oz spoodle = 2 1/4 ozw 4-oz spoodle = 3 ozw 6-oz spoodle = 4 1/2 ozw 8-oz spoodle = 6 ozw"
+      },
+      {
+        "id": "L392180",
+        "type": "Recipe",
+        "name": "Street Eatz Bibimbap",
+        "food_cost": 1.4462,
+        "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving plate, place 4-oz spoodle Jasmine rice. 2. Arrange the following around rice: 2-oz spoodle Asian chicken 2-oz spoodle sesame soy spinach 1-oz spoodle kimchi 1-oz spoodle pickled water chestnuts 3. Layer the following on top of rice: 1 fried egg 1 tbl Gochujang sauce 1 tbl scallion 4. Serve immediately.",
+        "special_instructions": "Created without main protein for customizable bowl."
+      },
+      {
+        "id": "L392181",
+        "type": "Recipe",
+        "name": "Street Eatz Loaded Bulgogi Fries",
+        "food_cost": 0.8021,
+        "assembly_instructions": "FOR 1 SERVING: 1. On a serving plate, place the following: 8-oz spoodle Fries 2-oz spoodle Beef 2-oz ladle Queso 1-oz spoodle Pickled Cucumber 1-oz spoodle Kimchi 1 T Mayonnaise 1 tsp cilantro 1 tsp scallion 2. Serve immediately."
+      },
+      {
+        "id": "L392896",
+        "type": "Recipe",
+        "name": "Street Eatz Korean BBQ Fish Taco",
+        "food_cost": 1.5092,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following across center of 1 tortilla: 2-oz spoodle lettuce 1-oz spoodle Kimchi 1 piece haddock 1 Tbl Korean BBQ sauce 4 Slices jalapeno 2. Cover. Keep hot for service."
+      },
+      {
+        "id": "L392900",
+        "type": "Recipe",
+        "name": "Street Eatz Kimchi Sushi Bowl",
+        "food_cost": 2.0244,
+        "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving container, place 1 each #8 scoop Sushi Rice. 2. Arrange the following around rice: 2 pieces Pollock 2-oz spoode kimchi 1-oz spoodle jalapeno 1-oz spoodle scallion 3. Layer the following on top of rice: 1 tbl Spicy Mayonnaise 4. Serve immediately."
+      },
+      {
+        "id": "M10140",
+        "type": "Recipe",
+        "name": "Pickled Carrot & Daikon",
+        "food_cost": 22.0545,
+        "assembly_instructions": "1. Combine vinegar and sugar. Whisk until well blended. Add daikon and carrot. Toss to coat. Let stand 2 hours or overnight. Drain. 2. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 1/2 oz 2-oz spoodle = 1 oz 3-oz spoodle = 1 1/2 oz 4-oz spoodle = 2 oz 6-oz spoodle = 3 oz 8-oz spoodle = 4 oz"
+      },
+      {
+        "id": "M16592",
+        "type": "Recipe",
+        "name": "Korean BBQ Tofu",
+        "food_cost": 0.2772,
+        "assembly_instructions": "1. In saute pan or wok over high heat, heat oil. Add tofu. Stir-fry until browned, 2 to 3 minutes. Remove from pan. 2. To same pan, add broccoli, onion, cabbage, carrot and celery. Stir-fry until tender-crisp, 2 to 3 minutes. 3. Add cooked tofu and sauce. Stir-fry until coated and heated through. 4. Cover. Keep hot for service. EXHIBITION SERVICE FOR EACH 6 (1/2 cup) SERVINGS: 1. In saucepan or wok over high heat, heat 1 1/2 tsp oil. 2. Add the following: 2 each 6-oz spoodles tofu Stir-fry until browned, 2 to 3 minutes. Remove from pan. 3. To same pan, add: 8-oz spoodle broccoli 6-oz spoodle onion 6-oz spoodle cabbage 3-oz spoodle carrot 3-oz spoodle celery Stir-fry until vegetables are tender-crisp, 2 to 3 minutes. 4. Add: Cooked tofu 6-oz ladle sauce Stir-fry until coated and heated through, 2 to 3 minutes. TO PLATE 1 SERVING: 1. On serving plate, place the following: 4-oz spoodle stir-fry mixture 2. Serve immediately."
+      },
+      {
+        "id": "M17310",
+        "type": "Recipe",
+        "name": "TURKEY GD ROTINI 10/3",
+        "food_cost": 0.9322,
+        "assembly_instructions": "1. In stockpot over medium-high heat, bring water, base, gingerroot, soy sauce, salt, Thai seasoning and sugar to a boil. Reduce heat. Simmer 5 minutes. FOR 1 SERVING: 1. In serving bowl, place the following: 3-oz spoodle Noodles 1-oz spoodle carrot 1-oz spoodle bean sprouts 2-oz spoodle tofu 1 tbl scallion 3 slices jalapeno 1 tsp cilantro 8-oz ladle broth 1 leaf basil 2. Serve immediately with 1 wedge lime.",
+        "special_instructions": "IDDSI Level 7"
+      },
+      {
+        "id": "M21426",
+        "type": "Recipe",
+        "name": "Korean BBQ Chicken",
+        "food_cost": 4.6248,
+        "assembly_instructions": "1. Combine chicken and marinade. Toss to coat. 2. Place chicken with marinade in covered non-reactive shallow pan(s) or sealable plastic bag(s). Refrigerate 1 hour. 3. Preheat flat-top griddle to 350 F. 4. Drain chicken. Discard marinade. 5. Cook chicken strips 2 minutes. Turn strips over. Brush with BBQ sauce. Cook until caramelized, 2 to 3 minutes. 6. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "2-oz spoodle = 2 oz 3-oz spoodle = 3 oz 4-oz spoodle = 4 oz 6-oz spoodle = 6 oz 8-oz spoodle = 8 oz"
+      },
+      {
+        "id": "M32304",
+        "type": "Recipe",
+        "name": "Kimchi",
+        "food_cost": 1.5106,
+        "assembly_instructions": "1. Preheat steamer. 2. In 2\" perforated steam table pan(s), steam cabbage 2 minutes. Drain. 3. Immediately rinse with cold water to stop the cooking process. Drain. 4. Cover. 5. Combine vinegar, fish sauce, Gochujang paste, garlic and gingerroot. Whisk until well blended. 2. Combine all ingredients. Toss to mix. 3. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 1/2 oz 2-oz spoodle = 1 1/8 oz 3-oz spoodle = 1 5/8 oz 4-oz spoodle = 2 1/4 oz 6-oz spoodle = 3 3/8 oz 8-oz spoodle = 4 1/2 oz"
+      },
+      {
+        "id": "M32306",
+        "type": "Recipe",
+        "name": "Gochujang Sauce",
+        "food_cost": 0.2293,
+        "assembly_instructions": "1. Preheat convection oven to 300 F. 2. On sheet pan(s), spread sesame seed in thin layer. 3. Bake, stirring once, until lightly toasted and aromatic, 4 to 6 minutes. Cool. 4. Combine all ingredients. Whisk until well blended. 5. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 1 1/8 oz 2-oz spoodle = 2 1/4 oz 3-oz spoodle = 3 3/8 oz 4-oz spoodle = 4 1/2 oz 6-oz spoodle = 6 3/4 oz 8-oz spoodle = 9 oz"
+      },
+      {
+        "id": "M32308",
+        "type": "Recipe",
+        "name": "Asian Seared Tofu",
+        "food_cost": 2.7541,
+        "assembly_instructions": "1. Combine tofu and Marinade. Toss to coat. 2. Place tofu with marinade in covered non-reactive shallow pan(s) or sealable plastic bag(s). Refrigerate 2 hours or overnight. 3. Preheat flat-top griddle to 350 F. 4. Drain tofu. Discard marinade. 5. Cook tofu until caramelized, 2 to 3 minutes. 6. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "2-oz spoodle = 1 3/4 oz 3-oz spoodle = 2 5/8 oz 4-oz spoodle = 3 1/2 oz 6-oz spoodle = 5 1/4 oz 8-oz spoodle = 7 oz"
+      },
+      {
+        "id": "M32316",
+        "type": "Recipe",
+        "name": "Kimchi Fried Rice",
+        "food_cost": 0.9395,
+        "assembly_instructions": "1. In saute pan over medium-high heat, heat oil. 2. Add gingerroot and garlic. Saute until aromatic, 30 seconds. 3. Add Kimchi and scallion. Saute until tender-crisp, 2 to 3 minutes. 4. Add Rice. Saute until heated through. 5. Cover. Keep hot for service."
+      },
+      {
+        "id": "M32354",
+        "type": "Recipe",
+        "name": "Korean Noodle Bowl",
+        "food_cost": 2.2155,
+        "assembly_instructions": "FOR 1 SERVING: 1. In center of specified serving plate, place 4-oz spoodle noodles. 2. Arrange the following around noodles: 2-oz spoodle tofu 2-oz spoodle mushrooms 6-oz ladle broth 1-oz spoodle kimchi 1-oz spoodle carrot daikon 3. Top with 1 tbsp scallion 4. Serve immediately."
+      },
+      {
+        "id": "M36626",
+        "type": "Recipe",
+        "name": "Spicy Asian Burrito",
+        "food_cost": 1.4471,
+        "assembly_instructions": "FOR 1 SERVING: 1. Layer the following across center of 1 tortilla: #12 scoop Basmati Rice #8 scoop Asian Coleslaw 1-oz spoodle Sriracha Edamame 2-oz spoodle snow peas Fold lower third of tortilla up over filling. Fold in right and left edges of tortilla about 1\" on each side. Roll burrito closed. Place seam side down. 2. Cut diagonally in half. 3. Cover. Keep hot for service."
+      },
+      {
+        "id": "M38517",
+        "type": "Recipe",
+        "name": "Crispy Sesame Tofu",
+        "food_cost": 3.2908,
+        "assembly_instructions": "1. Preheat deep-fat fryer to 350 F. 2. Combine tofu and soy sauce. Toss gently to coat. 3. In mixing bowl, combine cornstarch, salt and sesame seeds. Toss to mix. 4. Combine tofu mixture and cornstarch mixture. Toss to coat. 5. Fry tofu until golden brown, 2 to 3 minutes. Drain. Cool. 6. Cover. Keep chilled for service or use as directed in recipe.",
+        "special_instructions": "Place fryer basket on sheet pan to fill. DO NOT fill basket over fryer. DO NOT fill fryer basket more than 1/3 full. 1-oz spoodle = 1/2 ozw 2-oz spoodle = 1 ozw 3-oz spoodle = 1 1/2 ozw 4-oz spoodle = 2 ozw 6-oz spoodle = 3 ozw 8-oz spoodle = 4 ozw"
+      },
+      {
+        "id": "M38622",
+        "type": "Recipe",
+        "name": "Pickled Cucumber",
+        "food_cost": 2.0114,
+        "assembly_instructions": "1. Combine cucumbers, sugar and salt. Toss to coat. Let stand for 15 to 20 minutes, stirring once. 2. Combine cucumbers and vinegar. Toss to coat. 3. Cover. Keep chilled for service or use as directed in recipe. 4. Drain before serving.",
+        "special_instructions": "1 tbl = 1/2 ozw 1-oz spoodle = 7/8 ozw 2-oz spoodle = 1 5/8 ozw 3-oz spoodle = 2 3/8 ozw 4-oz spoodle = 3 1/4 ozw 6-oz spoodle = 4 7/8 ozw 8-oz spoodle = 6 1/2 ozw"
+      },
+      {
+        "id": "M39294",
+        "type": "Recipe",
+        "name": "Kimchi",
+        "food_cost": 4.9733,
+        "assembly_instructions": "1. Cover. Keep chilled for service.",
+        "special_instructions": "1 tbl = 1/2 ozw 1-oz spoodle = 7/8 ozw 2-oz spoodle = 1 3/4 ozw 3-oz spoodle = 2 5/8 ozw 4-oz spoodle = 3 1/2 ozw 6-oz spoodle = 5 1/4 ozw 8-oz spoodle = 7 ozw"
+      },
+      {
+        "id": "M40821",
+        "type": "Recipe",
+        "name": "Roasted Garlic Rice",
+        "food_cost": 0.1187,
+        "assembly_instructions": "RANGE-TOP METHOD 1. In stockpot over high heat, bring water to a boil. Add rice, oil, salt, pepper and Roasted Garlic. Stir. Return to a boil. Reduce heat. Cover. 2. Simmer until rice is tender and liquid is absorbed, 18 to 20 minutes. Remove from heat. Let stand 10 minutes. Fluff with fork. 3. Cover. Keep hot for service or use as directed in recipe. OVEN / STEAMER METHOD 1. Preheat oven to 350 F or preheat steamer. FOR EACH 24 (1/2 cup) SERVINGS: 1. In 2\" full steam table pan, place the following: 2 qt boiling water 1 lb + 12 oz rice 2 tbl oil 1 1/2 tsp salt 1/4 tsp pepper 2 oz Roasted Garlic Stir. Cover. 2. Bake or steam until rice is tender and liquid is absorbed, 30 to 35 minutes. Let stand 10 minutes. Fluff with fork. 3. Cover. Keep hot for service or use as directed in recipe.",
+        "special_instructions": "1-oz spoodle = 3/4 oz 2-oz spoodle = 1 1/2 oz 3-oz spoodle = 2 1/4 oz 4-oz spoodle = 3 oz 6-oz spoodle = 4 1/2 oz 8-oz spoodle = 6 oz #40 scoop = 1/2 oz #30 scoop = 3/4 oz #24 scoop = 1 oz #20 scoop = 1 1/4 oz #16 scoop = 1 1/2 oz #12 scoop = 2 oz #10 scoop = 2 1/4 oz #8 scoop = 3 oz"
+      },
+      {
+        "id": "M6349",
+        "type": "Recipe",
+        "name": "Sliced Scallions",
+        "food_cost": 6.0301,
+        "assembly_instructions": "1. Cover. Keep chilled for service."
+      }
+    ],
+    "Ingredient": [
+      {
+        "id": "ing_02219666ff12",
+        "type": "Ingredient",
+        "description": "TURKEY GD BULK RAW FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_028805c414ad",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEA SNOW - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_04ed11409bf5",
+        "type": "Ingredient",
+        "description": "PASTE GOCHUJANG"
+      },
+      {
+        "id": "ing_0696e1ee4e8f",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, CUT / COOKED"
+      },
+      {
+        "id": "ing_09cb19b63879",
+        "type": "Ingredient",
+        "description": "OIL SESAME"
+      },
+      {
+        "id": "ing_0a3572fa57b2",
+        "type": "Ingredient",
+        "description": "TOFU HIGH PROTEIN SUPER FIRM - DICED / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_0adfed0dd18e",
+        "type": "Ingredient",
+        "description": "SAUCE FISH"
+      },
+      {
+        "id": "ing_0bb706afe8d0",
+        "type": "Ingredient",
+        "description": "VINEGAR RICE SEASONED"
+      },
+      {
+        "id": "ing_0c1544110c8d",
+        "type": "Ingredient",
+        "description": "SPICE GARLIC POWDER"
+      },
+      {
+        "id": "ing_11b3b4a61123",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW/WHITE - PEELED AND TRIMMED, DICED / COOKED"
+      },
+      {
+        "id": "ing_15d61fb3b184",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / COOKED"
+      },
+      {
+        "id": "ing_15e254564e96",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CUCUMBER ENGLISH - SLICED / RAW"
+      },
+      {
+        "id": "ing_16e5cf0c3cb6",
+        "type": "Ingredient",
+        "description": "SUGAR BROWN LIGHT"
+      },
+      {
+        "id": "ing_1af9d1a97035",
+        "type": "Ingredient",
+        "description": "BASE BEEF FLAVORED (VEGAN)"
+      },
+      {
+        "id": "ing_21255b2cf8b6",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN - CUT / RAW"
+      },
+      {
+        "id": "ing_2add2964642f",
+        "type": "Ingredient",
+        "description": "WATER"
+      },
+      {
+        "id": "ing_31ae7337f64c",
+        "type": "Ingredient",
+        "description": "SAUCE, KOREAN HOT TACO KENS 65 OZ"
+      },
+      {
+        "id": "ing_346edc7eb5a9",
+        "type": "Ingredient",
+        "description": "TURKEY GROUND BULK 90/10 FZ - THAWED / COOKED"
+      },
+      {
+        "id": "ing_375e0d577e06",
+        "type": "Ingredient",
+        "description": "SUGAR GRANULATED EXTRA FINE"
+      },
+      {
+        "id": "ing_40e0eab3821a",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED TOMATO PASTE"
+      },
+      {
+        "id": "ing_413a70c826ce",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT - TRIMMED, SHREDDED / COOKED"
+      },
+      {
+        "id": "ing_416b3db7504b",
+        "type": "Ingredient",
+        "description": "CORNSTARCH"
+      },
+      {
+        "id": "ing_433dabb9bbd0",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_46ffa8576358",
+        "type": "Ingredient",
+        "description": "POTATO FZ FRIES CRINKLE CUT COAT 3/8\" XL 3761 / COOKED"
+      },
+      {
+        "id": "ing_4a7739884433",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED GARLIC AP CHOPPED IN WATER / RAW"
+      },
+      {
+        "id": "ing_4d3aa127b298",
+        "type": "Ingredient",
+        "description": "TOFU HIGH PROTEIN SUPER FIRM - DICED"
+      },
+      {
+        "id": "ing_525891faa5dc",
+        "type": "Ingredient",
+        "description": "VEGETABLE FZ ONION DICED / COOKED"
+      },
+      {
+        "id": "ing_5423ba8174e6",
+        "type": "Ingredient",
+        "description": "VINEGAR WHITE"
+      },
+      {
+        "id": "ing_5ca0f7d9ee8c",
+        "type": "Ingredient",
+        "description": "BASE VEGETABLE LS NO ADDED MSG GF"
+      },
+      {
+        "id": "ing_5df23892ea36",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN - SHREDDED / RAW"
+      },
+      {
+        "id": "ing_5edfe39255f0",
+        "type": "Ingredient",
+        "description": "VINEGAR CIDER"
+      },
+      {
+        "id": "ing_73a0f852e8a2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH GINGER ROOT - PEELED, MINCED / RAW"
+      },
+      {
+        "id": "ing_74e8e136f6dd",
+        "type": "Ingredient",
+        "description": "HERB FRESH BASIL - LEAVES / RAW"
+      },
+      {
+        "id": "ing_759c4aa70cb0",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH BROCCOLI AP FLORETS - CUT / COOKED"
+      },
+      {
+        "id": "ing_75ea2a48ea28",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CABBAGE GREEN - CUT / COOKED"
+      },
+      {
+        "id": "ing_7686af97b917",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER BLACK GROUND IMITATION"
+      },
+      {
+        "id": "ing_780edb023e9d",
+        "type": "Ingredient",
+        "description": "CHICKEN THIGH BNLS SKNLS RANDOM RAW - CUT / STEAMED, SIMMERED OR STEWED"
+      },
+      {
+        "id": "ing_78515cb23bc0",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH RADISH DAIKON - PEELED, CUT / RAW"
+      },
+      {
+        "id": "ing_7eab840ced2d",
+        "type": "Ingredient",
+        "description": "FISH POLLOCK FILLET BATTERED 3 OZ RAW IQF / DEEP FAT FRIED"
+      },
+      {
+        "id": "ing_81826d0e03cf",
+        "type": "Ingredient",
+        "description": "BEEF STEAK SANDWICH BULK RAW FZ - THAWED / SAUTEED, GRILLED OR STIR FRIED"
+      },
+      {
+        "id": "ing_8401329e809b",
+        "type": "Ingredient",
+        "description": "FRUIT FRESH LIME - SEEDED, CUT / RAW"
+      },
+      {
+        "id": "ing_87548d3aea96",
+        "type": "Ingredient",
+        "description": "SPICE SESAME SEED WHOLE WHITE"
+      },
+      {
+        "id": "ing_8b2f667417d1",
+        "type": "Ingredient",
+        "description": "PASTA DRY ROTINI / COOKED"
+      },
+      {
+        "id": "ing_8e954eb214f7",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, CUT / RAW"
+      },
+      {
+        "id": "ing_8edcdcef0179",
+        "type": "Ingredient",
+        "description": "HERB FRESH CILANTRO - LEAVES, CHOPPED / RAW"
+      },
+      {
+        "id": "ing_95a33759ea44",
+        "type": "Ingredient",
+        "description": "SAUCE KOREAN BBQ"
+      },
+      {
+        "id": "ing_98b7eef92e04",
+        "type": "Ingredient",
+        "description": "EGG FRIED HMSTYL CRCKD BLK PPR CAGE FREE 1.5 OZ FZ - THAWED"
+      },
+      {
+        "id": "ing_9c8659a2bb3d",
+        "type": "Ingredient",
+        "description": "SPICE PEPPER BLACK TABLE GRIND"
+      },
+      {
+        "id": "ing_a373c863f774",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH RADISH RED AP TRIMMED - SHREDDED / RAW"
+      },
+      {
+        "id": "ing_a56b5244f13d",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH GARLIC WHOLE CLOVES AP PEELED - MINCED / RAW"
+      },
+      {
+        "id": "ing_a8bdcc8a475a",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CELERY - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_aaa5b1ae30e7",
+        "type": "Ingredient",
+        "description": "SAUCE WORCESTERSHIRE"
+      },
+      {
+        "id": "ing_abb33f5250d2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION GREEN SCALLION - TRIMMED, SLICED / RAW"
+      },
+      {
+        "id": "ing_aeee07a4360b",
+        "type": "Ingredient",
+        "description": "TORTILLA FLOUR 10\" WHITE 2.5 OZ SHELF STABLE"
+      },
+      {
+        "id": "ing_af7471d7316d",
+        "type": "Ingredient",
+        "description": "OIL SALAD CANOLA"
+      },
+      {
+        "id": "ing_b12cf4c24581",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT AP SHREDDED 1/8\" / RAW"
+      },
+      {
+        "id": "ing_b277657f5005",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH ONION YELLOW - TRIMMED, CUT / COOKED"
+      },
+      {
+        "id": "ing_b28b5f69827a",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH PEPPER CHILI JALAPENO - SLICED / RAW"
+      },
+      {
+        "id": "ing_b94923e61920",
+        "type": "Ingredient",
+        "description": "HERB DRIED THYME LEAVES"
+      },
+      {
+        "id": "ing_ba53a9bb0e5e",
+        "type": "Ingredient",
+        "description": "OIL BLEND VEGETABLE 90 / EVO 10"
+      },
+      {
+        "id": "ing_bfc64df3d3d2",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH BROCCOLI AP CROWNS - TRIMMED, CUT / COOKED"
+      },
+      {
+        "id": "ing_c2780fdd965d",
+        "type": "Ingredient",
+        "description": "JUICE BULK LIME PASTEURIZED REFRIGERATED"
+      },
+      {
+        "id": "ing_c418c79705ae",
+        "type": "Ingredient",
+        "description": "VEGETABLE CANNED SPROUT BEAN - DRAINED"
+      },
+      {
+        "id": "ing_c787fb442e80",
+        "type": "Ingredient",
+        "description": "SALT KOSHER"
+      },
+      {
+        "id": "ing_c97f70dad6ac",
+        "type": "Ingredient",
+        "description": "RICE WHITE LONG GRAIN PARBOILED / COOKED"
+      },
+      {
+        "id": "ing_d636b5fdf777",
+        "type": "Ingredient",
+        "description": "OIL CHILI HOT"
+      },
+      {
+        "id": "ing_dadaf9b6d5b1",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH CARROT - TRIMMED, SLICED / COOKED"
+      },
+      {
+        "id": "ing_db3892b5086e",
+        "type": "Ingredient",
+        "description": "VEGETABLE FRESH LETTUCE ICEBERG - SHREDDED / RAW"
+      },
+      {
+        "id": "ing_dbf390dab2db",
+        "type": "Ingredient",
+        "description": "VEGETABLE CABBAGE CUT NAPPA KIMCHI"
+      },
+      {
+        "id": "ing_df25b6f2199b",
+        "type": "Ingredient",
+        "description": "SAUCE SOY TAMARI 40% LESS SODIUM GF"
+      },
+      {
+        "id": "ing_e0b5f316cef3",
+        "type": "Ingredient",
+        "description": "SPICE SESAME SEED WHOLE BLACK"
+      },
+      {
+        "id": "ing_f38df45c9fbc",
+        "type": "Ingredient",
+        "description": "VEGETABLE FROZEN SPINACH CHOPPED IQF - THAWED, DRAINED / COOKED"
+      },
+      {
+        "id": "ing_f3a60c9c57da",
+        "type": "Ingredient",
+        "description": "SUGAR WHITE GRANULATED"
+      },
+      {
+        "id": "ing_f689017ecb4b",
+        "type": "Ingredient",
+        "description": "TORTILLA FLOUR 6\" WHITE 1.09 OZ SHELF STABLE"
+      },
+      {
+        "id": "ing_f9117f29953d",
+        "type": "Ingredient",
+        "description": "HERB DRIED OREGANO LEAF"
+      }
+    ]
+  },
+  "relations": [
+    {
+      "from_type": "Recipe",
+      "from_id": "A4307",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4307",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4307",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4307",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_04ed11409bf5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4307",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_346edc7eb5a9"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4307",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_95a33759ea44"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_09cb19b63879"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0bb706afe8d0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_87548d3aea96"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_df25b6f2199b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f38df45c9fbc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4603",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4603",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4603",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A4603",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_04ed11409bf5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_09cb19b63879"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0adfed0dd18e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_16e5cf0c3cb6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_73a0f852e8a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_81826d0e03cf"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8edcdcef0179"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c2780fdd965d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_d636b5fdf777"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A526",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_df25b6f2199b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A7977",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A7977",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A7977",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_09cb19b63879"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0bb706afe8d0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5df23892ea36"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8e954eb214f7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "A8326",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_98b7eef92e04"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392180",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_433dabb9bbd0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_46ffa8576358"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8edcdcef0179"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392181",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dbf390dab2db"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_31ae7337f64c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7eab840ced2d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b28b5f69827a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_db3892b5086e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392896",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f689017ecb4b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7eab840ced2d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a373c863f774"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "L392900",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b28b5f69827a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5423ba8174e6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_78515cb23bc0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M10140",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b12cf4c24581"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_31ae7337f64c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4d3aa127b298"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_759c4aa70cb0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_75ea2a48ea28"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a8bdcc8a475a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b277657f5005"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_bfc64df3d3d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M16592",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dadaf9b6d5b1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_02219666ff12"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0c1544110c8d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_11b3b4a61123"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_15d61fb3b184"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_1af9d1a97035"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_40e0eab3821a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_413a70c826ce"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4d3aa127b298"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_525891faa5dc"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5ca0f7d9ee8c"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_73a0f852e8a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_74e8e136f6dd"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_7686af97b917"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8401329e809b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8b2f667417d1"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8edcdcef0179"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_aaa5b1ae30e7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b28b5f69827a"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b94923e61920"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c418c79705ae"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_df25b6f2199b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f3a60c9c57da"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M17310",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_f9117f29953d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21426",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21426",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21426",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21426",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M21426",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_780edb023e9d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_04ed11409bf5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0adfed0dd18e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_21255b2cf8b6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5423ba8174e6"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_73a0f852e8a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_78515cb23bc0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_8e954eb214f7"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32304",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_b12cf4c24581"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_04ed11409bf5"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_09cb19b63879"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4a7739884433"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_5edfe39255f0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_87548d3aea96"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32306",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32308",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32308",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32308",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32308",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32308",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_4d3aa127b298"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0696e1ee4e8f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_73a0f852e8a2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_a56b5244f13d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32316",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_ba53a9bb0e5e"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32354",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32354",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32354",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M32354",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36626",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36626",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36626",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36626",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_028805c414ad"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M36626",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_aeee07a4360b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0a3572fa57b2"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_416b3db7504b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_87548d3aea96"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_df25b6f2199b"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38517",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_e0b5f316cef3"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_0bb706afe8d0"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_15e254564e96"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_375e0d577e06"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M38622",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M39294",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_dbf390dab2db"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_2add2964642f"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_9c8659a2bb3d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_af7471d7316d"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c787fb442e80"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M40821",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_c97f70dad6ac"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "BELONGS_TO_STATION",
+      "to_type": "Station",
+      "to_id": "station_Halal Street Eats"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Friday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Lunch"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Monday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Sunday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Thursday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Tuesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SCHEDULED_ON",
+      "to_type": "Day",
+      "to_id": "day_Wednesday",
+      "attributes": {
+        "week_no": 3,
+        "period": "Dinner"
+      }
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "SERVED_IN_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Recipe",
+      "from_id": "M6349",
+      "predicate": "USES_INGREDIENT",
+      "to_type": "Ingredient",
+      "to_id": "ing_abb33f5250d2"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Friday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Monday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Sunday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Thursday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Tuesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Dinner"
+    },
+    {
+      "from_type": "Day",
+      "from_id": "day_Wednesday",
+      "predicate": "HAS_PERIOD",
+      "to_type": "MealPeriod",
+      "to_id": "period_Lunch"
+    },
+    {
+      "from_type": "Station",
+      "from_id": "station_Halal Street Eats",
+      "predicate": "HAS_WEEK",
+      "to_type": "Week",
+      "to_id": "week_3"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Friday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Monday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Sunday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Thursday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Tuesday"
+    },
+    {
+      "from_type": "Week",
+      "from_id": "week_3",
+      "predicate": "HAS_DAY",
+      "to_type": "Day",
+      "to_id": "day_Wednesday"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "meta": {
+    "source_file": "halal_street_eats_station_only.xlsx",
+    "station_name": "Halal Street Eats",
+    "warnings_count": 0,
+    "validation_issues_count": 0
+  }
+}
