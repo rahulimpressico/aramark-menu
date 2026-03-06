@@ -1,0 +1,43 @@
+run_analysis_fast()
+- This runs the full menu review for a station and meal period.
+- It combines all checks (rules, variety, nutrition mix, cost risk) and gives one final report.
+
+checking_playbook_bounds()
+- We define menu categories (Burger, Daily Feature, Vegan, Fries, Sides).
+- We compare menu items against playbook limits (for example: Burger max 1, Vegan min 1).
+- It tells where the menu is not following the playbook and by how much.
+
+detecting_period_overlap()
+- This checks data quality.
+- It finds if the same recipe is wrongly repeated/duplicated in the schedule.
+
+calculating_diversity_index()
+- This measures menu variety.
+- It checks how many different main items are offered across the schedule.
+- Higher score means better variety and less repetition.
+
+tracking_item_frequency()
+- This shows how often each item appears in the week.
+- If an item appears too many times, it is flagged as a rotation issue.
+
+evaluating_sustainability_mix()
+- This measures plant-based coverage in the menu.
+- It compares current % with the business target (44%).
+- It clearly shows the gap from target.
+
+calculating_cpm_risk_swaps()
+- This reviews protein mix from a cost perspective (beef-heavy vs balanced alternatives).
+- It marks risk as high/medium/low.
+- It gives practical swap suggestions to reduce risk and improve mix.
+
+formatting_executive_slide()
+- This converts analysis results into a client-friendly report.
+- If AI generation fails, it still creates a reliable fallback report.
+
+_call_gemini()
+- This is the AI call used only for improving report language/format.
+- Core calculations are still done by rule-based logic.
+
+Two key business metrics
+1. Diversity score: tells if menu rotation is healthy or repetitive.
+2. CPM risk: tells if protein choices are cost-risk balanced or beef-heavy.

@@ -29,10 +29,18 @@ app = FastAPI(
     version="0.1.0",
 )
 
+_cors_origins_raw = (os.environ.get("CORS_ALLOW_ORIGINS") or "*").strip()
+if _cors_origins_raw == "*":
+    _cors_allow_origins = ["*"]
+    _cors_allow_credentials = False
+else:
+    _cors_allow_origins = [o.strip() for o in _cors_origins_raw.split(",") if o.strip()]
+    _cors_allow_credentials = True
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=_cors_allow_origins,
+    allow_credentials=_cors_allow_credentials,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -48,6 +56,7 @@ def health():
 # Serve frontend static build when present
 STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
 if STATIC_DIR.is_dir():
+    _static_root = STATIC_DIR.resolve()
     assets_dir = STATIC_DIR / "assets"
     if assets_dir.is_dir():
         app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
@@ -56,8 +65,8 @@ if STATIC_DIR.is_dir():
     def _serve_spa(full_path: str):
         if full_path.startswith("api/"):
             raise HTTPException(status_code=404, detail="Not Found")
-        path = STATIC_DIR / full_path
-        if path.is_file() and not full_path.startswith(".."):
+        path = (_static_root / full_path).resolve()
+        if path.is_file() and path.is_relative_to(_static_root):
             return FileResponse(path)
         return FileResponse(STATIC_DIR / "index.html")
 else:

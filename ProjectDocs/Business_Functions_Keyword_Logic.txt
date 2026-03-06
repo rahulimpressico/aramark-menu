@@ -1,0 +1,127 @@
+run_analysis_fast()
+
+How it works
+- This is the main pipeline controller.
+- It loads station graph, filters by meal period, runs all agent functions in order, merges outputs, and generates final report text.
+- It ensures business output always comes from the same deterministic flow.
+
+Formula / logic
+- Pipeline sequence:
+  check_playbook -> overlap -> diversity -> frequency -> sustainability -> cpm -> final report
+- Final output:
+  analysis_json + report_markdown + usage
+
+
+checking_playbook_bounds()
+
+How it works
+- We created predefined lists of words for each playbook category, like "cheeseburger" for burger, "black bean burger" for vegan, "french fries" for fries, and "sliced tomato" for side.
+- Then we set daily limits (burger max 1, vegan min 1, fries min 1, daily feature max 2) as per the playbook.
+- The system matches recipe names to these keyword buckets, counts day-wise category totals, and marks compliant/violation.
+
+Formula / logic
+- category_count_per_day = matched recipes in that category for that day
+- Violations:
+  - burger_count > 1
+  - daily_feature_count > 2
+  - vegan_count < 1
+  - fries_count < 1
+- Hardcoded keyword examples:
+  - Burger: "cheeseburger", "hamburger"
+  - Vegan: "vegan", "black bean"
+  - Fries: "french fries", "crinkle fries"
+  - Side: "sliced tomato", "lettuce"
+
+
+detecting_period_overlap()
+
+How it works
+- This is a data-quality guard.
+- It checks schedule edges to find duplicate recipe scheduling inside same period/day, and period-mapping conflicts.
+
+Formula / logic
+- within_period_overlap if same recipe appears >= 2 times in same day + period
+- cross_period_overlap if same scheduled recipe maps to multiple periods unexpectedly
+
+
+calculating_diversity_index()
+
+How it works
+- Measures menu rotation quality using only entree items.
+- Sides/condiments are excluded so the score reflects true main-item variety.
+
+Formula / logic
+- diversity_index = unique_entree_count / entree_slots
+- Thresholds:
+  - >= 0.6 good
+  - >= 0.3 and < 0.6 moderate
+  - < 0.3 low
+- Hardcoded exclusion examples:
+  - "ketchup", "mustard", "american cheese", "pickle"
+
+
+tracking_item_frequency()
+
+How it works
+- Counts how frequently each recipe repeats across days.
+- Flags high-repetition items to support rotation recommendations.
+
+Formula / logic
+- appearance_count = count(distinct scheduled days per recipe)
+- high_repetition if appearance_count >= 4
+- Hardcoded side exclusions (not flagged): "mayo", "relish", "trim salad"
+
+
+evaluating_sustainability_mix()
+
+How it works
+- Detects plant-based offerings by keyword matching in recipe + ingredient text.
+- Calculates plant-based share and compares with 44% target.
+
+Formula / logic
+- plant_based_percent = (plant_based_count / total_offerings) * 100
+- gap_to_target = 44 - plant_based_percent
+- Hardcoded plant-based keyword examples:
+  - "vegan", "plant-based", "tofu", "black bean", "veggie", "lentil"
+
+
+calculating_cpm_risk_swaps()
+
+How it works
+- Estimates protein-mix risk by classifying recipes into beef vs non-beef alternatives.
+- Uses slot-based exposure to assign CPM risk and generate swap advice.
+
+Formula / logic
+- beef_slots = sum(slots of beef recipes)
+- alt_slots = sum(slots of alternative recipes)
+- beef_recurrence_high = beef_slots >= 3
+- alternatives_diversified = alt_slots >= 2
+- Risk outcome:
+  - high = beef heavy + weak alternatives
+  - medium = partial balance
+  - low = strong alternative mix
+- Hardcoded keyword examples:
+  - Beef: "beef", "cheeseburger"
+  - Alternatives: "chicken", "turkey", "fish", "vegan", "tofu"
+
+
+formatting_executive_slide()
+
+How it works
+- Converts computed JSON into a business-readable final report.
+- First tries AI formatting, then falls back to deterministic formatting to avoid failure.
+
+Formula / logic
+- if Gemini_output_valid -> return Gemini report
+- else -> return fallback deterministic report
+
+
+_call_gemini()
+
+How it works
+- Sends final prepared prompt to Gemini with configured settings.
+- Cleans markdown fences before returning text.
+
+Formula / logic
+- response = model.generate_content(prompt, config)
+- output = cleaned(response.text)

@@ -1,0 +1,190 @@
+run_analysis_fast()
+
+Inputs:
+- station_name
+- meal_period
+- normalized station graph data
+
+How it works:
+- This is the main backend pipeline function.
+- It loads data for the selected station.
+- It filters data for selected meal period.
+- It runs all core agent checks one by one.
+- It combines all outputs into one JSON.
+- It generates final report text for frontend.
+
+Formula / logic:
+- Sequential orchestration of all functions:
+  check_playbook -> overlap -> diversity -> frequency -> sustainability -> cpm -> final report
+
+
+checking_playbook_bounds()
+
+Inputs:
+- recipe names from selected station + meal period
+- playbook keyword lists (burger, daily_feature, vegan, fries, side)
+- playbook daily limits
+  - burger: max 1
+  - daily_feature: max 2
+  - vegan: min 1
+  - fries: min 1
+
+How it works:
+- We created predefined lists of words for each playbook category, like "cheeseburger" for burger, "black bean burger" for vegan, "french fries" for fries, and "sliced tomato" for side.
+- System matches each recipe name with these keyword lists.
+- It counts category-wise items day-wise.
+- Then it compares counts with playbook limits and marks compliant/violation.
+
+Formula / logic:
+- category_count_per_day = number of recipes matched to that category on that day
+- Burger violation if: burger_count > 1
+- Daily feature violation if: daily_feature_count > 2
+- Vegan violation if: vegan_count < 1
+- Fries violation if: fries_count < 1
+
+
+detecting_period_overlap()
+
+Inputs:
+- SCHEDULED_ON edges (Recipe -> Day)
+- SERVED_IN_PERIOD edges (Recipe -> MealPeriod)
+- Day and MealPeriod nodes
+
+How it works:
+- Checks if same recipe is duplicated in same day/period incorrectly.
+- Checks if one recipe is linked across multiple periods in conflict cases.
+- Flags data integrity issues before reporting.
+
+Formula / logic:
+- within_period overlap if same recipe appears 2+ times in same day-period
+- cross_period overlap if same scheduled recipe maps to multiple meal periods unexpectedly
+
+
+calculating_diversity_index()
+
+Inputs:
+- entree recipes
+- scheduled slots (SCHEDULED_ON)
+- side/condiment exclusion keywords
+
+How it works:
+- Side/condiment items are excluded.
+- Only entree items are considered.
+- It compares unique entrees vs total entree slots.
+
+Formula:
+- diversity_index = unique_entree_count / entree_slots
+
+Threshold logic:
+- >= 0.6: good variety
+- >= 0.3 and < 0.6: moderate variety
+- < 0.3: low variety / high repetition
+
+
+tracking_item_frequency()
+
+Inputs:
+- recipe to day scheduling edges
+- repetition threshold (4 days)
+
+How it works:
+- Counts number of distinct days each recipe appears.
+- Flags items with high repetition.
+- Side/condiment items are excluded from repetition alerts.
+
+Formula:
+- appearance_count = number of unique scheduled days per recipe
+- high_repetition if appearance_count >= 4
+
+
+evaluating_sustainability_mix()
+
+Inputs:
+- recipe text + ingredient text
+- plant-based keyword list
+- total scheduled offerings
+
+How it works:
+- Detects plant-based recipes using keywords.
+- Counts plant-based scheduled slots.
+- Compares against 44% target.
+
+Formula:
+- plant_based_percent = (plant_based_count / total_offerings) * 100
+- gap_to_target = 44 - plant_based_percent
+
+
+calculating_cpm_risk_swaps()
+
+Inputs:
+- recipe names
+- beef keyword list
+- non-beef alternative keyword list
+- scheduled slots
+- optional recurrence signals
+
+How it works:
+- Classifies each recipe as beef / alternative / neutral.
+- Counts beef exposure and alternative exposure using slots.
+- Applies risk thresholds.
+- Generates swap suggestions.
+
+Formula / threshold logic:
+- beef_slots = sum(slots of beef recipes)
+- alt_slots = sum(slots of alternative recipes)
+- beef_recurrence_high = beef_slots >= 3
+- alternatives_diversified = alt_slots >= 2
+
+Risk result:
+- high: beef heavy + weak alternatives
+- medium: partially balanced
+- low: good alternative mix and controlled beef exposure
+
+
+formatting_executive_slide()
+
+Inputs:
+- aggregated_state JSON from all previous functions
+
+How it works:
+- Builds business-ready report structure from all computed outputs.
+- Tries AI-generated final report.
+- If AI fails, uses deterministic fallback so report is still generated.
+
+Formula / logic:
+- if Gemini output valid -> return Gemini report
+- else -> return fallback report
+
+
+_call_gemini()
+
+Inputs:
+- final report prompt
+- API key from env (GEMINI_API_KEY or GOOGLE_API_KEY)
+- generation config (temperature, max_output_tokens)
+
+How it works:
+- Sends prompt to Gemini 2.5 Flash.
+- Gets markdown output.
+- Cleans output formatting (like code fences).
+
+Formula / logic:
+- response = model.generate_content(prompt, config)
+- return cleaned response text
+
+
+Quick Business Metrics Summary
+
+1. Playbook Compliance:
+- Are daily menu limits and minimums followed?
+
+2. Diversity Score:
+- diversity_index = unique_entrees / entree_slots
+- Higher is better rotation.
+
+3. Plant-Based Gap:
+- gap_to_target = 44 - plant_based_percent
+
+4. CPM Risk:
+- Based on beef_slots vs alt_slots
+- Final label: high / medium / low

@@ -217,6 +217,18 @@ def _save_station_period_response(
     return json_path
 
 
+def _load_cached_json(path: Path) -> dict:
+    """Best-effort JSON loader for cache files. Returns {} for unreadable/corrupt files."""
+    if not path.is_file():
+        return {}
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        log.warning("[REPORTS] Failed to parse cache json path={} err={}", path, exc)
+        return {}
+    return raw if isinstance(raw, dict) else {}
+
+
 @router.get("/report/{station_slug}/{meal_slug}")
 def get_cached_report(station_slug: str, meal_slug: str):
     """
@@ -236,11 +248,12 @@ def get_cached_report(station_slug: str, meal_slug: str):
     generated_at = None
     usage = {}
     analysis = {}
+    data = {}
     if txt_path.is_file():
         content = txt_path.read_text(encoding="utf-8").strip()
         log.debug("[REPORTS] Read from .txt path={} len={}", txt_path, len(content))
     if not content and json_path.is_file():
-        data = json.loads(json_path.read_text(encoding="utf-8"))
+        data = _load_cached_json(json_path)
         content = (data.get("content") or "").strip()
         generated_at = data.get("generated_at")
         usage = {
@@ -253,7 +266,7 @@ def get_cached_report(station_slug: str, meal_slug: str):
             "[REPORTS] Read from .json path={} content_len={}", json_path, len(content)
         )
     if content and json_path.is_file() and not usage:
-        data = json.loads(json_path.read_text(encoding="utf-8"))
+        data = _load_cached_json(json_path)
         usage = {
             "total_input_tokens": data.get("total_input_tokens", 0),
             "total_output_tokens": data.get("total_output_tokens", 0),
@@ -379,7 +392,7 @@ def _read_cached_report_text(station_slug: str, meal_slug: str) -> str:
         return txt_path.read_text(encoding="utf-8").strip()
     json_path = station_dir / f"{meal_slug}.json"
     if json_path.is_file():
-        data = json.loads(json_path.read_text(encoding="utf-8"))
+        data = _load_cached_json(json_path)
         return (data.get("content") or "").strip()
     return ""
 
@@ -388,12 +401,7 @@ def _read_cached_report_json(station_slug: str, meal_slug: str) -> dict:
     """Return full cached report dict from .json for station/meal. Empty dict if missing."""
     station_dir = _resolve_station_dir_for_read(station_slug)
     json_path = station_dir / f"{meal_slug}.json"
-    if json_path.is_file():
-        try:
-            return json.loads(json_path.read_text(encoding="utf-8"))
-        except Exception:
-            pass
-    return {}
+    return _load_cached_json(json_path)
 
 
 @router.get("/combined/{station_slug}", response_model=dict)

@@ -10,12 +10,7 @@ const CATEGORIES: Record<string, string> = {
   lunch: "Lunch",
   dinner: "Dinner",
 };
-
-const IMAGE_BY_CATEGORY: Record<string, string> = {
-  breakfast: "Breakfast.png",
-  lunch: "Lunch.png",
-  dinner: "Dinner.png",
-};
+const CATEGORY_KEYS = ["breakfast", "lunch", "dinner"] as const;
 
 type SourceRow = {
   id: string;
@@ -24,9 +19,12 @@ type SourceRow = {
   ing_count?: number;
 };
 
-function getImagePath(stationSlug: string, fileName: string): string {
-  return `/stations/${encodeURIComponent(stationSlug)}/${encodeURIComponent(fileName)}`;
-}
+type DaywiseRow = {
+  day: string;
+  recipes: string[];
+};
+
+const DAY_ORDER = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] as const;
 
 const MEAL_ICONS: Record<string, JSX.Element> = {
   breakfast: (
@@ -59,6 +57,21 @@ function extractSourceRows(data: any): SourceRow[] {
   }));
 }
 
+function extractDaywiseRows(data: any): DaywiseRow[] {
+  const schedule = data?.analysis?.schedule;
+  if (!schedule || typeof schedule !== "object") return [];
+  const ordered = DAY_ORDER
+    .filter((day) => Array.isArray((schedule as Record<string, unknown>)[day]))
+    .map((day) => ({
+      day,
+      recipes: ((schedule as Record<string, unknown[]>)[day] || [])
+        .map((item) => String(item ?? "").trim())
+        .filter(Boolean),
+    }))
+    .filter((row) => row.recipes.length > 0);
+  return ordered;
+}
+
 
 function normalizeReportError(message: string): string {
   if (message.toLowerCase().includes("no data found for station")) {
@@ -66,6 +79,11 @@ function normalizeReportError(message: string): string {
   }
   return message;
 }
+
+function isNoDataError(message: string): boolean {
+  return message.toLowerCase().includes("no data found for station");
+}
+
 export function CategoryAnalysisPage() {
   const { stationSlug, category } = useParams<{ stationSlug: string; category: string }>();
   const navigate = useNavigate();
@@ -73,9 +91,8 @@ export function CategoryAnalysisPage() {
   const [loaderActive, setLoaderActive] = useState(false);
   const [reportContent, setReportContent] = useState<string | null>(null);
   const [reportError, setReportError] = useState<string | null>(null);
+  const [daywiseRows, setDaywiseRows] = useState<DaywiseRow[]>([]);
   const [sourceRows, setSourceRows] = useState<SourceRow[]>([]);
-  const [imageDialogOpen, setImageDialogOpen] = useState(false);
-  const [imageAvailable, setImageAvailable] = useState(true);
 
   const normalizedStationSlug = stationSlug?.trim().toLowerCase() || "";
   const normalizedCategory = category?.trim().toLowerCase() || "";
@@ -86,65 +103,93 @@ export function CategoryAnalysisPage() {
       ? `${displayStationName} ${CATEGORIES[normalizedCategory]} Menu`
       : `${displayStationName} Menu`;
 
-  const imageFileName = normalizedCategory ? IMAGE_BY_CATEGORY[normalizedCategory] : "";
-  const imageSrc = imageFileName ? getImagePath(normalizedStationSlug, imageFileName) : "";
+  const hasExcelData = sourceRows.length > 0;
+  const hasDaywiseData = daywiseRows.length > 0;
+  const daywiseByDay = daywiseRows.reduce<Record<string, string[]>>((acc, row) => {
+    acc[row.day] = row.recipes;
+    return acc;
+  }, {});
 
   useEffect(() => {
     if (!analysisOpen || !normalizedCategory || !CATEGORIES[normalizedCategory]) return;
     setReportContent(null);
     setReportError(null);
+    setDaywiseRows([]);
     setSourceRows([]);
     setLoaderActive(true);
     let cancelled = false;
     const mealPeriod = CATEGORIES[normalizedCategory];
     (async () => {
-      try {
-        const cachedRes = await fetch(reportCachedUrl(stationName, mealPeriod));
-        if (cancelled) return;
-        if (cachedRes.ok) {
-          const data = await cachedRes.json();
-          const text = data.content ?? "";
-          if (text.trim()) {
-            setReportContent(text);
-            setSourceRows(extractSourceRows(data));
-            setReportError(null);
-            setLoaderActive(false);
-            return;
+      const loadReport = async (period: string): Promise<{ ok: true; data: any } | { ok: false; message: string; noData: boolean }> => {
+        try {
+          const cachedRes = await fetch(reportCachedUrl(stationName, period));
+          if (cachedRes.ok) {
+            const data = await cachedRes.json();
+            const text = data.content ?? "";
+            if (text.trim()) return { ok: true, data };
           }
-        }
-        const res = await fetch(REPORT_API_BASE, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            station_name: stationName,
-            meal_period: mealPeriod,
-            use_fast: true,
-          }),
-        });
-        if (cancelled) return;
-        if (res.ok) {
-          const data = await res.json();
-          setReportContent(data.content ?? "");
-          setSourceRows(extractSourceRows(data));
-          setReportError(null);
-        } else {
-          let message: string | null = null;
+
+          const res = await fetch(REPORT_API_BASE, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              station_name: stationName,
+              meal_period: period,
+              use_fast: true,
+            }),
+          });
+
+          if (res.ok) {
+            const data = await res.json();
+            return { ok: true, data };
+          }
+
+          let message = res.status === 503 ? "Report could not be generated. Please try again." : "Report not available.";
           try {
             const err = await res.json();
-            if (err?.detail) message = typeof err.detail === "string" ? err.detail : err.detail?.msg ?? null;
+            if (err?.detail) message = typeof err.detail === "string" ? err.detail : err.detail?.msg ?? message;
           } catch {
-            message = res.status === 503 ? "Report could not be generated. Please try again." : null;
+            // keep default message
           }
-          setReportError(normalizeReportError(message ?? (res.status === 503 ? "Report could not be generated. Please try again." : "Report not available.")));
+          return { ok: false, message, noData: isNoDataError(message) };
+        } catch {
+          const message = "Report not available. Please try again.";
+          return { ok: false, message, noData: false };
         }
-      } catch {
-        if (!cancelled) setReportError(normalizeReportError("Report not available. Please try again."));
+      };
+
+      try {
+        const current = await loadReport(mealPeriod);
+        if (cancelled) return;
+
+        if (current.ok) {
+          setReportContent(current.data.content ?? "");
+          setDaywiseRows(extractDaywiseRows(current.data));
+          setSourceRows(extractSourceRows(current.data));
+          setReportError(null);
+          return;
+        }
+
+        if (current.noData) {
+          for (const key of CATEGORY_KEYS) {
+            if (key === normalizedCategory) continue;
+            const fallbackPeriod = CATEGORIES[key];
+            const fallback = await loadReport(fallbackPeriod);
+            if (cancelled) return;
+            if (fallback.ok) {
+              navigate(`/stations/${normalizedStationSlug}/${key}`, { replace: true });
+              return;
+            }
+          }
+        }
+
+        setReportError(normalizeReportError(current.message));
       } finally {
         if (!cancelled) setLoaderActive(false);
       }
     })();
     return () => { cancelled = true; };
-  }, [analysisOpen, normalizedCategory, stationName]);
+  }, [analysisOpen, normalizedCategory, normalizedStationSlug, stationName, navigate]);
 
   useEffect(() => {
     if (normalizedCategory && CATEGORIES[normalizedCategory]) setAnalysisOpen(true);
@@ -164,6 +209,7 @@ export function CategoryAnalysisPage() {
       if (res.ok) {
         const data = await res.json();
         setReportContent(data.content ?? "");
+        setDaywiseRows(extractDaywiseRows(data));
         setSourceRows(extractSourceRows(data));
         setReportError(null);
       } else {
@@ -177,19 +223,6 @@ export function CategoryAnalysisPage() {
       setLoaderActive(false);
     }
   }, [normalizedCategory, stationName]);
-
-  useEffect(() => {
-    setImageAvailable(true);
-  }, [imageSrc]);
-
-  useEffect(() => {
-    if (!imageDialogOpen) return;
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setImageDialogOpen(false);
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [imageDialogOpen]);
 
   if (!normalizedStationSlug || !normalizedCategory || !CATEGORIES[normalizedCategory]) {
     navigate("/", { replace: true });
@@ -213,45 +246,90 @@ export function CategoryAnalysisPage() {
           </h1>
         </div>
       </header>
-      <div className="flex-1 relative flex flex-col lg:flex-row gap-5 m-4 min-h-0">
+      <div className="flex-1 relative flex flex-col lg:flex-row gap-4 lg:gap-5 m-3 sm:m-4 min-h-0">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0" aria-hidden>
           <div className="opacity-[0.06] select-none">
             <AramarkLogo width={280} height={70} variant="default" />
           </div>
         </div>
-        <div className="relative z-10 flex-1 flex flex-col lg:flex-row gap-5 min-h-0 min-w-0">
-          <section className="lg:w-[45%] xl:w-[40%] flex-shrink-0 opacity-0-init animate-slide-up rounded-xl bg-white shadow-xl border border-gray-200/90 overflow-hidden flex flex-col h-[65vh] lg:h-[72vh] transition-shadow duration-300 hover:shadow-2xl">
-            <div className="shrink-0 px-5 py-3.5 border-b border-gray-100 bg-white">
+        <div className="relative z-10 flex-1 flex flex-col lg:flex-row gap-4 lg:gap-5 min-h-0 min-w-0">
+          <section className="w-full lg:w-[45%] xl:w-[40%] flex-shrink-0 opacity-0-init animate-slide-up rounded-xl bg-white shadow-xl border border-gray-200/90 overflow-hidden flex flex-col h-[58vh] sm:h-[65vh] lg:h-[72vh] transition-shadow duration-300 hover:shadow-2xl">
+            <div className="shrink-0 px-4 sm:px-5 py-3 sm:py-3.5 border-b border-gray-100 bg-white">
               <h2 className="m-0 text-[0.9375rem] font-semibold tracking-tight text-gray-900">{title}</h2>
               <p className="m-0 mt-0.5 text-xs text-gray-500">Reference source data</p>
             </div>
-            <div className="flex-1 min-h-0 p-4 overflow-y-auto bg-gray-50/40">
-              {imageSrc && imageAvailable ? (
-                <div className="relative w-full h-[220px] flex items-center justify-center mb-4">
-                  <button
-                    type="button"
-                    onClick={() => !loaderActive && setImageDialogOpen(true)}
-                    className={`w-full h-full flex items-center justify-center focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 rounded-lg ${loaderActive ? "cursor-wait" : "cursor-zoom-in"}`}
-                    disabled={loaderActive}
-                    aria-label="Open image in full view"
-                  >
-                    <img
-                      src={imageSrc}
-                      alt={title}
-                      className={`max-w-full max-h-full w-auto h-auto object-contain rounded-lg border border-gray-200/80 shadow-sm transition-all duration-500 `}
-                      onError={() => setImageAvailable(false)}
-                    />
-                  </button>
+            <div className="flex-1 min-h-0 p-3 sm:p-4 overflow-y-auto bg-gray-50/40">
+              <div className="rounded-lg border border-gray-200 bg-white overflow-hidden mb-4">
+                <div className="px-3 py-2 border-b border-gray-200 bg-gray-50 text-xs font-semibold text-gray-700">
+                  Day-wise menu (Excel/KG)
                 </div>
-              ) : null}
+                {hasDaywiseData ? (
+                  <div className="max-h-[260px] overflow-x-auto overflow-y-auto">
+                    <table className="min-w-[980px] w-full text-xs text-left text-gray-700">
+                      <thead className="bg-gray-50 text-gray-800 sticky top-0 z-10">
+                        <tr>
+                          {DAY_ORDER.map((day) => (
+                            <th key={day} className="px-3 py-2.5 min-w-[180px] border-b border-gray-200 font-semibold">{day}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          {DAY_ORDER.map((day) => {
+                            const recipes = daywiseByDay[day] || [];
+                            return (
+                              <td key={day + "-count"} className="px-3 pt-2 pb-1 border-r border-gray-100 last:border-r-0 bg-white text-center">
+                                {recipes.length > 0 ? (
+                                  <span className="inline-flex min-w-[78px] items-center justify-center rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-600">
+                                    {recipes.length} item(s)
+                                  </span>
+                                ) : (
+                                  <span className="text-gray-400 text-[10px]">0 item(s)</span>
+                                )}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                        <tr className="align-top">
+                          {DAY_ORDER.map((day) => {
+                            const recipes = daywiseByDay[day] || [];
+                            return (
+                              <td key={day + "-recipes"} className="px-3 py-1.5 border-r border-gray-100 last:border-r-0 bg-white">
+                                {recipes.length > 0 ? (
+                                  <div className="space-y-1.5">
+                                    {recipes.map((name, idx) => (
+                                      <div
+                                        key={day + "-" + idx}
+                                        className="rounded-md border border-gray-100 bg-gray-50 px-2 py-1 leading-snug text-gray-700 whitespace-normal break-words"
+                                      >
+                                        {name}
+                                      </div>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <span className="text-gray-400">-</span>
+                                )}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
+                  <div className="p-3 text-xs text-gray-500">
+                    Day-wise source rows are not available for this station/meal.
+                  </div>
+                )}
+              </div>
 
               <div className="rounded-lg border border-gray-200 bg-white overflow-hidden">
                 <div className="px-3 py-2 border-b border-gray-200 bg-gray-50 text-xs font-semibold text-gray-700">
-                  Source menu data used (Excel/KG)
+                  Source recipes used (Excel/KG)
                 </div>
-                {sourceRows.length > 0 ? (
-                  <div className="max-h-[280px] overflow-auto">
-                    <table className="min-w-full text-xs text-left text-gray-700">
+                {hasExcelData ? (
+                  <div className="max-h-[280px] overflow-x-auto overflow-y-auto">
+                    <table className="min-w-[980px] w-full text-xs text-left text-gray-700">
                       <thead className="bg-gray-50 text-gray-800 sticky top-0">
                         <tr>
                           <th className="px-3 py-2">Recipe</th>
@@ -282,8 +360,8 @@ export function CategoryAnalysisPage() {
             </div>
           </section>
 
-          <section className="flex-1 min-h-0 min-w-0 opacity-0-init animate-slide-up delay-100 flex flex-col rounded-xl shadow-xl border border-gray-200/90 max-h-[65vh] lg:max-h-[72vh] overflow-hidden bg-white w-full">
-            <div className="shrink-0 px-6 py-3.5 border-b border-gray-100 bg-white flex flex-wrap items-center justify-between gap-3">
+          <section className="w-full flex-1 min-h-0 min-w-0 opacity-0-init animate-slide-up delay-100 flex flex-col rounded-xl shadow-xl border border-gray-200/90 h-[58vh] sm:h-[65vh] lg:h-[72vh] overflow-hidden bg-white">
+            <div className="shrink-0 px-4 sm:px-6 py-3 sm:py-3.5 border-b border-gray-100 bg-white flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 className="m-0 text-[0.9375rem] font-semibold tracking-tight text-gray-900">Analysis Report</h2>
                 <p className="m-0 mt-0.5 text-xs text-gray-500">Menu intelligence</p>
@@ -331,14 +409,6 @@ export function CategoryAnalysisPage() {
           </section>
         </div>
       </div>
-
-      {imageDialogOpen && imageSrc && imageAvailable && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in" onClick={() => setImageDialogOpen(false)} role="dialog" aria-modal="true" aria-label="Menu image full view">
-          <div className="relative max-w-[95vw] max-h-[95vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-            <img src={imageSrc} alt={title} className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl ring-2 ring-white/20" />
-          </div>
-        </div>
-      )}
     </main>
   );
 }
